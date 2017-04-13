@@ -1,6 +1,6 @@
 # Cemu (WiiU Emulator) game loader #
-Cemu : Highly experimental software to emulate Wii U applications on PC.
-This application is a game loader for this emulator.
+* Cemu : Highly experimental software to emulate Wii U applications on PC
+* This application is a game loader for this emulator
 
 # Execute application #
 
@@ -8,7 +8,7 @@ This application is a game loader for this emulator.
 * NW.js (https://nwjs.io/)
 
 ## Download latest version of the application ##
-* 1.0.2 : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.0.2.nw
+* Version 1.0.2 : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader.nw
 
 ## Launch application ##
 * Double click on the application (.nw file)

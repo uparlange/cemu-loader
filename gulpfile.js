@@ -82,7 +82,7 @@ gulp.task('copy-node-modules', () => {
 
 gulp.task('generate-release', () => {
     return gulp.src('dist/**/*')
-        .pipe(zip(pkg.name + '-' + pkg.version + '.nw'))
+        .pipe(zip(pkg.name + '.nw'))
         .pipe(gulp.dest('release'));
 });
 
