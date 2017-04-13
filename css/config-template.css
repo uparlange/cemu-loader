@@ -1,0 +1,22 @@
+.config-header
+{
+    background-color:#000000;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.config-header span
+{
+    vertical-align: middle;
+}
+
+#fileDialog
+{
+    display:none;
+}
+
+#saveBtn
+{
+    float:right;
+}

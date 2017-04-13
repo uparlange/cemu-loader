@@ -1,0 +1,15 @@
+<div class="app-content">
+    <router-outlet></router-outlet>
+</div>
+<div class="app-header">
+    <div class="tabs is-centered is-small">
+        <ul>
+            <li [ngClass]="model.currentView == '/list' ? 'is-active' : null" (click)="showView('/list')">
+                <a>List</a>
+            </li>
+            <li [ngClass]="model.currentView == '/config' ? 'is-active' : null" (click)="showView('/config')">
+                <a>Configuration</a>
+            </li>
+        </ul>
+    </div>
+</div>

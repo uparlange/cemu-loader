@@ -1,0 +1,15 @@
+.app-header
+{
+    position:fixed;
+    width: 100%;
+    background: white;
+}
+
+.app-content
+{
+    position: absolute;
+    top: 36px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}

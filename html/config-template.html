@@ -1,0 +1,48 @@
+<input id="fileDialog" type="file" />
+<div class="config-header">
+    <span>Cemu</span>
+    <button class="button is-primary" (click)="launchCemu()">Launch</button>
+    <button class="button is-primary" id="saveBtn" (click)="saveConfiguration()">Save configuration</button>
+</div>
+<table class="table">
+    <tr>
+        <td><label for="file">File</label></td>
+        <td>
+            <input class="input" type="text" id="file" readonly [title]="model.config.cemu.file" (click)="selectCemuFile()" [(ngModel)]="model.config.cemu.file">
+        </td>
+    </tr>
+    <tr>
+        <td><label for="fullscreen">Fullscreen</label></td>
+        <td><input class="checkbox" type="checkbox" id="fullscreen" [(ngModel)]="model.config.cemu.fullscreen"></td>
+    </tr>
+</table>
+<div class="config-header">
+    <span>Game list</span>
+    <button class="button is-primary" (click)="addGame()">Add</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Image</td>
+            <td>File</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of model.config.games; trackBy:model.trackGame">
+            <td>
+                <input class="input" [title]="game.name" type="text" [(ngModel)]="game.name">
+            </td>
+            <td>
+                <input class="input" readonly [title]="game.image" (click)="selectGameImage(game)" type="text" [(ngModel)]="game.image">
+            </td>
+            <td>
+                <input class="input" readonly [title]="game.file" (click)="selectGameFile(game)" type="text" [(ngModel)]="game.file">
+            </td>
+            <td>
+                <button class="button is-danger" [title]="'Delete ' + game.name" (click)="removeGame(game)">x</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
