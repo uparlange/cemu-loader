@@ -7,8 +7,8 @@ This application is a game loader for this emulator.
 ## Download NW.js ##
 * NW.js (https://nwjs.io/)
 
-## Download latest versionof the application ##
-* https://github.com/uparlange/cemu-loader/tree/master/release
+## Download latest version of the application ##
+* 1.0.2 : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.0.2.nw
 
 ## Launch application ##
 * Double click on the application (.nw file)
