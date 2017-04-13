@@ -13,7 +13,7 @@
 
 ## Launch application ##
 * Double click on the application (.nw file)
-* Select "nwjs.exe" from "C:\Program Files\nwjs" as default reader for "*.nw" files
+* Select "nw.exe" from "C:\Program Files\nwjs" as default reader for "*.nw" files
 
 # Links #
 * Author Homepage (https://www.lapli.fr)
