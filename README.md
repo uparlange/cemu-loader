@@ -8,11 +8,11 @@
 * NW.js (https://nwjs.io/)
 
 ## Download latest version of the application ##
-* Version 1.0.2 : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader.nw
+* Latest : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.0.2.nw
 
 ## Launch application ##
 * Double click on the application (.nw file)
-* Select "nwjs" file as default reader
+* Select "nwjs.exe" file as default reader
 
 # Links #
 * Author Homepage (https://www.lapli.fr)
