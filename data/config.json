@@ -65,8 +65,8 @@
             "file": null
         },
         {
-            "name":"Kirby and the Rainbow Curse",
-            "image": "images/kirby_and_the_rainbow_curse.jpg",
+            "name":"Kirby and the Rainbow Paintbrush",
+            "image": "images/kirby_and_the_rainbow_paintbrush.jpg",
             "file": null
         },
         {
@@ -92,6 +92,36 @@
         {
             "name":"Hyrule Warriors",
             "image": "images/hyrule_warriors.jpg",
+            "file": null
+        },
+        {
+            "name":"The Legend of Zelda: The Wind Waker HD",
+            "image": "images/the_legend_of_zelda_the_windwaker_hd.jpg",
+            "file": null
+        },
+        {
+            "name":"Monster Hunter 3 Ultimate",
+            "image": "images/monster_hunter_3_ultimate.jpg",
+            "file": null
+        },
+        {
+            "name":"Guacamelee! Super Turbo Championship Edition",
+            "image": "images/guacamelee_super_turbo_championship_edition.jpg",
+            "file": null
+        },
+        {
+            "name":"Xenoblade Chronicles X",
+            "image": "images/xenoblade_chronicles_x.jpg",
+            "file": null
+        },
+        {
+            "name":"Bayonetta",
+            "image": "images/bayonetta.jpg",
+            "file": null
+        },
+        {
+            "name":"Bayonetta 2",
+            "image": "images/bayonetta_2.jpg",
             "file": null
         }
     ]
