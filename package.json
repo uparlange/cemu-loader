@@ -1,6 +1,6 @@
 {
   "name": "cemu-loader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Ugo Parlange",
   "description": "Cemu Loader",
   "main": "index.html",

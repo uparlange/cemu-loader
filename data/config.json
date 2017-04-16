@@ -123,6 +123,16 @@
             "name":"Bayonetta 2",
             "image": "images/bayonetta_2.jpg",
             "file": null
+        },
+        {
+            "name":"The Legend of Zelda: Breath of the Wild",
+            "image": "images/the_legend_of_zelda_breath_of_the_wild.jpg",
+            "file": null
+        },
+        {
+            "name":"Shovel Knight",
+            "image": "images/shovel_knight.jpg",
+            "file": null
         }
     ]
 }

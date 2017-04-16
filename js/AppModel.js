@@ -73,9 +73,7 @@ define(["AppUtils"],
 					configFile = currentConfigFile;
 				}
 				configFile.file = AppUtils.getConfigFile();
-
 				this.config = configFile;
-
 				this.save();
 			},
 			_sortGamesFunction(g1, g2) {
