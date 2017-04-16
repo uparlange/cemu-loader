@@ -18,9 +18,12 @@ define(function () {
 			const path = require("path");
 			return path.resolve() + "\\data\\config.json";
 		},
-		getConfigFile: function () {
+		getHomeDir:function() {
 			const os = require("os");
-			return os.homedir() + "\\" + this.getPackage().name + ".json";
+			return os.homedir();
+		},
+		getConfigFile: function () {
+			return this.getHomeDir() + "\\" + this.getPackage().name + ".json";
 		}
 	};
 });

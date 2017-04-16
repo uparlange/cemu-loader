@@ -11,12 +11,33 @@
     vertical-align: middle;
 }
 
-#fileDialog
+.config-file-dialog
 {
     display:none;
 }
 
-#saveBtn
+.config-add-btn
 {
     float:right;
+}
+
+.config-launch-btn
+{
+    float:right;
+}
+
+.config-save-btn
+{
+    float:right;
+}
+
+.config-edit-btn
+{
+    float:right;
+}
+
+.config-delete-btn
+{
+    float:right;
+    margin-right:10px;
 }

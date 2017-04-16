@@ -18,6 +18,21 @@ define(["AppUtils", "AppModel", "RouterManager", "CemuManager"],
 			removeGame: function (game) {
 				this.model.removeGame(game);
 			},
+			toggleEditGame: function (game) {
+				game.edit = (game.edit === true) ? false : true;
+			},
+			openCemuFileDirectory:function() {
+				nw.Shell.showItemInFolder(this.model.config.cemu.file.replace(/"/g, ""));
+			},
+			openGameImageDirectory:function(game) {
+				nw.Shell.showItemInFolder(game.image);
+			},
+			openGameFileDirectory:function(game) {
+				nw.Shell.showItemInFolder(game.file.replace(/"/g, ""));
+			},
+			openConfigDirectory:function() {
+				nw.Shell.showItemInFolder(AppUtils.getConfigFile());
+			},
 			selectCemuFile: function () {
 				this._selectFile().subscribe((file) => {
 					this.model.setCemuFile(file);

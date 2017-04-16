@@ -21,7 +21,7 @@ gulp.task('copy-files', () => {
         streams.add(gulp.src([item])
             .pipe(gulp.dest('dist/')));
     });
-    ['css', 'data', 'html', 'images', 'js'].forEach((item) => {
+    ['css', 'data', 'html', 'images', 'js', 'node_modules/font-awesome/fonts'].forEach((item) => {
         streams.add(gulp.src([item + '/*.*'])
             .pipe(gulp.dest('dist/' + item)));
     });

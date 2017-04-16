@@ -13,7 +13,7 @@ define(["AppModel", "RouterManager"],
             },
             launchGame: function (game) {
                 if (game.file === null) {
-                    window.alert("Please configure '" + game.name);
+                    window.alert("Please configure " + game.name + " file");
                     this._routerManager.showConfig();
                     return;
                 }

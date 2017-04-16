@@ -24,7 +24,8 @@ define(["AppUtils"],
 					this.config.games.unshift({
 						name: "New Game",
 						image: null,
-						file: null
+						file: null,
+						edit:true
 					});
 				});
 			},
@@ -71,6 +72,7 @@ define(["AppUtils"],
 					});
 					configFile = currentConfigFile;
 				}
+				configFile.file = AppUtils.getConfigFile();
 
 				this.config = configFile;
 
