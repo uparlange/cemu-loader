@@ -7,7 +7,8 @@
             <li [ngClass]="model.currentView == '/list' ? 'is-active' : null" (click)="showView('/list')">
                 <a>
                     <span class="icon is-small"><i class="fa fa-gamepad"></i></span>
-                    Games ({{model.config.games.length}})
+                    <span *ngIf="model.config.games.length > 0; else nogames">My {{model.config.games.length}} game(s)</span>
+                    <template #nogames>My future game(s)</template>
                 </a>
             </li>
             <li [ngClass]="model.currentView == '/config' ? 'is-active' : null" (click)="showView('/config')">

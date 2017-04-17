@@ -65,7 +65,7 @@
     </tr>
 </table>
 <div class="config-header">
-    <span>Game list</span>
+    <span>My game(s)</span>
     <span class="icon config-add-btn" [title]="'Add game'" (click)="addGame()">
         <i class="fa fa-plus"></i>
     </span>
@@ -143,7 +143,7 @@
 </table>
 <div class="config-find-panel" *ngIf="searchPanelVisible">
     <div class="config-header">
-        <span>Select game</span>
+        <span>Select 1 game from {{model.games.length}} game(s)</span>
         <span class="icon config-cancel-btn" [title]="'Cancel'" (click)="cancelFindDbGame()">
             <i class="fa fa-ban"></i>
         </span>

@@ -9,7 +9,7 @@
 * Unzip content in "C:\Program Files\nwjs"
 
 ## Download application ##
-* Latest : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.1.1.nw
+* Latest : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.1.2.nw
 
 ## Launch application ##
 * Double click on the application (.nw file)
