@@ -22,7 +22,9 @@ define(["AppUtils", "AppModel", "RouterManager", "CemuManager"],
 			},
 			findDbGame: function (game) {
 				this.searchGameReference = game;
-				this.searchPanelVisible = true;
+				this.model.initDbGameList(() => {
+					this.searchPanelVisible = true;
+				});
 			},
 			cancelFindDbGame:function() {
 				this.searchPanelVisible = false;

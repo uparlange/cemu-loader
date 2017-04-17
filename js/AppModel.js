@@ -62,6 +62,38 @@ define(["AppUtils"],
 					game.file = '"' + file + '"';
 				});
 			},
+			initDbGameList: function (callback) {
+				if (this.games.length === 0) {
+					const fs = require("fs");
+					const db = fs.readFileSync(AppUtils.getDatabaseFile(), "utf8");
+					const xml2js = require("xml2js");
+					const parser = new xml2js.Parser();
+					parser.parseString(db, (err, result) => {
+						result.datafile.game.forEach((element) => {
+							if (element.type[0] === "WiiU") {
+								const id = element.id[0];
+								const name = element.$.name;
+								let locale = "EN";
+								if (name.indexOf("USA") !== -1) {
+									locale = "US";
+								} else if (name.indexOf("Japan") !== -1) {
+									locale = "JA";
+								}
+								const image = "http://art.gametdb.com/wiiu/coverHQ/" + locale + "/" + id + ".jpg?" + new Date().getTime();
+								this.games.push({
+									id: id,
+									name: name,
+									image: image
+								});
+							}
+						});
+					});
+					this.games.sort(this._sortGamesFunction);
+					callback();
+				} else {
+					callback();
+				}
+			},
 			_sortGamesFunction(g1, g2) {
 				if (g1.name < g2.name) {
 					return -1;
@@ -73,37 +105,11 @@ define(["AppUtils"],
 			},
 			_init: function () {
 				const fs = require("fs");
-				// init config file
 				if (fs.existsSync(this.config.file)) {
 					this.config = require(this.config.file);
 				} else {
 					this.save();
 				}
-				// init games
-				const db = fs.readFileSync(AppUtils.getDatabaseFile(), "utf8");
-				const xml2js = require("xml2js");
-				const parser = new xml2js.Parser();
-				parser.parseString(db, (err, result) => {
-					result.datafile.game.forEach((element) => {
-						if (element.type[0] === "WiiU") {
-							const id = element.id[0];
-							const name = element.$.name;
-							let locale = "EN";
-							if (name.indexOf("USA") !== -1) {
-								locale = "US";
-							} else if (name.indexOf("Japan") !== -1) {
-								locale = "JA";
-							}
-							const image = "http://art.gametdb.com/wiiu/coverHQ/" + locale + "/" + id + ".jpg?" + new Date().getTime();
-							this.games.push({
-								id: id,
-								name: name,
-								image: image
-							});
-						}
-					});
-				});
-				this.games.sort(this._sortGamesFunction);
 			}
 		});
 	});
