@@ -13,7 +13,7 @@ define(["AppModel", "RouterManager"],
             },
             launchGame: function (game) {
                 if (game.file === null) {
-                    window.alert("Please configure " + game.name + " file");
+                    window.alert("Please configure " + game.name + "'s file");
                     this._routerManager.showConfig();
                     return;
                 }
@@ -26,7 +26,7 @@ define(["AppModel", "RouterManager"],
             },
             _launch: function (cmd) {
                 if (this._model.config.cemu.file === null) {
-                    window.alert("Please configure Cemu file");
+                    window.alert("Please configure Cemu's file");
                     return;
                 }
                 const child_process = require("child_process");
