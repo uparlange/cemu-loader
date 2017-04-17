@@ -14,9 +14,12 @@ define(function () {
 		getPackage: function () {
 			return require("./package.json");
 		},
-		getBaseConfigFile: function () {
+		getDatabaseFile: function () {
 			const path = require("path");
-			return path.resolve() + "\\data\\config.json";
+			return path.resolve() + "\\data\\wiiutdb.xml";
+		},
+		getDatabaseImage:function(id) {
+			return "./images/" + id + ".jpg";
 		},
 		getHomeDir:function() {
 			const os = require("os");

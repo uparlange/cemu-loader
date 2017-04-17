@@ -86,9 +86,18 @@
                 <div *ngIf="game.edit === true">
                     <div class="field">
                         <label class="label">Name</label>
-                        <p class="control">
-                            <input class="input" type="text" [title]="game.name" [(ngModel)]="game.name">
-                        </p>
+                        <div class="field has-addons">
+                            <p class="control is-expanded">
+                                <input class="input" type="text" [title]="game.name" [(ngModel)]="game.name">
+                            </p>
+                            <p class="control">
+                                <a class="button is-primary">
+                                    <span class="icon" [title]="'Find game'" (click)="findDbGame(game)">
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
                     </div>
                     <div class="field">
                         <label class="label">Image</label>
@@ -100,13 +109,6 @@
                                 <a class="button is-primary">
                                     <span class="icon" [title]="'Select file'" (click)="selectGameImage(game)">
                                         <i class="fa fa-file-o"></i>
-                                    </span>
-                                </a>
-                            </p>
-                            <p class="control">
-                                <a class="button is-primary">
-                                    <span class="icon" [title]="'Open directory'" (click)="openGameImageDirectory(game)">
-                                        <i class="fa fa-folder-o"></i>
                                     </span>
                                 </a>
                             </p>
@@ -139,3 +141,18 @@
         </tr>
     </tbody>
 </table>
+<div class="config-find-panel" *ngIf="searchPanelVisible">
+    <div class="config-header">
+        <span>Select game</span>
+        <span class="icon config-cancel-btn" [title]="'Cancel'" (click)="cancelFindDbGame()">
+            <i class="fa fa-ban"></i>
+        </span>
+    </div>
+    <table class="table">
+        <tr *ngFor="let game of model.games; trackBy:model.trackGame" (click)="selectDbGame(game)">
+            <td>
+                {{game.name}}
+            </td>
+        </tr>
+    </table>
+</div>

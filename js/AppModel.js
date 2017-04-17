@@ -2,18 +2,29 @@ define(["AppUtils"],
 	function (AppUtils) {
 		return ng.core.Class({
 			constructor: [ng.core.NgZone,
-				function AppModel(NgZone) {
-					this._ngZone = NgZone;
-					this.config = {};
-					this.currentView = "/list";
-					this._initConfigFile();
-				}
+			function AppModel(NgZone) {
+				this._ngZone = NgZone;
+				this.config = {
+					file: AppUtils.getConfigFile(),
+					cemu: {
+						file: null,
+						fullscreen: true
+					},
+					games: []
+				};
+				this.games = [];
+				this.currentView = "/list";
+				this._init();
+			}
 			],
 			init: function () {
 				this.config.games.sort(this._sortGamesFunction);
 			},
 			save: function () {
 				const fs = require("fs");
+				this.config.games.forEach((game) => {
+					game.edit = false;
+				});
 				fs.writeFileSync(AppUtils.getConfigFile(), JSON.stringify(this.config));
 			},
 			trackGame: function (index, value) {
@@ -22,10 +33,11 @@ define(["AppUtils"],
 			addGame: function () {
 				this._ngZone.run(() => {
 					this.config.games.unshift({
+						id: null,
 						name: "New Game",
 						image: null,
 						file: null,
-						edit:true
+						edit: true
 					});
 				});
 			},
@@ -50,32 +62,6 @@ define(["AppUtils"],
 					game.file = '"' + file + '"';
 				});
 			},
-			_initConfigFile: function () {
-				const fs = require("fs");
-				let configFile = null;
-				let baseConfigFile = require(AppUtils.getBaseConfigFile());
-				if (!fs.existsSync(AppUtils.getConfigFile())) {
-					configFile = baseConfigFile;
-				} else {
-					const currentConfigFile = require(AppUtils.getConfigFile());
-					baseConfigFile.games.forEach((bItem) => {
-						let toAdd = true;
-						currentConfigFile.games.forEach((cItem) => {
-							if (bItem.name === cItem.name) {
-								toAdd = false;
-								return;
-							}
-						});
-						if (toAdd) {
-							currentConfigFile.games.push(bItem);
-						}
-					});
-					configFile = currentConfigFile;
-				}
-				configFile.file = AppUtils.getConfigFile();
-				this.config = configFile;
-				this.save();
-			},
 			_sortGamesFunction(g1, g2) {
 				if (g1.name < g2.name) {
 					return -1;
@@ -84,6 +70,40 @@ define(["AppUtils"],
 				} else {
 					return 0;
 				}
+			},
+			_init: function () {
+				const fs = require("fs");
+				// init config file
+				if (fs.existsSync(this.config.file)) {
+					this.config = require(this.config.file);
+				} else {
+					this.save();
+				}
+				// init games
+				const db = fs.readFileSync(AppUtils.getDatabaseFile(), "utf8");
+				const xml2js = require("xml2js");
+				const parser = new xml2js.Parser();
+				parser.parseString(db, (err, result) => {
+					result.datafile.game.forEach((element) => {
+						if (element.type[0] === "WiiU") {
+							const id = element.id[0];
+							const name = element.$.name;
+							let locale = "EN";
+							if (name.indexOf("USA") !== -1) {
+								locale = "US";
+							} else if (name.indexOf("Japan") !== -1) {
+								locale = "JA";
+							}
+							const image = "http://art.gametdb.com/wiiu/coverHQ/" + locale + "/" + id + ".jpg?" + new Date().getTime();
+							this.games.push({
+								id: id,
+								name: name,
+								image: image
+							});
+						}
+					});
+				});
+				this.games.sort(this._sortGamesFunction);
 			}
 		});
 	});

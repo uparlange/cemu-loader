@@ -11,30 +11,19 @@ define(["AppUtils", "AppModel", "CemuManager"],
 			],
 			ngOnInit: function () {
 				this.model.init();
-				this.onContextmenuHandler = (ev) => 
-				{
-					ev.preventDefault();
-					let game = null;
-					this.model.config.games.forEach((element) => 
-					{
-						if(element.name === ev.target.title) 
-						{
-							game = element;
-							return;
-						}
-					});
-					if(game !== null) 
-					{
+				this.onContextmenuHandler = (evt) => {
+					evt.preventDefault();
+					if (evt.target.id !== null) {
 						const gui = require("nw.gui");
 						const menu = new gui.Menu();
-						menu.append(new gui.MenuItem({ 
-							label: "Test", 
+						menu.append(new gui.MenuItem({
+							label: "Description",
 							click: () => {
-								gui.Shell.openExternal("http://www.jeuxvideo.com/recherche.php?q=Test : "+ game.name +"&t=40&m=51");
-							} 
+								gui.Shell.openExternal("http://www.gametdb.com/WiiU/" + evt.target.id);
+							}
 						}));
 						//menu.append(new gui.MenuItem({ type: "separator" }));
-						menu.popup(ev.x, ev.y);
+						menu.popup(evt.x, evt.y);
 					}
 					return false;
 				};

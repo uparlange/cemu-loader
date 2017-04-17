@@ -7,6 +7,8 @@ define(["AppUtils", "AppModel", "RouterManager", "CemuManager"],
 					this.model = AppModel;
 					this._routerManager = RouterManager;
 					this._cemuManager = CemuManager;
+					this.searchPanelVisible = false;
+					this.searchGameReference = null;
 				}
 			],
 			ngOnInit: function () {
@@ -18,19 +20,30 @@ define(["AppUtils", "AppModel", "RouterManager", "CemuManager"],
 			removeGame: function (game) {
 				this.model.removeGame(game);
 			},
+			findDbGame: function (game) {
+				this.searchGameReference = game;
+				this.searchPanelVisible = true;
+			},
+			cancelFindDbGame:function() {
+				this.searchPanelVisible = false;
+			},
+			selectDbGame: function (game) {
+				this.searchPanelVisible = false;
+				this.searchGameReference.id = game.id;
+				this.searchGameReference.name = game.name;
+				this.searchGameReference.image = game.image;
+				this.searchGameReference = null;
+			},
 			toggleEditGame: function (game) {
 				game.edit = (game.edit === true) ? false : true;
 			},
-			openCemuFileDirectory:function() {
+			openCemuFileDirectory: function () {
 				nw.Shell.showItemInFolder(this.model.config.cemu.file.replace(/"/g, ""));
 			},
-			openGameImageDirectory:function(game) {
-				nw.Shell.showItemInFolder(game.image);
-			},
-			openGameFileDirectory:function(game) {
+			openGameFileDirectory: function (game) {
 				nw.Shell.showItemInFolder(game.file.replace(/"/g, ""));
 			},
-			openConfigDirectory:function() {
+			openConfigDirectory: function () {
 				nw.Shell.showItemInFolder(AppUtils.getConfigFile());
 			},
 			selectCemuFile: function () {
