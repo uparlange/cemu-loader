@@ -2,20 +2,20 @@ define(["AppUtils"],
 	function (AppUtils) {
 		return ng.core.Class({
 			constructor: [ng.core.NgZone,
-			function AppModel(NgZone) {
-				this._ngZone = NgZone;
-				this.config = {
-					file: AppUtils.getConfigFile(),
-					cemu: {
-						file: null,
-						fullscreen: true
-					},
-					games: []
-				};
-				this.games = [];
-				this.currentView = "/list";
-				this._init();
-			}
+				function AppModel(NgZone) {
+					this._ngZone = NgZone;
+					this.config = {
+						file: AppUtils.getConfigFile(),
+						cemu: {
+							file: null,
+							fullscreen: true
+						},
+						games: []
+					};
+					this.games = [];
+					this.currentView = "/list";
+					this._init();
+				}
 			],
 			init: function () {
 				this.config.games.sort(this._sortGamesFunction);
@@ -70,7 +70,8 @@ define(["AppUtils"],
 					const parser = new xml2js.Parser();
 					parser.parseString(db, (err, result) => {
 						result.datafile.game.forEach((element) => {
-							if (element.type[0] === "WiiU") {
+							const type = element.type[0];
+							if (type === "WiiU" || type === "eShop") {
 								const id = element.id[0];
 								const name = element.$.name;
 								let locale = "EN";
