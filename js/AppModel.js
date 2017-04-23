@@ -1,9 +1,8 @@
 define(["AppUtils"],
 	function (AppUtils) {
 		return ng.core.Class({
-			constructor: [ng.core.NgZone,
-				function AppModel(NgZone) {
-					this._ngZone = NgZone;
+			constructor: [
+				function AppModel() {
 					this.config = {
 						file: AppUtils.getConfigFile(),
 						cemu: {
@@ -31,36 +30,26 @@ define(["AppUtils"],
 				return value.name;
 			},
 			addGame: function () {
-				this._ngZone.run(() => {
-					this.config.games.unshift({
-						id: null,
-						name: "New Game",
-						image: null,
-						file: null,
-						edit: true
-					});
+				this.config.games.unshift({
+					id: null,
+					name: "New Game",
+					image: null,
+					file: null,
+					edit: true
 				});
 			},
 			removeGame: function (game) {
-				this._ngZone.run(() => {
-					const index = this.config.games.indexOf(game);
-					this.config.games.splice(index, 1);
-				});
+				const index = this.config.games.indexOf(game);
+				this.config.games.splice(index, 1);
 			},
 			setCemuFile: function (file) {
-				this._ngZone.run(() => {
-					this.config.cemu.file = '"' + file + '"';
-				});
+				this.config.cemu.file = '"' + file + '"';
 			},
 			setGameImage: function (game, file) {
-				this._ngZone.run(() => {
-					game.image = "file:" + file;
-				});
+				game.image = "file:" + file;
 			},
 			setGameFile: function (game, file) {
-				this._ngZone.run(() => {
-					game.file = '"' + file + '"';
-				});
+				game.file = '"' + file + '"';
 			},
 			initDbGameList: function (callback) {
 				if (this.games.length === 0) {

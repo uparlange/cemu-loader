@@ -27,6 +27,7 @@ define(["AppModel", "RouterManager"],
             _launch: function (cmd) {
                 if (this._model.config.cemu.file === null) {
                     window.alert("Please configure Cemu's file");
+                    this._routerManager.showConfig();
                     return;
                 }
                 const child_process = require("child_process");

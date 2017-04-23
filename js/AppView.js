@@ -14,7 +14,6 @@ define(["AppUtils", "AppModel", "RouterManager"],
 				const win = nw.Window.get();
 				const pkg = AppUtils.getPackage();
 				win.title = pkg.description + " " + pkg.version;
-				win.menu = null;
 			},
 			showView: function (view) {
 				this._routerManager.showView(view);

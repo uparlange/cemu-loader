@@ -8,7 +8,7 @@
                 <a>
                     <span class="icon is-small"><i class="fa fa-gamepad"></i></span>
                     <span *ngIf="model.config.games.length > 0; else nogames">My {{model.config.games.length}} game(s)</span>
-                    <template #nogames>My future game(s)</template>
+                    <ng-template #nogames>My future game(s)</ng-template>
                 </a>
             </li>
             <li [ngClass]="model.currentView == '/config' ? 'is-active' : null" (click)="showView('/config')">

@@ -13,18 +13,7 @@ define(["AppUtils", "AppModel", "CemuManager"],
 				this.model.init();
 				this.onContextmenuHandler = (evt) => {
 					evt.preventDefault();
-					if (evt.target.id !== null) {
-						const gui = require("nw.gui");
-						const menu = new gui.Menu();
-						menu.append(new gui.MenuItem({
-							label: "Description",
-							click: () => {
-								gui.Shell.openExternal("http://www.gametdb.com/WiiU/" + evt.target.id);
-							}
-						}));
-						//menu.append(new gui.MenuItem({ type: "separator" }));
-						menu.popup(evt.x, evt.y);
-					}
+					this._displayRightClickMenu(evt);
 					return false;
 				};
 				document.body.addEventListener("contextmenu", this.onContextmenuHandler);
@@ -34,6 +23,33 @@ define(["AppUtils", "AppModel", "CemuManager"],
 			},
 			launchGame: function (game) {
 				this._cemuManager.launchGame(game);
+			},
+			_displayRightClickMenu: function (evt) {
+				const game = this._getGameByName(evt.target.title);
+				if (game.id !== null) {
+					const gui = require("nw.gui");
+					const menu = new gui.Menu();
+					menu.append(new gui.MenuItem({
+						label: "GameTDB",
+						click: () => {
+							gui.Shell.openExternal("http://www.gametdb.com/WiiU/" + game.id);
+						}
+					}));
+					//menu.append(new gui.MenuItem({ type: "separator" }));
+					menu.popup(evt.x, evt.y);
+				}
+			},
+			_getGameByName: function (name) {
+				let game = {
+					id: null
+				};
+				this.model.config.games.forEach((element) => {
+					if (element.name === name) {
+						game = element;
+						return;
+					}
+				});
+				return game;
 			}
 		})
 	});

@@ -40,13 +40,16 @@ define(["AppUtils", "AppModel", "RouterManager", "CemuManager"],
 				game.edit = (game.edit === true) ? false : true;
 			},
 			openCemuFileDirectory: function () {
-				nw.Shell.showItemInFolder(this.model.config.cemu.file.replace(/"/g, ""));
+				const item = this.model.config.cemu.file.replace(/"/g, "");
+				nw.Shell.showItemInFolder(item);
 			},
 			openGameFileDirectory: function (game) {
-				nw.Shell.showItemInFolder(game.file.replace(/"/g, ""));
+				const item = game.file.replace(/"/g, "");
+				nw.Shell.showItemInFolder(item);
 			},
 			openConfigDirectory: function () {
-				nw.Shell.showItemInFolder(AppUtils.getConfigFile());
+				const item = AppUtils.getConfigFile();
+				nw.Shell.showItemInFolder(item);
 			},
 			selectCemuFile: function () {
 				this._selectFile().subscribe((file) => {
@@ -65,7 +68,7 @@ define(["AppUtils", "AppModel", "RouterManager", "CemuManager"],
 			},
 			saveConfiguration: function () {
 				this.model.save();
-				this._routerManager.showView("/list");
+				this._routerManager.showList();
 			},
 			launchCemu: function () {
 				this._cemuManager.launchCemu();
