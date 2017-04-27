@@ -1,0 +1,38 @@
+ .config-params-file-dialog
+{
+    display:none;
+}
+
+ .config-params-add-btn
+{
+    float:right;
+}
+
+ .config-params-launch-btn
+{
+    float:right;
+}
+
+ .config-params-save-btn
+{
+    float:right;
+}
+
+ .config-params-edit-btn
+{
+    float:right;
+}
+
+ .config-params-delete-btn
+{
+    float:right;
+    margin-right:10px;
+}
+
+ .config-params-find-panel
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}

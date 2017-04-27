@@ -1,1 +1,1 @@
-<img *ngFor="let game of model.config.games; trackBy:model.trackGame" [src]="game.image" [title]="game.name" (click)="launchGame(game)">
+<img *ngFor="let game of model.config.games | orderBy:'name'; trackBy:model.trackGame" [src]="game.image" [title]="game.name" (click)="launchGame(game)">

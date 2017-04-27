@@ -10,7 +10,6 @@ define(["AppUtils", "AppModel", "CemuManager"],
 				}
 			],
 			ngOnInit: function () {
-				this.model.init();
 				this.onContextmenuHandler = (evt) => {
 					evt.preventDefault();
 					this._displayRightClickMenu(evt);

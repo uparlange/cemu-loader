@@ -12,35 +12,31 @@ define(["AppUtils"],
 						games: []
 					};
 					this.games = [];
-					this.currentView = "/list";
+					this.currentGame = null;
 					this._init();
 				}
 			],
-			init: function () {
-				this.config.games.sort(this._sortGamesFunction);
-			},
 			save: function () {
 				const fs = require("fs");
-				this.config.games.forEach((game) => {
-					game.edit = false;
-				});
 				fs.writeFileSync(AppUtils.getConfigFile(), JSON.stringify(this.config));
 			},
 			trackGame: function (index, value) {
 				return value.name;
 			},
 			addGame: function () {
-				this.config.games.unshift({
+				const game = {
 					id: null,
 					name: "New Game",
 					image: null,
-					file: null,
-					edit: true
-				});
+					file: null
+				};
+				this.config.games.unshift(game);
+				this.currentGame = game;
 			},
 			removeGame: function (game) {
 				const index = this.config.games.indexOf(game);
 				this.config.games.splice(index, 1);
+				this.currentGame = null;
 			},
 			setCemuFile: function (file) {
 				this.config.cemu.file = '"' + file + '"';
@@ -51,8 +47,9 @@ define(["AppUtils"],
 			setGameFile: function (game, file) {
 				game.file = '"' + file + '"';
 			},
-			initDbGameList: function (callback) {
+			initGames: function () {
 				if (this.games.length === 0) {
+					const games = [];
 					const fs = require("fs");
 					const db = fs.readFileSync(AppUtils.getDatabaseFile(), "utf8");
 					const xml2js = require("xml2js");
@@ -70,7 +67,7 @@ define(["AppUtils"],
 									locale = "JA";
 								}
 								const image = "http://art.gametdb.com/wiiu/coverHQ/" + locale + "/" + id + ".jpg?" + new Date().getTime();
-								this.games.push({
+								games.push({
 									id: id,
 									name: name,
 									image: image
@@ -78,19 +75,7 @@ define(["AppUtils"],
 							}
 						});
 					});
-					this.games.sort(this._sortGamesFunction);
-					callback();
-				} else {
-					callback();
-				}
-			},
-			_sortGamesFunction(g1, g2) {
-				if (g1.name < g2.name) {
-					return -1;
-				} else if (g1.name > g2.name) {
-					return 1;
-				} else {
-					return 0;
+					this.games = games;
 				}
 			},
 			_init: function () {

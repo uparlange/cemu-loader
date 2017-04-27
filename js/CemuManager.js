@@ -1,10 +1,10 @@
-define(["AppModel", "RouterManager"],
-    function (AppModel, RouterManager) {
+define(["AppModel"],
+    function (AppModel) {
         return ng.core.Class({
-            constructor: [AppModel, RouterManager,
-                function CemuManager(AppModel, RouterManager) {
+            constructor: [AppModel, ng.router.Router,
+                function CemuManager(AppModel, Router) {
                     this._model = AppModel;
-                    this._routerManager = RouterManager;
+                    this._router = Router;
                 }
             ],
             launchCemu: function () {
@@ -14,7 +14,7 @@ define(["AppModel", "RouterManager"],
             launchGame: function (game) {
                 if (game.file === null) {
                     window.alert("Please configure " + game.name + "'s file");
-                    this._routerManager.showConfig();
+                    this._router.navigate(["/config"]);
                     return;
                 }
                 let cmd = this._model.config.cemu.file;
@@ -27,7 +27,7 @@ define(["AppModel", "RouterManager"],
             _launch: function (cmd) {
                 if (this._model.config.cemu.file === null) {
                     window.alert("Please configure Cemu's file");
-                    this._routerManager.showConfig();
+                    this._router.navigate(["/config"]);
                     return;
                 }
                 const child_process = require("child_process");

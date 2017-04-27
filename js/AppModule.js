@@ -1,5 +1,5 @@
-define(["CommonModule", "AppView", "AppUtils", "AppModel", "RouterManager", "CemuManager"],
-	function (CommonModule, AppView, AppUtils, AppModel, RouterManager, CemuManager) {
+define(["CommonModule", "AppView", "AppUtils", "AppModel", "CemuManager"],
+	function (CommonModule, AppView, AppUtils, AppModel, CemuManager) {
 		ng.core.enableProdMode();
 		ng.platformBrowserDynamic.platformBrowserDynamic().bootstrapModule(
 			ng.core.NgModule({
@@ -9,15 +9,15 @@ define(["CommonModule", "AppView", "AppUtils", "AppModel", "RouterManager", "Cem
 					ng.router.RouterModule.forRoot([
 						{ path: "", redirectTo: "list", pathMatch: "full" },
 						{ path: "list", loadChildren: AppUtils.getModuleName("ListModule") },
-						{ path: "config", loadChildren: AppUtils.getModuleName("ConfigModule") }
-					], { useHash: true })
+						{ path: "config", loadChildren: AppUtils.getModuleName("ConfigModule") },
+						{ path: "resources", loadChildren: AppUtils.getModuleName("ResourcesModule") }
+					])
 				],
 				declarations: [
 					AppView
 				],
 				providers: [
 					AppModel,
-					RouterManager,
 					CemuManager
 				],
 				bootstrap: [
