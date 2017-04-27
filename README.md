@@ -10,6 +10,7 @@
 
 ## Download application ##
 * Latest : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.1.6.nw
+* Changelog : https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md
 
 ## Launch application ##
 * Double click on the application (.nw file)
