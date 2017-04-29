@@ -47,44 +47,46 @@ define(["AppUtils"],
 			setGameFile: function (game, file) {
 				game.file = '"' + file + '"';
 			},
-			initGames: function () {
-				if (this.games.length === 0) {
-					const games = [];
-					const fs = require("fs");
-					const db = fs.readFileSync(AppUtils.getDatabaseFile(), "utf8");
-					const xml2js = require("xml2js");
-					const parser = new xml2js.Parser();
-					parser.parseString(db, (err, result) => {
-						result.datafile.game.forEach((element) => {
-							const type = element.type[0];
-							if (type === "WiiU" || type === "eShop") {
-								const id = element.id[0];
-								const name = element.$.name;
-								let locale = "EN";
-								if (name.indexOf("USA") !== -1) {
-									locale = "US";
-								} else if (name.indexOf("Japan") !== -1) {
-									locale = "JA";
-								}
-								const image = "http://art.gametdb.com/wiiu/coverHQ/" + locale + "/" + id + ".jpg?" + new Date().getTime();
-								games.push({
-									id: id,
-									name: name,
-									image: image
-								});
-							}
-						});
-					});
-					this.games = games;
-				}
-			},
 			_init: function () {
+				this._initConfig();
+				this._initGameDb();
+			},
+			_initConfig: function () {
 				const fs = require("fs");
 				if (fs.existsSync(this.config.file)) {
 					this.config = require(this.config.file);
 				} else {
 					this.save();
 				}
+			},
+			_initGameDb: function () {
+				const games = [];
+				const fs = require("fs");
+				const db = fs.readFileSync(AppUtils.getDatabaseFile(), "utf8");
+				const xml2js = require("xml2js");
+				const parser = new xml2js.Parser();
+				parser.parseString(db, (err, result) => {
+					result.datafile.game.forEach((element) => {
+						const type = element.type[0];
+						if (type === "WiiU" || type === "eShop") {
+							const id = element.id[0];
+							const name = element.$.name;
+							let locale = "EN";
+							if (name.indexOf("USA") !== -1) {
+								locale = "US";
+							} else if (name.indexOf("Japan") !== -1) {
+								locale = "JA";
+							}
+							const image = "http://art.gametdb.com/wiiu/coverHQ/" + locale + "/" + id + ".jpg?" + new Date().getTime();
+							games.push({
+								id: id,
+								name: name,
+								image: image
+							});
+						}
+					});
+					this.games = games;
+				});
 			}
 		});
 	});

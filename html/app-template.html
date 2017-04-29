@@ -4,20 +4,20 @@
 <div class="app-header">
     <div class="tabs is-centered is-small">
         <ul>
-            <li [ngClass]="currentView == '/list' ? 'is-active' : null" (click)="showView('/list')">
+            <li [ngClass]="currentView == 'list' ? 'is-active' : null" (click)="showView('list')">
                 <a>
                     <span class="icon is-small"><i class="fa fa-gamepad"></i></span>
                     <span *ngIf="model.config.games.length > 0; else nogames">My {{model.config.games.length}} game(s)</span>
                     <ng-template #nogames>My future game(s)</ng-template>
                 </a>
             </li>
-            <li [ngClass]="currentView == '/config' ? 'is-active' : null" (click)="showView('/config')">
+            <li [ngClass]="currentView == 'config' ? 'is-active' : null" (click)="showView('config')">
                 <a>
                     <span class="icon is-small"><i class="fa fa-cogs"></i></span>
                     Configuration
                 </a>
             </li>
-            <li [ngClass]="currentView == '/resources' ? 'is-active' : null" (click)="showView('/resources')">
+            <li [ngClass]="currentView == 'resources' ? 'is-active' : null" (click)="showView('resources')">
                 <a>
                     <span class="icon is-small"><i class="fa fa-link"></i></span>
                     Resources

@@ -1,36 +1,31 @@
-define(["AppUtils", "AppModel"],
-	function (AppUtils, AppModel) {
+define(["AppUtils", "AppModel", "RouterManager"],
+	function (AppUtils, AppModel, RouterManager) {
 		const conf = AppUtils.getComponentConfiguration("app", {
 			selector: "body"
 		});
 		return ng.core.Component(conf).Class({
-			constructor: [AppModel, ng.router.Router,
-				function AppView(AppModel, Router) {
+			constructor: [AppModel, RouterManager,
+				function AppView(AppModel, RouterManager) {
 					this.model = AppModel;
-					this._router = Router;
-					this._routerEventsSubscriber = null;
-					this.currentView = "/list";
+					this._routerManager = RouterManager;
+					this._navigationEndEventEmitter = null;
+					this.currentView = "list";
 				}
 			],
 			ngOnInit: function () {
 				const win = nw.Window.get();
-				const pkg = AppUtils.getPackage();
+				const pkg = AppUtils.getPackageFile();
 				win.title = pkg.description + " " + pkg.version;
-				this._routerEventsSubscriber = this._router.events.subscribe((event) => {
-					if (event.constructor.name === "NavigationEnd") {
-						const currentView = "/" + event.url.split("/")[1];
-						if (currentView !== "/") {
-							this.currentView = currentView;
-						}
-					}
+				this._navigationEndEventEmitter = this._routerManager.on("NAVIGATION_END").subscribe((event) => {
+					this.currentView = event.toUrl.substring(1).split("/")[0];
 				});
 			},
 			ngOnDestroy: function () {
-				this._routerEventsSubscriber();
+				this._navigationEndEventEmitter();
 			},
 			showView: function (view) {
 				this.currentView = view;
-				this._router.navigate([view]);
+				this._routerManager.navigate(["/" + view]);
 			}
 		});
 	});

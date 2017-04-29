@@ -2,7 +2,7 @@ define(["AppUtils", "AppModel", "CemuManager"],
 	function (AppUtils, AppModel, CemuManager) {
 		const conf = AppUtils.getComponentConfiguration("config-params");
 		return ng.core.Component(conf).Class({
-			constructor: [AppModel, CemuManager, ng.router.Router,
+			constructor: [AppModel, CemuManager, ng.router.Router, 
 				function ConfigParamsView(AppModel, CemuManager, Router) {
 					this.model = AppModel;
 					this._router = Router;

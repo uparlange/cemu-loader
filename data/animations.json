@@ -1,0 +1,33 @@
+{
+    "duration": 75,
+    "transitions": [
+        {
+            "from": "/list",
+            "to": "/config/params",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutLeft",
+            "reverse": true
+        },
+        {
+            "from": "/list",
+            "to": "/resources",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutLeft",
+            "reverse": true
+        },
+        {
+            "from": "/config/params",
+            "to": "/resources",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutLeft",
+            "reverse": true
+        },
+        {
+            "from": "/config/params",
+            "to": "/config/games",
+            "enterAnimation": "slideInUp",
+            "leaveAnimation": "slideOutUp",
+            "reverse": true
+        }
+    ]
+}

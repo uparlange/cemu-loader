@@ -1,5 +1,5 @@
-define(["CommonModule", "AppView", "AppUtils", "AppModel", "CemuManager"],
-	function (CommonModule, AppView, AppUtils, AppModel, CemuManager) {
+define(["CommonModule", "AppView", "AppUtils", "AppModel", "CemuManager", "AnimationManager", "RouterManager"],
+	function (CommonModule, AppView, AppUtils, AppModel, CemuManager, AnimationManager, RouterManager) {
 		ng.core.enableProdMode();
 		ng.platformBrowserDynamic.platformBrowserDynamic().bootstrapModule(
 			ng.core.NgModule({
@@ -18,7 +18,9 @@ define(["CommonModule", "AppView", "AppUtils", "AppModel", "CemuManager"],
 				],
 				providers: [
 					AppModel,
-					CemuManager
+					CemuManager,
+					AnimationManager,
+					RouterManager
 				],
 				bootstrap: [
 					AppView

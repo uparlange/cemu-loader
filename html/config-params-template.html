@@ -1,143 +1,145 @@
-<input id="fileDialog" class=" config-params-file-dialog" type="file" />
-<div class="panel-header">
-    <span>Configuration</span>
-    <span class="icon  config-params-save-btn" title="Save configuration" (click)="saveConfiguration()">
-        <i class="fa fa-floppy-o"></i>
-    </span>
-</div>
-<table class="table">
-    <tr>
-        <td width="100">File</td>
-        <td>
-            <div class="field has-addons">
-                <p class="control is-expanded">
-                    <input class="input" readonly type="text" [title]="model.config.file" [ngModel]="model.config.file">
-                </p>
-                <p class="control">
-                    <a class="button is-primary">
-                        <span class="icon" title="Open directory" (click)="openConfigDirectory()">
-                            <i class="fa fa-folder-o"></i>
-                        </span>
-                    </a>
-                </p>
-            </div>
-        </td>
-    </tr>
-</table>
-<div class="panel-header">
-    <span>Cemu</span>
-    <span class="icon  config-params-launch-btn" title="Launch Cemu" (click)="launchCemu()">
-        <i class="fa fa-bullseye"></i>
-    </span>
-</div>
-<table class="table">
-    <tr>
-        <td width="100">File</td>
-        <td>
-            <div class="field has-addons">
-                <p class="control is-expanded">
-                    <input class="input" type="text" id="file" readonly [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
-                </p>
-                <p class="control">
-                    <a class="button is-primary">
-                        <span class="icon" title="Select file" (click)="selectCemuFile()">
-                            <i class="fa fa-file-o"></i>
-                        </span>
-                    </a>
-                </p>
-                <p class="control">
-                    <a class="button is-primary">
-                        <span class="icon" title="Open directory" (click)="openCemuFileDirectory()">
-                            <i class="fa fa-folder-o"></i>
-                        </span>
-                    </a>
-                </p>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label for="fullscreen">Fullscreen</label>
-        </td>
-        <td>
-            <input class="checkbox" type="checkbox" id="fullscreen" [(ngModel)]="model.config.cemu.fullscreen">
-        </td>
-    </tr>
-</table>
-<div class="panel-header">
-    <span>My game(s)</span>
-    <span class="icon  config-params-add-btn" title="Add game" (click)="addGame()">
-        <i class="fa fa-plus"></i>
-    </span>
-</div>
-<table class="table">
-    <tbody>
-        <tr *ngFor="let game of model.config.games | orderBy:'name'; trackBy:model.trackGame">
+<div [animation]="animation">
+    <input id="fileDialog" class=" config-params-file-dialog" type="file" />
+    <div class="panel-header">
+        <span>Configuration</span>
+        <span class="icon  config-params-save-btn" title="Save configuration" (click)="saveConfiguration()">
+            <i class="fa fa-floppy-o"></i>
+        </span>
+    </div>
+    <table class="table">
+        <tr>
+            <td width="100">File</td>
             <td>
-                <div>
-                    <span *ngIf="model.currentGame !== game">{{game.name}}</span>
-                    <span class="icon  config-params-edit-btn" [title]="'Edit ' + game.name" (click)="toggleEditGame(game)">
-                        <i class="fa fa-pencil"></i>
-                    </span>
-                    <span *ngIf="model.currentGame === game" class="icon  config-params-delete-btn" [title]="'Delete ' + game.name" (click)="removeGame(game)">
-                        <i class="fa fa-trash-o"></i>
-                    </span>
-                </div>
-                <div *ngIf="model.currentGame === game">
-                    <div class="field">
-                        <label class="label">Name</label>
-                        <div class="field has-addons">
-                            <p class="control is-expanded">
-                                <input class="input" type="text" [title]="game.name" [(ngModel)]="game.name">
-                            </p>
-                            <p class="control">
-                                <a class="button is-primary">
-                                    <span class="icon" title="Find game" (click)="findGame()">
-                                        <i class="fa fa-search"></i>
-                                    </span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Image</label>
-                        <div class="field has-addons">
-                            <p class="control is-expanded">
-                                <input class="input" readonly [title]="game.image" type="text" [ngModel]="game.image">
-                            </p>
-                            <p class="control">
-                                <a class="button is-primary">
-                                    <span class="icon" title="Select file" (click)="selectGameImage(game)">
-                                        <i class="fa fa-file-o"></i>
-                                    </span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">File</label>
-                        <div class="field has-addons">
-                            <p class="control is-expanded">
-                                <input class="input" readonly [title]="game.file" type="text" [ngModel]="game.file">
-                            </p>
-                            <p class="control">
-                                <a class="button is-primary">
-                                    <span class="icon" title="Select file" (click)="selectGameFile(game)">
-                                        <i class="fa fa-file-o"></i>
-                                    </span>
-                                </a>
-                            </p>
-                            <p class="control">
-                                <a class="button is-primary">
-                                    <span class="icon" title="Open directory" (click)="openGameFileDirectory(game)">
-                                        <i class="fa fa-folder-o"></i>
-                                    </span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+                <div class="field has-addons">
+                    <p class="control is-expanded">
+                        <input class="input" readonly type="text" [title]="model.config.file" [ngModel]="model.config.file">
+                    </p>
+                    <p class="control">
+                        <a class="button is-primary">
+                            <span class="icon" title="Open directory" (click)="openConfigDirectory()">
+                                <i class="fa fa-folder-o"></i>
+                            </span>
+                        </a>
+                    </p>
                 </div>
             </td>
         </tr>
-    </tbody>
-</table>
+    </table>
+    <div class="panel-header">
+        <span>Cemu</span>
+        <span class="icon  config-params-launch-btn" title="Launch Cemu" (click)="launchCemu()">
+            <i class="fa fa-bullseye"></i>
+        </span>
+    </div>
+    <table class="table">
+        <tr>
+            <td width="100">File</td>
+            <td>
+                <div class="field has-addons">
+                    <p class="control is-expanded">
+                        <input class="input" type="text" id="file" readonly [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
+                    </p>
+                    <p class="control">
+                        <a class="button is-primary">
+                            <span class="icon" title="Select file" (click)="selectCemuFile()">
+                                <i class="fa fa-file-o"></i>
+                            </span>
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a class="button is-primary">
+                            <span class="icon" title="Open directory" (click)="openCemuFileDirectory()">
+                                <i class="fa fa-folder-o"></i>
+                            </span>
+                        </a>
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fullscreen">Fullscreen</label>
+            </td>
+            <td>
+                <input class="checkbox" type="checkbox" id="fullscreen" [(ngModel)]="model.config.cemu.fullscreen">
+            </td>
+        </tr>
+    </table>
+    <div class="panel-header">
+        <span>My game(s)</span>
+        <span class="icon  config-params-add-btn" title="Add game" (click)="addGame()">
+            <i class="fa fa-plus"></i>
+        </span>
+    </div>
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let game of model.config.games | orderBy:'name'; trackBy:model.trackGame">
+                <td>
+                    <div>
+                        <span *ngIf="model.currentGame !== game">{{game.name}}</span>
+                        <span class="icon  config-params-edit-btn" [title]="'Edit ' + game.name" (click)="toggleEditGame(game)">
+                            <i class="fa fa-pencil"></i>
+                        </span>
+                        <span *ngIf="model.currentGame === game" class="icon  config-params-delete-btn" [title]="'Delete ' + game.name" (click)="removeGame(game)">
+                            <i class="fa fa-trash-o"></i>
+                        </span>
+                    </div>
+                    <div *ngIf="model.currentGame === game">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="field has-addons">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" [title]="game.name" [(ngModel)]="game.name">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-primary">
+                                        <span class="icon" title="Find game" (click)="findGame()">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Image</label>
+                            <div class="field has-addons">
+                                <p class="control is-expanded">
+                                    <input class="input" readonly [title]="game.image" type="text" [ngModel]="game.image">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-primary">
+                                        <span class="icon" title="Select file" (click)="selectGameImage(game)">
+                                            <i class="fa fa-file-o"></i>
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">File</label>
+                            <div class="field has-addons">
+                                <p class="control is-expanded">
+                                    <input class="input" readonly [title]="game.file" type="text" [ngModel]="game.file">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-primary">
+                                        <span class="icon" title="Select file" (click)="selectGameFile(game)">
+                                            <i class="fa fa-file-o"></i>
+                                        </span>
+                                    </a>
+                                </p>
+                                <p class="control">
+                                    <a class="button is-primary">
+                                        <span class="icon" title="Open directory" (click)="openGameFileDirectory(game)">
+                                            <i class="fa fa-folder-o"></i>
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

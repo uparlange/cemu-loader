@@ -1,5 +1,10 @@
 # Changelog #
 
+## 1.1.7 ##
+
+* Add H264 decoder plugin in resources
+* Manage transitions between views
+
 ## 1.1.6 ##
 
 * Add resources view

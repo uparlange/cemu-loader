@@ -1,25 +1,27 @@
-<div class="panel-header">
-    <span>Select 1 game</span>
-    <span class="icon  config-games-cancel-btn" title="Cancel" (click)="cancel()">
-        <i class="fa fa-ban"></i>
-    </span>
+<div [animation]="animation">
+    <div class="panel-header">
+        <span>Select 1 game</span>
+        <span class="icon  config-games-cancel-btn" title="Cancel" (click)="cancel()">
+            <i class="fa fa-ban"></i>
+        </span>
+    </div>
+    <div class="field has-addons">
+        <p class="control is-expanded">
+            <input autofocus class="input" placeholder="Filter" [(ngModel)]="filterValue">
+        </p>
+        <p class="control">
+            <a class="button is-primary" (click)="deleteFilter()">
+                <span class="icon" title="Delete filter">
+                    <i class="fa fa-eraser"></i>
+                </span>
+            </a>
+        </p>
+    </div>
+    <table class="table">
+        <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue; trackBy:model.trackGame" (click)="select(game)">
+            <td>
+                {{game.name}}
+            </td>
+        </tr>
+    </table>
 </div>
-<div class="field has-addons">
-    <p class="control is-expanded">
-        <input autofocus class="input" placeholder="Filter" [(ngModel)]="filterValue">
-    </p>
-    <p class="control">
-        <a class="button is-primary" (click)="deleteFilter()">
-            <span class="icon" title="Delete filter">
-                <i class="fa fa-eraser"></i>
-            </span>
-        </a>
-    </p>
-</div>
-<table class="table">
-    <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue; trackBy:model.trackGame" (click)="select(game)">
-        <td>
-            {{game.name}}
-        </td>
-    </tr>
-</table>

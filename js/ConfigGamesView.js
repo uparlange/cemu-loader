@@ -9,11 +9,8 @@ define(["AppUtils", "AppModel"],
 					this.filterValue = null;
 				}
 			],
-			ngOnInit: function () {
-				this.model.initGames();
-			},
 			select: function (game) {
-				if(this.model.currentGame != null) {
+				if (this.model.currentGame != null) {
 					this.model.currentGame.id = game.id;
 					this.model.currentGame.name = game.name;
 					this.model.currentGame.image = game.image;

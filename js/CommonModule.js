@@ -1,5 +1,5 @@
-define(["OrderByPipe", "FilterByPipe"],
-	function (OrderByPipe, FilterByPipe) {
+define(["OrderByPipe", "FilterByPipe", "AnimationDirective"],
+	function (OrderByPipe, FilterByPipe, AnimationDirective) {
 		return ng.core.NgModule({
 			imports: [
 				ng.common.CommonModule,
@@ -8,14 +8,16 @@ define(["OrderByPipe", "FilterByPipe"],
 			],
 			declarations: [
 				OrderByPipe,
-				FilterByPipe
+				FilterByPipe,
+				AnimationDirective
 			],
 			exports: [
 				ng.common.CommonModule,
 				ng.http.HttpModule,
 				ng.forms.FormsModule,
 				OrderByPipe,
-				FilterByPipe
+				FilterByPipe,
+				AnimationDirective
 			]
 		}).Class({
 			constructor: [
