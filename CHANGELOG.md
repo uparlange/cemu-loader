@@ -1,5 +1,10 @@
 # Changelog #
 
+## 1.1.9 ##
+
+* Reduce package size (remove unused dependency)
+* Optimize config game list
+ 
 ## 1.1.8 ##
 
 * Start duration optimization

@@ -77,12 +77,6 @@
                 <td>
                     <div>
                         <span *ngIf="model.currentGame !== game">{{game.name}}</span>
-                        <span class="icon  config-params-edit-btn" [title]="'Edit ' + game.name" (click)="toggleEditGame(game)">
-                            <i class="fa fa-pencil"></i>
-                        </span>
-                        <span *ngIf="model.currentGame === game" class="icon  config-params-delete-btn" [title]="'Delete ' + game.name" (click)="removeGame(game)">
-                            <i class="fa fa-trash-o"></i>
-                        </span>
                     </div>
                     <div *ngIf="model.currentGame === game">
                         <div class="field">
@@ -138,6 +132,14 @@
                             </div>
                         </div>
                     </div>
+                </td>
+                <td class="config-td-actions" width="24px">
+                    <span class="icon  config-params-edit-btn" [title]="'Edit ' + game.name" (click)="toggleEditGame(game)">
+                        <i class="fa fa-pencil"></i>
+                    </span>
+                    <span *ngIf="model.currentGame === game" class="icon  config-params-delete-btn" [title]="'Delete ' + game.name" (click)="removeGame(game)">
+                        <i class="fa fa-trash-o"></i>
+                    </span>
                 </td>
             </tr>
         </tbody>
