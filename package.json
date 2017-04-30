@@ -1,6 +1,6 @@
 {
   "name": "cemu-loader",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "author": "Ugo Parlange",
   "description": "Cemu Loader",
   "main": "index.html",
@@ -19,7 +19,6 @@
     "@angular/compiler": "4.1.0",
     "@angular/core": "4.1.0",
     "@angular/forms": "4.1.0",
-    "@angular/http": "4.1.0",
     "@angular/platform-browser": "4.1.0",
     "@angular/platform-browser-dynamic": "4.1.0",
     "@angular/router": "4.1.0",

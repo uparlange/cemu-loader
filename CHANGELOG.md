@@ -1,5 +1,11 @@
 # Changelog #
 
+## 1.1.8 ##
+
+* Start duration optimization
+* Add animations and shadows to game list
+* Automatic display config if no game list configured
+
 ## 1.1.7 ##
 
 * Add H264 decoder plugin in resources

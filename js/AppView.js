@@ -19,6 +19,9 @@ define(["AppUtils", "AppModel", "RouterManager"],
 				this._navigationEndEventEmitter = this._routerManager.on("NAVIGATION_END").subscribe((event) => {
 					this.currentView = event.toUrl.substring(1).split("/")[0];
 				});
+				if (this.model.config.games.length === 0) {
+					this.showView("config");
+				}
 			},
 			ngOnDestroy: function () {
 				this._navigationEndEventEmitter();
