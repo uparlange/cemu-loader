@@ -6,3 +6,8 @@ img
     cursor: pointer;
     box-shadow: 3px 3px 3px #aaa; 
 }
+
+.animated.swing
+{
+    -webkit-animation-duration:500ms;
+}

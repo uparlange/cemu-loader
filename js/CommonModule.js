@@ -3,7 +3,8 @@ define(["OrderByPipe", "FilterByPipe", "AnimationDirective"],
 		return ng.core.NgModule({
 			imports: [
 				ng.common.CommonModule,
-				ng.forms.FormsModule
+				ng.forms.FormsModule,
+				ng.http.HttpModule,
 			],
 			declarations: [
 				OrderByPipe,
@@ -13,6 +14,7 @@ define(["OrderByPipe", "FilterByPipe", "AnimationDirective"],
 			exports: [
 				ng.common.CommonModule,
 				ng.forms.FormsModule,
+				ng.http.HttpModule,
 				OrderByPipe,
 				FilterByPipe,
 				AnimationDirective

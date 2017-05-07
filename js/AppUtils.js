@@ -33,6 +33,12 @@ define(function () {
 		},
 		getConfigFile: function () {
 			return this.getHomeDir() + "\\" + this.getPackageFile().name + ".json";
+		},
+		getRemotePackageUrl: function () {
+			return "https://raw.githubusercontent.com/uparlange/cemu-loader/master/package.json";
+		},
+		getRemoteApplicationDownloadUrl: function (version) {
+			return "https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-" + version + ".nw";
 		}
 	};
 });

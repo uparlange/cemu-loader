@@ -19,9 +19,13 @@ define(["AppUtils"],
 			save: function () {
 				const fs = require("fs");
 				fs.writeFileSync(AppUtils.getConfigFile(), JSON.stringify(this.config));
+				this.unSelectGame();
 			},
 			trackGame: function (index, value) {
 				return value.name;
+			},
+			unSelectGame: function () {
+				this.currentGame = null;
 			},
 			addGame: function () {
 				const game = {
@@ -36,7 +40,7 @@ define(["AppUtils"],
 			removeGame: function (game) {
 				const index = this.config.games.indexOf(game);
 				this.config.games.splice(index, 1);
-				this.currentGame = null;
+				this.unSelectGame();
 			},
 			setCemuFile: function (file) {
 				this.config.cemu.file = '"' + file + '"';

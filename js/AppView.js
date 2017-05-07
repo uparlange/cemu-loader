@@ -4,10 +4,11 @@ define(["AppUtils", "AppModel", "RouterManager"],
 			selector: "body"
 		});
 		return ng.core.Component(conf).Class({
-			constructor: [AppModel, RouterManager,
-				function AppView(AppModel, RouterManager) {
+			constructor: [AppModel, RouterManager, ng.http.Http,
+				function AppView(AppModel, RouterManager, Http) {
 					this.model = AppModel;
 					this._routerManager = RouterManager;
+					this._http = Http;
 					this._navigationEndEventEmitter = null;
 					this.currentView = "list";
 				}
@@ -18,6 +19,14 @@ define(["AppUtils", "AppModel", "RouterManager"],
 				win.title = pkg.description + " " + pkg.version;
 				this._navigationEndEventEmitter = this._routerManager.on("NAVIGATION_END").subscribe((event) => {
 					this.currentView = event.toUrl.substring(1).split("/")[0];
+				});
+				this._http.get(AppUtils.getRemotePackageUrl()).subscribe((result) => {
+					const remotePkg = result.json();
+					if (remotePkg.version > pkg.version) {
+						if (confirm("New version " + remotePkg.version + " available, do you want download it ?") === true) {
+							nw.Shell.openExternal(AppUtils.getRemoteApplicationDownloadUrl(remotePkg.version));
+						}
+					}
 				});
 				if (this.model.config.games.length === 0) {
 					this.showView("config");

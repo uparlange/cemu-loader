@@ -1,4 +1,4 @@
-<div [animation]="animation">
+<div [animation]="animation" (onComplete)="filterInput.focus()">
     <div class="panel-header">
         <span>Select 1 game</span>
         <span class="icon  config-games-cancel-btn" title="Cancel" (click)="cancel()">
@@ -7,7 +7,7 @@
     </div>
     <div class="field has-addons">
         <p class="control is-expanded">
-            <input autofocus class="input" placeholder="Filter" [(ngModel)]="filterValue">
+            <input #filterInput class="input" placeholder="Filter" [(ngModel)]="filterValue">
         </p>
         <p class="control">
             <a class="button is-primary" (click)="deleteFilter()">

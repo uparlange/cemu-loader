@@ -1,5 +1,11 @@
 # Changelog #
 
+## 1.2.0 ##
+
+* Animation optimization
+* Check new versions at startup
+* Add Wii U USB Helper in resources
+
 ## 1.1.9 ##
 
 * Reduce package size (remove unused dependency)

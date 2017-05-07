@@ -1,4 +1,9 @@
- .config-games-cancel-btn 
+tr
+{
+    cursor:pointer;
+}
+
+.config-games-cancel-btn 
 {
     float:right;
 }
