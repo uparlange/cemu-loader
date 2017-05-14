@@ -1,5 +1,9 @@
 # Changelog #
 
+## 1.2.3 ##
+
+* Change general icon
+
 ## 1.2.2 ##
 
 * Add tray (icon and menu)
