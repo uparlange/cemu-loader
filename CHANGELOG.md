@@ -1,5 +1,9 @@
 # Changelog #
 
+## 1.2.2 ##
+
+* Add tray (icon and menu)
+
 ## 1.2.1 ##
 
 * Optimisations

@@ -14,9 +14,7 @@ define(["AppUtils", "AppModel", "RouterManager"],
 				}
 			],
 			ngOnInit: function () {
-				const win = nw.Window.get();
 				const pkg = AppUtils.getPackageFile();
-				win.title = pkg.description + " " + pkg.version;
 				this._navigationEndEventEmitter = this._routerManager.on("NAVIGATION_END").subscribe((event) => {
 					this.currentView = event.toUrl.substring(1).split("/")[0];
 				});

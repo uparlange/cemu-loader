@@ -1,10 +1,11 @@
-define(["AppModel"],
-    function (AppModel) {
+define(["AppModel", "ApplicationManager"],
+    function (AppModel, ApplicationManager) {
         return ng.core.Class({
-            constructor: [AppModel, ng.router.Router,
-                function CemuManager(AppModel, Router) {
+            constructor: [AppModel, ng.router.Router, ApplicationManager,
+                function CemuManager(AppModel, Router, ApplicationManager) {
                     this._model = AppModel;
                     this._router = Router;
+                    this._applicationManager = ApplicationManager;
                 }
             ],
             launchCemu: function () {
@@ -31,17 +32,13 @@ define(["AppModel"],
                     return;
                 }
                 const child_process = require("child_process");
-                child_process.exec(cmd, (error, stdout, stderr) => {
-                    if (error != null && error.length > 0) {
-                        window.alert(error.toString());
-                    }
-                    if (stdout != null && stdout.length > 0) {
-                        //console.debug(stdout);
-                    }
-                    if (stderr != null && stderr.length > 0) {
-                        window.alert(stderr);
+                child_process.exec(cmd, (error) => {
+                    if (error) {
+                        alert(error);
+                        return;
                     }
                 });
+                this._applicationManager.hide();
             }
         });
     });
