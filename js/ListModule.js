@@ -1,18 +1,18 @@
-define(["CommonModule", "ListView", "AnimationCanDeactivate"],
-	function (CommonModule, ListView, AnimationCanDeactivate) {
+define(["CommonModule", "ListView", "ViewCanDeactivate"],
+	function (CommonModule, ListView, ViewCanDeactivate) {
 		return {
 			module: ng.core.NgModule({
 				imports: [
 					CommonModule,
 					ng.router.RouterModule.forChild([
-						{ path: "", component: ListView, canDeactivate: [AnimationCanDeactivate] }
+						{ path: "", component: ListView, canDeactivate: [ViewCanDeactivate] }
 					])
 				],
 				declarations: [
 					ListView
 				],
 				providers: [
-					AnimationCanDeactivate
+					ViewCanDeactivate
 				]
 			}).Class({
 				constructor: [

@@ -1,5 +1,5 @@
 {
-    "duration": 125,
+    "duration": 250,
     "transitions": [
         {
             "from": "/list",
@@ -26,6 +26,20 @@
             "from": "/config/params",
             "to": "/config/games",
             "enterAnimation": "slideInUp",
+            "leaveAnimation": "slideOutUp",
+            "reverse": true
+        },
+        {
+            "from": "/config/games",
+            "to": "/resources",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutUp",
+            "reverse": true
+        },
+        {
+            "from": "/config/games",
+            "to": "/list",
+            "enterAnimation": "slideInLeft",
             "leaveAnimation": "slideOutUp",
             "reverse": true
         }

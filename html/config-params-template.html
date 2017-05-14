@@ -1,8 +1,8 @@
-<div [animation]="animation">
+<div view animated [(animation)]="animation" [(duration)]="duration">
     <input id="fileDialog" class=" config-params-file-dialog" type="file" />
     <div class="panel-header">
         <span>Configuration</span>
-        <span class="icon  config-params-save-btn" title="Save configuration" (click)="saveConfiguration()">
+        <span class="icon config-params-save-btn" title="Save configuration" (click)="saveConfiguration()">
             <i class="fa fa-floppy-o"></i>
         </span>
     </div>

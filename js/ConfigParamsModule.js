@@ -1,18 +1,18 @@
-define(["CommonModule", "ConfigParamsView", "AnimationCanDeactivate"],
-	function (CommonModule, ConfigParamsView, AnimationCanDeactivate) {
+define(["CommonModule", "ConfigParamsView", "ViewCanDeactivate"],
+	function (CommonModule, ConfigParamsView, ViewCanDeactivate) {
 		return {
 			module: ng.core.NgModule({
 				imports: [
 					CommonModule,
 					ng.router.RouterModule.forChild([
-						{ path: "", component: ConfigParamsView, canDeactivate: [AnimationCanDeactivate] }
+						{ path: "", component: ConfigParamsView, canDeactivate: [ViewCanDeactivate] }
 					])
 				],
 				declarations: [
 					ConfigParamsView
 				],
 				providers: [
-					AnimationCanDeactivate
+					ViewCanDeactivate
 				]
 			}).Class({
 				constructor: [

@@ -9,6 +9,10 @@ define(["AppUtils", "AppModel"],
 					this.filterValue = null;
 				}
 			],
+			onAnimationComplete: function (filterInput) {
+				window.scrollTo(0, 0);
+				filterInput.focus();
+			},
 			select: function (game) {
 				if (this.model.currentGame != null) {
 					this.model.currentGame.id = game.id;

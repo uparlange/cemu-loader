@@ -1,5 +1,9 @@
 # Changelog #
 
+## 1.2.1 ##
+
+* Optimisations
+
 ## 1.2.0 ##
 
 * Animation optimization

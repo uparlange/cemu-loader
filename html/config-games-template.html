@@ -1,4 +1,4 @@
-<div [animation]="animation" (onComplete)="filterInput.focus()">
+<div view animated [(animation)]="animation" [(duration)]="duration" (onComplete)="onAnimationComplete(filterInput)">
     <div class="panel-header">
         <span>Select 1 game</span>
         <span class="icon  config-games-cancel-btn" title="Cancel" (click)="cancel()">

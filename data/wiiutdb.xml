@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datafile xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="wiiutdb.xsd">
-	<WiiUTDB version="20170430182618" filter="FR" games="2183"/>
+	<WiiUTDB version="20170514063518" filter="FR" games="2183"/>
 	<!--
  GameTDB: WiiU, Database started in 2012 (http://www.gametdb.com)
  Never modify this file manually, it will get overwritten when you update. You can add games and fixes on the website.
@@ -10679,6 +10679,7 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 			<control type="procontroller" required="false"/>
 		</input>
 		<rom version="" name="Xenoblade Chronicles X (USA) (EN).wud" size="25025314816"/>
+		<case versions="2"/>
 	</game>
 	<game name="Xenoblade Cross (Japan) (JA)">
 		<id>AX5J01</id>

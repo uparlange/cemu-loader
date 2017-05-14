@@ -1,5 +1,5 @@
-define(["OrderByPipe", "FilterByPipe", "AnimationDirective"],
-	function (OrderByPipe, FilterByPipe, AnimationDirective) {
+define(["OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective"],
+	function (OrderByPipe, FilterByPipe, ViewDirective, AnimatedDirective) {
 		return ng.core.NgModule({
 			imports: [
 				ng.common.CommonModule,
@@ -9,7 +9,8 @@ define(["OrderByPipe", "FilterByPipe", "AnimationDirective"],
 			declarations: [
 				OrderByPipe,
 				FilterByPipe,
-				AnimationDirective
+				ViewDirective,
+				AnimatedDirective
 			],
 			exports: [
 				ng.common.CommonModule,
@@ -17,7 +18,8 @@ define(["OrderByPipe", "FilterByPipe", "AnimationDirective"],
 				ng.http.HttpModule,
 				OrderByPipe,
 				FilterByPipe,
-				AnimationDirective
+				ViewDirective,
+				AnimatedDirective
 			]
 		}).Class({
 			constructor: [
