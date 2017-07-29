@@ -1,5 +1,10 @@
 # Changelog #
 
+## 1.2.5 ##
+
+* Missing htmlparser2 dependency in release nw package
+* Other optimisations
+
 ## 1.2.4 ##
 
 * Image selection added when adding new game

@@ -13,8 +13,6 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 				}
 			],
 			ngOnInit: function () {
-				const cc = console;
-				cc.dir(process.argv);
 				this._shell.init();
 				this._navigationEndEventEmitter = this._routerManager.on("NAVIGATION_END").subscribe((event) => {
 					this.currentView = event.toUrl.substring(1).split("/")[0];
