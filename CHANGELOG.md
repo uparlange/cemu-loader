@@ -1,15 +1,19 @@
 # Changelog #
 
+## 1.2.6 ##
+
+* Optimize image selection
+
 ## 1.2.5 ##
 
 * Missing htmlparser2 dependency in release nw package
-* Other optimisations
+* Other optimizations
 
 ## 1.2.4 ##
 
 * Image selection added when adding new game
 * Option added to start application minimized
-* Other optimisations
+* Other optimizations
 
 ## 1.2.3 ##
 
@@ -21,7 +25,7 @@
 
 ## 1.2.1 ##
 
-* Optimisations
+* Optimizations
 
 ## 1.2.0 ##
 
