@@ -5,14 +5,18 @@ define(["AppUtils"],
 				function AppModel() {
 					this.config = {
 						file: AppUtils.getConfigFile(),
+						autostart: false,
+						startMinimized: false,
 						cemu: {
 							file: null,
-							fullscreen: true
+							fullscreen: true,
 						},
 						games: []
 					};
 					this.games = [];
 					this.currentGame = null;
+					this.gameTypes = [];
+					this.currentGameType = "WiiU";
 					this._init();
 				}
 			],
@@ -20,6 +24,7 @@ define(["AppUtils"],
 				const fs = require("fs");
 				fs.writeFileSync(AppUtils.getConfigFile(), JSON.stringify(this.config));
 				this.unSelectGame();
+				//this._checkAutostart();
 			},
 			trackGame: function (index, value) {
 				return value.name;
@@ -51,6 +56,26 @@ define(["AppUtils"],
 			setGameFile: function (game, file) {
 				game.file = '"' + file + '"';
 			},
+			_checkAutostart: function () {
+				const pkg = AppUtils.getPackageFile();
+				const AutoLaunch = require("auto-launch");
+				var cemuLoaderAutoLauncher = new AutoLaunch({
+					name: pkg.description
+				});
+				cemuLoaderAutoLauncher.isEnabled().then((isEnabled) => {
+					if (this.config.autostart) {
+						if (!isEnabled) {
+							cemuLoaderAutoLauncher.enable();
+						}
+					} else {
+						if (isEnabled) {
+							cemuLoaderAutoLauncher.disable();
+						}
+					}
+				}).catch(() => {
+					// TODO
+				});
+			},
 			_init: function () {
 				this._initConfig();
 				this._initGameDb();
@@ -68,28 +93,25 @@ define(["AppUtils"],
 				const xml2js = require("xml2js");
 				const parser = new xml2js.Parser();
 				const games = [];
+				const gameTypes = [];
 				fs.readFile(AppUtils.getDatabaseFile(), (err, result) => {
 					parser.parseString(result, (err, result) => {
 						result.datafile.game.forEach((element) => {
 							const type = element.type[0];
-							if (type === "WiiU" || type === "eShop") {
-								const id = element.id[0];
-								const name = element.$.name;
-								let locale = "EN";
-								if (name.indexOf("USA") !== -1) {
-									locale = "US";
-								} else if (name.indexOf("Japan") !== -1) {
-									locale = "JA";
-								}
-								const image = "http://art.gametdb.com/wiiu/coverHQ/" + locale + "/" + id + ".jpg";
-								games.push({
-									id: id,
-									name: name,
-									image: image
-								});
+							const id = element.id[0];
+							const name = element.$.name;
+							games.push({
+								id: id,
+								name: name,
+								type: type,
+								images: []
+							});
+							if(gameTypes.indexOf(type) == -1) {
+								gameTypes.push(type);
 							}
 						});
 						this.games = games;
+						this.gameTypes = gameTypes;
 					});
 				});
 			}

@@ -8,6 +8,9 @@ define(["AppModel", "ApplicationManager"],
                     this._applicationManager = ApplicationManager;
                 }
             ],
+            init:function() {
+                
+            },
             launchCemu: function () {
                 let cmd = this._model.config.cemu.file;
                 this._launch(cmd);

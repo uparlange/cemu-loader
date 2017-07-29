@@ -13,6 +13,11 @@ td
     vertical-align: middle !important;
 }
 
+img
+{
+    cursor: pointer;
+}
+
 .panel-header
 {
     background-color:#000000;
@@ -24,4 +29,14 @@ td
 .panel-header span
 {
     vertical-align: middle;
+}
+
+.checkbox
+{
+    visibility: hidden;
+}
+
+.checkbox:before 
+{
+    visibility: visible;
 }

@@ -3,9 +3,14 @@ define(["EventManager"],
         return ng.core.Class({
             extends: EventManager,
             constructor: [ng.router.Router,
-            function RouterManager(Router) {
-                EventManager.call(this);
-                this._router = Router;
+                function RouterManager(Router) {
+                    EventManager.call(this);
+                    this._router = Router;
+                    this._previousUrl = "";
+                    this._currentUrl = "";
+                }
+            ],
+            init: function () {
                 this._routerEventsSubscriber = this._router.events.subscribe((event) => {
                     switch (event.constructor.name) {
                         case "RoutesRecognized":
@@ -24,10 +29,7 @@ define(["EventManager"],
                             break;
                     }
                 });
-                this._previousUrl = "";
-                this._currentUrl = "";
-            }
-            ],
+            },
             navigate: function (commands, extras) {
                 this._router.navigate(commands, extras);
             }

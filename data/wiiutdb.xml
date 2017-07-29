@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datafile xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="wiiutdb.xsd">
-	<WiiUTDB version="20170514063518" filter="FR" games="2183"/>
+	<WiiUTDB version="20170727071409" filter="FR" games="2187"/>
 	<!--
  GameTDB: WiiU, Database started in 2012 (http://www.gametdb.com)
  Never modify this file manually, it will get overwritten when you update. You can add games and fixes on the website.
@@ -3203,6 +3203,59 @@
 			<control type="nunchuk" required="false"/>
 		</input>
 		<rom version="" name="Disney Epic Mickey 2: The Power of Two (Europe) (EN,FR,DE,ES,IT,PT).wud" size="25025314816"/>
+		<case versions="2"/>
+	</game>
+	<game name="Disney Epic Mickey 2: The Power of Two (Europe) (EN,ES)">
+		<id>AEMS4Q</id>
+		<type>WiiU</type>
+		<region>PAL</region>
+		<languages>EN,ES</languages>
+		<locale lang="EN">
+			<title>Disney Epic Mickey 2: The Power of Two</title>
+			<synopsis/>
+		</locale>
+		<locale lang="ES">
+			<title>Disney Epic Mickey 2: El retorno de dos héroes</title>
+			<synopsis/>
+		</locale>
+		<developer>Junction Point</developer>
+		<publisher>Disney Interactive</publisher>
+		<date year="2012" month="11" day="30"/>
+		<genre>action,adventure</genre>
+		<rating type="PEGI" value="7">
+			<descriptor>violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="true"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+		</input>
+		<rom version="" name="Disney Epic Mickey 2: The Power of Two (Europe) (EN,ES).wud" size="25025314816"/>
+	</game>
+	<game name="Disney Epic Mickey 2: The Power of Two (Europe) (EN,SE,DK,NO)">
+		<id>AEMX4Q</id>
+		<type>WiiU</type>
+		<region>PAL</region>
+		<languages>EN,SE,DK,NO</languages>
+		<locale lang="EN">
+			<title>Disney Epic Mickey 2: The Power of Two</title>
+			<synopsis/>
+		</locale>
+		<developer>Junction Point</developer>
+		<publisher>Disney Interactive</publisher>
+		<date year="2017" month="" day=""/>
+		<genre>action,adventure</genre>
+		<rating type="PEGI" value="7">
+			<descriptor>violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="true"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+		</input>
+		<rom version="" name="Disney Epic Mickey 2: The Power of Two (Europe) (EN,SE,DK,NO).wud" size="25025314816"/>
 	</game>
 	<game name="FIFA Soccer 13 (USA) (EN)">
 		<id>AF3E69</id>
@@ -4395,6 +4448,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<control type="classiccontroller" required="false"/>
 		</input>
 		<rom version="" firmware="4.0.0" name="Hello Kitty Kruisers (USA) (EN).wud" size="25025314816"/>
+		<case versions="2"/>
 	</game>
 	<game name="Hello Kitty Kruisers (Europe) (EN,FR,DE,ES,IT)">
 		<id>AHKPYM</id>
@@ -11545,6 +11599,32 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<rom version="" name="ZombiU (Europe) (EN,FR,DE,ES,IT,NL,RU).wud" size="25025314816"/>
 		<case versions="2"/>
 	</game>
+	<game name="Cars 3: Driven to Win (USA) (EN)">
+		<id>BA4EWR</id>
+		<type>WiiU</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Cars 3: Driven to Win</title>
+			<synopsis/>
+		</locale>
+		<developer>Avalanche Software</developer>
+		<publisher>Warner Bros. Interactive Entertainment Inc.</publisher>
+		<date year="2017" month="6" day="13"/>
+		<genre>racing</genre>
+		<rating type="ESRB" value="E10+">
+			<descriptor>cartoon violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Cars 3: Driven to Win (USA) (EN).wud" size="25025314816"/>
+	</game>
 	<game name="Minecraft: Story Mode - The Complete Adventure (USA) (EN)">
 		<id>BAKETL</id>
 		<type>WiiU</type>
@@ -11786,6 +11866,56 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="Dragon Quest X All in One Package (Japan) (JA).wud" size="25025314816"/>
+	</game>
+	<game name="Darksiders - Warmastered Edition (USA) (EN)">
+		<id>BEDE78</id>
+		<type>WiiU</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Darksiders - Warmastered Edition</title>
+			<synopsis/>
+		</locale>
+		<developer>KAIKO</developer>
+		<publisher>Nordic Games</publisher>
+		<date year="2017" month="5" day="23"/>
+		<genre>action,adventure,fighting,role-playing</genre>
+		<rating type="ESRB" value="M">
+			<descriptor>blood and gore</descriptor>
+			<descriptor>intense violence</descriptor>
+			<descriptor>suggestive themes</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="Darksiders - Warmastered Edition (USA) (EN).wud" size="25025314816"/>
+	</game>
+	<game name="Darksiders - Warmastered Edition (Europe) (EN,FR,DE,ES,IT,PT,RU)">
+		<id>BEDP78</id>
+		<type>WiiU</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT,PT,RU</languages>
+		<locale lang="EN">
+			<title>Darksiders - Warmastered Edition</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Darksiders - Warmastered Edition</title>
+			<synopsis/>
+		</locale>
+		<developer>KAIKO</developer>
+		<publisher>Nordic Games</publisher>
+		<date year="2017" month="5" day="23"/>
+		<genre>action,adventure,fighting,role-playing</genre>
+		<rating type="PEGI" value="18"/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="Darksiders - Warmastered Edition (Europe) (EN,FR,DE,ES,IT,PT,RU).wud" size="25025314816"/>
 	</game>
 	<game name="Runbow Deluxe Edition (USA) (EN)">
 		<id>BENE8X</id>
@@ -12338,6 +12468,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<control type="procontroller" required="false"/>
 		</input>
 		<rom version="" name="Legend of Kay Anniversary (USA) (EN).wud" size="25025314816"/>
+		<case versions="2"/>
 	</game>
 	<game name="Legend of Kay Anniversary (Europe) (EN,FR,DE,ES,IT)">
 		<id>BLKP6V</id>
@@ -13814,38 +13945,6 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="Wii Karaoke U (Trial Disc) (Japan) (JA).wud"/>
-	</game>
-	<game name="Pokémon Rumble U: Special Edition (Europe) (EN)">
-		<id>WCNP01</id>
-		<type>WiiU</type>
-		<region>PAL</region>
-		<languages>EN</languages>
-		<locale lang="EN">
-			<title>Pokémon Rumble U: Special Edition</title>
-			<synopsis/>
-		</locale>
-		<locale lang="NL">
-			<title>Pokémon Rumble U: Special Edition</title>
-			<synopsis/>
-		</locale>
-		<developer>Ambrella</developer>
-		<publisher>Nintendo</publisher>
-		<date year="2013" month="8" day="15"/>
-		<genre>action</genre>
-		<rating type="PEGI" value="7">
-			<descriptor>violence</descriptor>
-		</rating>
-		<wi-fi players="0">
-			<feature>online</feature>
-		</wi-fi>
-		<input players="4">
-			<control type="pad" required="false"/>
-			<control type="procontroller" required="false"/>
-			<control type="wiimote" required="false"/>
-			<control type="classiccontroller" required="false"/>
-		</input>
-		<rom version="" name="Pokémon Rumble U: Special Edition (Europe) (EN).wud" size="25025314816"/>
-		<case versions="2"/>
 	</game>
 	<game name="DuckTales: Remastered (USA) (EN)">
 		<id>WDKE08</id>

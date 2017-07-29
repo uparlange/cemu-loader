@@ -1,5 +1,5 @@
-define(["OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective"],
-	function (OrderByPipe, FilterByPipe, ViewDirective, AnimatedDirective) {
+define(["OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective", "CheckboxDirective"],
+	function (OrderByPipe, FilterByPipe, ViewDirective, AnimatedDirective, CheckboxDirective) {
 		return ng.core.NgModule({
 			imports: [
 				ng.common.CommonModule,
@@ -10,7 +10,8 @@ define(["OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective"],
 				OrderByPipe,
 				FilterByPipe,
 				ViewDirective,
-				AnimatedDirective
+				AnimatedDirective,
+				CheckboxDirective
 			],
 			exports: [
 				ng.common.CommonModule,
@@ -19,7 +20,8 @@ define(["OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective"],
 				OrderByPipe,
 				FilterByPipe,
 				ViewDirective,
-				AnimatedDirective
+				AnimatedDirective,
+				CheckboxDirective
 			]
 		}).Class({
 			constructor: [

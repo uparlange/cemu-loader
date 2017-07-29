@@ -1,5 +1,11 @@
 # Changelog #
 
+## 1.2.4 ##
+
+* Image selection added when adding new game
+* Option added to start application minimized
+* Other optimisations
+
 ## 1.2.3 ##
 
 * Change general icon

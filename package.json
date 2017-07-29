@@ -1,6 +1,6 @@
 {
   "name": "cemu-loader",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": "Ugo Parlange",
   "description": "Cemu Loader",
   "main": "index.html",
@@ -15,33 +15,35 @@
     "desktop-debug": "nodemon node_modules/nw/bin/nw debug"
   },
   "dependencies": {
-    "@angular/common": "4.1.2",
-    "@angular/compiler": "4.1.2",
-    "@angular/core": "4.1.2",
-    "@angular/http": "4.1.2",
-    "@angular/forms": "4.1.2",
-    "@angular/platform-browser": "4.1.2",
-    "@angular/platform-browser-dynamic": "4.1.2",
-    "@angular/router": "4.1.2",
+    "@angular/common": "5.0.0-beta.0",
+    "@angular/compiler": "5.0.0-beta.0",
+    "@angular/core": "5.0.0-beta.0",
+    "@angular/http": "5.0.0-beta.0",
+    "@angular/forms": "5.0.0-beta.0",
+    "@angular/platform-browser": "5.0.0-beta.0",
+    "@angular/platform-browser-dynamic": "5.0.0-beta.0",
+    "@angular/router": "5.0.0-beta.0",
     "core-js": "2.4.1",
-    "rxjs": "5.4.0",
-    "systemjs": "0.20.12",
-    "zone.js": "0.8.10",
-    "bulma": "0.4.1",
+    "rxjs": "5.4.2",
+    "systemjs": "0.20.17",
+    "zone.js": "0.8.14",
+    "bulma": "0.4.4",
     "font-awesome": "4.7.0",
     "xml2js": "0.4.17",
-    "animate.css":"3.5.2"
+    "animate.css": "3.5.2",
+    "request": "2.81.0"
   },
   "devDependencies": {
     "nodemon": "1.11.0",
-    "nw": "0.22.3-sdk",
+    "nw": "0.24.0-sdk",
     "gulp": "3.9.1",
     "gulp-copy": "1.0.0",
-    "gulp-eslint": "3.0.1",
+    "gulp-eslint": "4.0.0",
     "gulp-zip": "4.0.0",
     "htmlparser2": "3.9.2",
     "merge-stream": "1.0.1",
     "pump": "1.0.2",
-    "run-sequence": "1.2.2"
+    "run-sequence": "1.2.2",
+    "auto-launch": "5.0.1"
   }
 }

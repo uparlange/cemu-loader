@@ -1,27 +1,51 @@
 <div view animated [(animation)]="animation" [(duration)]="duration" (onComplete)="onAnimationComplete(filterInput)">
     <div class="panel-header">
-        <span>Select 1 game</span>
-        <span class="icon  config-games-cancel-btn" title="Cancel" (click)="cancel()">
+        <span>Select 1 game from {{model.games.length}}</span>
+        <span class="icon config-games-cancel-btn" title="Cancel" (click)="cancel()">
             <i class="fa fa-ban"></i>
         </span>
     </div>
-    <div class="field has-addons">
-        <p class="control is-expanded">
-            <input #filterInput class="input" placeholder="Filter" [(ngModel)]="filterValue">
-        </p>
-        <p class="control">
-            <a class="button is-primary" (click)="deleteFilter()">
-                <span class="icon" title="Delete filter">
-                    <i class="fa fa-eraser"></i>
-                </span>
-            </a>
-        </p>
+    <div>
+        <div class="field has-addons">
+            <div class="dropdown" [ngClass]="comboTypeActive ? 'is-active' : null" (click)="comboTypeActive=!comboTypeActive">
+                <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>{{model.currentGameType}}</span>
+                        <span class="icon is-small">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <a [ngClass]="(type == model.currentGameType) ? 'is-active' : null" *ngFor="let type of model.gameTypes" class="dropdown-item"
+                            (click)="model.currentGameType=type">{{type}}</a>
+                    </div>
+                </div>
+            </div>
+            <p class="control is-expanded">
+                <input #filterInput class="input" placeholder="Filter" [(ngModel)]="filterValue">
+            </p>
+            <p class="control">
+                <a class="button is-primary" (click)="deleteFilter()">
+                    <span class="icon" title="Delete filter">
+                        <i class="fa fa-eraser"></i>
+                    </span>
+                </a>
+            </p>
+        </div>
     </div>
     <table class="table">
-        <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue; trackBy:model.trackGame" (click)="select(game)">
-            <td>
-                {{game.name}}
-            </td>
+        <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue | filterBy:'type':model.currentGameType; trackBy:model.trackGame"
+            (click)="showGameImages(game)">
+            <td>{{game.name}}</td>
         </tr>
     </table>
+</div>
+<div class="modal" [ngClass]="imagesPopupActive ? 'is-active' : null">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <img [src]="image" *ngFor="let image of images" width="180" (click)="selectImage(image)">
+    </div>
+    <button class="modal-close is-large" (click)="imagesPopupActive=false"></button>
 </div>
