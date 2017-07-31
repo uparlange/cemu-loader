@@ -1,5 +1,9 @@
 # Changelog #
 
+## 1.2.7 ##
+
+* Finally correct image selection
+
 ## 1.2.6 ##
 
 * Optimize image selection

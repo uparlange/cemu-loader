@@ -2,10 +2,11 @@ define(["AppUtils", "AppModel"],
 	function (AppUtils, AppModel) {
 		const conf = AppUtils.getComponentConfiguration("config-games");
 		return ng.core.Component(conf).Class({
-			constructor: [AppModel, ng.router.Router,
-				function ConfigGamesView(AppModel, Router) {
+			constructor: [AppModel, ng.router.Router, ng.core.NgZone,
+				function ConfigGamesView(AppModel, Router, NgZone) {
 					this.model = AppModel;
 					this._router = Router;
+					this._ngZone = NgZone;
 					this.filterValue = null;
 					this.comboTypeActive = false;
 					this.images = [];
@@ -26,7 +27,9 @@ define(["AppUtils", "AppModel"],
 				this.model.currentGame.id = game.id;
 				this.model.currentGame.name = game.name;
 				this._getImageList(game.id, (images) => {
-					this.images = images;
+					this._ngZone.run(() => {
+						this.images = images;
+					});
 				});
 			},
 			deleteFilter: function () {

@@ -29,7 +29,7 @@ define(["AppUtils", "AppModel", "CemuManager"],
 					const gui = require("nw.gui");
 					const menu = new gui.Menu();
 					menu.append(new gui.MenuItem({
-						label: "GameTDB",
+						label: "Description",
 						click: () => {
 							gui.Shell.openExternal("http://www.gametdb.com/WiiU/" + game.id);
 						}
