@@ -1,5 +1,10 @@
 # Changelog #
 
+## 1.2.9 ##
+
+* Add direct download links to resources tab
+* Optimizations
+
 ## 1.2.8 ##
 
 * Display Cemu and Hook version in Configration Tab
