@@ -7,7 +7,7 @@
 
 ## 1.2.8 ##
 
-* Display Cemu and Hook version in Configration Tab
+* Display Cemu and Cemu Hook version in configuration tab
 * Optimizations
 
 ## 1.2.7 ##
