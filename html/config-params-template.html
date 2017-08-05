@@ -6,82 +6,88 @@
             <i class="fa fa-floppy-o"></i>
         </span>
     </div>
-    <table class="table">
-        <tr>
-            <td width="145">Save file</td>
-            <td>
-                <div class="field has-addons">
-                    <p class="control is-expanded">
-                        <input class="input" readonly type="text" [title]="model.config.file" [ngModel]="model.config.file">
-                    </p>
-                    <p class="control">
-                        <a class="button is-primary">
-                            <span class="icon" title="Open directory" (click)="openConfigDirectory()">
-                                <i class="fa fa-folder-o"></i>
-                            </span>
-                        </a>
-                    </p>
-                </div>
-            </td>
-        </tr>
-        <!--
-        <tr>
-            <td width="145">
-                <label for="autostart">Autostart</label>
-            </td>
-            <td>
-                <input class="checkbox" type="checkbox" id="autostart" [(ngModel)]="model.config.autostart">
-            </td>
-        </tr>
-        -->
-        <tr>
-            <td width="145">
-                <label for="startMinimized">Start minimized</label>
-            </td>
-            <td>
-                <input class="checkbox" type="checkbox" id="startMinimized" [(ngModel)]="model.config.startMinimized">
-            </td>
-        </tr>
+    <table class="table is-fullwidth">
+        <tbody>
+            <tr>
+                <td width="145">Save file</td>
+                <td>
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input" readonly type="text" [title]="model.config.file" [ngModel]="model.config.file">
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary">
+                                <span class="icon" title="Open directory" (click)="openConfigDirectory()">
+                                    <i class="fa fa-folder-o"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <!--
+            <tr>
+                <td width="145">
+                    <label for="autostart">Autostart</label>
+                </td>
+                <td>
+                    <input class="checkbox" type="checkbox" id="autostart" [(ngModel)]="model.config.autostart">
+                </td>
+            </tr>
+            -->
+            <tr>
+                <td width="145">
+                    <label for="startMinimized">Start minimized</label>
+                </td>
+                <td>
+                    <input class="checkbox" type="checkbox" id="startMinimized" [(ngModel)]="model.config.startMinimized">
+                </td>
+            </tr>
+        </tbody>
     </table>
     <div class="panel-header">
         <span>Cemu</span>
+        <span *ngIf="model.cemu.localVersion != null">{{model.cemu.localVersion}}</span>
+        <span *ngIf="model.cemuHook.localVersion != null">| Hook {{model.cemuHook.localVersion}}</span>
         <span class="icon config-params-launch-btn" title="Launch Cemu" (click)="launchCemu()">
             <i class="fa fa-bullseye"></i>
         </span>
     </div>
-    <table class="table">
-        <tr>
-            <td width="145">Emulator file</td>
-            <td>
-                <div class="field has-addons">
-                    <p class="control is-expanded">
-                        <input class="input" type="text" id="file" readonly [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
-                    </p>
-                    <p class="control">
-                        <a class="button is-primary">
-                            <span class="icon" title="Select file" (click)="selectCemuFile()">
-                                <i class="fa fa-file-o"></i>
-                            </span>
-                        </a>
-                    </p>
-                    <p class="control">
-                        <a class="button is-primary">
-                            <span class="icon" title="Open directory" (click)="openCemuFileDirectory()">
-                                <i class="fa fa-folder-o"></i>
-                            </span>
-                        </a>
-                    </p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td width="145">
-                <label for="fullscreen">Start fullscreen</label>
-            </td>
-            <td>
-                <input class="checkbox" type="checkbox" id="fullscreen" [(ngModel)]="model.config.cemu.fullscreen">
-            </td>
-        </tr>
+    <table class="table is-fullwidth">
+        <tbody>
+            <tr>
+                <td width="145">Emulator file</td>
+                <td>
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input" type="text" id="file" readonly [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary">
+                                <span class="icon" title="Select file" (click)="selectCemuFile()">
+                                    <i class="fa fa-file-o"></i>
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary">
+                                <span class="icon" title="Open directory" (click)="openCemuFileDirectory()">
+                                    <i class="fa fa-folder-o"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="145">
+                    <label for="fullscreen">Start fullscreen</label>
+                </td>
+                <td>
+                    <input class="checkbox" type="checkbox" id="fullscreen" [(ngModel)]="model.config.cemu.fullscreen">
+                </td>
+            </tr>
+        </tbody>
     </table>
     <div class="panel-header">
         <span>My {{model.config.games.length}} game(s)</span>
@@ -89,7 +95,7 @@
             <i class="fa fa-plus"></i>
         </span>
     </div>
-    <table class="table">
+    <table class="table is-fullwidth">
         <tbody>
             <tr *ngFor="let game of model.config.games | orderBy:'name'; trackBy:model.trackGame">
                 <td>

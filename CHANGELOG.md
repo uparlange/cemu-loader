@@ -1,5 +1,10 @@
 # Changelog #
 
+## 1.2.8 ##
+
+* Display Cemu and Hook version in Configration Tab
+* Optimizations
+
 ## 1.2.7 ##
 
 * Finally correct image selection

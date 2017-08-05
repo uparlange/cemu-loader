@@ -1,8 +1,10 @@
-define(["AppUtils"],
-	function (AppUtils) {
+define(["AppUtils", "WmicManager"],
+	function (AppUtils, WmicManager) {
 		return ng.core.Class({
-			constructor: [
-				function AppModel() {
+			constructor: [WmicManager, ng.core.NgZone,
+				function AppModel(WmicManager, NgZone) {
+					this._wmicManager = WmicManager;
+					this._ngZone = NgZone;
 					this.config = {
 						file: AppUtils.getConfigFile(),
 						autostart: false,
@@ -12,6 +14,12 @@ define(["AppUtils"],
 							fullscreen: true,
 						},
 						games: []
+					};
+					this.cemu = {
+						localVersion: null
+					};
+					this.cemuHook = {
+						localVersion: null
 					};
 					this.games = [];
 					this.currentGame = null;
@@ -49,6 +57,7 @@ define(["AppUtils"],
 			},
 			setCemuFile: function (file) {
 				this.config.cemu.file = '"' + file + '"';
+				this._initUpdateCemuVersion();
 			},
 			setGameImage: function (game, file) {
 				game.image = "file:" + file;
@@ -78,7 +87,25 @@ define(["AppUtils"],
 			},
 			_init: function () {
 				this._initConfig();
+				this._initUpdateCemuVersion();
 				this._initGameDb();
+			},
+			_initUpdateCemuVersion: function () {
+				const file = this.config.cemu.file.replace(/"/g, "");
+				this._wmicManager.getDatafileVersion(file).subscribe((version) => {
+					this._ngZone.run(() => {
+						this.cemu.localVersion = version;
+						this._initUpdateCemuHookVersion();
+					});
+				});
+			},
+			_initUpdateCemuHookVersion: function () {
+				const file = this.config.cemu.file.replace(/"/g, "").replace("Cemu.exe", "dbghelp.dll");
+				this._wmicManager.getDatafileVersion(file).subscribe((version) => {
+					this._ngZone.run(() => {
+						this.cemuHook.localVersion = version;
+					});
+				});
 			},
 			_initConfig: function () {
 				const fs = require("fs");
@@ -106,7 +133,7 @@ define(["AppUtils"],
 								type: type,
 								images: []
 							});
-							if(gameTypes.indexOf(type) == -1) {
+							if (gameTypes.indexOf(type) == -1) {
 								gameTypes.push(type);
 							}
 						});

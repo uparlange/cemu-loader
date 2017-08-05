@@ -35,11 +35,13 @@
             </p>
         </div>
     </div>
-    <table class="table">
-        <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue | filterBy:'type':model.currentGameType; trackBy:model.trackGame"
-            (click)="showGameImages(game)">
-            <td>{{game.name}}</td>
-        </tr>
+    <table class="table is-fullwidth">
+        <tbody>
+            <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue | filterBy:'type':model.currentGameType; trackBy:model.trackGame"
+                (click)="showGameImages(game)">
+                <td>{{game.name}}</td>
+            </tr>
+        </tbody>
     </table>
 </div>
 <div class="modal" [ngClass]="imagesPopupActive ? 'is-active' : null">
