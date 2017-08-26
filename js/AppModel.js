@@ -91,21 +91,25 @@ define(["AppUtils", "WmicManager"],
 				this._initGameDb();
 			},
 			_initUpdateCemuVersion: function () {
-				const file = this.config.cemu.file.replace(/"/g, "");
-				this._wmicManager.getDatafileVersion(file).subscribe((version) => {
-					this._ngZone.run(() => {
-						this.cemu.localVersion = version;
-						this._initUpdateCemuHookVersion();
+				if(this.config.cemu.file != null) {
+					const file = this.config.cemu.file.replace(/"/g, "");
+					this._wmicManager.getDatafileVersion(file).subscribe((version) => {
+						this._ngZone.run(() => {
+							this.cemu.localVersion = version;
+							this._initUpdateCemuHookVersion();
+						});
 					});
-				});
+				}
 			},
 			_initUpdateCemuHookVersion: function () {
-				const file = this.config.cemu.file.replace(/"/g, "").replace("Cemu.exe", "dbghelp.dll");
-				this._wmicManager.getDatafileVersion(file).subscribe((version) => {
-					this._ngZone.run(() => {
-						this.cemuHook.localVersion = version;
+				if(this.config.cemu.file != null) {
+					const file = this.config.cemu.file.replace(/"/g, "").replace("Cemu.exe", "dbghelp.dll");
+					this._wmicManager.getDatafileVersion(file).subscribe((version) => {
+						this._ngZone.run(() => {
+							this.cemuHook.localVersion = version;
+						});
 					});
-				});
+				}
 			},
 			_initConfig: function () {
 				const fs = require("fs");

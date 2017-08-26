@@ -5,17 +5,17 @@
 # Execute application #
 
 ## Install NW.js ##
-* Download lastest normal version of NW.js (https://nwjs.io/)
+* Download lastest normal version of [NW.js](https://nwjs.io/)
 * Unzip content in "C:\Program Files\nwjs"
 
 ## Download application ##
-* Latest : https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.2.9.nw
-* Changelog : https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md
+* Latest : [Cemu Loader](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.3.0.nw)
+* [Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md)
 
 ## Launch application ##
 * Double click on the application (.nw file)
 * Select "nw.exe" from "C:\Program Files\nwjs" as default reader for "*.nw" files
 
 # Links #
-* Author Homepage (https://www.lapli.fr)
-* Cemu Homepage (http://cemu.info/)
+* [Author Homepage](https://www.lapli.fr)
+* [Cemu Homepage](http://cemu.info/)

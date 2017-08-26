@@ -1,5 +1,10 @@
 # Changelog #
 
+## 1.3.0 ##
+
+* Application was not launching correctly when Cemu exe was not configured, closes [#1](https://github.com/uparlange/cemu-loader/issues/1)
+* Optimizations
+
 ## 1.2.9 ##
 
 * Add direct download links to resources tab
