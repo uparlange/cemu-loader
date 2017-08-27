@@ -10,18 +10,55 @@ const zip = require('gulp-zip');
 const mergeStream = require('merge-stream');
 const htmlparser = require('htmlparser2');
 const fs = require('fs');
+const htmlclean = require('gulp-htmlclean');
+const uglify = require('gulp-uglify-es').default;
+const cleanCSS = require('gulp-clean-css');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('clean-dist', () => {
     return del(['./dist']);
 });
 
-gulp.task('copy-files', () => {
+gulp.task('copy-files', (callback) => {
+    runSequence('copy-js', 'copy-css', 'copy-html', 'copy-images', 'copy-static', callback);
+});
+
+gulp.task('copy-js', () => {
+    return gulp.src('js/*.js')
+        .pipe(uglify({ keep_fnames: true }))
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('copy-css', () => {
+    return gulp.src('css/*.css')
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('copy-images', () => {
+    return gulp.src('images/*.*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('copy-html', () => {
     const streams = mergeStream();
-    ['index.html', 'package.json'].forEach((item) => {
+    streams.add(gulp.src('html/*.html')
+        .pipe(htmlclean())
+        .pipe(gulp.dest('dist/html')));
+    streams.add(gulp.src('index.html')
+        .pipe(htmlclean())
+        .pipe(gulp.dest('dist')));
+    return streams;
+});
+
+gulp.task('copy-static', () => {
+    const streams = mergeStream();
+    ['package.json'].forEach((item) => {
         streams.add(gulp.src([item])
             .pipe(gulp.dest('dist/')));
     });
-    ['css', 'data', 'html', 'images', 'js', 'node_modules/font-awesome/fonts'].forEach((item) => {
+    ['data', 'node_modules/font-awesome/fonts'].forEach((item) => {
         streams.add(gulp.src([item + '/*.*'])
             .pipe(gulp.dest('dist/' + item)));
     });

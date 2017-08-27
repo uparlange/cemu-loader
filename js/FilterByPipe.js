@@ -1,22 +1,25 @@
-define([],
-	function () {
-		const conf = {
-			name: "filterBy"
-		};
-		return ng.core.Pipe(conf).Class({
-			constructor: [
-				function FilterByPipe() {
+define(["AppUtils"],
+	function (AppUtils) {
+		return AppUtils.getClass({
+			constructor: function FilterByPipe() {
 
-				}
+			},
+			annotations: [
+				new ng.core.Pipe({
+					name: "filterBy"
+				})
 			],
-			transform: function (list, property, value) {
-				if(value == null) {
-					return list; 
+			functions: [
+				function transform(list, property, value) {
+					if (value == null) {
+						return list;
+					}
+					return list.filter((o) => {
+						const v = (property == null) ? o : o[property];
+						return (v.toLowerCase().indexOf(value.toLowerCase()) !== -1)
+					});
 				}
-				return list.filter((o) => {
-					const v = (property == null) ? o : o[property];
-					return (v.toLowerCase().indexOf(value.toLowerCase()) !== -1)
-				});
-			}
+			]
 		});
-	});
+	}
+);

@@ -1,5 +1,32 @@
 define(function () {
 	return {
+		getClass: function (conf) {
+			const c = conf.constructor;
+			if (conf.extends) {
+				c.prototype = Object.create(conf.extends.prototype);
+				c.prototype.constructor = c;
+			}
+			if (conf.annotations) {
+				c.annotations = conf.annotations;
+			}
+			if (conf.parameters) {
+				c.parameters = conf.parameters;
+			}
+			if (conf.functions) {
+				conf.functions.forEach((element) => {
+					c.prototype[element.name] = element;
+				});
+			}
+			return c;
+		},
+		getLazyModuleClass: function (conf) {
+			return {
+				module: this.getClass(conf)
+			};
+		},
+		getLazyModuleName: function (moduleName) {
+			return moduleName + "#module";
+		},
 		getComponentConfiguration: function (componentName, params) {
 			const defaultParams = {
 				selector: componentName,
@@ -7,15 +34,6 @@ define(function () {
 				styleUrls: ["css/" + componentName + "-template.css"]
 			};
 			return Object.assign({}, defaultParams, params);
-		},
-		getDirectiveConfiguration: function (selector, params) {
-			const defaultParams = {
-				selector: selector
-			};
-			return Object.assign({}, defaultParams, params);
-		},
-		getModuleName: function (moduleName) {
-			return "" + moduleName + "#module";
 		},
 		getPackageFile: function () {
 			return require("./package.json");

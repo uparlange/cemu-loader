@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datafile xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="wiiutdb.xsd">
-	<WiiUTDB version="20170727071409" filter="FR" games="2187"/>
+	<WiiUTDB version="20170827121457" filter="FR" games="2188"/>
 	<!--
  GameTDB: WiiU, Database started in 2012 (http://www.gametdb.com)
  Never modify this file manually, it will get overwritten when you update. You can add games and fixes on the website.
@@ -2543,11 +2543,11 @@
 		<rom version="" name="Devil's Third (Japan) (JA).wud" size="25025314816"/>
 		<case color="000000"/>
 	</game>
-	<game name="Devil's Third (Europe) (EN,FR)">
+	<game name="Devil's Third (Europe) (EN,FR,DE)">
 		<id>ADNP01</id>
 		<type>WiiU</type>
 		<region>PAL</region>
-		<languages>EN,FR</languages>
+		<languages>EN,FR,DE</languages>
 		<locale lang="EN">
 			<title>Devil's Third</title>
 			<synopsis/>
@@ -2573,7 +2573,7 @@
 			<control type="pad" required="false"/>
 			<control type="procontroller" required="false"/>
 		</input>
-		<rom version="" name="Devil's Third (Europe) (EN,FR).wud" size="25025314816"/>
+		<rom version="" name="Devil's Third (Europe) (EN,FR,DE).wud" size="25025314816"/>
 	</game>
 	<game name="Just Dance Disney Party 2 (USA) (EN)">
 		<id>ADPE41</id>
@@ -5538,7 +5538,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<developer>TT Games</developer>
 		<publisher>Warner Bros. Interactive Entertainment Inc.</publisher>
 		<date year="2014" month="4" day="11"/>
-		<genre>action,adventure,fantasy</genre>
+		<genre>fantasy,action,adventure</genre>
 		<rating type="PEGI" value="7">
 			<descriptor>fear</descriptor>
 			<descriptor>violence</descriptor>
@@ -8309,6 +8309,7 @@ Caractéristiques:
 			<control type="classiccontroller" required="false"/>
 		</input>
 		<rom version="" firmware="1.0.1" name="Sonic &amp; All-Stars Racing Transformed (USA) (EN).wud" size="25025314816"/>
+		<case versions="2"/>
 	</game>
 	<game name="Sonic and All-Stars Racing Transformed (Japan) (JA)">
 		<id>AS2J8P</id>
@@ -11480,7 +11481,6 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<control type="nunchuk" required="false"/>
 		</input>
 		<rom version="" name="ZombiU (Europe) (EN,DE).wud" size="25025314816"/>
-		<case versions="2"/>
 	</game>
 	<game name="ZombiU (USA) (EN)">
 		<id>AZUE41</id>
@@ -11625,6 +11625,30 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		</input>
 		<rom version="" name="Cars 3: Driven to Win (USA) (EN).wud" size="25025314816"/>
 	</game>
+	<game name="Cars 3: Driven to Win (Europe) (EN)">
+		<id>BA4PWR</id>
+		<type>WiiU</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Cars 3: Driven to Win</title>
+			<synopsis/>
+		</locale>
+		<developer>Avalanche Software</developer>
+		<publisher>Warner Bros. Interactive Entertainment Inc.</publisher>
+		<date year="2017" month="7" day="14"/>
+		<genre>racing</genre>
+		<rating type="PEGI" value="7"/>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Cars 3: Driven to Win (Europe) (EN).wud" size="25025314816"/>
+	</game>
 	<game name="Minecraft: Story Mode - The Complete Adventure (USA) (EN)">
 		<id>BAKETL</id>
 		<type>WiiU</type>
@@ -11658,6 +11682,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		</locale>
 		<publisher>Telltale Games</publisher>
 		<date year="2016" month="1" day="1"/>
+		<genre>adventure</genre>
 		<rating type="PEGI" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -13865,7 +13890,7 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 		<developer>Brainseed Factory</developer>
 		<publisher>Brainseed Factory</publisher>
 		<date year="2015" month="11" day="4"/>
-		<genre>puzzle,strategy rpg</genre>
+		<genre>role-playing,strategy rpg,puzzle</genre>
 		<rating type="ESRB" value="E10+">
 			<descriptor>fantasy violence</descriptor>
 		</rating>
@@ -18538,7 +18563,7 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<developer>Infinite Dreams Inc.</developer>
 		<publisher>Infinite Dreams Inc.</publisher>
 		<date year="2017" month="3" day="16"/>
-		<genre>arcade,shooter</genre>
+		<genre>action,shooter,arcade</genre>
 		<rating type="ESRB" value="E10+">
 			<descriptor>fantasy violence</descriptor>
 		</rating>
@@ -23090,7 +23115,7 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<developer>Hucast Games</developer>
 		<publisher>2Dream</publisher>
 		<date year="2017" month="2" day="28"/>
-		<genre>action,arcade,shooter</genre>
+		<genre>action,shooter,arcade</genre>
 		<rating type="ESRB" value="E10+">
 			<descriptor>mild fantasy violence</descriptor>
 			<descriptor>suggestive themes</descriptor>
@@ -49039,13 +49064,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Mario Party 2 (Europe) (EN).wud"/>
 	</game>
-	<game name="Pokemon Snap (USA) (EN)">
+	<game name="Pokémon Snap (USA) (EN)">
 		<id>NASE</id>
 		<type>VC-N64</type>
 		<region>NTSC-U</region>
 		<languages>EN</languages>
 		<locale lang="EN">
-			<title>Pokemon Snap</title>
+			<title>Pokémon Snap</title>
 			<synopsis/>
 		</locale>
 		<developer>Nintendo / HAL Laboratory, Inc.</developer>
@@ -49060,7 +49085,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="wiimote" required="false"/>
 			<control type="classiccontroller" required="false"/>
 		</input>
-		<rom version="" name="Pokemon Snap (USA) (EN).wud"/>
+		<rom version="" name="Pokémon Snap (USA) (EN).wud"/>
 	</game>
 	<game name="Pokémon Snap (Europe) (EN)">
 		<id>NASP</id>

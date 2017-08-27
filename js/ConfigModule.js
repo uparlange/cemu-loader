@@ -1,27 +1,27 @@
 define(["AppUtils", "CommonModule", "ConfigView"],
 	function (AppUtils, CommonModule, ConfigView) {
-		return {
-			module: ng.core.NgModule({
-				imports: [
-					CommonModule,
-					ng.router.RouterModule.forChild([
-						{ path: "", redirectTo: "params", pathMatch: "full" },
-						{ path: "params", loadChildren: AppUtils.getModuleName("ConfigParamsModule") },
-						{ path: "games", loadChildren: AppUtils.getModuleName("ConfigGamesModule") }
-					])
-				],
-				declarations: [
-					ConfigView
-				],
-				providers: [
+		return AppUtils.getLazyModuleClass({
+			constructor: function ConfigModule() {
 
-				]
-			}).Class({
-				constructor: [
-					function ConfigModule() {
+			},
+			annotations: [
+				new ng.core.NgModule({
+					imports: [
+						CommonModule,
+						ng.router.RouterModule.forChild([
+							{ path: "", redirectTo: "params", pathMatch: "full" },
+							{ path: "params", loadChildren: AppUtils.getLazyModuleName("ConfigParamsModule") },
+							{ path: "games", loadChildren: AppUtils.getLazyModuleName("ConfigGamesModule") }
+						])
+					],
+					declarations: [
+						ConfigView
+					],
+					providers: [
 
-					}
-				]
-			})
-		};
-	});
+					]
+				})
+			]
+		});
+	}
+);
