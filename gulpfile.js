@@ -59,7 +59,7 @@ gulp.task('copy-static', () => {
             .pipe(gulp.dest('dist/')));
     });
     ['data', 'node_modules/font-awesome/fonts'].forEach((item) => {
-        streams.add(gulp.src([item + '/*.*'])
+        streams.add(gulp.src([item + '/**/*'])
             .pipe(gulp.dest('dist/' + item)));
     });
     return streams;

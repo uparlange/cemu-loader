@@ -1,15 +1,15 @@
 <div view animated [(animation)]="animation" [(duration)]="duration">
     <input id="fileDialog" class=" config-params-file-dialog" type="file" />
     <div class="panel-header">
-        <span>Application</span>
-        <span class="icon config-params-save-btn" title="Save configuration" (click)="saveConfiguration()">
+        <span>{{'L10N_APPLICATION'|translate}}</span>
+        <span class="icon config-params-save-btn" [title]="'L10N_SAVE_CONFIGURATION'|translate" (click)="saveConfiguration()">
             <i class="fa fa-floppy-o"></i>
         </span>
     </div>
     <table class="table is-fullwidth">
         <tbody>
             <tr>
-                <td width="145">Save file</td>
+                <td class="form-label" width="200">{{'L10N_SAVE_FILE'|translate}}</td>
                 <td>
                     <div class="field has-addons">
                         <p class="control is-expanded">
@@ -17,7 +17,7 @@
                         </p>
                         <p class="control">
                             <a class="button is-primary">
-                                <span class="icon" title="Open directory" (click)="openConfigDirectory()">
+                                <span class="icon" [title]="'L10N_OPEN_DIRECTORY'|translate" (click)="openConfigDirectory()">
                                     <i class="fa fa-folder-o"></i>
                                 </span>
                             </a>
@@ -25,9 +25,33 @@
                     </div>
                 </td>
             </tr>
+            <tr>
+                <td class="form-label" width="200">{{'L10N_LANGUAGE'|translate}}</td>
+                <td>
+                    <div class="dropdown" [ngClass]="comboLanguageActive ? 'is-active' : null" (click)="comboLanguageActive=!comboLanguageActive">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <img [src]="'images/' + model.config.language + '.png'">
+                                <span class="icon is-small">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <a [ngClass]="(language.data == model.config.language) ? 'is-active' : null" *ngFor="let language of availableLanguages"
+                                    class="dropdown-item" (click)="changeLanguage(language.data)">
+                                        <img [src]="'images/' + language.data + '.png'">
+                                        <span class="dropdown-label">{{language.label}}</span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             <!--
             <tr>
-                <td width="145">
+                <td class="form-label" width="200">
                     <label for="autostart">Autostart</label>
                 </td>
                 <td>
@@ -36,8 +60,8 @@
             </tr>
             -->
             <tr>
-                <td width="145">
-                    <label for="startMinimized">Start minimized</label>
+                <td class="form-label" width="200">
+                    <label for="startMinimized">{{'L10N_START_MINIMIZED'|translate}}</label>
                 </td>
                 <td>
                     <input class="checkbox" type="checkbox" id="startMinimized" [(ngModel)]="model.config.startMinimized">
@@ -49,14 +73,14 @@
         <span>Cemu</span>
         <span *ngIf="model.cemu.localVersion != null">{{model.cemu.localVersion}}</span>
         <span *ngIf="model.cemuHook.localVersion != null">| Cemu Hook {{model.cemuHook.localVersion}}</span>
-        <span class="icon config-params-launch-btn" title="Launch Cemu" (click)="launchCemu()">
+        <span class="icon config-params-launch-btn" [title]="('L10N_LAUNCH'|translate) + ' Cemu'" (click)="launchCemu()">
             <i class="fa fa-bullseye"></i>
         </span>
     </div>
     <table class="table is-fullwidth">
         <tbody>
             <tr>
-                <td width="145">Emulator file</td>
+                <td class="form-label" width="200">{{'L10N_EMULATOR_EXE'|translate}}</td>
                 <td>
                     <div class="field has-addons">
                         <p class="control is-expanded">
@@ -64,14 +88,14 @@
                         </p>
                         <p class="control">
                             <a class="button is-primary">
-                                <span class="icon" title="Select file" (click)="selectCemuFile()">
+                                <span class="icon" [title]="'L10N_SELECT_FILE'|translate" (click)="selectCemuFile()">
                                     <i class="fa fa-file-o"></i>
                                 </span>
                             </a>
                         </p>
                         <p class="control">
                             <a class="button is-primary">
-                                <span class="icon" title="Open directory" (click)="openCemuFileDirectory()">
+                                <span class="icon" [title]="'L10N_OPEN_DIRECTORY'|translate" (click)="openCemuFileDirectory()">
                                     <i class="fa fa-folder-o"></i>
                                 </span>
                             </a>
@@ -80,8 +104,8 @@
                 </td>
             </tr>
             <tr>
-                <td width="145">
-                    <label for="fullscreen">Start fullscreen</label>
+                <td class="form-label" width="200">
+                    <label for="fullscreen">{{'L10N_START_FULLSCREEN'|translate}}</label>
                 </td>
                 <td>
                     <input class="checkbox" type="checkbox" id="fullscreen" [(ngModel)]="model.config.cemu.fullscreen">
@@ -90,8 +114,9 @@
         </tbody>
     </table>
     <div class="panel-header">
-        <span>My {{model.config.games.length}} game(s)</span>
-        <span class="icon  config-params-add-btn" title="Add game" (click)="addGame()">
+        <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
+        <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
+        <span class="icon  config-params-add-btn" [title]="'L10N_ADD_GAME'|translate" (click)="addGame()">
             <i class="fa fa-plus"></i>
         </span>
     </div>
@@ -104,14 +129,14 @@
                     </div>
                     <div *ngIf="model.currentGame === game">
                         <div class="field">
-                            <label class="label">Name</label>
+                            <label class="label">{{'L10N_NAME'|translate}}</label>
                             <div class="field has-addons">
                                 <p class="control is-expanded">
                                     <input class="input" type="text" [title]="game.name" [(ngModel)]="game.name">
                                 </p>
                                 <p class="control">
                                     <a class="button is-primary">
-                                        <span class="icon" title="Find game" (click)="findGame()">
+                                        <span class="icon" [title]="'L10N_FIND_GAME'|translate" (click)="findGame()">
                                             <i class="fa fa-search"></i>
                                         </span>
                                     </a>
@@ -119,14 +144,14 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Image</label>
+                            <label class="label">{{'L10N_IMAGE'|translate}}</label>
                             <div class="field has-addons">
                                 <p class="control is-expanded">
                                     <input class="input" readonly [title]="game.image" type="text" [ngModel]="game.image">
                                 </p>
                                 <p class="control">
                                     <a class="button is-primary">
-                                        <span class="icon" title="Select file" (click)="selectGameImage(game)">
+                                        <span class="icon" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameImage(game)">
                                             <i class="fa fa-file-o"></i>
                                         </span>
                                     </a>
@@ -134,21 +159,21 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">File</label>
+                            <label class="label">{{'L10N_FILE'|translate}}</label>
                             <div class="field has-addons">
                                 <p class="control is-expanded">
                                     <input class="input" readonly [title]="game.file" type="text" [ngModel]="game.file">
                                 </p>
                                 <p class="control">
                                     <a class="button is-primary">
-                                        <span class="icon" title="Select file" (click)="selectGameFile(game)">
+                                        <span class="icon" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameFile(game)">
                                             <i class="fa fa-file-o"></i>
                                         </span>
                                     </a>
                                 </p>
                                 <p class="control">
                                     <a class="button is-primary">
-                                        <span class="icon" title="Open directory" (click)="openGameFileDirectory(game)">
+                                        <span class="icon" [title]="'L10N_OPEN_DIRECTORY'|translate" (click)="openGameFileDirectory(game)">
                                             <i class="fa fa-folder-o"></i>
                                         </span>
                                     </a>
@@ -158,10 +183,11 @@
                     </div>
                 </td>
                 <td class="config-td-actions" width="24">
-                    <span class="icon  config-params-edit-btn" [title]="'Edit ' + game.name" (click)="toggleEditGame(game)">
+                    <span class="icon  config-params-edit-btn" [title]="('L10N_EDIT'|translate) + ' ' + game.name" (click)="toggleEditGame(game)">
                         <i class="fa fa-pencil"></i>
                     </span>
-                    <span *ngIf="model.currentGame === game" class="icon  config-params-delete-btn" [title]="'Delete ' + game.name" (click)="removeGame(game)">
+                    <span *ngIf="model.currentGame === game" class="icon  config-params-delete-btn" [title]="('L10N_DELETE'|translate) + ' ' + game.name"
+                        (click)="removeGame(game)">
                         <i class="fa fa-trash-o"></i>
                     </span>
                 </td>

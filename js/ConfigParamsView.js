@@ -3,6 +3,8 @@ define(["AppUtils", "AppModel", "CemuManager"],
 		return AppUtils.getClass({
 			constructor: function ConfigParamsView(AppModel, CemuManager, Router) {
 				this.model = AppModel;
+				this.comboLanguageActive = false;
+				this.availableLanguages = [];
 				this._router = Router;
 				this._cemuManager = CemuManager;
 			},
@@ -13,6 +15,12 @@ define(["AppUtils", "AppModel", "CemuManager"],
 				[AppModel], [CemuManager], [ng.router.Router]
 			],
 			functions: [
+				function ngOnInit() {
+					this._initRefreshAvailableLanguages();
+				},
+				function changeLanguage(language) {
+					this.model.setLanguage(language);
+				},
 				function addGame() {
 					this.model.addGame();
 				},
@@ -73,6 +81,13 @@ define(["AppUtils", "AppModel", "CemuManager"],
 					chooser.addEventListener("change", handler);
 					chooser.click();
 					return eventEmitter;
+				},
+				function _initRefreshAvailableLanguages() {
+					this.availableLanguages = [
+						{ data: "en", label: "English" },
+						{ data: "fr", label: "Français" },
+						{ data: "es", label: "Español" }
+					]
 				}
 			]
 		});

@@ -1,3 +1,4 @@
 <div view animated [(animation)]="animation" [(duration)]="duration">
-    <img animated [animation]="'swing'" [duration]="250" *ngFor="let game of model.config.games | orderBy:'name'; trackBy:model.trackGame" [src]="game.image" [title]="game.name" (click)="launchGame(game)">
+    <img animated [animation]="'swing'" [duration]="250" *ngFor="let game of model.config.games | orderBy:'name'; trackBy:model.trackGame"
+        [src]="game.image" [title]="game.name" (click)="launchGame(game)">
 </div>

@@ -1,5 +1,12 @@
 # Changelog #
 
+## 1.3.1 ##
+
+* Language support (en, fr, es)
+* Compatibility with angular 5.0.0-beta.4 (correct breaking changes)
+* Files minification --> reduce général nw file
+* Optimizations
+
 ## 1.3.0 ##
 
 * Application was not launching correctly when Cemu exe was not configured, closes [#1](https://github.com/uparlange/cemu-loader/issues/1)

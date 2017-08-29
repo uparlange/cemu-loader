@@ -40,3 +40,13 @@ img
 {
     visibility: visible;
 }
+
+.form-label
+{
+    text-align:right;
+}
+
+.dropdown-label
+{
+    vertical-align:top;
+}

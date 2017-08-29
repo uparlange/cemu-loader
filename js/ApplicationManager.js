@@ -1,40 +1,27 @@
-define(["AppUtils", "AppModel"],
-	function (AppUtils, AppModel) {
+define(["AppUtils", "AppModel", "TranslateManager"],
+	function (AppUtils, AppModel, TranslateManager) {
 		return AppUtils.getClass({
-			constructor: function ApplicationManager(AppModel) {
+			constructor: function ApplicationManager(AppModel, TranslateManager) {
 				this._appModel = AppModel;
+				this._translateManager = TranslateManager;
+				this._onLanguageChangeSubscriber = null;
+				this._tray = null;
 			},
 			parameters: [
-				[AppModel]
+				[AppModel], [TranslateManager]
 			],
 			functions: [
 				function init() {
-					const win = nw.Window.get();
 					const pkg = AppUtils.getPackageFile();
 					const title = pkg.description + " " + pkg.version;
-					win.title = title;
-					win.on("close", () => {
-						this.hide();
-					});
-					const tray = new nw.Tray({
-						title: title,
-						tooltip: title,
-						icon: "images/icon.png"
-					});
-					const menu = new nw.Menu();
-					menu.append(new nw.MenuItem({
-						label: "Quit",
-						click: () => {
-							this.quit();
-						}
-					}));
-					tray.menu = menu;
-					tray.on("click", () => {
-						this.show();
-					});
+					this._initWindow(title);
+					this._initTray(title);
 					if (this._appModel.config.startMinimized) {
 						this.hide();
 					}
+					this._onLanguageChangeSubscriber = this._translateManager.onLanguageChange.subscribe(() => {
+						this._initUpdateTrayMenu();
+					});
 				},
 				function show() {
 					nw.Window.get().show();
@@ -44,6 +31,36 @@ define(["AppUtils", "AppModel"],
 				},
 				function quit() {
 					nw.App.quit();
+				},
+				function _initTray(title) {
+					this._tray = new nw.Tray({
+						title: title,
+						tooltip: title,
+						icon: "images/icon.png"
+					});
+					this._tray.on("click", () => {
+						this.show();
+					});
+					this._initUpdateTrayMenu();
+				},
+				function _initUpdateTrayMenu() {
+					this._translateManager.getValues(["L10N_QUIT"]).subscribe((translations) => {
+						const menu = new nw.Menu();
+						menu.append(new nw.MenuItem({
+							label: translations.L10N_QUIT,
+							click: () => {
+								this.quit();
+							}
+						}));
+						this._tray.menu = menu;
+					});
+				},
+				function _initWindow(title) {
+					const win = nw.Window.get();
+					win.title = title;
+					win.on("close", () => {
+						this.hide();
+					});
 				}
 			]
 		});

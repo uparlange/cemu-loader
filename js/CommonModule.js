@@ -1,7 +1,7 @@
 define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective",
-	"CheckboxDirective"],
+	"CheckboxDirective", "TranslatePipe"],
 	function (AppUtils, OrderByPipe, FilterByPipe, ViewDirective, AnimatedDirective,
-		CheckboxDirective) {
+		CheckboxDirective, TranslatePipe) {
 		return AppUtils.getClass({
 			constructor: function CommonModule() {
 
@@ -18,7 +18,8 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 						FilterByPipe,
 						ViewDirective,
 						AnimatedDirective,
-						CheckboxDirective
+						CheckboxDirective,
+						TranslatePipe
 					],
 					exports: [
 						ng.common.CommonModule,
@@ -28,7 +29,8 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 						FilterByPipe,
 						ViewDirective,
 						AnimatedDirective,
-						CheckboxDirective
+						CheckboxDirective,
+						TranslatePipe
 					]
 				})
 			]

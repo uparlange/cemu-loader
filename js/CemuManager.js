@@ -1,13 +1,14 @@
-define(["AppUtils", "AppModel", "ApplicationManager"],
-    function (AppUtils, AppModel, ApplicationManager) {
+define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager"],
+    function (AppUtils, AppModel, ApplicationManager, TranslateManager) {
         return AppUtils.getClass({
-            constructor: function CemuManager(AppModel, Router, ApplicationManager) {
+            constructor: function CemuManager(AppModel, Router, ApplicationManager, TranslateManager) {
                 this._model = AppModel;
                 this._router = Router;
                 this._applicationManager = ApplicationManager;
+                this._translateManager = TranslateManager;
             },
             parameters: [
-                [AppModel], [ng.router.Router], [ApplicationManager]
+                [AppModel], [ng.router.Router], [ApplicationManager], [TranslateManager]
             ],
             functions: [
                 function init() {
@@ -19,8 +20,10 @@ define(["AppUtils", "AppModel", "ApplicationManager"],
                 },
                 function launchGame(game) {
                     if (game.file === null) {
-                        window.alert("Please configure " + game.name + "'s file");
-                        this._router.navigate(["/config"]);
+                        this._translateManager.getValues([{ key: "L10N_CONFIGURE_XXX_FILE", properties: [game.name] }]).subscribe((translations) => {
+                            window.alert(translations.L10N_CONFIGURE_XXX_FILE);
+                            this._router.navigate(["/config"]);
+                        });
                         return;
                     }
                     let cmd = this._model.config.cemu.file;
@@ -32,8 +35,9 @@ define(["AppUtils", "AppModel", "ApplicationManager"],
                 },
                 function _launch(cmd) {
                     if (this._model.config.cemu.file === null) {
-                        window.alert("Please configure Cemu's file");
-                        this._router.navigate(["/config"]);
+                        this._translateManager.getValues([{ key: "L10N_CONFIGURE_XXX_FILE", properties: ["Cemu"] }]).subscribe((translations) => {
+                            window.alert(translations.L10N_CONFIGURE_XXX_FILE);
+                        });
                         return;
                     }
                     const child_process = require("child_process");

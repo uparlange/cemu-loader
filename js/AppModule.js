@@ -1,9 +1,9 @@
 define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
 	"AnimationManager", "RouterManager", "ApplicationManager", "Shell", "VersionManager",
-	"WmicManager"],
+	"WmicManager", "TranslateManager"],
 	function (AppUtils, CommonModule, AppView, AppModel, CemuManager,
 		AnimationManager, RouterManager, ApplicationManager, Shell, VersionManager,
-		WmicManager) {
+		WmicManager, TranslateManager) {
 		ng.core.enableProdMode();
 		ng.platformBrowserDynamic.platformBrowserDynamic().bootstrapModule(AppUtils.getClass({
 			constructor: function AppModule() {
@@ -32,7 +32,8 @@ define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
 						RouterManager,
 						ApplicationManager,
 						VersionManager,
-						WmicManager
+						WmicManager,
+						TranslateManager
 					],
 					bootstrap: [
 						AppView

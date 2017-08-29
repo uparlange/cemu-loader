@@ -1,49 +1,49 @@
 <div view animated [(animation)]="animation" [(duration)]="duration">
     <div class="panel-header">
-        <span>Resources</span>
+        <span>{{"L10N_RESOURCES"|translate}}</span>
     </div>
     <table class="table is-fullwidth">
         <tbody>
             <tr>
-                <td colspan="2"><b>Cemu Emulator</b></td>
+                <td colspan="2"><b>Cemu</b></td>
             </tr>
             <tr>
-                <td>Link</td>
+                <td>{{"L10N_LINK"|translate}}</td>
                 <td><a data-link="http://cemu.info" (click)="openDataLink($event)">http://cemu.info</a></td>
             </tr>
             <tr>
-                <td>Download</td>
+                <td>{{"L10N_DOWNLOAD"|translate}}</td>
                 <td><a (click)="openLink(cemu.link)">{{cemu.label}}</a></td>
             </tr>
             <tr>
                 <td colspan="2"><b>Cemu Hook</b></td>
             </tr>
             <tr>
-                <td>Link</td>
+                <td>{{"L10N_LINK"|translate}}</td>
                 <td><a data-link="https://sshnuke.net/cemuhook" (click)="openDataLink($event)">https://sshnuke.net/cemuhook</a></td>
             </tr>
             <tr>
-                <td>Download</td>
+                <td>{{"L10N_DOWNLOAD"|translate}}</td>
                 <td>
                     <span *ngFor="let version of cemuHook.versions; let first=first;">
                         <span *ngIf="!first">|</span>
-                        <a (click)="openLink(version.link)">{{version.label}}</a>
+                    <a (click)="openLink(version.link)">{{version.label}}</a>
                     </span>
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><b>Graphics Packs</b></td>
+                <td colspan="2"><b>{{"L10N_GRAPHIC_PACKS"|translate}}</b></td>
             </tr>
             <tr>
-                <td>Link</td>
+                <td>{{"L10N_LINK"|translate}}</td>
                 <td><a data-link="https://slashiee.github.io/cemu_graphic_packs" (click)="openDataLink($event)">https://slashiee.github.io/cemu_graphic_packs</a></td>
             </tr>
             <tr>
-                <td>Download</td>
-                <td><a data-link="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip" (click)="openDataLink($event)">Latest version</a></td>
+                <td>{{"L10N_DOWNLOAD"|translate}}</td>
+                <td><a data-link="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip" (click)="openDataLink($event)">{{"L10N_LATEST_VERSION"|translate}}</a></td>
             </tr>
             <tr>
-                <td colspan="2"><b>More...</b></td>
+                <td colspan="2"><b>{{"L10N_MORE"|translate}}...</b></td>
             </tr>
             <tr>
                 <td colspan="2">

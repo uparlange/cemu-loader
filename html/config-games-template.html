@@ -1,7 +1,7 @@
 <div view animated [(animation)]="animation" [(duration)]="duration" (onComplete)="onAnimationComplete(filterInput)">
     <div class="panel-header">
-        <span>Select 1 game from {{model.games.length}}</span>
-        <span class="icon config-games-cancel-btn" title="Cancel" (click)="cancel()">
+        <span>{{'L10N_SELECT_XXX_GAMES_FROM_XXX'|translate:1:model.games.length}}</span>
+        <span class="icon config-games-cancel-btn" [title]="'L10N_CANCEL'|translate" (click)="cancel()">
             <i class="fa fa-ban"></i>
         </span>
     </div>
@@ -24,11 +24,11 @@
                 </div>
             </div>
             <p class="control is-expanded">
-                <input #filterInput class="input" placeholder="Filter" [(ngModel)]="filterValue">
+                <input #filterInput class="input" [placeholder]="'L10N_FILTER'|translate" [(ngModel)]="filterValue">
             </p>
             <p class="control">
                 <a class="button is-primary" (click)="deleteFilter()">
-                    <span class="icon" title="Delete filter">
+                    <span class="icon" [title]="'L10N_CLEAR'|translate">
                         <i class="fa fa-eraser"></i>
                     </span>
                 </a>

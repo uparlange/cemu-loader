@@ -1,51 +1,50 @@
-define(["AppUtils", "AppModel", "CemuManager"],
-	function (AppUtils, AppModel, CemuManager) {
+define(["AppUtils", "AppModel", "CemuManager", "TranslateManager"],
+	function (AppUtils, AppModel, CemuManager, TranslateManager) {
 		return AppUtils.getClass({
-			constructor: function ListView(AppModel, CemuManager) {
+			constructor: function ListView(AppModel, CemuManager, TranslateManager) {
 				this.model = AppModel;
 				this._cemuManager = CemuManager;
-				this.onContextmenuHandler = null;
+				this._translateManager = TranslateManager;
+				this._onContextmenuHandler = null;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("list"))
 			],
 			parameters: [
-				[AppModel], [CemuManager]
+				[AppModel], [CemuManager], [TranslateManager]
 			],
 			functions: [
 				function ngOnInit() {
-					this.onContextmenuHandler = (evt) => {
+					this._onContextmenuHandler = (evt) => {
 						evt.preventDefault();
 						this._displayRightClickMenu(evt);
 						return false;
 					};
-					document.body.addEventListener("contextmenu", this.onContextmenuHandler);
+					document.body.addEventListener("contextmenu", this._onContextmenuHandler);
 				},
 				function ngOnDestroy() {
-					document.body.removeEventListener("contextmenu", this.onContextmenuHandler);
+					document.body.removeEventListener("contextmenu", this._onContextmenuHandler);
 				},
 				function launchGame(game) {
 					this._cemuManager.launchGame(game);
 				},
 				function _displayRightClickMenu(evt) {
-					const game = this._getGameByName(evt.target.title);
-					if (game.id !== null) {
+					this._translateManager.getValues(["L10N_DESCRIPTION"]).subscribe((translations) => {
+						const game = this._getGameByName(evt.target.title);
 						const gui = require("nw.gui");
 						const menu = new gui.Menu();
 						menu.append(new gui.MenuItem({
-							label: "Description",
+							label: translations.L10N_DESCRIPTION,
 							click: () => {
 								gui.Shell.openExternal("http://www.gametdb.com/WiiU/" + game.id);
 							}
 						}));
 						//menu.append(new gui.MenuItem({ type: "separator" }));
 						menu.popup(evt.x, evt.y);
-					}
+					});
 				},
 				function _getGameByName(name) {
-					let game = {
-						id: null
-					};
+					let game = null;
 					this.model.config.games.forEach((element) => {
 						if (element.name === name) {
 							game = element;

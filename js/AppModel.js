@@ -1,13 +1,12 @@
-define(["AppUtils", "WmicManager"],
-	function (AppUtils, WmicManager) {
+define(["AppUtils", "WmicManager", "TranslateManager"],
+	function (AppUtils, WmicManager, TranslateManager) {
 		return AppUtils.getClass({
-			constructor: function AppModel(WmicManager, NgZone) {
-				this._wmicManager = WmicManager;
-				this._ngZone = NgZone;
+			constructor: function AppModel(WmicManager, NgZone, TranslateManager) {
 				this.config = {
 					file: AppUtils.getConfigFile(),
 					autostart: false,
 					startMinimized: false,
+					language: TranslateManager.getDefaultLanguage(),
 					cemu: {
 						file: null,
 						fullscreen: true,
@@ -24,12 +23,19 @@ define(["AppUtils", "WmicManager"],
 				this.currentGame = null;
 				this.gameTypes = [];
 				this.currentGameType = "WiiU";
+				this._wmicManager = WmicManager;
+				this._ngZone = NgZone;
+				this._translateManager = TranslateManager;
+				this._onLanguageChangeSubscriber = null;
 				this._init();
 			},
 			parameters: [
-				[WmicManager], [ng.core.NgZone]
+				[WmicManager], [ng.core.NgZone], [TranslateManager]
 			],
 			functions: [
+				function setLanguage(language) {
+					this._translateManager.setLanguage(language);
+				},
 				function save() {
 					const fs = require("fs");
 					fs.writeFileSync(AppUtils.getConfigFile(), JSON.stringify(this.config));
@@ -43,14 +49,16 @@ define(["AppUtils", "WmicManager"],
 					this.currentGame = null;
 				},
 				function addGame() {
-					const game = {
-						id: null,
-						name: "New Game",
-						image: null,
-						file: null
-					};
-					this.config.games.unshift(game);
-					this.currentGame = game;
+					this._translateManager.getValues(["L10N_NEW_GAME"]).subscribe((translations) => {
+						const game = {
+							id: null,
+							name: translations.L10N_NEW_GAME + " " + (this.config.games.length + 1),
+							image: null,
+							file: null
+						};
+						this.config.games.unshift(game);
+						this.currentGame = game;
+					});
 				},
 				function removeGame(game) {
 					const index = this.config.games.indexOf(game);
@@ -89,8 +97,15 @@ define(["AppUtils", "WmicManager"],
 				},
 				function _init() {
 					this._initConfig();
+					this._initLanguage();
 					this._initUpdateCemuVersion();
 					this._initGameDb();
+				},
+				function _initLanguage() {
+					this._onLanguageChangeSubscriber = this._translateManager.onLanguageChange.subscribe((language) => {
+						this.config.language = language;
+					});
+					this.setLanguage(this.config.language);
 				},
 				function _initUpdateCemuVersion() {
 					if (this.config.cemu.file != null) {
@@ -116,7 +131,7 @@ define(["AppUtils", "WmicManager"],
 				function _initConfig() {
 					const fs = require("fs");
 					if (fs.existsSync(this.config.file)) {
-						this.config = require(this.config.file);
+						this.config = Object.assign(this.config, require(this.config.file));
 					} else {
 						this.save();
 					}

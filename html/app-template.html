@@ -7,20 +7,20 @@
             <li [ngClass]="currentView == 'list' ? 'is-active' : null" (click)="showView('list')">
                 <a>
                     <span class="icon is-small"><i class="fa fa-gamepad"></i></span>
-                    <span *ngIf="model.config.games.length > 0; else nogames">My {{model.config.games.length}} game(s)</span>
-                    <ng-template #nogames>My future game(s)</ng-template>
+                    <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
+                    <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
                 </a>
             </li>
             <li [ngClass]="currentView == 'config' ? 'is-active' : null" (click)="showView('config')">
                 <a>
                     <span class="icon is-small"><i class="fa fa-cogs"></i></span>
-                    Configuration
+                    {{"L10N_CONFIGURATION"|translate}}
                 </a>
             </li>
             <li [ngClass]="currentView == 'resources' ? 'is-active' : null" (click)="showView('resources')">
                 <a>
                     <span class="icon is-small"><i class="fa fa-link"></i></span>
-                    Resources
+                    {{"L10N_RESOURCES"|translate}}
                 </a>
             </li>
         </ul>
