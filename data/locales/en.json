@@ -32,5 +32,6 @@
 	"L10N_MY_FUTURE_GAMES": "My future games",
 	"L10N_CONFIGURE_XXX_FILE": "Please configure {0}'s file",
 	"L10N_SELECT_XXX_GAMES_FROM_XXX": "Select {0} game(s) from {1}",
-	"L10N_NEW_GAME": "New game"
+	"L10N_NEW_GAME": "New game",
+	"L10N_DISPLAY": "Display"
 }

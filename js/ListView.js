@@ -8,7 +8,7 @@ define(["AppUtils", "AppModel", "CemuManager", "TranslateManager"],
 				this._onContextmenuHandler = null;
 			},
 			annotations: [
-				new ng.core.Component(AppUtils.getComponentConfiguration("list"))
+				new ng.core.Component(AppUtils.getComponentConfiguration("list-view"))
 			],
 			parameters: [
 				[AppModel], [CemuManager], [TranslateManager]

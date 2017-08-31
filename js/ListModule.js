@@ -1,5 +1,7 @@
-define(["AppUtils", "CommonModule", "ListView", "ViewCanDeactivate"],
-	function (AppUtils, CommonModule, ListView, ViewCanDeactivate) {
+define(["AppUtils", "CommonModule", "ListView", "ViewCanDeactivate", "TileRendererComponent",
+	"ListRendererComponent"],
+	function (AppUtils, CommonModule, ListView, ViewCanDeactivate, TileRendererComponent,
+		ListRendererComponent) {
 		return AppUtils.getLazyModuleClass({
 			constructor: function ListModule() {
 
@@ -13,7 +15,9 @@ define(["AppUtils", "CommonModule", "ListView", "ViewCanDeactivate"],
 						])
 					],
 					declarations: [
-						ListView
+						ListView,
+						TileRendererComponent,
+						ListRendererComponent
 					],
 					providers: [
 						ViewCanDeactivate

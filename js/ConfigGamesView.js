@@ -12,7 +12,7 @@ define(["AppUtils", "AppModel"],
 				this.imagesPopupActive = false;
 			},
 			annotations: [
-				new ng.core.Component(AppUtils.getComponentConfiguration("config-games"))
+				new ng.core.Component(AppUtils.getComponentConfiguration("config-games-view"))
 			],
 			parameters: [
 				[AppModel], [ng.router.Router], [ng.core.NgZone], [ng.http.Http]

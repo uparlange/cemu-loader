@@ -49,6 +49,32 @@
                     </div>
                 </td>
             </tr>
+            <tr>
+                <td class="form-label" width="200">
+                    <label for="fullscreen">{{'L10N_DISPLAY'|translate}}</label>
+                </td>
+                <td>
+                    <div class="dropdown" [ngClass]="comboRendererActive ? 'is-active' : null" (click)="comboRendererActive=!comboRendererActive">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                               <img [src]="'images/' + model.config.renderer + '.png'">
+                                <span class="icon is-small">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <a [ngClass]="(renderer.data == model.config.renderer) ? 'is-active' : null" *ngFor="let renderer of availableRenderers"
+                                    class="dropdown-item" (click)="model.config.renderer = renderer.data">
+                                        <img [src]="'images/' + renderer.data + '.png'">
+                                        <span class="dropdown-label">{{renderer.label}}</span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
             <!--
             <tr>
                 <td class="form-label" width="200">

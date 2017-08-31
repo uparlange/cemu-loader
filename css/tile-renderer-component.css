@@ -4,9 +4,5 @@ img
     width: 200px;
     height:284px;
     box-shadow: 3px 3px 3px #aaa; 
-}
-
-.animated.swing
-{
-    -webkit-animation-duration:500ms;
+    cursor: pointer;
 }

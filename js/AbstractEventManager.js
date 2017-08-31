@@ -1,7 +1,7 @@
 define(["AppUtils"],
 	function (AppUtils) {
 		return AppUtils.getClass({
-			constructor: function EventManager() {
+			constructor: function AbstractEventManager() {
 				this._eventEmitters = {};
 			},
 			functions: [

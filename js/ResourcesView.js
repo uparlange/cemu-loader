@@ -15,7 +15,7 @@ define(["AppUtils"],
 				[ng.http.Http]
 			],
 			annotations: [
-				new ng.core.Component(AppUtils.getComponentConfiguration("resources"))
+				new ng.core.Component(AppUtils.getComponentConfiguration("resources-view"))
 			],
 			functions: [
 				function ngOnInit() {

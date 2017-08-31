@@ -1,9 +1,9 @@
-define(["AppUtils", "EventManager"],
-    function (AppUtils, EventManager) {
+define(["AppUtils", "AbstractEventManager"],
+    function (AppUtils, AbstractEventManager) {
         return AppUtils.getClass({
-            extends: EventManager,
+            extends: AbstractEventManager,
             constructor: function RouterManager(Router) {
-                EventManager.call(this);
+                AbstractEventManager.call(this);
                 this._router = Router;
                 this._previousUrl = "";
                 this._currentUrl = "";

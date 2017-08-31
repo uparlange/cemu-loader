@@ -5,7 +5,7 @@ define(["AppUtils"],
 
 			},
 			annotations: [
-				new ng.core.Component(AppUtils.getComponentConfiguration("config"))
+				new ng.core.Component(AppUtils.getComponentConfiguration("config-view"))
 			]
 		});
 	}

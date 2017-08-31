@@ -6,6 +6,7 @@ define(["AppUtils", "WmicManager", "TranslateManager"],
 					file: AppUtils.getConfigFile(),
 					autostart: false,
 					startMinimized: false,
+					renderer: "tile",
 					language: TranslateManager.getDefaultLanguage(),
 					cemu: {
 						file: null,

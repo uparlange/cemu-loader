@@ -30,8 +30,16 @@ define(function () {
 		getComponentConfiguration: function (componentName, params) {
 			const defaultParams = {
 				selector: componentName,
-				templateUrl: "html/" + componentName + "-template" + ".html",
-				styleUrls: ["css/" + componentName + "-template.css"]
+				templateUrl: "html/" + componentName + ".html",
+				styleUrls: ["css/" + componentName + ".css"]
+			};
+			return Object.assign({}, defaultParams, params);
+		},
+		getRendererComponentConfiguration: function (componentName) {
+			const defaultParams = this.getComponentConfiguration(componentName);
+			const params = {
+				inputs: ["provider"],
+				outputs: ["change"]
 			};
 			return Object.assign({}, defaultParams, params);
 		},

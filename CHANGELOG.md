@@ -1,5 +1,11 @@
 # Changelog #
 
+## 1.3.2 ##
+
+* Game list renderer (tile, list)
+* Wiiudb version 20170831114630
+* Optimizations
+
 ## 1.3.1 ##
 
 * Language support (en, fr, es)

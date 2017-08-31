@@ -8,7 +8,7 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 				this.currentView = null;
 			},
 			annotations: [
-				new ng.core.Component(AppUtils.getComponentConfiguration("app", {
+				new ng.core.Component(AppUtils.getComponentConfiguration("app-view", {
 					selector: "body"
 				}))
 			],

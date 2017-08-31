@@ -5,18 +5,21 @@ define(["AppUtils", "AppModel", "CemuManager"],
 				this.model = AppModel;
 				this.comboLanguageActive = false;
 				this.availableLanguages = [];
+				this.comboRendererActive = false;
+				this.availableRenderers = [];
 				this._router = Router;
 				this._cemuManager = CemuManager;
 			},
 			annotations: [
-				new ng.core.Component(AppUtils.getComponentConfiguration("config-params"))
+				new ng.core.Component(AppUtils.getComponentConfiguration("config-params-view"))
 			],
 			parameters: [
 				[AppModel], [CemuManager], [ng.router.Router]
 			],
 			functions: [
 				function ngOnInit() {
-					this._initRefreshAvailableLanguages();
+					this._initUpdateAvailableLanguages();
+					this._initUpdateAvailableRenderers();
 				},
 				function changeLanguage(language) {
 					this.model.setLanguage(language);
@@ -82,11 +85,17 @@ define(["AppUtils", "AppModel", "CemuManager"],
 					chooser.click();
 					return eventEmitter;
 				},
-				function _initRefreshAvailableLanguages() {
+				function _initUpdateAvailableLanguages() {
 					this.availableLanguages = [
 						{ data: "en", label: "English" },
 						{ data: "fr", label: "Français" },
 						{ data: "es", label: "Español" }
+					]
+				},
+				function _initUpdateAvailableRenderers() {
+					this.availableRenderers = [
+						{ data: "tile", label: "Tile" },
+						{ data: "list", label: "List" }
 					]
 				}
 			]
