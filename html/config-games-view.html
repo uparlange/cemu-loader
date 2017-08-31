@@ -37,7 +37,7 @@
     </div>
     <table class="table is-fullwidth">
         <tbody>
-            <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue | filterBy:'type':model.currentGameType; trackBy:model.trackGame"
+            <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue | filterBy:'type':model.currentGameType; trackBy:gameHelper.track"
                 (click)="showGameImages(game)">
                 <td>{{game.name}}</td>
             </tr>

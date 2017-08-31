@@ -1,7 +1,8 @@
 <div view animated [(animation)]="animation" [(duration)]="duration">
     <input id="fileDialog" class=" config-params-file-dialog" type="file" />
     <div class="panel-header">
-        <span>{{'L10N_APPLICATION'|translate}}</span>
+        <span>Cemu Loader</span>
+        <span *ngIf="version.application != null">{{version.application}}</span>
         <span class="icon config-params-save-btn" [title]="'L10N_SAVE_CONFIGURATION'|translate" (click)="saveConfiguration()">
             <i class="fa fa-floppy-o"></i>
         </span>
@@ -39,7 +40,7 @@
                         </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
-                                <a [ngClass]="(language.data == model.config.language) ? 'is-active' : null" *ngFor="let language of availableLanguages"
+                                <a [ngClass]="(language.data == model.config.language) ? 'is-active' : null" *ngFor="let language of config.languages; trackBy:itemHelper.track"
                                     class="dropdown-item" (click)="changeLanguage(language.data)">
                                         <img [src]="'images/' + language.data + '.png'">
                                         <span class="dropdown-label">{{language.label}}</span>
@@ -65,7 +66,7 @@
                         </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
-                                <a [ngClass]="(renderer.data == model.config.renderer) ? 'is-active' : null" *ngFor="let renderer of availableRenderers"
+                                <a [ngClass]="(renderer.data == model.config.renderer) ? 'is-active' : null" *ngFor="let renderer of config.renderers; trackBy:itemHelper.track"
                                     class="dropdown-item" (click)="model.config.renderer = renderer.data">
                                         <img [src]="'images/' + renderer.data + '.png'">
                                         <span class="dropdown-label">{{renderer.label}}</span>
@@ -97,8 +98,8 @@
     </table>
     <div class="panel-header">
         <span>Cemu</span>
-        <span *ngIf="model.cemu.localVersion != null">{{model.cemu.localVersion}}</span>
-        <span *ngIf="model.cemuHook.localVersion != null">| Cemu Hook {{model.cemuHook.localVersion}}</span>
+        <span *ngIf="version.cemu != null">{{version.cemu}}</span>
+        <span *ngIf="version.cemuHook != null">| Cemu Hook {{version.cemuHook}}</span>
         <span class="icon config-params-launch-btn" [title]="('L10N_LAUNCH'|translate) + ' Cemu'" (click)="launchCemu()">
             <i class="fa fa-bullseye"></i>
         </span>
@@ -148,7 +149,7 @@
     </div>
     <table class="table is-fullwidth">
         <tbody>
-            <tr *ngFor="let game of model.config.games | orderBy:'name'; trackBy:model.trackGame">
+            <tr *ngFor="let game of model.config.games | orderBy:'name'; trackBy:gameHelper.track">
                 <td>
                     <div>
                         <span *ngIf="model.currentGame !== game">{{game.name}}</span>

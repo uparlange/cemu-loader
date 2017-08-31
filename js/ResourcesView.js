@@ -1,18 +1,19 @@
-define(["AppUtils"],
-	function (AppUtils) {
+define(["AppUtils", "ItemHelper"],
+	function (AppUtils, ItemHelper) {
 		return AppUtils.getClass({
-			constructor: function ResourcesView(Http) {
+			constructor: function ResourcesView(Http, ItemHelper) {
 				this._http = Http;
+				this.itemHelper = ItemHelper;
 				this.cemu = {
 					label: null,
-					link: null
+					data: null
 				};
 				this.cemuHook = {
 					versions: []
 				}
 			},
 			parameters: [
-				[ng.http.Http]
+				[ng.http.Http], [ItemHelper]
 			],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("resources-view"))
@@ -30,6 +31,9 @@ define(["AppUtils"],
 				},
 				function downloadCemu() {
 					nw.Shell.openExternal(this.cemu.link);
+				},
+				function trackCemuHook(index, value) {
+					return value.label;
 				},
 				function _initCemuVersion() {
 					const htmlparser = require("htmlparser2");
@@ -63,7 +67,7 @@ define(["AppUtils"],
 									if (text.indexOf(" - Cemu hook ") == -1) {
 										this.cemuHook.versions.push({
 											label: text,
-											link: currentLink
+											data: currentLink
 										});
 									}
 								}

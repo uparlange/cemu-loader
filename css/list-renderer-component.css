@@ -4,6 +4,7 @@ img
     height:48px;
     border-radius: 24px;
     vertical-align: middle;
+    box-shadow: 3px 3px 3px #aaa; 
 }
 
 tr

@@ -13,7 +13,7 @@ define(["AppUtils", "AppModel", "TranslateManager"],
 			functions: [
 				function init() {
 					const pkg = AppUtils.getPackageFile();
-					const title = pkg.description + " " + pkg.version;
+					const title = pkg.description;
 					this._initWindow(title);
 					this._initTray(title);
 					if (this._appModel.config.startMinimized) {

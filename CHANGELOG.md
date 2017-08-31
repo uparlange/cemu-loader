@@ -1,5 +1,9 @@
 # Changelog #
 
+## 1.3.3 ##
+
+* Optimizations
+
 ## 1.3.2 ##
 
 * Game list renderer (tile, list)

@@ -1,10 +1,13 @@
-define(["AppUtils", "AbstractRendererComponent"],
-	function (AppUtils, AbstractRendererComponent) {
+define(["AppUtils", "AbstractRendererComponent", "GameHelper"],
+	function (AppUtils, AbstractRendererComponent, GameHelper) {
 		return AppUtils.getClass({
 			extends: AbstractRendererComponent,
-			constructor: function ListRendererComponent() {
-				AbstractRendererComponent.call(this);
+			constructor: function ListRendererComponent(GameHelper) {
+				AbstractRendererComponent.call(this, GameHelper);
 			},
+			parameters: [
+				[GameHelper]
+			],
 			annotations: [
 				new ng.core.Component(AppUtils.getRendererComponentConfiguration("list-renderer-component"))
 			],

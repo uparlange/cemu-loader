@@ -1,0 +1,26 @@
+{
+    "languages": [
+        {
+            "data": "en",
+            "label": "English"
+        },
+        {
+            "data": "fr",
+            "label": "Français"
+        },
+        {
+            "data": "es",
+            "label": "Español"
+        }
+    ],
+    "renderers": [
+        {
+            "data": "tile",
+            "label": "Tile"
+        },
+        {
+            "data": "list",
+            "label": "List"
+        }
+    ]
+}

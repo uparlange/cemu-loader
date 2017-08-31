@@ -58,6 +58,9 @@ define(function () {
 			return os.homedir();
 		},
 		getConfigFile: function () {
+			return require("./data/configuration.json");
+		},
+		getUserConfigFile: function () {
 			return this.getHomeDir() + "\\" + this.getPackageFile().name + ".json";
 		},
 		getRemotePackageUrl: function () {

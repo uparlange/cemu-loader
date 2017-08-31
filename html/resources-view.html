@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <td>{{"L10N_DOWNLOAD"|translate}}</td>
-                <td><a (click)="openLink(cemu.link)">{{cemu.label}}</a></td>
+                <td><a (click)="openLink(cemu.data)">{{cemu.label}}</a></td>
             </tr>
             <tr>
                 <td colspan="2"><b>Cemu Hook</b></td>
@@ -25,9 +25,9 @@
             <tr>
                 <td>{{"L10N_DOWNLOAD"|translate}}</td>
                 <td>
-                    <span *ngFor="let version of cemuHook.versions; let first=first;">
+                    <span *ngFor="let version of cemuHook.versions; let first=first; trackBy:itemHelper.track">
                         <span *ngIf="!first">|</span>
-                    <a (click)="openLink(version.link)">{{version.label}}</a>
+                    <a (click)="openLink(version.data)">{{version.label}}</a>
                     </span>
                 </td>
             </tr>

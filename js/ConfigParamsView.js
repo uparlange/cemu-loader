@@ -1,25 +1,37 @@
-define(["AppUtils", "AppModel", "CemuManager"],
-	function (AppUtils, AppModel, CemuManager) {
+define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
+	"ItemHelper"],
+	function (AppUtils, AppModel, CemuManager, WmicManager, GameHelper,
+		ItemHelper) {
 		return AppUtils.getClass({
-			constructor: function ConfigParamsView(AppModel, CemuManager, Router) {
+			constructor: function ConfigParamsView(AppModel, CemuManager, Router, WmicManager, NgZone,
+				GameHelper, ItemHelper) {
 				this.model = AppModel;
 				this.comboLanguageActive = false;
-				this.availableLanguages = [];
 				this.comboRendererActive = false;
-				this.availableRenderers = [];
+				this.config = AppUtils.getConfigFile();
+				this.version = {
+					application: AppUtils.getPackageFile().version,
+					cemu: null,
+					cemuHook: null
+				};
+				this.gameHelper = GameHelper;
+				this.itemHelper = ItemHelper;
 				this._router = Router;
 				this._cemuManager = CemuManager;
+				this._wmicManager = WmicManager;
+				this._ngZone = NgZone;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("config-params-view"))
 			],
 			parameters: [
-				[AppModel], [CemuManager], [ng.router.Router]
+				[AppModel], [CemuManager], [ng.router.Router], [WmicManager], [ng.core.NgZone],
+				[GameHelper], [ItemHelper]
 			],
 			functions: [
 				function ngOnInit() {
-					this._initUpdateAvailableLanguages();
-					this._initUpdateAvailableRenderers();
+					this._initUpdateCemuVersion();
+					this._initUpdateCemuHookVersion();
 				},
 				function changeLanguage(language) {
 					this.model.setLanguage(language);
@@ -49,12 +61,15 @@ define(["AppUtils", "AppModel", "CemuManager"],
 					nw.Shell.showItemInFolder(item);
 				},
 				function openConfigDirectory() {
-					const item = AppUtils.getConfigFile();
+					const item = AppUtils.getUserConfigFile();
 					nw.Shell.showItemInFolder(item);
 				},
 				function selectCemuFile() {
 					this._selectFile().subscribe((file) => {
-						this.model.setCemuFile(file);
+						this.model.setCemuFile(file).subscribe(() => {
+							this._initUpdateCemuVersion();
+							this._initUpdateCemuHookVersion();
+						});
 					});
 				},
 				function selectGameImage(game) {
@@ -74,6 +89,26 @@ define(["AppUtils", "AppModel", "CemuManager"],
 				function launchCemu() {
 					this._cemuManager.launchCemu();
 				},
+				function _initUpdateCemuVersion() {
+					if (this.model.config.cemu.file != null) {
+						const file = this.model.config.cemu.file.replace(/"/g, "");
+						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
+							this._ngZone.run(() => {
+								this.version.cemu = version;
+							});
+						});
+					}
+				},
+				function _initUpdateCemuHookVersion() {
+					if (this.model.config.cemu.file != null) {
+						const file = this.model.config.cemu.file.replace(/"/g, "").replace("Cemu.exe", "dbghelp.dll");
+						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
+							this._ngZone.run(() => {
+								this.version.cemuHook = version;
+							});
+						});
+					}
+				},
 				function _selectFile() {
 					const eventEmitter = new ng.core.EventEmitter();
 					const chooser = document.querySelector("#fileDialog");
@@ -84,19 +119,6 @@ define(["AppUtils", "AppModel", "CemuManager"],
 					chooser.addEventListener("change", handler);
 					chooser.click();
 					return eventEmitter;
-				},
-				function _initUpdateAvailableLanguages() {
-					this.availableLanguages = [
-						{ data: "en", label: "English" },
-						{ data: "fr", label: "Français" },
-						{ data: "es", label: "Español" }
-					]
-				},
-				function _initUpdateAvailableRenderers() {
-					this.availableRenderers = [
-						{ data: "tile", label: "Tile" },
-						{ data: "list", label: "List" }
-					]
 				}
 			]
 		});

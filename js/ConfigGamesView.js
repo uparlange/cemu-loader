@@ -1,21 +1,22 @@
-define(["AppUtils", "AppModel"],
-	function (AppUtils, AppModel) {
+define(["AppUtils", "AppModel", "GameHelper"],
+	function (AppUtils, AppModel, GameHelper) {
 		return AppUtils.getClass({
-			constructor: function ConfigGamesView(AppModel, Router, NgZone, Http) {
+			constructor: function ConfigGamesView(AppModel, Router, NgZone, Http, GameHelper) {
 				this.model = AppModel;
-				this._router = Router;
-				this._ngZone = NgZone;
-				this._http = Http;
+				this.gameHelper = GameHelper;
 				this.filterValue = null;
 				this.comboTypeActive = false;
 				this.images = [];
 				this.imagesPopupActive = false;
+				this._router = Router;
+				this._ngZone = NgZone;
+				this._http = Http;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("config-games-view"))
 			],
 			parameters: [
-				[AppModel], [ng.router.Router], [ng.core.NgZone], [ng.http.Http]
+				[AppModel], [ng.router.Router], [ng.core.NgZone], [ng.http.Http], [GameHelper]
 			],
 			functions: [
 				function onAnimationComplete(filterInput) {

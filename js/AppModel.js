@@ -1,37 +1,19 @@
-define(["AppUtils", "WmicManager", "TranslateManager"],
-	function (AppUtils, WmicManager, TranslateManager) {
+define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
+	function (AppUtils, TranslateManager, GameHelper, UserConfigHelper) {
 		return AppUtils.getClass({
-			constructor: function AppModel(WmicManager, NgZone, TranslateManager) {
-				this.config = {
-					file: AppUtils.getConfigFile(),
-					autostart: false,
-					startMinimized: false,
-					renderer: "tile",
-					language: TranslateManager.getDefaultLanguage(),
-					cemu: {
-						file: null,
-						fullscreen: true,
-					},
-					games: []
-				};
-				this.cemu = {
-					localVersion: null
-				};
-				this.cemuHook = {
-					localVersion: null
-				};
+			constructor: function AppModel(TranslateManager, GameHelper, UserConfigHelper) {
+				this.config = UserConfigHelper.getNew();
 				this.games = [];
 				this.currentGame = null;
 				this.gameTypes = [];
 				this.currentGameType = "WiiU";
-				this._wmicManager = WmicManager;
-				this._ngZone = NgZone;
 				this._translateManager = TranslateManager;
 				this._onLanguageChangeSubscriber = null;
+				this._gameHelper = GameHelper;
 				this._init();
 			},
 			parameters: [
-				[WmicManager], [ng.core.NgZone], [TranslateManager]
+				[TranslateManager], [GameHelper], [UserConfigHelper]
 			],
 			functions: [
 				function setLanguage(language) {
@@ -39,24 +21,17 @@ define(["AppUtils", "WmicManager", "TranslateManager"],
 				},
 				function save() {
 					const fs = require("fs");
-					fs.writeFileSync(AppUtils.getConfigFile(), JSON.stringify(this.config));
+					fs.writeFileSync(AppUtils.getUserConfigFile(), JSON.stringify(this.config));
 					this.unSelectGame();
 					//this._checkAutostart();
-				},
-				function trackGame(index, value) {
-					return value.name;
 				},
 				function unSelectGame() {
 					this.currentGame = null;
 				},
 				function addGame() {
 					this._translateManager.getValues(["L10N_NEW_GAME"]).subscribe((translations) => {
-						const game = {
-							id: null,
-							name: translations.L10N_NEW_GAME + " " + (this.config.games.length + 1),
-							image: null,
-							file: null
-						};
+						const name = translations.L10N_NEW_GAME + " " + (this.config.games.length + 1);
+						const game = this._gameHelper.getNew(name);
 						this.config.games.unshift(game);
 						this.currentGame = game;
 					});
@@ -67,9 +42,13 @@ define(["AppUtils", "WmicManager", "TranslateManager"],
 					this.unSelectGame();
 				},
 				function setCemuFile(file) {
+					const eventEmitter = new ng.core.EventEmitter();
 					this.config.cemu.file = '"' + file + '"';
-					this._initUpdateCemuVersion();
-				},
+					setTimeout(() => {
+						eventEmitter.emit();
+					}, 0);
+					return eventEmitter;
+				}, -
 				function setGameImage(game, file) {
 					game.image = "file:" + file;
 				},
@@ -99,7 +78,6 @@ define(["AppUtils", "WmicManager", "TranslateManager"],
 				function _init() {
 					this._initConfig();
 					this._initLanguage();
-					this._initUpdateCemuVersion();
 					this._initGameDb();
 				},
 				function _initLanguage() {
@@ -107,27 +85,6 @@ define(["AppUtils", "WmicManager", "TranslateManager"],
 						this.config.language = language;
 					});
 					this.setLanguage(this.config.language);
-				},
-				function _initUpdateCemuVersion() {
-					if (this.config.cemu.file != null) {
-						const file = this.config.cemu.file.replace(/"/g, "");
-						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
-							this._ngZone.run(() => {
-								this.cemu.localVersion = version;
-								this._initUpdateCemuHookVersion();
-							});
-						});
-					}
-				},
-				function _initUpdateCemuHookVersion() {
-					if (this.config.cemu.file != null) {
-						const file = this.config.cemu.file.replace(/"/g, "").replace("Cemu.exe", "dbghelp.dll");
-						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
-							this._ngZone.run(() => {
-								this.cemuHook.localVersion = version;
-							});
-						});
-					}
 				},
 				function _initConfig() {
 					const fs = require("fs");
