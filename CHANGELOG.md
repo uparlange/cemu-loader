@@ -1,5 +1,9 @@
 # Changelog #
 
+## 1.3.4 ##
+
+* Correct Cemu download link in resources
+
 ## 1.3.3 ##
 
 * Optimizations

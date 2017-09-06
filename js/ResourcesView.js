@@ -43,7 +43,7 @@ define(["AppUtils", "ItemHelper"],
 								if (tagname == "a") {
 									if (attributes.href.indexOf("releases") != -1) {
 										this.cemu.label = "Cemu " + attributes.href.substring(attributes.href.indexOf("_") + 1, attributes.href.length - 4);
-										this.cemu.link = attributes.href;
+										this.cemu.data = attributes.href;
 									}
 								}
 							}
