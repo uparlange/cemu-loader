@@ -1,48 +1,45 @@
 <div view animated [(animation)]="animation" [(duration)]="duration" (onComplete)="onAnimationComplete(filterInput)">
-    <div class="panel-header">
-        <span>{{'L10N_SELECT_XXX_GAMES_FROM_XXX'|translate:1:model.games.length}}</span>
-        <span class="icon config-games-cancel-btn" [title]="'L10N_CANCEL'|translate" (click)="cancel()">
-            <i class="fa fa-ban"></i>
-        </span>
-    </div>
-    <div>
-        <div class="field has-addons">
-            <div class="dropdown" [ngClass]="comboTypeActive ? 'is-active' : null" (click)="comboTypeActive=!comboTypeActive">
-                <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>{{model.currentGameType}}</span>
-                        <span class="icon is-small">
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                        <a [ngClass]="(type == model.currentGameType) ? 'is-active' : null" *ngFor="let type of model.gameTypes" class="dropdown-item"
-                            (click)="model.currentGameType=type">{{type}}</a>
+    <panel-component>
+        <panel-header-component>
+            <span>{{'L10N_SELECT_XXX_GAMES_FROM_XXX'|translate:1:model.games.length}}</span>
+            <span style="flex-grow:1"></span>
+            <bulma-button-component [icon]="'fa-ban'" [title]="'L10N_CANCEL'|translate" (click)="cancel()"></bulma-button-component>
+        </panel-header-component>
+        <panel-content-component>
+            <div class="field has-addons">
+                <div class="dropdown" [ngClass]="comboTypeActive ? 'is-active' : null" (click)="comboTypeActive=!comboTypeActive">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>{{model.currentGameType}}</span>
+                                <span class="icon is-small">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a [ngClass]="(type == model.currentGameType) ? 'is-active' : null" *ngFor="let type of model.gameTypes" class="dropdown-item"
+                                (click)="model.currentGameType=type">{{type}}</a>
+                        </div>
                     </div>
                 </div>
+                <p class="control is-expanded">
+                    <input #filterInput class="input" [placeholder]="'L10N_FILTER'|translate" [(ngModel)]="filterValue">
+                </p>
+                <p class="control">
+                    <bulma-button-component [icon]="'fa-eraser'" [enabled]="filterValue != null" [title]="'L10N_CLEAR'|translate" (click)="deleteFilter()"></bulma-button-component>
+                </p>
             </div>
-            <p class="control is-expanded">
-                <input #filterInput class="input" [placeholder]="'L10N_FILTER'|translate" [(ngModel)]="filterValue">
-            </p>
-            <p class="control">
-                <a class="button is-primary" (click)="deleteFilter()">
-                    <span class="icon" [title]="'L10N_CLEAR'|translate">
-                        <i class="fa fa-eraser"></i>
-                    </span>
-                </a>
-            </p>
-        </div>
-    </div>
-    <table class="table is-fullwidth">
-        <tbody>
-            <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue | filterBy:'type':model.currentGameType; trackBy:gameHelper.track"
-                (click)="showGameImages(game)">
-                <td>{{game.name}}</td>
-            </tr>
-        </tbody>
-    </table>
+            <table class="table is-fullwidth">
+                <tbody>
+                    <tr *ngFor="let game of model.games | orderBy:'name' | filterBy:'name':filterValue | filterBy:'type':model.currentGameType; trackBy:gameHelper.track"
+                        (click)="showGameImages(game)">
+                        <td>{{game.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </panel-content-component>
+    </panel-component>
 </div>
 <div class="modal" [ngClass]="imagesPopupActive ? 'is-active' : null">
     <div class="modal-background"></div>

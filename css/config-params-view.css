@@ -1,43 +1,14 @@
-.config-params-file-dialog
+#fileDialog
 {
     display:none;
 }
 
- .config-params-add-btn
+#folderDialog
 {
-    float:right;
+    display:none;
 }
 
- .config-params-launch-btn
-{
-    float:right;
-}
-
- .config-params-save-btn
-{
-    float:right;
-}
-
- .config-params-edit-btn
-{
-    float:right;
-}
-
- .config-params-delete-btn
-{
-    float:right;
-    margin-top:10px;
-}
-
-.config-params-find-panel
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-}
-
-.config-td-actions
+.game-actions
 {
     vertical-align: top !important;
 }

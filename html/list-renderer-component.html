@@ -1,7 +1,7 @@
 <table class="table is-fullwidth">
     <tbody>
         <tr animated [animation]="'fadeInLeftBig'" [duration]="500" *ngFor="let game of provider | orderBy:'name'; trackBy:gameHelper.track"
-            (click)="onClickHandler(game)" [title]="game.name">
+            (click)="onClick(game)" [title]="game.name">
             <td>
                 <img [src]="game.image">
                 <span>{{game.name}}</span>

@@ -1,7 +1,9 @@
 define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective",
-	"CheckboxDirective", "TranslatePipe"],
+	"CheckboxComponent", "TranslatePipe", "BulmaButtonComponent", "BulmaTabsComponent", "BulmaTabComponent",
+	"PanelComponent", "PanelHeaderComponent", "PanelContentComponent", "AccordionComponent", "BulmaComboboxComponent"],
 	function (AppUtils, OrderByPipe, FilterByPipe, ViewDirective, AnimatedDirective,
-		CheckboxDirective, TranslatePipe) {
+		CheckboxComponent, TranslatePipe, BulmaButtonComponent, BulmaTabsComponent, BulmaTabComponent,
+		PanelComponent, PanelHeaderComponent, PanelContentComponent, AccordionComponent, BulmaComboboxComponent) {
 		return AppUtils.getClass({
 			constructor: function CommonModule() {
 
@@ -11,15 +13,23 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 					imports: [
 						ng.common.CommonModule,
 						ng.forms.FormsModule,
-						ng.http.HttpModule,
+						ng.http.HttpModule
 					],
 					declarations: [
 						OrderByPipe,
 						FilterByPipe,
 						ViewDirective,
 						AnimatedDirective,
-						CheckboxDirective,
-						TranslatePipe
+						CheckboxComponent,
+						TranslatePipe,
+						BulmaButtonComponent,
+						BulmaTabsComponent,
+						BulmaTabComponent,
+						BulmaComboboxComponent,
+						PanelComponent,
+						PanelHeaderComponent,
+						PanelContentComponent,
+						AccordionComponent
 					],
 					exports: [
 						ng.common.CommonModule,
@@ -29,8 +39,16 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 						FilterByPipe,
 						ViewDirective,
 						AnimatedDirective,
-						CheckboxDirective,
-						TranslatePipe
+						CheckboxComponent,
+						TranslatePipe,
+						BulmaButtonComponent,
+						BulmaTabsComponent,
+						BulmaTabComponent,
+						BulmaComboboxComponent,
+						PanelComponent,
+						PanelHeaderComponent,
+						PanelContentComponent,
+						AccordionComponent
 					]
 				})
 			]

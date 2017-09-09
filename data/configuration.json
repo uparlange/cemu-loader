@@ -1,24 +1,29 @@
 {
     "languages": [
         {
+            "icon": "images/en.png",
             "data": "en",
             "label": "English"
         },
         {
+            "icon": "images/fr.png",
             "data": "fr",
             "label": "Français"
         },
         {
+            "icon": "images/es.png",
             "data": "es",
             "label": "Español"
         }
     ],
     "renderers": [
         {
+            "icon": "images/tile.png",
             "data": "tile",
             "label": "Tile"
         },
         {
+            "icon": "images/list.png",
             "data": "list",
             "label": "List"
         }

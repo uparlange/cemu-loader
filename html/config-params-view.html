@@ -1,224 +1,206 @@
+<input id="fileDialog" class="config-params-view-file-dialog" type="file" />
+<input id="folderDialog" nwdirectory class="config-params-view-folder-dialog" type="file" />
 <div view animated [(animation)]="animation" [(duration)]="duration">
-    <input id="fileDialog" class=" config-params-file-dialog" type="file" />
-    <div class="panel-header">
-        <span>Cemu Loader</span>
-        <span *ngIf="version.application != null">{{version.application}}</span>
-        <span class="icon config-params-save-btn" [title]="'L10N_SAVE_CONFIGURATION'|translate" (click)="saveConfiguration()">
-            <i class="fa fa-floppy-o"></i>
-        </span>
-    </div>
-    <table class="table is-fullwidth">
-        <tbody>
-            <tr>
-                <td class="form-label" width="200">{{'L10N_SAVE_FILE'|translate}}</td>
-                <td>
-                    <div class="field has-addons">
-                        <p class="control is-expanded">
-                            <input class="input" readonly type="text" [title]="model.config.file" [ngModel]="model.config.file">
-                        </p>
-                        <p class="control">
-                            <a class="button is-primary">
-                                <span class="icon" [title]="'L10N_OPEN_DIRECTORY'|translate" (click)="openConfigDirectory()">
-                                    <i class="fa fa-folder-o"></i>
-                                </span>
-                            </a>
-                        </p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="form-label" width="200">{{'L10N_LANGUAGE'|translate}}</td>
-                <td>
-                    <div class="dropdown" [ngClass]="comboLanguageActive ? 'is-active' : null" (click)="comboLanguageActive=!comboLanguageActive">
-                        <div class="dropdown-trigger">
-                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <img [src]="'images/' + model.config.language + '.png'">
-                                <span class="icon is-small">
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <a [ngClass]="(language.data == model.config.language) ? 'is-active' : null" *ngFor="let language of config.languages; trackBy:itemHelper.track"
-                                    class="dropdown-item" (click)="changeLanguage(language.data)">
-                                        <img [src]="'images/' + language.data + '.png'">
-                                        <span class="dropdown-label">{{language.label}}</span>
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="form-label" width="200">
-                    <label for="fullscreen">{{'L10N_DISPLAY'|translate}}</label>
-                </td>
-                <td>
-                    <div class="dropdown" [ngClass]="comboRendererActive ? 'is-active' : null" (click)="comboRendererActive=!comboRendererActive">
-                        <div class="dropdown-trigger">
-                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                               <img [src]="'images/' + model.config.renderer + '.png'">
-                                <span class="icon is-small">
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <a [ngClass]="(renderer.data == model.config.renderer) ? 'is-active' : null" *ngFor="let renderer of config.renderers; trackBy:itemHelper.track"
-                                    class="dropdown-item" (click)="model.config.renderer = renderer.data">
-                                        <img [src]="'images/' + renderer.data + '.png'">
-                                        <span class="dropdown-label">{{renderer.label}}</span>
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <!--
-            <tr>
-                <td class="form-label" width="200">
-                    <label for="autostart">Autostart</label>
-                </td>
-                <td>
-                    <input class="checkbox" type="checkbox" id="autostart" [(ngModel)]="model.config.autostart">
-                </td>
-            </tr>
-            -->
-            <tr>
-                <td class="form-label" width="200">
-                    <label for="startMinimized">{{'L10N_START_MINIMIZED'|translate}}</label>
-                </td>
-                <td>
-                    <input class="checkbox" type="checkbox" id="startMinimized" [(ngModel)]="model.config.startMinimized">
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="panel-header">
-        <span>Cemu</span>
-        <span *ngIf="version.cemu != null">{{version.cemu}}</span>
-        <span *ngIf="version.cemuHook != null">| Cemu Hook {{version.cemuHook}}</span>
-        <span class="icon config-params-launch-btn" [title]="('L10N_LAUNCH'|translate) + ' Cemu'" (click)="launchCemu()">
-            <i class="fa fa-bullseye"></i>
-        </span>
-    </div>
-    <table class="table is-fullwidth">
-        <tbody>
-            <tr>
-                <td class="form-label" width="200">{{'L10N_EMULATOR_EXE'|translate}}</td>
-                <td>
-                    <div class="field has-addons">
-                        <p class="control is-expanded">
-                            <input class="input" type="text" id="file" readonly [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
-                        </p>
-                        <p class="control">
-                            <a class="button is-primary">
-                                <span class="icon" [title]="'L10N_SELECT_FILE'|translate" (click)="selectCemuFile()">
-                                    <i class="fa fa-file-o"></i>
-                                </span>
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button is-primary">
-                                <span class="icon" [title]="'L10N_OPEN_DIRECTORY'|translate" (click)="openCemuFileDirectory()">
-                                    <i class="fa fa-folder-o"></i>
-                                </span>
-                            </a>
-                        </p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="form-label" width="200">
-                    <label for="fullscreen">{{'L10N_START_FULLSCREEN'|translate}}</label>
-                </td>
-                <td>
-                    <input class="checkbox" type="checkbox" id="fullscreen" [(ngModel)]="model.config.cemu.fullscreen">
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="panel-header">
-        <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
-        <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
-        <span class="icon  config-params-add-btn" [title]="'L10N_ADD_GAME'|translate" (click)="addGame()">
-            <i class="fa fa-plus"></i>
-        </span>
-    </div>
-    <table class="table is-fullwidth">
-        <tbody>
-            <tr *ngFor="let game of model.config.games | orderBy:'name'; trackBy:gameHelper.track">
-                <td>
-                    <div>
-                        <span *ngIf="model.currentGame !== game">{{game.name}}</span>
-                    </div>
-                    <div *ngIf="model.currentGame === game">
-                        <div class="field">
-                            <label class="label">{{'L10N_NAME'|translate}}</label>
-                            <div class="field has-addons">
-                                <p class="control is-expanded">
-                                    <input class="input" type="text" [title]="game.name" [(ngModel)]="game.name">
-                                </p>
-                                <p class="control">
-                                    <a class="button is-primary">
-                                        <span class="icon" [title]="'L10N_FIND_GAME'|translate" (click)="findGame()">
-                                            <i class="fa fa-search"></i>
-                                        </span>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">{{'L10N_IMAGE'|translate}}</label>
-                            <div class="field has-addons">
-                                <p class="control is-expanded">
-                                    <input class="input" readonly [title]="game.image" type="text" [ngModel]="game.image">
-                                </p>
-                                <p class="control">
-                                    <a class="button is-primary">
-                                        <span class="icon" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameImage(game)">
-                                            <i class="fa fa-file-o"></i>
-                                        </span>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">{{'L10N_FILE'|translate}}</label>
-                            <div class="field has-addons">
-                                <p class="control is-expanded">
-                                    <input class="input" readonly [title]="game.file" type="text" [ngModel]="game.file">
-                                </p>
-                                <p class="control">
-                                    <a class="button is-primary">
-                                        <span class="icon" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameFile(game)">
-                                            <i class="fa fa-file-o"></i>
-                                        </span>
-                                    </a>
-                                </p>
-                                <p class="control">
-                                    <a class="button is-primary">
-                                        <span class="icon" [title]="'L10N_OPEN_DIRECTORY'|translate" (click)="openGameFileDirectory(game)">
-                                            <i class="fa fa-folder-o"></i>
-                                        </span>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-                <td class="config-td-actions" width="24">
-                    <span class="icon  config-params-edit-btn" [title]="('L10N_EDIT'|translate) + ' ' + game.name" (click)="toggleEditGame(game)">
-                        <i class="fa fa-pencil"></i>
-                    </span>
-                    <span *ngIf="model.currentGame === game" class="icon  config-params-delete-btn" [title]="('L10N_DELETE'|translate) + ' ' + game.name"
-                        (click)="removeGame(game)">
-                        <i class="fa fa-trash-o"></i>
-                    </span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <accordion-component [selected]="currentPanel">
+        <panel-component [id]="'application'">
+            <panel-header-component>
+                <a>
+                    <span>Cemu Loader</span>
+                    <span *ngIf="version.application != null">{{version.application}}</span>
+                </a>
+                <span style="flex-grow:1"></span>
+                <bulma-button-component [icon]="'fa-floppy-o'" [title]="'L10N_SAVE_CONFIGURATION'|translate" (click)="saveConfiguration()"></bulma-button-component>
+            </panel-header-component>
+            <panel-content-component>
+                <table class="table is-fullwidth">
+                    <tbody>
+                        <tr>
+                            <td class="form-label" width="200">{{'L10N_SAVE_FILE'|translate}}</td>
+                            <td>
+                                <div class="field has-addons">
+                                    <p class="control is-expanded">
+                                        <input class="input" readonly type="text" [title]="model.config.file" [ngModel]="model.config.file">
+                                    </p>
+                                    <p class="control">
+                                        <bulma-button-component [icon]="'fa-folder-open-o'" [enabled]="model.config.file != null" [title]="'L10N_OPEN_FOLDER'|translate"
+                                            (click)="openConfigFolder()"></bulma-button-component>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-label" width="200">{{'L10N_LANGUAGE'|translate}}</td>
+                            <td>
+                                <bulma-combobox-component [(selected)]="selectedLanguage" [provider]="config.languages" (change)="onLanguageChange($event)"></bulma-combobox-component>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-label" width="200">
+                                <label for="fullscreen">{{'L10N_DISPLAY'|translate}}</label>
+                            </td>
+                            <td>
+                                <bulma-combobox-component [(selected)]="selectedRenderer" [provider]="config.renderers" (change)="onRendererChange($event)"></bulma-combobox-component>
+                            </td>
+                        </tr>
+                        <!--
+                    <tr>
+                        <td class="form-label" width="200">
+                            <label for="autostart">Autostart</label>
+                        </td>
+                        <td>
+                            <input class="checkbox" type="checkbox" id="autostart" [(ngModel)]="model.config.autostart">
+                        </td>
+                    </tr>
+                    -->
+                        <tr>
+                            <td class="form-label" width="200">
+                                <label for="startMinimized">{{'L10N_START_MINIMIZED'|translate}}</label>
+                            </td>
+                            <td>
+                                <checkbox-component [id]="'startMinimized'" [(selected)]="model.config.startMinimized"></checkbox-component>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </panel-content-component>
+        </panel-component>
+        <panel-component [id]="'cemu'">
+            <panel-header-component>
+                <a>
+                    <span>Cemu Emulator</span>
+                    <span *ngIf="version.cemu != null">{{version.cemu}}</span>
+                    <span *ngIf="version.cemuHook != null">| Cemu Hook {{version.cemuHook}}</span>
+                </a>
+                <span style="flex-grow:1"></span>
+                <bulma-button-component [icon]="'fa-bullseye'" [enabled]="model.config.cemu.file != null" [title]="('L10N_LAUNCH'|translate) + ' Cemu'"
+                    (click)="launchCemu()"></bulma-button-component>
+            </panel-header-component>
+            <panel-content-component>
+                <table class="table is-fullwidth">
+                    <tbody>
+                        <tr>
+                            <td class="form-label" width="200">{{'L10N_EMULATOR_EXE'|translate}}</td>
+                            <td>
+                                <div class="field has-addons">
+                                    <p class="control is-expanded">
+                                        <input class="input" type="text" readonly [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
+                                    </p>
+                                    <p class="control">
+                                        <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectCemuFile()"></bulma-button-component>
+                                    </p>
+                                    <p class="control">
+                                        <bulma-button-component [icon]="'fa-folder-open-o'" [enabled]="model.config.cemu.file != null" [title]="'L10N_OPEN_FOLDER'|translate"
+                                            (click)="openCemuFileFolder()"></bulma-button-component>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-label" width="200">
+                                <label for="romsFolder">{{'L10N_ROMS_FOLDER'|translate}}</label>
+                            </td>
+                            <td>
+                                <div class="field has-addons">
+                                    <p class="control is-expanded">
+                                        <input class="input" id="romsFolder" type="text" readonly [title]="model.config.cemu.romsFolder" [ngModel]="model.config.cemu.romsFolder">
+                                    </p>
+                                    <p class="control">
+                                        <bulma-button-component [icon]="'fa-folder-o'" [title]="'L10N_SELECT_FOLDER'|translate" (click)="selectRomsFolder()"></bulma-button-component>
+                                    </p>
+                                    <p class="control">
+                                        <bulma-button-component [icon]="'fa-folder-open-o'" [enabled]="model.config.cemu.romsFolder != null" [title]="'L10N_OPEN_FOLDER'|translate"
+                                            (click)="openRomsFolder()"></bulma-button-component>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-label" width="200">
+                                <label for="fullscreen">{{'L10N_START_FULLSCREEN'|translate}}</label>
+                            </td>
+                            <td>
+                                <checkbox-component [id]="'fullscreen'" [(selected)]="model.config.cemu.fullscreen"></checkbox-component>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </panel-content-component>
+        </panel-component>
+        <panel-component [id]="'games'">
+            <panel-header-component>
+                <a>
+                    <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
+                    <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
+                </a>
+                <span style="flex-grow:1"></span>
+                <div class="field has-addons">
+                    <p class="control">
+                        <bulma-button-component [icon]="'fa-magic'" [enabled]="model.config.cemu.romsFolder != null" [title]="'L10N_MAGIC_FIND_GAMES'|translate"
+                            (click)="magicFindGames()"></bulma-button-component>
+                    </p>
+                    <p class="control">
+                        <bulma-button-component [icon]="'fa-plus'" [title]="'L10N_ADD_GAME'|translate" (click)="addGame()"></bulma-button-component>
+                    </p>
+                </div>
+            </panel-header-component>
+            <panel-content-component>
+                <table class="table is-fullwidth">
+                    <tbody>
+                        <tr *ngFor="let game of model.config.games | orderBy:'name'; trackBy:gameHelper.track">
+                            <td>
+                                <div>
+                                    <span *ngIf="model.currentGame !== game">{{game.name}}</span>
+                                </div>
+                                <div *ngIf="model.currentGame === game">
+                                    <div class="field">
+                                        <label class="label">{{'L10N_NAME'|translate}}</label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                                <input class="input" type="text" [title]="game.name" [(ngModel)]="game.name">
+                                            </p>
+                                            <p class="control">
+                                                <bulma-button-component [icon]="'fa-search'" [title]="'L10N_FIND_GAME'|translate" (click)="findGame()"></bulma-button-component>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">{{'L10N_IMAGE'|translate}}</label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                                <input class="input" readonly [title]="game.image" type="text" [ngModel]="game.image">
+                                            </p>
+                                            <p class="control">
+                                                <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameImage(game)"></bulma-button-component>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">{{'L10N_FILE'|translate}}</label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                                <input class="input" readonly [title]="game.file" type="text" [ngModel]="game.file">
+                                            </p>
+                                            <p class="control">
+                                                <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameFile(game)"></bulma-button-component>
+                                            </p>
+                                            <p class="control">
+                                                <bulma-button-component [icon]="'fa-folder-open-o'" [enabled]="game.file != null" [title]="'L10N_OPEN_FOLDER'|translate"
+                                                    (click)="openGameFileFolder(game)"></bulma-button-component>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="game-actions" width="24">
+                                <bulma-button-component [icon]="'fa-pencil'" [title]="('L10N_EDIT'|translate) + ' ' + game.name" (click)="toggleEditGame(game)"></bulma-button-component>
+                                <div *ngIf="model.currentGame === game" style="height:10px;"></div>
+                                <bulma-button-component [icon]="'fa-trash-o'" *ngIf="model.currentGame === game" [title]="('L10N_DELETE'|translate) + ' ' + game.name"
+                                    (click)="removeGame(game)"></bulma-button-component>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </panel-content-component>
+        </panel-component>
+    </accordion-component>
 </div>

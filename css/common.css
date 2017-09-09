@@ -1,8 +1,3 @@
-i
-{
-    cursor:pointer;
-}
-
 table
 {
     margin-bottom:0px !important;
@@ -13,35 +8,7 @@ td
     vertical-align: middle !important;
 }
 
-.panel-header
-{
-    background-color:#000000;
-    color: #FFFFFF;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.panel-header span
-{
-    vertical-align: middle;
-}
-
-.checkbox
-{
-    visibility: hidden;
-}
-
-.checkbox:before 
-{
-    visibility: visible;
-}
-
 .form-label
 {
     text-align:right;
-}
-
-.dropdown-label
-{
-    vertical-align:top;
 }
