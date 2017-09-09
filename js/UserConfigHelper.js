@@ -17,6 +17,7 @@ define(["AppUtils", "TranslateManager"],
                         language: this._translateManager.getDefaultLanguage(),
                         cemu: {
                             file: null,
+                            romsFolder: null,
                             fullscreen: true,
                         },
                         games: []
