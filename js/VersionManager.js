@@ -1,11 +1,12 @@
-define(["AppUtils"],
-	function (AppUtils) {
+define(["AppUtils", "TranslateManager"],
+	function (AppUtils, TranslateManager) {
 		return AppUtils.getClass({
-			constructor: function VersionManager(Http) {
+			constructor: function VersionManager(Http, TranslateManager) {
 				this._http = Http;
+				this._translateManager = TranslateManager;
 			},
 			parameters: [
-				[ng.http.Http]
+				[ng.http.Http], [TranslateManager]
 			],
 			functions: [
 				function init() {
@@ -13,9 +14,14 @@ define(["AppUtils"],
 					this._http.get(AppUtils.getRemotePackageUrl()).subscribe((result) => {
 						const remotePkg = result.json();
 						if (remotePkg.version > pkg.version) {
-							if (confirm("New version " + remotePkg.version + " available, do you want download it ?") === true) {
-								nw.Shell.openExternal(AppUtils.getRemoteApplicationDownloadUrl(remotePkg.version));
-							}
+							this._translateManager.getValues([{
+								key: "L10N_NEW_VERSION_XXX_AVAILABLE",
+								properties: [remotePkg.version]
+							}]).subscribe((translations) => {
+								if (confirm(translations.L10N_NEW_VERSION_XXX_AVAILABLE) === true) {
+									nw.Shell.openExternal(AppUtils.getRemoteApplicationDownloadUrl(remotePkg.version));
+								}
+							});
 						}
 					});
 				}
