@@ -1,0 +1,20 @@
+<div class="dropdown" [ngClass]="active ? 'is-active' : null" (click)="active=!active">
+    <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+        <img class="button-combobox-component-img" *ngIf="selected.icon != null" [src]="selected.icon">
+        <span *ngIf="selected.label != null">{{selected.label}}</span>
+        <span class="icon is-small">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </span>
+    </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+        <div class="dropdown-content">
+            <a [ngClass]="(item.data == selected.data) ? 'is-active' : null" *ngFor="let item of provider; trackBy:trackBy" class="dropdown-item"
+                (click)="onClick(item)">
+            <img class="button-combobox-component-img" *ngIf="item.icon != null" [src]="item.icon">
+            <span *ngIf="item.label != null" class="dropdown-label">{{item.label}}</span>
+        </a>
+        </div>
+    </div>
+</div>
