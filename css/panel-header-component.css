@@ -1,0 +1,16 @@
+.panel-header-component
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:#000000;
+    color: #FFFFFF;
+    padding:11px;
+    font-weight: bold;
+    min-height: 58px;
+}
+
+.panel-header-component .icon
+{
+    margin-right:5px;
+}
