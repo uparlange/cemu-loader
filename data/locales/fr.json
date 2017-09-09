@@ -8,7 +8,7 @@
 	"L10N_CLEAR": "Effacer",
 	"L10N_FILTER": "Filtrer",
 	"L10N_SAVE_CONFIGURATION": "Sauvegarder la configuration",
-	"L10N_OPEN_DIRECTORY": "Ouvrir le dossier",
+	"L10N_OPEN_FOLDER": "Ouvrir le dossier",
 	"L10N_SELECT_FILE": "Sélectionner un fichier",
 	"L10N_ADD_GAME": "Ajouter un jeu",
 	"L10N_FIND_GAME": "Chercher un jeu",
@@ -33,5 +33,9 @@
 	"L10N_CONFIGURE_XXX_FILE": "Merci de configurer {0}",
 	"L10N_SELECT_XXX_GAMES_FROM_XXX": "Selectionner {0} jeu(x) à partir de {1}",
 	"L10N_NEW_GAME": "Nouveau jeu",
-	"L10N_DISPLAY": "Affichage"
+	"L10N_DISPLAY": "Affichage",
+	"L10N_NEW_VERSION_XXX_AVAILABLE": "Une nouvelle version {0} est disponible, voulez-vous la télécharger ?",
+	"L10N_ROMS_FOLDER": "Dossier des roms",
+	"L10N_SELECT_FOLDER": "Sélectionner un dossier",
+	"L10N_MAGIC_FIND_GAMES": "Rechercher automatiquement les jeux dans le dossier des roms"
 }
