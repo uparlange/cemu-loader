@@ -6,7 +6,7 @@ define(["AppUtils"],
                 this.gameHelper = GameHelper;
             },
             functions: [
-                function onClickHandler(game) {
+                function onClick(game) {
                     this.change.emit(game);
                 }
             ]

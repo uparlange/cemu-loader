@@ -28,7 +28,6 @@ define(["AppUtils"],
 					if (this.animation != null && this.duration != null) {
 						this._element.style.visibility = "initial";
 						this._element.style["-webkit-animation-duration"] = this.duration + "ms";
-						this._element.className = "";
 						this._element.classList.add("animated");
 						this._element.classList.add(this.animation);
 					}

@@ -19,6 +19,9 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				function setLanguage(language) {
 					this._translateManager.setLanguage(language);
 				},
+				function setRenderer(renderer) {
+					this.config.renderer = renderer;
+				},
 				function save() {
 					const fs = require("fs");
 					fs.writeFileSync(AppUtils.getUserConfigFile(), JSON.stringify(this.config));
@@ -54,6 +57,9 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				},
 				function setGameFile(game, file) {
 					game.file = '"' + file + '"';
+				},
+				function setRomsFolder(folder) {
+					this.config.cemu.romsFolder = folder;
 				},
 				function _checkAutostart() {
 					const pkg = AppUtils.getPackageFile();
