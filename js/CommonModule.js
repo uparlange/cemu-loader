@@ -1,9 +1,9 @@
 define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDirective",
-	"CheckboxComponent", "TranslatePipe", "BulmaButtonComponent", "BulmaTabsComponent", "BulmaTabComponent",
-	"PanelComponent", "PanelHeaderComponent", "PanelContentComponent", "AccordionComponent", "BulmaComboboxComponent"],
+	"CheckboxComponent", "TranslatePipe", "PanelComponent", "PanelHeaderComponent", "PanelContentComponent",
+	"AccordionComponent", "BulmaCommonModule"],
 	function (AppUtils, OrderByPipe, FilterByPipe, ViewDirective, AnimatedDirective,
-		CheckboxComponent, TranslatePipe, BulmaButtonComponent, BulmaTabsComponent, BulmaTabComponent,
-		PanelComponent, PanelHeaderComponent, PanelContentComponent, AccordionComponent, BulmaComboboxComponent) {
+		CheckboxComponent, TranslatePipe, PanelComponent, PanelHeaderComponent, PanelContentComponent,
+		AccordionComponent, BulmaCommonModule) {
 		return AppUtils.getClass({
 			constructor: function CommonModule() {
 
@@ -13,7 +13,8 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 					imports: [
 						ng.common.CommonModule,
 						ng.forms.FormsModule,
-						ng.http.HttpModule
+						ng.http.HttpModule,
+						BulmaCommonModule
 					],
 					declarations: [
 						OrderByPipe,
@@ -22,10 +23,6 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 						AnimatedDirective,
 						CheckboxComponent,
 						TranslatePipe,
-						BulmaButtonComponent,
-						BulmaTabsComponent,
-						BulmaTabComponent,
-						BulmaComboboxComponent,
 						PanelComponent,
 						PanelHeaderComponent,
 						PanelContentComponent,
@@ -35,16 +32,13 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 						ng.common.CommonModule,
 						ng.forms.FormsModule,
 						ng.http.HttpModule,
+						BulmaCommonModule,
 						OrderByPipe,
 						FilterByPipe,
 						ViewDirective,
 						AnimatedDirective,
 						CheckboxComponent,
 						TranslatePipe,
-						BulmaButtonComponent,
-						BulmaTabsComponent,
-						BulmaTabComponent,
-						BulmaComboboxComponent,
 						PanelComponent,
 						PanelHeaderComponent,
 						PanelContentComponent,
