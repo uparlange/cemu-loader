@@ -1,5 +1,12 @@
 # Changelog #
 
+## 1.3.5 ##
+
+* Add Accordion to simplify configuration view
+* Add roms's folder option
+* Add button to auto find games in roms's folder (only RPX for the moment)
+* Optimizations
+
 ## 1.3.4 ##
 
 * Correct Cemu download link in resources
