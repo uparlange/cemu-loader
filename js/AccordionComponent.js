@@ -34,10 +34,12 @@ define(["AppUtils", "PanelComponent"],
 				function _initListeners() {
 					this.panels.forEach((panel) => {
 						const subscriber = panel.on("panelHeaderClick").subscribe((event) => {
-							this.selected = (event.id === this.selected) ? null : event.id;
-							this.selectedChange.emit(this.selected);
-							this.change.emit(this.selected);
-							this._refreshSelection();
+							if (event.id !== this.selected) {
+								this.selected = event.id;
+								this.selectedChange.emit(this.selected);
+								this.change.emit(this.selected);
+								this._refreshSelection();
+							}
 						});
 						this._panelsEventsSubscribers.push(subscriber);
 					});
