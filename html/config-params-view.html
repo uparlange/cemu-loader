@@ -1,7 +1,7 @@
 <input id="fileDialog" class="config-params-view-file-dialog" type="file" />
 <input id="folderDialog" nwdirectory class="config-params-view-folder-dialog" type="file" />
 <div view animated [(animation)]="animation" [(duration)]="duration">
-    <accordion-component [selected]="currentPanel">
+    <accordion-component [(selected)]="model.currentPanel">
         <panel-component [id]="'application'">
             <panel-header-component>
                 <a>

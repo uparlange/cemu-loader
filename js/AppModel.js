@@ -2,11 +2,16 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 	function (AppUtils, TranslateManager, GameHelper, UserConfigHelper) {
 		return AppUtils.getClass({
 			constructor: function AppModel(TranslateManager, GameHelper, UserConfigHelper) {
+				// User config
 				this.config = UserConfigHelper.getNew();
+				// ConfigGamesView
 				this.games = [];
 				this.currentGame = null;
 				this.gameTypes = [];
 				this.currentGameType = "WiiU";
+				// ConfigParamsView
+				this.currentPanel = "application";
+				// -----
 				this._translateManager = TranslateManager;
 				this._onLanguageChangeSubscriber = null;
 				this._gameHelper = GameHelper;
@@ -28,16 +33,24 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 					this.unSelectGame();
 					//this._checkAutostart();
 				},
+				function clearGames() {
+					this.config.games = [];
+				},
 				function unSelectGame() {
 					this.currentGame = null;
 				},
-				function addGame() {
-					this._translateManager.getValues(["L10N_NEW_GAME"]).subscribe((translations) => {
-						const name = translations.L10N_NEW_GAME + " " + (this.config.games.length + 1);
-						const game = this._gameHelper.getNew(name);
+				function addGame(game) {
+					if (game == null) {
+						this._translateManager.getValues(["L10N_NEW_GAME"]).subscribe((translations) => {
+							const name = translations.L10N_NEW_GAME + " " + (this.config.games.length + 1);
+							const game = this._gameHelper.getNew(name);
+							this.config.games.unshift(game);
+							this.currentGame = game;
+						});
+					} else {
 						this.config.games.unshift(game);
 						this.currentGame = game;
-					});
+					}
 				},
 				function removeGame(game) {
 					const index = this.config.games.indexOf(game);
@@ -51,7 +64,7 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 						eventEmitter.emit();
 					}, 0);
 					return eventEmitter;
-				}, -
+				},
 				function setGameImage(game, file) {
 					game.image = "file:" + file;
 				},

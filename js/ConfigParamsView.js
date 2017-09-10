@@ -14,7 +14,6 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				};
 				this.gameHelper = GameHelper;
 				this.itemHelper = ItemHelper;
-				this.currentPanel = "application";
 				this.selectedLanguage = null;
 				this.selectedRenderer = null;
 				this._router = Router;
@@ -79,7 +78,19 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					nw.Shell.openItem(this.model.config.cemu.romsFolder);
 				},
 				function magicFindGames() {
-
+					this.model.clearGames();
+					const fs = require("fs");
+					const romsFolder = this.model.config.cemu.romsFolder;
+					fs.readdir(romsFolder, (err, roms) => {
+						roms.forEach((rom) => {
+							const path = romsFolder + "\\" + rom;
+							fs.lstat(path, (err, stats) => {
+								if (stats.isDirectory()) {
+									this._addLoadiineGame(path);
+								}
+							});
+						});
+					});
 				},
 				function selectCemuFile() {
 					this._selectFile().subscribe((file) => {
@@ -105,6 +116,43 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				},
 				function launchCemu() {
 					this._cemuManager.launchCemu();
+				},
+				function _addLoadiineGame(path) {
+					const metaxmlPath = path + "\\meta\\meta.xml";
+					const fs = require("fs");
+					const tga2png = require("tga2png");
+					fs.lstat(metaxmlPath, (err, stats) => {
+						if (stats.isFile()) {
+							const xml2js = require("xml2js");
+							const parser = new xml2js.Parser();
+							fs.readFile(metaxmlPath, (err, result) => {
+								parser.parseString(result, (err, result) => {
+									const game = this.gameHelper.getNew(result.menu.longname_en[0]._);
+									const rpxFolder = path + "\\code";
+									fs.readdir(rpxFolder, (err, files) => {
+										if (!err) {
+											files.forEach((filename) => {
+												if (filename.indexOf(".rpx") !== -1) {
+													this.model.setGameFile(game, rpxFolder + "\\" + filename);
+													const iconSourcePath = path + "\\meta\\iconTex.tga";
+													const iconDestPath = AppUtils.getPicturesDirectory() + "\\" + result.menu.product_code[0]._ + ".png";
+													tga2png(iconSourcePath, iconDestPath).then(() => {
+														this.model.setGameImage(game, iconDestPath);
+														this._ngZone.run(() => {
+															this.model.addGame(game);
+														});
+													}, () => {
+														// TODO
+													});
+													return;
+												}
+											})
+										}
+									});
+								});
+							});
+						}
+					});
 				},
 				function _initSelectedLanguage() {
 					this.config.languages.forEach((item) => {
