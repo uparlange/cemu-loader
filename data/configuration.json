@@ -1,31 +1,36 @@
 {
     "languages": [
         {
-            "icon": "images/en.png",
+            "icon": "/data/locales/en/icon.png",
             "data": "en",
             "label": "English"
         },
         {
-            "icon": "images/fr.png",
+            "icon": "/data/locales/fr/icon.png",
             "data": "fr",
             "label": "Français"
         },
         {
-            "icon": "images/es.png",
+            "icon": "/data/locales/es/icon.png",
             "data": "es",
             "label": "Español"
         }
     ],
     "renderers": [
         {
-            "icon": "images/tile.png",
+            "icon": "/data/renderers/tile/icon.png",
             "data": "tile",
             "label": "Tile"
         },
         {
-            "icon": "images/list.png",
+            "icon": "/data/renderers/list/icon.png",
             "data": "list",
             "label": "List"
+        },
+        {
+            "icon": "/data/renderers/maccrazy/icon.png",
+            "data": "maccrazy",
+            "label": "Maccrazy"
         }
     ]
 }
