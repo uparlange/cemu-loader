@@ -29,7 +29,7 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				},
 				function save() {
 					const fs = require("fs");
-					fs.writeFileSync(AppUtils.getUserConfigFile(), JSON.stringify(this.config));
+					fs.writeFileSync(AppUtils.getUserConfigPath(), JSON.stringify(this.config));
 					this.unSelectGame();
 					//this._checkAutostart();
 				},
@@ -67,6 +67,9 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				},
 				function setGameImage(game, file) {
 					game.image = "file:" + file;
+				},
+				function setGameBackground(game, file) {
+					game.background = "file:" + file;
 				},
 				function setGameFile(game, file) {
 					game.file = '"' + file + '"';
@@ -119,7 +122,7 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 					const parser = new xml2js.Parser();
 					const games = [];
 					const gameTypes = [];
-					fs.readFile(AppUtils.getDatabaseFile(), (err, result) => {
+					fs.readFile(AppUtils.getDatabasePath(), (err, result) => {
 						parser.parseString(result, (err, result) => {
 							result.datafile.game.forEach((element) => {
 								const type = element.type[0];
