@@ -41,9 +41,10 @@
                             <span>{{"L10N_DOWNLOAD"|translate}}</span>
                         </td>
                         <td>
-                            <div *ngFor="let version of cemuHook.versions; let first=first; trackBy:itemHelper.track">
-                                <a [title]="version.data" (click)="openLink(version.data)">{{version.label}}</a>
-                            </div>
+                            <span *ngFor="let version of cemuHook.versions; let last=last; trackBy:itemHelper.track">
+                                <span><a [title]="version.data" (click)="openLink(version.data)">{{version.label}}</a></span>
+                                <span *ngIf="!last">|</span>
+                            </span>
                         </td>
                     </tr>
                     <tr>
