@@ -1,4 +1,0 @@
-<div view animated [(animation)]="animation" [(duration)]="duration">
-    <tile-renderer-component *ngIf="model.config.renderer == 'tile'" [provider]="model.config.games" (change)="launchGame($event)"></tile-renderer-component>
-    <list-renderer-component *ngIf="model.config.renderer == 'list'" [provider]="model.config.games" (change)="launchGame($event)"></list-renderer-component>
-</div>
