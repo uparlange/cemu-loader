@@ -10,7 +10,7 @@ define(["AppUtils", "TranslateManager"],
             functions: [
                 function getNew() {
                     return {
-                        file: AppUtils.getUserConfigFile(),
+                        file: AppUtils.getUserConfigPath(),
                         autostart: false,
                         startMinimized: false,
                         renderer: "tile",
