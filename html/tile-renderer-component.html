@@ -1,2 +1,0 @@
-<img animated [animation]="'swing'" [duration]="500" *ngFor="let game of provider | orderBy:'name'; trackBy:gameHelper.track"
-    [src]="game.image" [title]="game.name" (click)="onClick(game)">

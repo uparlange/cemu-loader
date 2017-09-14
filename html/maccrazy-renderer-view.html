@@ -1,0 +1,9 @@
+<div class="frame">
+    <img class="background" [src]="selectedGame?.background != null ? selectedGame.background : '/data/renderers/maccrazy/background.png'">
+    <ul class="slidee">
+        <li *ngFor="let game of provider | orderBy:'name'; trackBy:gameTrack">
+            <img [ngClass]="game === selectedGame ? 'selected' : null" [src]="game.image" [title]="game.name" (click)="select(game)">
+        </li>
+    </ul>
+    <button class="playBtn" [title]="selectedGame?.name" (click)="play(selectedGame)">{{'L10N_PLAY'|translate}}</button>
+</div>

@@ -1,0 +1,53 @@
+.background
+{
+    position: absolute;
+    width:100%;
+    height:100%; 
+}
+
+.frame 
+{ 
+    width: 100%; 
+    height:100%; 
+}
+
+.frame .slidee 
+{ 
+    list-style: none; 
+    padding-left:20px;
+}
+
+.frame .slidee li 
+{ 
+    float: left; 
+    margin-top:20px;
+    margin-left: 20px;
+    width: 100px;
+}
+
+.frame .slidee li:last-child
+{
+    margin-right: 10px; 
+}
+
+.frame .slidee li img
+{
+    border: 1px solid #FFFFFF;
+    filter: grayscale(100%);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.frame .slidee li img.selected
+{
+    filter: grayscale(0%);
+}
+
+.playBtn
+{
+    position: absolute;
+    right: 20px;
+    bottom:20px;
+    height: 30px;
+    cursor: pointer;
+}

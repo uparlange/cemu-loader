@@ -1,7 +1,5 @@
-define(["AppUtils", "CommonModule", "ListView", "ViewCanDeactivate", "TileRendererComponent",
-	"ListRendererComponent"],
-	function (AppUtils, CommonModule, ListView, ViewCanDeactivate, TileRendererComponent,
-		ListRendererComponent) {
+define(["AppUtils", "CommonModule"],
+	function (AppUtils, CommonModule) {
 		return AppUtils.getLazyModuleClass({
 			constructor: function ListModule() {
 
@@ -11,16 +9,10 @@ define(["AppUtils", "CommonModule", "ListView", "ViewCanDeactivate", "TileRender
 					imports: [
 						CommonModule,
 						ng.router.RouterModule.forChild([
-							{ path: "", component: ListView, canDeactivate: [ViewCanDeactivate] }
+							{ path: "maccrazy", loadChildren: AppUtils.getLazyModuleName("MaccrazyRendererModule") },
+							{ path: "tile", loadChildren: AppUtils.getLazyModuleName("TileRendererModule") },
+							{ path: "list", loadChildren: AppUtils.getLazyModuleName("ListRendererModule") }
 						])
-					],
-					declarations: [
-						ListView,
-						TileRendererComponent,
-						ListRendererComponent
-					],
-					providers: [
-						ViewCanDeactivate
 					]
 				})
 			]

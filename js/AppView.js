@@ -23,10 +23,19 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 					});
 					if (this.model.config.games.length === 0) {
 						this._showView("config");
+					} else {
+						this._showList();
 					}
 				},
 				function onChange(view) {
-					this._showView(view);
+					if (view === "list") {
+						this._showList();
+					} else {
+						this._showView(view);
+					}
+				},
+				function _showList() {
+					this._showView("list/" + this.model.config.renderer);
 				},
 				function _showView(view) {
 					this._routerManager.navigate(["/" + view]);

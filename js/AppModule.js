@@ -1,9 +1,11 @@
 define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
 	"AnimationManager", "RouterManager", "ApplicationManager", "Shell", "VersionManager",
-	"WmicManager", "TranslateManager", "GameHelper", "ItemHelper", "UserConfigHelper"],
+	"WmicManager", "TranslateManager", "GameHelper", "ItemHelper", "UserConfigHelper",
+	"RendererHelper"],
 	function (AppUtils, CommonModule, AppView, AppModel, CemuManager,
 		AnimationManager, RouterManager, ApplicationManager, Shell, VersionManager,
-		WmicManager, TranslateManager, GameHelper, ItemHelper, UserConfigHelper) {
+		WmicManager, TranslateManager, GameHelper, ItemHelper, UserConfigHelper,
+		RendererHelper) {
 		ng.core.enableProdMode();
 		ng.platformBrowserDynamic.platformBrowserDynamic().bootstrapModule(AppUtils.getClass({
 			constructor: function AppModule() {
@@ -15,7 +17,6 @@ define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
 						CommonModule,
 						ng.platformBrowser.BrowserModule,
 						ng.router.RouterModule.forRoot([
-							{ path: "", redirectTo: "list", pathMatch: "full" },
 							{ path: "list", loadChildren: AppUtils.getLazyModuleName("ListModule") },
 							{ path: "config", loadChildren: AppUtils.getLazyModuleName("ConfigModule") },
 							{ path: "resources", loadChildren: AppUtils.getLazyModuleName("ResourcesModule") }
@@ -36,7 +37,8 @@ define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
 						TranslateManager,
 						GameHelper,
 						ItemHelper,
-						UserConfigHelper
+						UserConfigHelper,
+						RendererHelper
 					],
 					bootstrap: [
 						AppView

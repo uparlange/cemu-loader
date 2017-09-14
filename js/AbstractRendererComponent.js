@@ -1,13 +1,14 @@
 define(["AppUtils"],
     function (AppUtils) {
         return AppUtils.getClass({
-            constructor: function AbstractRendererComponent(GameHelper) {
-                this.change = new ng.core.EventEmitter();
-                this.gameHelper = GameHelper;
+            constructor: function AbstractRendererComponent(RendererHelper) {
+                this.provider = RendererHelper.provider;
+                this.gameTrack = RendererHelper.gameTrack;
+                this._rendererHelper = RendererHelper;
             },
             functions: [
-                function onClick(game) {
-                    this.change.emit(game);
+                function play(game) {
+                    this._rendererHelper.play(game);
                 }
             ]
         });

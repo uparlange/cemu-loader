@@ -112,7 +112,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				},
 				function saveConfiguration() {
 					this.model.save();
-					this._router.navigate(["/list"]);
+					this._router.navigate(["/list/" + this.model.config.renderer]);
 				},
 				function launchCemu() {
 					this._cemuManager.launchCemu();
@@ -134,12 +134,19 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 											files.forEach((filename) => {
 												if (filename.indexOf(".rpx") !== -1) {
 													this.model.setGameFile(game, rpxFolder + "\\" + filename);
-													const iconSourcePath = path + "\\meta\\iconTex.tga";
-													const iconDestPath = AppUtils.getPicturesDirectory() + "\\" + result.menu.product_code[0]._ + ".png";
-													tga2png(iconSourcePath, iconDestPath).then(() => {
-														this.model.setGameImage(game, iconDestPath);
-														this._ngZone.run(() => {
-															this.model.addGame(game);
+													const imageSourcePath = path + "\\meta\\iconTex.tga";
+													const imageDestPath = AppUtils.getPicturesPath() + "\\" + result.menu.product_code[0]._ + "_iconTex.png";
+													tga2png(imageSourcePath, imageDestPath).then(() => {
+														this.model.setGameImage(game, imageDestPath);
+														const backgroundSourcePath = path + "\\meta\\bootDrcTex.tga";
+														const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + result.menu.product_code[0]._ + "_bootDrcTex.png";
+														tga2png(backgroundSourcePath, backgroundDestPath).then(() => {
+															this.model.setGameBackground(game, backgroundDestPath);
+															this._ngZone.run(() => {
+																this.model.addGame(game);
+															});
+														}, () => {
+															// TODO
 														});
 													}, () => {
 														// TODO
