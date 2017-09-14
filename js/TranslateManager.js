@@ -79,7 +79,7 @@ define(["AppUtils"],
 					const eventEmitter = new ng.core.EventEmitter();
 					if (!this._properties.hasOwnProperty(this._currentLang) && !this._loading) {
 						this._loading = true;
-						this._http.get("data/locales/" + this._currentLang + ".json").subscribe((data) => {
+						this._http.get("/data/locales/" + this._currentLang + "/properties.json").subscribe((data) => {
 							this._properties[this._currentLang] = data.json();
 							this._loading = false;
 							this._checkPendingRequests();

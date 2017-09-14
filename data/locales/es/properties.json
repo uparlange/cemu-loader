@@ -37,5 +37,6 @@
 	"L10N_NEW_VERSION_XXX_AVAILABLE": "Una nueva versiòn {0} está disponible, ¿quieres descargarla?",
 	"L10N_ROMS_FOLDER": "Carpeta de las roms",
 	"L10N_SELECT_FOLDER": "Seleccionar una carpeta",
-	"L10N_MAGIC_FIND_GAMES": "Encuentra automáticamente juegos en la carpeta de roms"
+	"L10N_MAGIC_FIND_GAMES": "Encuentra automáticamente juegos en la carpeta de roms",
+	"L10N_PLAY": "Jugar"
 }
