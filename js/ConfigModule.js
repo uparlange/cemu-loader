@@ -1,5 +1,5 @@
-define(["AppUtils", "CommonModule", "ConfigView"],
-	function (AppUtils, CommonModule, ConfigView) {
+define(["AppUtils", "CommonModule"],
+	function (AppUtils, CommonModule) {
 		return AppUtils.getLazyModuleClass({
 			constructor: function ConfigModule() {
 
@@ -13,12 +13,6 @@ define(["AppUtils", "CommonModule", "ConfigView"],
 							{ path: "params", loadChildren: AppUtils.getLazyModuleName("ConfigParamsModule") },
 							{ path: "games", loadChildren: AppUtils.getLazyModuleName("ConfigGamesModule") }
 						])
-					],
-					declarations: [
-						ConfigView
-					],
-					providers: [
-
 					]
 				})
 			]
