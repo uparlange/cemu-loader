@@ -11,18 +11,20 @@ define(["AppUtils"],
 			],
 			functions: [
 				function transform(list, property) {
-					list.sort((o1, o2) => {
-						const v1 = (property == null) ? o1 : o1[property];
-						const v2 = (property == null) ? o2 : o2[property];
-						if (v1 < v2) {
-							return -1;
-						} else if (v1 > v2) {
-							return 1;
-						} else {
-							return 0;
-						}
-					});
-					return list;
+					if (Array.isArray(list)) {
+						list.sort((o1, o2) => {
+							const v1 = (property == null) ? o1 : o1[property];
+							const v2 = (property == null) ? o2 : o2[property];
+							if (v1 < v2) {
+								return -1;
+							} else if (v1 > v2) {
+								return 1;
+							} else {
+								return 0;
+							}
+						});
+						return list;
+					}
 				}
 			]
 		});
