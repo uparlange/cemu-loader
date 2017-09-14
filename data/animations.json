@@ -2,14 +2,42 @@
     "duration": 200,
     "transitions": [
         {
-            "from": "/list",
+            "from": "/list/maccrazy",
             "to": "/config/params",
             "enterAnimation": "slideInRight",
             "leaveAnimation": "slideOutLeft",
             "reverse": true
         },
         {
-            "from": "/list",
+            "from": "/list/tile",
+            "to": "/config/params",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutLeft",
+            "reverse": true
+        },
+        {
+            "from": "/list/list",
+            "to": "/config/params",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutLeft",
+            "reverse": true
+        },
+        {
+            "from": "/list/maccrazy",
+            "to": "/resources",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutLeft",
+            "reverse": true
+        },
+        {
+            "from": "/list/tile",
+            "to": "/resources",
+            "enterAnimation": "slideInRight",
+            "leaveAnimation": "slideOutLeft",
+            "reverse": true
+        },
+        {
+            "from": "/list/list",
             "to": "/resources",
             "enterAnimation": "slideInRight",
             "leaveAnimation": "slideOutLeft",
@@ -38,7 +66,21 @@
         },
         {
             "from": "/config/games",
-            "to": "/list",
+            "to": "/list/maccrazy",
+            "enterAnimation": "slideInLeft",
+            "leaveAnimation": "slideOutUp",
+            "reverse": true
+        },
+        {
+            "from": "/config/games",
+            "to": "/list/tile",
+            "enterAnimation": "slideInLeft",
+            "leaveAnimation": "slideOutUp",
+            "reverse": true
+        },
+        {
+            "from": "/config/games",
+            "to": "/list/list",
             "enterAnimation": "slideInLeft",
             "leaveAnimation": "slideOutUp",
             "reverse": true
