@@ -9,7 +9,6 @@ define(["AppUtils", "CommonModule"],
 					imports: [
 						CommonModule,
 						ng.router.RouterModule.forChild([
-							{ path: "", redirectTo: "params", pathMatch: "full" },
 							{ path: "params", loadChildren: AppUtils.getLazyModuleName("ConfigParamsModule") },
 							{ path: "games", loadChildren: AppUtils.getLazyModuleName("ConfigGamesModule") }
 						])
