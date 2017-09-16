@@ -32,6 +32,16 @@ define(["AppUtils", "AppModel", "TranslateManager"],
 				function quit() {
 					nw.App.quit();
 				},
+				function addDesktopShortcut(path, options) {
+					const ws = require("windows-shortcuts");
+					options.iconIndex = '0';
+					options.runStyle = ws.MIN;
+					ws.create(path, options, (error) => {
+						if (error) {
+							alert(error);
+						}
+					});
+				},
 				function _initTray(title) {
 					this._tray = new nw.Tray({
 						title: title,
