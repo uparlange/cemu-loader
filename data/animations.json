@@ -2,49 +2,21 @@
     "duration": 200,
     "transitions": [
         {
-            "from": "/list/maccrazy",
-            "to": "/config/params",
+            "from": "/list",
+            "to": "/config",
             "enterAnimation": "slideInRight",
             "leaveAnimation": "slideOutLeft",
             "reverse": true
         },
         {
-            "from": "/list/tile",
-            "to": "/config/params",
-            "enterAnimation": "slideInRight",
-            "leaveAnimation": "slideOutLeft",
-            "reverse": true
-        },
-        {
-            "from": "/list/list",
-            "to": "/config/params",
-            "enterAnimation": "slideInRight",
-            "leaveAnimation": "slideOutLeft",
-            "reverse": true
-        },
-        {
-            "from": "/list/maccrazy",
+            "from": "/list",
             "to": "/resources",
             "enterAnimation": "slideInRight",
             "leaveAnimation": "slideOutLeft",
             "reverse": true
         },
         {
-            "from": "/list/tile",
-            "to": "/resources",
-            "enterAnimation": "slideInRight",
-            "leaveAnimation": "slideOutLeft",
-            "reverse": true
-        },
-        {
-            "from": "/list/list",
-            "to": "/resources",
-            "enterAnimation": "slideInRight",
-            "leaveAnimation": "slideOutLeft",
-            "reverse": true
-        },
-        {
-            "from": "/config/params",
+            "from": "/config",
             "to": "/resources",
             "enterAnimation": "slideInRight",
             "leaveAnimation": "slideOutLeft",
@@ -54,34 +26,6 @@
             "from": "/config/params",
             "to": "/config/games",
             "enterAnimation": "slideInUp",
-            "leaveAnimation": "slideOutUp",
-            "reverse": true
-        },
-        {
-            "from": "/config/games",
-            "to": "/resources",
-            "enterAnimation": "slideInRight",
-            "leaveAnimation": "slideOutUp",
-            "reverse": true
-        },
-        {
-            "from": "/config/games",
-            "to": "/list/maccrazy",
-            "enterAnimation": "slideInLeft",
-            "leaveAnimation": "slideOutUp",
-            "reverse": true
-        },
-        {
-            "from": "/config/games",
-            "to": "/list/tile",
-            "enterAnimation": "slideInLeft",
-            "leaveAnimation": "slideOutUp",
-            "reverse": true
-        },
-        {
-            "from": "/config/games",
-            "to": "/list/list",
-            "enterAnimation": "slideInLeft",
             "leaveAnimation": "slideOutUp",
             "reverse": true
         }

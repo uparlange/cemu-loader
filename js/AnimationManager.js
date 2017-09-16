@@ -17,10 +17,10 @@ define(["AppUtils", "RouterManager"],
 						this.enterAnimation = null;
 						this.leaveAnimation = null;
 						this.transitions.forEach((transition) => {
-							if (transition.from === event.fromUrl && transition.to === event.toUrl) {
+							if ((event.fromUrl.indexOf(transition.from) !== -1) && (event.toUrl.indexOf(transition.to) !== -1)) {
 								this.enterAnimation = transition.enterAnimation;
 								this.leaveAnimation = transition.leaveAnimation;
-							} else if (transition.reverse && transition.to === event.fromUrl && transition.from === event.toUrl) {
+							} else if (transition.reverse && (event.fromUrl.indexOf(transition.to) !== -1) && (event.toUrl.indexOf(transition.from) !== -1)) {
 								this.enterAnimation = this._getReverseAnimation(transition.enterAnimation);
 								this.leaveAnimation = this._getReverseAnimation(transition.leaveAnimation);
 							}
