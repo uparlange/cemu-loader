@@ -60,14 +60,14 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				},
 				function setCemuFile(file) {
 					const eventEmitter = new ng.core.EventEmitter();
-					this.config.cemu.file = '"' + file + '"';
+					this.config.cemu.file = file;
 					setTimeout(() => {
 						eventEmitter.emit();
 					}, 0);
 					return eventEmitter;
 				},
 				function setGameFile(game, file) {
-					game.file = '"' + file + '"';
+					game.file = file;
 				},
 				function setRomsFolder(folder) {
 					this.config.cemu.romsFolder = folder;
