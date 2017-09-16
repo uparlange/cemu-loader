@@ -5,9 +5,9 @@ define(["AppUtils"],
 
             },
             functions: [
-                function getNew(name) {
+                function getNew(id, name) {
                     return {
-                        id: null,
+                        id: id,
                         name: name,
                         image: null,
                         file: null
