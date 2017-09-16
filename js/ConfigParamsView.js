@@ -16,6 +16,11 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				this.itemHelper = ItemHelper;
 				this.selectedLanguage = null;
 				this.selectedRenderer = null;
+				this.progress = {
+					visible: false,
+					value: 0,
+					max: 0
+				};
 				this._cemuManager = CemuManager;
 				this._wmicManager = WmicManager;
 				this._ngZone = NgZone;
@@ -58,11 +63,11 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					}
 				},
 				function openCemuFileFolder() {
-					const item = this.model.config.cemu.file.replace(/"/g, "");
+					const item = this.model.config.cemu.file;
 					nw.Shell.showItemInFolder(item);
 				},
 				function openGameFileFolder(game) {
-					const item = game.file.replace(/"/g, "");
+					const item = game.file;
 					nw.Shell.showItemInFolder(item);
 				},
 				function openConfigFolder() {
@@ -78,18 +83,36 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					nw.Shell.openItem(this.model.config.cemu.romsFolder);
 				},
 				function magicFindGames() {
-					this.model.clearGames();
-					const fs = require("fs");
 					const romsFolder = this.model.config.cemu.romsFolder;
-					fs.readdir(romsFolder, (err, roms) => {
-						roms.forEach((rom) => {
-							const path = romsFolder + "\\" + rom;
+					let romsToTreat = [];
+					const treatNextRom = () => {
+						if (romsToTreat.length > 0) {
+							const path = romsFolder + "\\" + romsToTreat.shift();
 							fs.lstat(path, (err, stats) => {
 								if (stats.isDirectory()) {
-									this._addLoadiineGame(path);
+									this._initLoadiineGame(path).subscribe((game) => {
+										this._ngZone.run(() => {
+											this.model.addGame(game);
+											this.progress.value++;
+											treatNextRom();
+										});
+									})
 								}
 							});
+						} else {
+							this.progress.visible = false;
+						}
+					};
+					const fs = require("fs");
+					fs.readdir(romsFolder, (err, roms) => {
+						romsToTreat = roms;
+						this._ngZone.run(() => {
+							this.model.clearGames();
+							this.progress.visible = true;
+							this.progress.max = roms.length;
+							this.progress.value = 0;
 						});
+						treatNextRom();
 					});
 				},
 				function selectCemuFile() {
@@ -117,7 +140,8 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				function launchCemu() {
 					this._cemuManager.launchCemu();
 				},
-				function _addLoadiineGame(path) {
+				function _initLoadiineGame(path) {
+					const eventEmitter = new ng.core.EventEmitter();
 					const metaxmlPath = path + "\\meta\\meta.xml";
 					const fs = require("fs");
 					const tga2png = require("tga2png");
@@ -144,9 +168,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 														const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_bootDrcTex.png";
 														tga2png(backgroundSourcePath, backgroundDestPath).then(() => {
 															game.background = backgroundDestPath;
-															this._ngZone.run(() => {
-																this.model.addGame(game);
-															});
+															eventEmitter.emit(game);
 														}, () => {
 															// TODO
 														});
@@ -162,6 +184,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 							});
 						}
 					});
+					return eventEmitter;
 				},
 				function _initSelectedLanguage() {
 					this.config.languages.forEach((item) => {
@@ -181,7 +204,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				},
 				function _initUpdateCemuVersion() {
 					if (this.model.config.cemu.file != null) {
-						const file = this.model.config.cemu.file.replace(/"/g, "");
+						const file = this.model.config.cemu.file;
 						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
 							this._ngZone.run(() => {
 								this.version.cemu = version;
@@ -191,7 +214,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				},
 				function _initUpdateCemuHookVersion() {
 					if (this.model.config.cemu.file != null) {
-						const file = this.model.config.cemu.file.replace(/"/g, "").replace("Cemu.exe", "dbghelp.dll");
+						const file = this.model.config.cemu.file.replace("Cemu.exe", "dbghelp.dll");
 						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
 							this._ngZone.run(() => {
 								this.version.cemuHook = version;

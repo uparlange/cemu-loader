@@ -12,3 +12,8 @@
 {
     vertical-align: top !important;
 }
+
+bulma-progress-component
+{
+    width:400px;
+}

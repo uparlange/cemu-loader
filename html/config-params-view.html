@@ -6,7 +6,7 @@
             <panel-header-component>
                 <span>
                     <span>Cemu Loader</span>
-                    <span *ngIf="version.application != null">{{version.application}}</span>
+                <span *ngIf="version.application != null">{{version.application}}</span>
                 </span>
                 <span style="flex-grow:1"></span>
                 <bulma-button-component [icon]="'fa-floppy-o'" [title]="'L10N_SAVE_CONFIGURATION'|translate" (click)="saveConfiguration()"></bulma-button-component>
@@ -68,8 +68,8 @@
             <panel-header-component>
                 <span>
                     <span>Cemu Emulator</span>
-                    <span *ngIf="version.cemu != null">{{version.cemu}}</span>
-                    <span *ngIf="version.cemuHook != null">| Cemu Hook {{version.cemuHook}}</span>
+                <span *ngIf="version.cemu != null">{{version.cemu}}</span>
+                <span *ngIf="version.cemuHook != null">| Cemu Hook {{version.cemuHook}}</span>
                 </span>
                 <span style="flex-grow:1"></span>
                 <bulma-button-component [icon]="'fa-bullseye'" [enabled]="model.config.cemu.file != null" [title]="('L10N_LAUNCH'|translate) + ' Cemu'"
@@ -130,8 +130,10 @@
             <panel-header-component>
                 <span>
                     <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
-                    <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
+                <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
                 </span>
+                <span style="flex-grow:1"></span>
+                <bulma-progress-component *ngIf="progress.visible" [theme]="'primary'" [value]="progress.value" [max]="progress.max"></bulma-progress-component>
                 <span style="flex-grow:1"></span>
                 <div class="field has-addons">
                     <p class="control">
