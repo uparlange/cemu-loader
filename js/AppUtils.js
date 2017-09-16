@@ -52,7 +52,13 @@ define(function () {
 			return this._getHomeDir() + "\\Desktop";
 		},
 		getPicturesPath: function () {
-			return this._getHomeDir() + "\\Pictures";
+			const pkg = this.getPackageFile();
+			const fs = require("fs");
+			const path = this._getHomeDir() + "\\Pictures\\" + pkg.name;
+			if (!fs.existsSync(path)) {
+				fs.mkdirSync(path);
+			}
+			return path;
 		},
 		getUserConfigPath: function () {
 			return this._getHomeDir() + "\\" + this.getPackageFile().name + ".json";
