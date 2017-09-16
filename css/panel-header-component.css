@@ -8,6 +8,7 @@
     padding:11px;
     font-weight: bold;
     min-height: 58px;
+    cursor: pointer;
 }
 
 .panel-header-component .icon
