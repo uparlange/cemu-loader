@@ -1,5 +1,7 @@
-define(["AppUtils", "BulmaButtonComponent", "BulmaTabsComponent", "BulmaTabComponent", "BulmaComboboxComponent"],
-    function (AppUtils, BulmaButtonComponent, BulmaTabsComponent, BulmaTabComponent, BulmaComboboxComponent) {
+define(["AppUtils", "BulmaButtonComponent", "BulmaTabsComponent", "BulmaTabComponent", "BulmaComboboxComponent",
+    "BulmaProgressComponent"],
+    function (AppUtils, BulmaButtonComponent, BulmaTabsComponent, BulmaTabComponent, BulmaComboboxComponent,
+        BulmaProgressComponent) {
         return AppUtils.getClass({
             constructor: function BulmaCommonModule() {
 
@@ -13,13 +15,15 @@ define(["AppUtils", "BulmaButtonComponent", "BulmaTabsComponent", "BulmaTabCompo
                         BulmaButtonComponent,
                         BulmaTabsComponent,
                         BulmaTabComponent,
-                        BulmaComboboxComponent
+                        BulmaComboboxComponent,
+                        BulmaProgressComponent
                     ],
                     exports: [
                         BulmaButtonComponent,
                         BulmaTabsComponent,
                         BulmaTabComponent,
-                        BulmaComboboxComponent
+                        BulmaComboboxComponent,
+                        BulmaProgressComponent
                     ]
                 })
             ]
