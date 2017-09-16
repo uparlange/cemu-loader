@@ -1,9 +1,15 @@
-<div class="frame">
-    <img class="background" [src]="selectedGame?.background != null ? selectedGame.background : '/data/renderers/maccrazy/background.png'">
-    <ul class="slidee">
-        <li *ngFor="let game of provider | orderBy:'name'; trackBy:gameTrack">
-            <img [ngClass]="game === selectedGame ? 'selected' : null" [src]="game.image" [title]="game.name" (click)="select(game)">
-        </li>
-    </ul>
-    <button class="playBtn" [title]="selectedGame?.name" (click)="play(selectedGame)">{{'L10N_PLAY'|translate}}</button>
+<div view animated [(animation)]="animation" [(duration)]="duration">
+    <img class="background" [src]="helper.getImageUrl(selectedGame?.background != null ? selectedGame.background : '/data/renderers/maccrazy/background.png')">
+    <div class="frame">
+        <ul class="slidee">
+            <li *ngFor="let game of helper.provider | orderBy:'name'; trackBy:helper.gameTrack" (mouseover)="showDescription(game)" (mouseout)="hideDescription(game)">
+                <img [ngClass]="game === selectedGame ? 'selected' : null" [src]="helper.getImageUrl(game.image)" [title]="game.name" (click)="select(game)">
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="description != null" class="options">
+        <span>{{description}}</span>
+        <bulma-button-component *ngFor="let option of helper.options; trackBy:helper.optionTrack" [icon]="option.icon" [title]="option.label"
+            (click)="helper.executeGameOption(selectedGame, option)"></bulma-button-component>
+    </div>
 </div>

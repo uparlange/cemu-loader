@@ -1,3 +1,9 @@
+[view]
+{
+    width:100%;
+    height:100%; 
+}
+
 .background
 {
     position: absolute;
@@ -7,8 +13,7 @@
 
 .frame 
 { 
-    width: 100%; 
-    height:100%; 
+    width:100%;
 }
 
 .frame .slidee 
@@ -22,7 +27,6 @@
     float: left; 
     margin-top:20px;
     margin-left: 20px;
-    width: 100px;
 }
 
 .frame .slidee li:last-child
@@ -32,22 +36,42 @@
 
 .frame .slidee li img
 {
-    border: 1px solid #FFFFFF;
-    filter: grayscale(100%);
+    opacity:0.85;
     cursor: pointer;
     border-radius: 5px;
+    filter: grayscale(100%);
+    width: 100px;
+    border: 1px solid #aaa;
 }
 
 .frame .slidee li img.selected
 {
+    opacity:1;
     filter: grayscale(0%);
 }
 
-.playBtn
+.options
 {
-    position: absolute;
-    right: 20px;
+    border: 1px solid #aaa;
+    position:absolute;
+    left:20px;
+    right:20px;
+    padding:10px;
     bottom:20px;
-    height: 30px;
+    border-radius: 5px;
+    opacity:0.85;
+    background: #FFFFFF;
+    padding-right:10px;
+}
+
+.options span
+{
+    vertical-align: sub;
+}
+
+.options bulma-button-component
+{
+    margin-left:10px;
     cursor: pointer;
+    float:right;
 }

@@ -1,7 +1,13 @@
+[view]
+{
+    padding-top:5px;
+}
+
 img
 {
     margin-left:5px;
     width: 206px;
     box-shadow: 3px 3px 3px #aaa; 
     cursor: pointer;
+    border-radius: 5px;
 }

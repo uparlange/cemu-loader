@@ -1,2 +1,4 @@
-<img animated [animation]="'swing'" [duration]="500" *ngFor="let game of provider | orderBy:'name'; trackBy:gameTrack"
-    [src]="game.image" [title]="game.name" (click)="play(game)">
+<div view animated [(animation)]="animation" [(duration)]="duration">
+    <img animated [animation]="'swing'" [duration]="500" *ngFor="let game of helper.provider | orderBy:'name'; trackBy:helper.gameTrack"
+        [src]="helper.getImageUrl(game.image)" [title]="game.name" (click)="helper.playGame(game)">
+</div>
