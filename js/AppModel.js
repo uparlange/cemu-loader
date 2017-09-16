@@ -42,8 +42,9 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				function addGame(game) {
 					if (game == null) {
 						this._translateManager.getValues(["L10N_NEW_GAME"]).subscribe((translations) => {
+							const id = new Date().getTime();
 							const name = translations.L10N_NEW_GAME + " " + (this.config.games.length + 1);
-							const game = this._gameHelper.getNew(name);
+							const game = this._gameHelper.getNew(id, name);
 							this.config.games.unshift(game);
 							this.currentGame = game;
 						});
@@ -64,12 +65,6 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 						eventEmitter.emit();
 					}, 0);
 					return eventEmitter;
-				},
-				function setGameImage(game, file) {
-					game.image = "file:" + file;
-				},
-				function setGameBackground(game, file) {
-					game.background = "file:" + file;
 				},
 				function setGameFile(game, file) {
 					game.file = '"' + file + '"';

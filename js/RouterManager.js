@@ -34,6 +34,18 @@ define(["AppUtils", "AbstractEventManager"],
                 },
                 function navigate(commands, extras) {
                     this._router.navigate(commands, extras);
+                },
+                function showConfigParams(extras) {
+                    this.navigate(["/config/params"], extras);
+                },
+                function showConfigGames(extras) {
+                    this.navigate(["/config/games"], extras);
+                },
+                function showResources(extras) {
+                    this.navigate(["/resources"], extras);
+                },
+                function showList(renderer, extras) {
+                    this.navigate(["/list/" + renderer], extras);
                 }
             ]
         });

@@ -48,6 +48,9 @@ define(function () {
 			const path = require("path");
 			return path.resolve() + "\\data\\wiiutdb.xml";
 		},
+		getDesktopPath: function () {
+			return this._getHomeDir() + "\\Desktop";
+		},
 		getPicturesPath: function () {
 			return this._getHomeDir() + "\\Pictures";
 		},

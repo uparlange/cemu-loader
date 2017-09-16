@@ -1,10 +1,10 @@
 define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
-	"ItemHelper"],
+	"ItemHelper", "RouterManager"],
 	function (AppUtils, AppModel, CemuManager, WmicManager, GameHelper,
-		ItemHelper) {
+		ItemHelper, RouterManager) {
 		return AppUtils.getClass({
-			constructor: function ConfigParamsView(AppModel, CemuManager, Router, WmicManager, NgZone,
-				GameHelper, ItemHelper) {
+			constructor: function ConfigParamsView(AppModel, CemuManager, WmicManager, NgZone, GameHelper,
+				ItemHelper, RouterManager) {
 				this.model = AppModel;
 				this.config = AppUtils.getConfigFile();
 				this.version = {
@@ -16,17 +16,17 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				this.itemHelper = ItemHelper;
 				this.selectedLanguage = null;
 				this.selectedRenderer = null;
-				this._router = Router;
 				this._cemuManager = CemuManager;
 				this._wmicManager = WmicManager;
 				this._ngZone = NgZone;
+				this._routerManager = RouterManager;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("config-params-view"))
 			],
 			parameters: [
-				[AppModel], [CemuManager], [ng.router.Router], [WmicManager], [ng.core.NgZone],
-				[GameHelper], [ItemHelper]
+				[AppModel], [CemuManager], [WmicManager], [ng.core.NgZone], [GameHelper],
+				[ItemHelper], [RouterManager]
 			],
 			functions: [
 				function ngOnInit() {
@@ -48,7 +48,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					this.model.removeGame(game);
 				},
 				function findGame() {
-					this._router.navigate(["/config/games"]);
+					this._routerManager.showConfigGames();
 				},
 				function toggleEditGame(game) {
 					if (this.model.currentGame === game) {
@@ -102,7 +102,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				},
 				function selectGameImage(game) {
 					this._selectFile().subscribe((file) => {
-						this.model.setGameImage(game, file);
+						game.image = file;
 					});
 				},
 				function selectGameFile(game) {
@@ -112,7 +112,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				},
 				function saveConfiguration() {
 					this.model.save();
-					this._router.navigate(["/list/" + this.model.config.renderer]);
+					this._routerManager.showList(this.model.config.renderer);
 				},
 				function launchCemu() {
 					this._cemuManager.launchCemu();
@@ -127,7 +127,9 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 							const parser = new xml2js.Parser();
 							fs.readFile(metaxmlPath, (err, result) => {
 								parser.parseString(result, (err, result) => {
-									const game = this.gameHelper.getNew(result.menu.longname_en[0]._);
+									const id = result.menu.title_id[0]._;
+									const name = result.menu.longname_en[0]._;
+									const game = this.gameHelper.getNew(id, name);
 									const rpxFolder = path + "\\code";
 									fs.readdir(rpxFolder, (err, files) => {
 										if (!err) {
@@ -135,13 +137,13 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 												if (filename.indexOf(".rpx") !== -1) {
 													this.model.setGameFile(game, rpxFolder + "\\" + filename);
 													const imageSourcePath = path + "\\meta\\iconTex.tga";
-													const imageDestPath = AppUtils.getPicturesPath() + "\\" + result.menu.product_code[0]._ + "_iconTex.png";
+													const imageDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_iconTex.png";
 													tga2png(imageSourcePath, imageDestPath).then(() => {
-														this.model.setGameImage(game, imageDestPath);
+														game.image = imageDestPath;
 														const backgroundSourcePath = path + "\\meta\\bootDrcTex.tga";
-														const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + result.menu.product_code[0]._ + "_bootDrcTex.png";
+														const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_bootDrcTex.png";
 														tga2png(backgroundSourcePath, backgroundDestPath).then(() => {
-															this.model.setGameBackground(game, backgroundDestPath);
+															game.background = backgroundDestPath;
 															this._ngZone.run(() => {
 																this.model.addGame(game);
 															});

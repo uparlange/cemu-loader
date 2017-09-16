@@ -1,22 +1,22 @@
-define(["AppUtils", "AppModel", "GameHelper"],
-	function (AppUtils, AppModel, GameHelper) {
+define(["AppUtils", "AppModel", "GameHelper", "RouterManager"],
+	function (AppUtils, AppModel, GameHelper, RouterManager) {
 		return AppUtils.getClass({
-			constructor: function ConfigGamesView(AppModel, Router, NgZone, Http, GameHelper) {
+			constructor: function ConfigGamesView(AppModel, NgZone, Http, GameHelper, RouterManager) {
 				this.model = AppModel;
 				this.gameHelper = GameHelper;
 				this.filterValue = null;
 				this.comboTypeActive = false;
 				this.images = [];
 				this.imagesPopupActive = false;
-				this._router = Router;
 				this._ngZone = NgZone;
 				this._http = Http;
+				this._routerManager = RouterManager;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("config-games-view"))
 			],
 			parameters: [
-				[AppModel], [ng.router.Router], [ng.core.NgZone], [ng.http.Http], [GameHelper]
+				[AppModel], [ng.core.NgZone], [ng.http.Http], [GameHelper], [RouterManager]
 			],
 			functions: [
 				function onAnimationComplete(filterInput) {
@@ -25,7 +25,7 @@ define(["AppUtils", "AppModel", "GameHelper"],
 				},
 				function selectImage(image) {
 					this.model.currentGame.image = image;
-					this._showParams();
+					this._routerManager.showConfigParams();
 				},
 				function showGameImages(game) {
 					this.images = [];
@@ -42,7 +42,7 @@ define(["AppUtils", "AppModel", "GameHelper"],
 					this.filterValue = null;
 				},
 				function cancel() {
-					this._showParams();
+					this._routerManager.showConfigParams();
 				},
 				function _getImageList(id) {
 					const htmlparser = require("htmlparser2");
@@ -63,9 +63,6 @@ define(["AppUtils", "AppModel", "GameHelper"],
 						eventEmitter.emit(images);
 					});
 					return eventEmitter;
-				},
-				function _showParams() {
-					this._router.navigate(["/config/params"]);
 				}
 			]
 		});

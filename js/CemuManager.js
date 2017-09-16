@@ -1,14 +1,14 @@
-define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager"],
-    function (AppUtils, AppModel, ApplicationManager, TranslateManager) {
+define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager", "RouterManager"],
+    function (AppUtils, AppModel, ApplicationManager, TranslateManager, RouterManager) {
         return AppUtils.getClass({
-            constructor: function CemuManager(AppModel, Router, ApplicationManager, TranslateManager) {
+            constructor: function CemuManager(AppModel, ApplicationManager, TranslateManager, RouterManager) {
                 this._model = AppModel;
-                this._router = Router;
                 this._applicationManager = ApplicationManager;
                 this._translateManager = TranslateManager;
+                this._routerManager = RouterManager;
             },
             parameters: [
-                [AppModel], [ng.router.Router], [ApplicationManager], [TranslateManager]
+                [AppModel], [ApplicationManager], [TranslateManager], [RouterManager]
             ],
             functions: [
                 function init() {
@@ -22,7 +22,7 @@ define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager"],
                     if (game.file === null) {
                         this._translateManager.getValues([{ key: "L10N_CONFIGURE_XXX_FILE", properties: [game.name] }]).subscribe((translations) => {
                             window.alert(translations.L10N_CONFIGURE_XXX_FILE);
-                            this._router.navigate(["/config"]);
+                            this._routerManager.showConfigParams();
                         });
                         return;
                     }

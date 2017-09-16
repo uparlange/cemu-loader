@@ -3,16 +3,16 @@
 </div>
 <div class="app-header">
     <bulma-tabs-component [selected]="currentView" (change)="onChange($event)">
-        <bulma-tab-component [id]="'list'">
+        <bulma-tab-component [id]="'/list/'+model.config.renderer">
             <span class="icon is-small"><i class="fa fa-gamepad"></i></span>
             <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
             <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
         </bulma-tab-component>
-        <bulma-tab-component [id]="'config'">
+        <bulma-tab-component [id]="'/config/params'">
             <span class="icon is-small"><i class="fa fa-cogs"></i></span>
             <span>{{"L10N_CONFIGURATION"|translate}}</span>
         </bulma-tab-component>
-        <bulma-tab-component [id]="'resources'">
+        <bulma-tab-component [id]="'/resources'">
             <span class="icon is-small"><i class="fa fa-link"></i></span>
             <span>{{"L10N_RESOURCES"|translate}}</span>
         </bulma-tab-component>

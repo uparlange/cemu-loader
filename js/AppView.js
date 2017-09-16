@@ -19,10 +19,10 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 				function ngOnInit() {
 					this._shell.init();
 					this._routerManager.on("NAVIGATION_END").subscribe((event) => {
-						this.currentView = event.toUrl.substring(1).split("/")[0];
+						this.currentView = event.toUrl;
 					});
 					if (this.model.config.games.length === 0) {
-						this._showView("config");
+						this._routerManager._showView("config/params");
 					} else {
 						this._showList();
 					}
@@ -35,10 +35,10 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 					}
 				},
 				function _showList() {
-					this._showView("list/" + this.model.config.renderer);
+					this._routerManager.showList(this.model.config.renderer);
 				},
 				function _showView(view) {
-					this._routerManager.navigate(["/" + view]);
+					this._routerManager.navigate([view]);
 				}
 			]
 		});
