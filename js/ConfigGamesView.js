@@ -22,12 +22,6 @@ define(["AppUtils", "AppModel", "GameHelper", "RouterManager", "ImageManager"],
 				[ImageManager]
 			],
 			functions: [
-				function ngOnInit() {
-					var toto = ";"
-				},
-				function ngOnDestroy() {
-					var toto = ";"
-				},
 				function onAnimationComplete(filterInput) {
 					window.scrollTo(0, 0);
 					filterInput.focus();

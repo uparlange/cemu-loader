@@ -39,7 +39,7 @@ define(["AppUtils"],
 							fs.writeFileSync(input.dest, buf);
 							outputs[input.src] = true;
 							this._treated(inputs, outputs, eventEmitter);
-						}).catch((error) => {
+						}).catch(() => {
 							outputs[input.src] = false;
 							this._treated(inputs, outputs, eventEmitter);
 						});

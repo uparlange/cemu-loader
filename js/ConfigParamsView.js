@@ -41,9 +41,6 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					this._initUpdateCemuVersion();
 					this._initUpdateCemuHookVersion();
 				},
-				function ngOnDestroy() {
-					var toto = ";"
-				},
 				function onLanguageChange(language) {
 					this.model.setLanguage(language.data);
 				},
@@ -148,7 +145,6 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					const eventEmitter = new ng.core.EventEmitter();
 					const metaxmlPath = path + "\\meta\\meta.xml";
 					const fs = require("fs");
-					const tga2png = require("tga2png");
 					fs.lstat(metaxmlPath, (err, stats) => {
 						if (stats.isFile()) {
 							const xml2js = require("xml2js");
