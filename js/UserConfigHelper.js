@@ -13,7 +13,7 @@ define(["AppUtils", "TranslateManager"],
                         file: AppUtils.getUserConfigPath(),
                         autostart: false,
                         startMinimized: false,
-                        renderer: "tile",
+                        renderer: "maccrazy",
                         language: this._translateManager.getDefaultLanguage(),
                         cemu: {
                             file: null,
