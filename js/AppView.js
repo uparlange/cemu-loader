@@ -22,7 +22,7 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 						this.currentView = event.toUrl;
 					});
 					if (this.model.config.games.length === 0) {
-						this._routerManager._showView("config/params");
+						this._showView("/config/params");
 					} else {
 						this._showList();
 					}

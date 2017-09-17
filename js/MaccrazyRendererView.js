@@ -29,11 +29,7 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 								touchDragging: true
 							});
 							this._sly.on("load", () => {
-								const lastGameName = localStorage.getItem("lastGameName");
-								const lastGame = (lastGameName == null) ? this.provider[0] : this.helper.provider.find((game) => {
-									return (game.name === lastGameName);
-								});
-								this.select(lastGame);
+								this._initLastGame();
 								// TODO fix force redraw
 								var bridge = document.querySelector("[view]");
 								bridge.style.display = "none";
@@ -54,13 +50,25 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 					this.description = (this.selectedGame != null) ? this.selectedGame.name : null;
 				},
 				function select(game) {
-					this.selectedGame = game;
-					this.description = this.selectedGame.name;
-					const gameIndex = this.helper.provider.findIndex((game) => {
-						return (game.name === this.selectedGame.name);
+					if (game != null) {
+						this.selectedGame = game;
+						this.description = this.selectedGame.name;
+						const gameIndex = this.helper.provider.findIndex((game) => {
+							return (game.name === this.selectedGame.name);
+						});
+						this._sly.toCenter(gameIndex);
+						localStorage.setItem("lastGameName", game.name);
+					}
+				},
+				function _initLastGame() {
+					const lastGameName = localStorage.getItem("lastGameName");
+					let lastGame = (lastGameName == null) ? this.provider[0] : this.helper.provider.find((game) => {
+						return (game.name === lastGameName);
 					});
-					this._sly.toCenter(gameIndex);
-					localStorage.setItem("lastGameName", game.name);
+					if (lastGame == null) {
+						lastGame = this.helper.provider[0];
+					}
+					this.select(lastGame);
 				}
 			]
 		});
