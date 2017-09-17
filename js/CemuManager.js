@@ -26,11 +26,11 @@ define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager", "Route
                         });
                         return;
                     }
-                    let cmd = this._model.config.cemu.file;
+                    let cmd = "\"" + this._model.config.cemu.file + "\"";
                     if (this._model.config.cemu.fullscreen) {
                         cmd += " -f";
                     }
-                    cmd += " -g " + game.file;
+                    cmd += " -g \"" + game.file + "\"";
                     this._launch(cmd);
                 },
                 function _launch(cmd) {

@@ -41,12 +41,14 @@ define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
                         fs.writeFileSync(icoFilename, buf);
                         const path = AppUtils.getDesktopPath() + "\\" + game.id + '.lnk';
                         const options = {
-                            target: this._model.config.cemu.file,
-                            args: "-g " + game.file,
+                            target: "\"" + this._model.config.cemu.file + "\"",
+                            args: "-g \"" + game.file + "\"",
                             icon: icoFilename
                         }
                         this._applicationManager.addDesktopShortcut(path, options);
-                    }).catch(console.error);
+                    }).catch((error) => {
+                        alert(error);
+                    });
                 },
                 function executeGameOption(game, option) {
                     if (typeof (this[option.data]) === "function") {

@@ -153,7 +153,8 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 								parser.parseString(result, (err, result) => {
 									const id = result.menu.title_id[0]._;
 									const name = result.menu.longname_en[0]._;
-									const game = this.gameHelper.getNew(id, name);
+									const game = this.gameHelper.getNew(name);
+									game.id = id;
 									const rpxFolder = path + "\\code";
 									fs.readdir(rpxFolder, (err, files) => {
 										if (!err) {

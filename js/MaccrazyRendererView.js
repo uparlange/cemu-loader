@@ -50,7 +50,7 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 				function showDescription(game) {
 					this.description = game.name;
 				},
-				function hideDescription(game) {
+				function hideDescription() {
 					this.description = (this.selectedGame != null) ? this.selectedGame.name : null;
 				},
 				function select(game) {
