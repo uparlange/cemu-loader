@@ -1,10 +1,10 @@
 define(["AppUtils", "RouterManager", "ApplicationManager", "AnimationManager", "CemuManager",
-	"VersionManager", "WmicManager", "TranslateManager"],
+	"VersionManager", "WmicManager", "TranslateManager", "ImageManager"],
 	function (AppUtils, RouterManager, ApplicationManager, AnimationManager, CemuManager,
-		VersionManager, WmicManager, TranslateManager) {
+		VersionManager, WmicManager, TranslateManager, ImageManager) {
 		return AppUtils.getClass({
 			constructor: function Shell(RouterManager, ApplicationManager, AnimationManager, CemuManager, VersionManager,
-				WmicManager, TranslateManager) {
+				WmicManager, TranslateManager, ImageManager) {
 				this._managers = [];
 				this._managers.push(RouterManager);
 				this._managers.push(ApplicationManager);
@@ -13,10 +13,11 @@ define(["AppUtils", "RouterManager", "ApplicationManager", "AnimationManager", "
 				this._managers.push(VersionManager);
 				this._managers.push(WmicManager);
 				this._managers.push(TranslateManager);
+				this._managers.push(ImageManager);
 			},
 			parameters: [
 				[RouterManager], [ApplicationManager], [AnimationManager], [CemuManager], [VersionManager],
-				[WmicManager], [TranslateManager]
+				[WmicManager], [TranslateManager], [ImageManager]
 			],
 			functions: [
 				function init() {

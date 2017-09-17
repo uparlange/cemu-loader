@@ -1,10 +1,10 @@
 define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
-	"ItemHelper", "RouterManager"],
+	"ItemHelper", "RouterManager", "ImageManager"],
 	function (AppUtils, AppModel, CemuManager, WmicManager, GameHelper,
-		ItemHelper, RouterManager) {
+		ItemHelper, RouterManager, ImageManager) {
 		return AppUtils.getClass({
 			constructor: function ConfigParamsView(AppModel, CemuManager, WmicManager, NgZone, GameHelper,
-				ItemHelper, RouterManager) {
+				ItemHelper, RouterManager, ImageManager) {
 				this.model = AppModel;
 				this.config = AppUtils.getConfigFile();
 				this.version = {
@@ -25,13 +25,14 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				this._wmicManager = WmicManager;
 				this._ngZone = NgZone;
 				this._routerManager = RouterManager;
+				this._imageManager = ImageManager;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("config-params-view"))
 			],
 			parameters: [
 				[AppModel], [CemuManager], [WmicManager], [ng.core.NgZone], [GameHelper],
-				[ItemHelper], [RouterManager]
+				[ItemHelper], [RouterManager], [ImageManager]
 			],
 			functions: [
 				function ngOnInit() {
@@ -39,6 +40,9 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					this._initSelectedRenderer();
 					this._initUpdateCemuVersion();
 					this._initUpdateCemuHookVersion();
+				},
+				function ngOnDestroy() {
+					var toto = ";"
 				},
 				function onLanguageChange(language) {
 					this.model.setLanguage(language.data);
@@ -161,21 +165,19 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 											files.forEach((filename) => {
 												if (filename.indexOf(".rpx") !== -1) {
 													this.model.setGameFile(game, rpxFolder + "\\" + filename);
-													const imageSourcePath = path + "\\meta\\iconTex.tga";
-													const imageDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_iconTex.png";
-													tga2png(imageSourcePath, imageDestPath).then(() => {
+													const imageSrcPath = path + "\\meta\\iconTex.tga";
+													const imageDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_image.png";
+													const backgroundSrcPath = path + "\\meta\\bootDrcTex.tga";
+													const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_background.png";
+													const inputs = [
+														{ src: imageSrcPath, dest: imageDestPath },
+														{ src: backgroundSrcPath, dest: backgroundDestPath }
+													];
+													this._imageManager.tgaToPng(inputs).subscribe(() => {
 														game.image = imageDestPath;
-														const backgroundSourcePath = path + "\\meta\\bootDrcTex.tga";
-														const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_bootDrcTex.png";
-														tga2png(backgroundSourcePath, backgroundDestPath).then(() => {
-															game.background = backgroundDestPath;
-															eventEmitter.emit(game);
-														}, () => {
-															// TODO
-														});
-													}, () => {
-														// TODO
-													});
+														game.background = backgroundDestPath;
+														eventEmitter.emit(game);
+													})
 													return;
 												}
 											})

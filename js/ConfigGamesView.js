@@ -1,7 +1,8 @@
-define(["AppUtils", "AppModel", "GameHelper", "RouterManager"],
-	function (AppUtils, AppModel, GameHelper, RouterManager) {
+define(["AppUtils", "AppModel", "GameHelper", "RouterManager", "ImageManager"],
+	function (AppUtils, AppModel, GameHelper, RouterManager, ImageManager) {
 		return AppUtils.getClass({
-			constructor: function ConfigGamesView(AppModel, NgZone, Http, GameHelper, RouterManager) {
+			constructor: function ConfigGamesView(AppModel, NgZone, Http, GameHelper, RouterManager,
+				ImageManager) {
 				this.model = AppModel;
 				this.gameHelper = GameHelper;
 				this.filterValue = null;
@@ -11,21 +12,39 @@ define(["AppUtils", "AppModel", "GameHelper", "RouterManager"],
 				this._ngZone = NgZone;
 				this._http = Http;
 				this._routerManager = RouterManager;
+				this._imageManager = ImageManager;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("config-games-view"))
 			],
 			parameters: [
-				[AppModel], [ng.core.NgZone], [ng.http.Http], [GameHelper], [RouterManager]
+				[AppModel], [ng.core.NgZone], [ng.http.Http], [GameHelper], [RouterManager],
+				[ImageManager]
 			],
 			functions: [
+				function ngOnInit() {
+					var toto = ";"
+				},
+				function ngOnDestroy() {
+					var toto = ";"
+				},
 				function onAnimationComplete(filterInput) {
 					window.scrollTo(0, 0);
 					filterInput.focus();
 				},
 				function selectImage(image) {
-					this.model.currentGame.image = image;
-					this._routerManager.showConfigParams();
+					const extension = image.substr(image.lastIndexOf(".") + 1, 3);
+					const imageDestPath = AppUtils.getPicturesPath() + "\\" + this.model.currentGame.id + "_image." + extension;
+					const inputs = [
+						{ src: image, dest: imageDestPath }
+					];
+					this._imageManager.download(inputs).subscribe(() => {
+						this.model.currentGame.image = imageDestPath;
+						// TODO why needed ?
+						this._ngZone.run(() => {
+							this._routerManager.showConfigParams();
+						});
+					});
 				},
 				function showGameImages(game) {
 					this.images = [];

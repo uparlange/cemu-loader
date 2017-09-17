@@ -1,10 +1,10 @@
 define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
-    "ItemHelper", "ApplicationManager"],
+    "ItemHelper", "ApplicationManager", "ImageManager"],
     function (AppUtils, AppModel, GameHelper, CemuManager, TranslateManager,
-        ItemHelper, ApplicationManager) {
+        ItemHelper, ApplicationManager, ImageManager) {
         return AppUtils.getClass({
             constructor: function RendererHelper(AppModel, GameHelper, CemuManager, TranslateManager, ItemHelper,
-                ApplicationManager, DomSanitizer) {
+                ApplicationManager, DomSanitizer, ImageManager) {
                 this.gameTrack = GameHelper.track;
                 this.optionTrack = ItemHelper.track;
                 this.provider = [];
@@ -14,10 +14,11 @@ define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
                 this._translateManager = TranslateManager;
                 this._applicationManager = ApplicationManager;
                 this._domSanitizer = DomSanitizer;
+                this._imageManager = ImageManager;
             },
             parameters: [
                 [AppModel], [GameHelper], [CemuManager], [TranslateManager], [ItemHelper],
-                [ApplicationManager], [ng.platformBrowser.DomSanitizer]
+                [ApplicationManager], [ng.platformBrowser.DomSanitizer], [ImageManager]
             ],
             functions: [
                 function init() {
@@ -34,20 +35,18 @@ define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
                     this._cemuManager.launchGame(game);
                 },
                 function addDesktopShortcut(game) {
-                    const fs = require("fs");
-                    const pngToIco = require("png-to-ico");
-                    const icoFilename = AppUtils.getPicturesPath() + "\\" + game.id + ".ico";
-                    pngToIco(game.image).then((buf) => {
-                        fs.writeFileSync(icoFilename, buf);
+                    const icoDestPath = AppUtils.getPicturesPath() + "\\" + game.id + ".ico";
+                    const inputs = [
+                        { src: game.image, dest: icoDestPath }
+                    ]
+                    this._imageManager.toIco(inputs).subscribe(() => {
                         const path = AppUtils.getDesktopPath() + "\\" + game.id + '.lnk';
                         const options = {
                             target: "\"" + this._model.config.cemu.file + "\"",
                             args: "-g \"" + game.file + "\"",
-                            icon: icoFilename
+                            icon: icoDestPath
                         }
                         this._applicationManager.addDesktopShortcut(path, options);
-                    }).catch((error) => {
-                        alert(error);
                     });
                 },
                 function executeGameOption(game, option) {
