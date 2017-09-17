@@ -42,9 +42,8 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				function addGame(game) {
 					if (game == null) {
 						this._translateManager.getValues(["L10N_NEW_GAME"]).subscribe((translations) => {
-							const id = new Date().getTime();
 							const name = translations.L10N_NEW_GAME + " " + (this.config.games.length + 1);
-							const game = this._gameHelper.getNew(id, name);
+							const game = this._gameHelper.getNew(name);
 							this.config.games.unshift(game);
 							this.currentGame = game;
 						});
