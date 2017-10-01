@@ -2,14 +2,15 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 	function (AppUtils, AbstractRendererComponent, RendererHelper) {
 		return AppUtils.getClass({
 			extends: AbstractRendererComponent,
-			constructor: function MaccrazyRendererView(RendererHelper) {
+			constructor: function MaccrazyRendererView(RendererHelper, NgZone) {
 				AbstractRendererComponent.call(this, RendererHelper);
 				this.description = null;
 				this.selectedGame = null;
 				this._sly = null;
+				this._zone = NgZone;
 			},
 			parameters: [
-				[RendererHelper]
+				[RendererHelper], [ng.core.NgZone]
 			],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("maccrazy-renderer-view"))
@@ -17,7 +18,7 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 			functions: {
 				rendererInit: function () {
 					SystemJS.import("/data/renderers/maccrazy/jquery-3.2.1.min.js").then(() => {
-						SystemJS.import("/data/renderers/maccrazy/sly-1.6.1.min.js").then((Sly) => {
+						SystemJS.import("/data/renderers/maccrazy/sly-1.6.1.min.js").then(() => {
 							this._sly = new Sly(".frame", {
 								slidee: ".slidee",
 								horizontal: true,
@@ -29,12 +30,9 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 								touchDragging: true
 							});
 							this._sly.on("load", () => {
-								this._initLastGame();
-								// TODO fix force redraw
-								var bridge = document.querySelector("[view]");
-								bridge.style.display = "none";
-								bridge.offsetHeight;
-								bridge.style.display = "block";
+								this._zone.run(() => {
+									this._initLastGame();
+								});
 							});
 							this._sly.init();
 						});
