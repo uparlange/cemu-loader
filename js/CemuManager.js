@@ -50,14 +50,14 @@ define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager", "Route
                     const fs = require("fs");
                     fs.lstat(path, (err, stats) => {
                         if (stats.isDirectory()) {
-                            this._scanLoadiine(path).subscribe((game) => {
+                            this._scanLoadiineGame(path).subscribe((game) => {
                                 eventEmitter.emit(game);
                             })
                         }
                     });
                     return eventEmitter;
                 },
-                _scanLoadiine: function (path) {
+                _scanLoadiineGame: function (path) {
                     const eventEmitter = new ng.core.EventEmitter();
                     const metaxmlPath = path + "\\meta\\meta.xml";
                     const fs = require("fs");
