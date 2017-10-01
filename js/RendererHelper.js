@@ -36,10 +36,7 @@ define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
                 },
                 addDesktopShortcut: function (game) {
                     const icoDestPath = AppUtils.getPicturesPath() + "\\" + game.id + ".ico";
-                    const inputs = [
-                        { src: game.image, dest: icoDestPath }
-                    ]
-                    this._imageManager.toIco(inputs).subscribe(() => {
+                    this._imageManager.toIco([{ src: game.image, dest: icoDestPath }]).subscribe(() => {
                         const path = AppUtils.getDesktopPath() + "\\" + game.id + '.lnk';
                         const options = {
                             target: this._cemuManager.getLaunchGameTarget(),

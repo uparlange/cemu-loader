@@ -32,16 +32,14 @@ define(["AppUtils"],
 					const eventEmitter = new ng.core.EventEmitter();
 					inputs.forEach((input) => {
 						const extension = this._getExtention(input.src);
-						switch (extension) {
-							case "jpg":
-								const jpgToPngDest = input.src.replace(extension, "png");
-								this.jpgToPng([{ src: input.src, dest: jpgToPngDest }]).subscribe(() => {
-									input.src = jpgToPngDest;
-									this._finalizeToIco(inputs, input, eventEmitter);
-								});
-								break;
-							default:
+						if (extension === "jpg") {
+							const jpgToPngDest = input.src.replace(extension, "png");
+							this.jpgToPng([{ src: input.src, dest: jpgToPngDest }]).subscribe(() => {
+								input.src = jpgToPngDest;
 								this._finalizeToIco(inputs, input, eventEmitter);
+							});
+						} else {
+							this._finalizeToIco(inputs, input, eventEmitter);
 						}
 					});
 					return eventEmitter;

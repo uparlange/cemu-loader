@@ -91,12 +91,15 @@ gulp.task('copy-node-modules', () => {
         }
     }, { decodeEntities: true });
     const addDependency = function (dependency) {
+        const fs = require("fs");
         const folder = './node_modules/' + dependency;
         streams.add(gulp.src([folder + '/**/*'])
             .pipe(gulp.dest('./dist/node_modules/' + dependency)));
-        const pkg2 = require(folder + '/package.json');
-        for (let dependency in pkg2.dependencies) {
-            addDependency(dependency);
+        if (fs.existsSync(folder + '/package.json')) {
+            const pkg2 = require(folder + '/package.json');
+            for (let dependency in pkg2.dependencies) {
+                addDependency(dependency);
+            }
         }
     };
     parser.write(fs.readFileSync('index.html', 'utf8'));
