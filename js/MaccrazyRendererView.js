@@ -18,7 +18,7 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 			functions: {
 				rendererInit: function () {
 					SystemJS.import("/data/renderers/maccrazy/jquery-3.2.1.min.js").then(() => {
-						SystemJS.import("/data/renderers/maccrazy/sly-1.6.1.min.js").then(() => {
+						SystemJS.import("/data/renderers/maccrazy/sly-1.6.1.min.js").then((Sly) => {
 							this._sly = new Sly(".frame", {
 								slidee: ".slidee",
 								horizontal: true,

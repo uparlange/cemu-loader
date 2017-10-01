@@ -1,5 +1,13 @@
 # Changelog #
 
+## 2.0.0 ##
+* Breaking changes : paths (files, images) no more contains double quotes... update your configuration !
+* Add new "Maccray" renderer
+* Add combo options in "List" renderer
+* Add option to create desktop game shortcut
+* Add progress bar when scanning games
+* Optimizations
+
 ## 1.3.5 ##
 
 * Add Accordion to simplify configuration view
