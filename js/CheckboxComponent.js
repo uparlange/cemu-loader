@@ -12,11 +12,11 @@ define(["AppUtils"],
 					outputs: ["selectedChange"]
 				}))
 			],
-			functions: [
-				function onChange() {
+			functions: {
+				onChange: function () {
 					this.selectedChange.emit(this.selected);
 				}
-			]
+			}
 		});
 	}
 );	

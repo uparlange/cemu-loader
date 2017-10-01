@@ -15,8 +15,8 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 			parameters: [
 				[AppModel], [Shell], [RouterManager]
 			],
-			functions: [
-				function ngOnInit() {
+			functions: {
+				ngOnInit: function () {
 					this._shell.init();
 					this._routerManager.on("NAVIGATION_END").subscribe((event) => {
 						this.currentView = event.toUrl;
@@ -27,20 +27,20 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 						this._showList();
 					}
 				},
-				function onChange(view) {
+				onChange: function (view) {
 					if (view === "list") {
 						this._showList();
 					} else {
 						this._showView(view);
 					}
 				},
-				function _showList() {
+				_showList: function () {
 					this._routerManager.showList(this.model.config.renderer);
 				},
-				function _showView(view) {
+				_showView: function (view) {
 					this._routerManager.navigate([view]);
 				}
-			]
+			}
 		});
 	}
 );

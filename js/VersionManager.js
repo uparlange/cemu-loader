@@ -8,8 +8,8 @@ define(["AppUtils", "TranslateManager"],
 			parameters: [
 				[ng.http.Http], [TranslateManager]
 			],
-			functions: [
-				function init() {
+			functions: {
+				init: function () {
 					const pkg = AppUtils.getPackageFile();
 					this._http.get(AppUtils.getRemotePackageUrl()).subscribe((result) => {
 						const remotePkg = result.json();
@@ -25,7 +25,7 @@ define(["AppUtils", "TranslateManager"],
 						}
 					});
 				}
-			]
+			}
 		});
 	}
 );

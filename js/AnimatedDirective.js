@@ -15,16 +15,16 @@ define(["AppUtils"],
 			parameters: [
 				[ng.core.ElementRef]
 			],
-			functions: [
-				function ngOnInit() {
+			functions: {
+				ngOnInit: function () {
 					this._element.addEventListener("webkitAnimationEnd", () => {
 						this.onComplete.emit();
 					});
 				},
-				function ngOnChanges() {
+				ngOnChanges: function () {
 					this._checkAnimation();
 				},
-				function _checkAnimation() {
+				_checkAnimation: function () {
 					if (this.animation != null && this.duration != null) {
 						this._element.style.visibility = "initial";
 						this._element.style["-webkit-animation-duration"] = this.duration + "ms";
@@ -32,7 +32,7 @@ define(["AppUtils"],
 						this._element.classList.add(this.animation);
 					}
 				}
-			]
+			}
 		});
 	}
 );	

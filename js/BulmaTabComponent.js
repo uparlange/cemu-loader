@@ -12,11 +12,11 @@ define(["AppUtils", "AbstractEventManager"],
 					inputs: ["id", "active"]
 				}))
 			],
-			functions: [
-				function onClick() {
+			functions: {
+				onClick: function () {
 					this.emit("tabClick", { id: this.id });
 				}
-			]
+			}
 		});
 	}
 );

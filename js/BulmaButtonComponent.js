@@ -16,15 +16,15 @@ define(["AppUtils"],
 			parameters: [
 				[ng.core.ElementRef]
 			],
-			functions: [
-				function onClick(event) {
+			functions: {
+				onClick: function (event) {
 					if (!this.enabled) {
 						event.stopPropagation();
 						event.preventDefault();
 						return false;
 					}
 				},
-				function ngOnChanges(changes) {
+				ngOnChanges: function (changes) {
 					if (changes.hasOwnProperty("enabled")) {
 						const a = this._elementRef.getElementsByTagName("a")[0];
 						if (changes.enabled.currentValue === true) {
@@ -34,7 +34,7 @@ define(["AppUtils"],
 						}
 					}
 				}
-			]
+			}
 		});
 	}
 );

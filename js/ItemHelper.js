@@ -4,11 +4,11 @@ define(["AppUtils"],
             constructor: function ItemHelper() {
 
             },
-            functions: [
-                function track(index, value) {
+            functions: {
+                track: function (index, value) {
                     return value.data;
                 }
-            ]
+            }
         });
     }
 );

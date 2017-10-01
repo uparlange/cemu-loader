@@ -19,13 +19,13 @@ define(["AppUtils", "RouterManager", "ApplicationManager", "AnimationManager", "
 				[RouterManager], [ApplicationManager], [AnimationManager], [CemuManager], [VersionManager],
 				[WmicManager], [TranslateManager], [ImageManager]
 			],
-			functions: [
-				function init() {
+			functions: {
+				init: function () {
 					this._managers.forEach(function (manager) {
 						manager.init();
 					});
 				}
-			]
+			}
 		});
 	}
 );

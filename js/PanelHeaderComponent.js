@@ -11,11 +11,11 @@ define(["AppUtils", "AbstractEventManager"],
 					inputs: ["icon"]
 				}))
 			],
-			functions: [
-				function onClick() {
+			functions: {
+				onClick: function () {
 					this.emit("headerClick");
 				}
-			]
+			}
 		});
 	}
 );

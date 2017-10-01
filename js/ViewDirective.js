@@ -16,22 +16,22 @@ define(["AppUtils", "AnimationManager"],
 			parameters: [
 				[AnimationManager]
 			],
-			functions: [
-				function ngOnInit() {
+			functions: {
+				ngOnInit: function () {
 					if (this._animationManager.enterAnimation != null) {
 						this._setAnimation(this._animationManager.enterAnimation);
 						this._setDuration(this._animationManager.duration);
 					}
 				},
-				function _setDuration(value) {
+				_setDuration: function (value) {
 					this.duration = value;
 					this.durationChange.emit(value);
 				},
-				function _setAnimation(value) {
+				_setAnimation: function (value) {
 					this.animation = value;
 					this.animationChange.emit(value);
 				}
-			]
+			}
 		});
 	}
 );	

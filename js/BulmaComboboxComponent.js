@@ -14,16 +14,16 @@ define(["AppUtils"],
 					outputs: ["change", "selectedChange"]
 				}))
 			],
-			functions: [
-				function trackBy(item) {
+			functions: {
+				trackBy: function (item) {
 					return item.data;
 				},
-				function onClick(item) {
+				onClick: function (item) {
 					this.selected = item;
 					this.selectedChange.emit(this.selected);
 					this.change.emit(this.selected);
 				}
-			]
+			}
 		});
 	}
 );

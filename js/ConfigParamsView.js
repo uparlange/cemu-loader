@@ -1,10 +1,10 @@
 define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
-	"ItemHelper", "RouterManager", "ImageManager"],
+	"ItemHelper", "RouterManager"],
 	function (AppUtils, AppModel, CemuManager, WmicManager, GameHelper,
-		ItemHelper, RouterManager, ImageManager) {
+		ItemHelper, RouterManager) {
 		return AppUtils.getClass({
 			constructor: function ConfigParamsView(AppModel, CemuManager, WmicManager, NgZone, GameHelper,
-				ItemHelper, RouterManager, ImageManager) {
+				ItemHelper, RouterManager) {
 				this.model = AppModel;
 				this.config = AppUtils.getConfigFile();
 				this.version = {
@@ -25,80 +25,75 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 				this._wmicManager = WmicManager;
 				this._ngZone = NgZone;
 				this._routerManager = RouterManager;
-				this._imageManager = ImageManager;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("config-params-view"))
 			],
 			parameters: [
 				[AppModel], [CemuManager], [WmicManager], [ng.core.NgZone], [GameHelper],
-				[ItemHelper], [RouterManager], [ImageManager]
+				[ItemHelper], [RouterManager]
 			],
-			functions: [
-				function ngOnInit() {
+			functions: {
+				ngOnInit: function () {
 					this._initSelectedLanguage();
 					this._initSelectedRenderer();
 					this._initUpdateCemuVersion();
 					this._initUpdateCemuHookVersion();
 				},
-				function onLanguageChange(language) {
+				onLanguageChange: function (language) {
 					this.model.setLanguage(language.data);
 				},
-				function onRendererChange(renderer) {
+				onRendererChange: function (renderer) {
 					this.model.setRenderer(renderer.data);
 				},
-				function addGame() {
+				addGame: function () {
 					this.model.addGame();
 				},
-				function removeGame(game) {
+				removeGame: function (game) {
 					this.model.removeGame(game);
 				},
-				function findGame() {
+				findGame: function () {
 					this._routerManager.showConfigGames();
 				},
-				function toggleEditGame(game) {
+				toggleEditGame: function (game) {
 					if (this.model.currentGame === game) {
 						this.model.currentGame = null;
 					} else {
 						this.model.currentGame = game;
 					}
 				},
-				function openCemuFileFolder() {
+				openCemuFileFolder: function () {
 					const item = this.model.config.cemu.file;
 					nw.Shell.showItemInFolder(item);
 				},
-				function openGameFileFolder(game) {
+				openGameFileFolder: function (game) {
 					const item = game.file;
 					nw.Shell.showItemInFolder(item);
 				},
-				function openConfigFolder() {
+				openConfigFolder: function () {
 					const item = AppUtils.getUserConfigFile();
 					nw.Shell.showItemInFolder(item);
 				},
-				function selectRomsFolder() {
+				selectRomsFolder: function () {
 					this._selectFolder().subscribe((folder) => {
 						this.model.setRomsFolder(folder);
 					});
 				},
-				function openRomsFolder() {
+				openRomsFolder: function () {
 					nw.Shell.openItem(this.model.config.cemu.romsFolder);
 				},
-				function magicFindGames() {
+				scanGames: function () {
 					const romsFolder = this.model.config.cemu.romsFolder;
 					let romsToTreat = [];
 					const treatNextRom = () => {
 						if (romsToTreat.length > 0) {
 							const path = romsFolder + "\\" + romsToTreat.shift();
-							fs.lstat(path, (err, stats) => {
-								if (stats.isDirectory()) {
-									this._initLoadiineGame(path).subscribe((game) => {
-										this._ngZone.run(() => {
-											this.model.addGame(game);
-											this.progress.value++;
-											treatNextRom();
-										});
-									})
-								}
+							this._cemuManager.scanGame(path).subscribe((game) => {
+								this._ngZone.run(() => {
+									this.model.addGame(game);
+									this.progress.value++;
+									treatNextRom();
+								});
 							});
 						} else {
 							this.progress.visible = false;
@@ -116,7 +111,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 						treatNextRom();
 					});
 				},
-				function selectCemuFile() {
+				selectCemuFile: function () {
 					this._selectFile().subscribe((file) => {
 						this.model.setCemuFile(file).subscribe(() => {
 							this._initUpdateCemuVersion();
@@ -124,68 +119,29 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 						});
 					});
 				},
-				function selectGameImage(game) {
+				selectGameImage: function (game) {
 					this._selectFile().subscribe((file) => {
 						game.image = file;
 					});
 				},
-				function selectGameFile(game) {
+				selectGameBackground: function (game) {
+					this._selectFile().subscribe((file) => {
+						game.background = file;
+					});
+				},
+				selectGameFile: function (game) {
 					this._selectFile().subscribe((file) => {
 						this.model.setGameFile(game, file);
 					});
 				},
-				function saveConfiguration() {
+				saveConfiguration: function () {
 					this.model.save();
 					this._routerManager.showList(this.model.config.renderer);
 				},
-				function launchCemu() {
+				launchCemu: function () {
 					this._cemuManager.launchCemu();
 				},
-				function _initLoadiineGame(path) {
-					const eventEmitter = new ng.core.EventEmitter();
-					const metaxmlPath = path + "\\meta\\meta.xml";
-					const fs = require("fs");
-					fs.lstat(metaxmlPath, (err, stats) => {
-						if (stats.isFile()) {
-							const xml2js = require("xml2js");
-							const parser = new xml2js.Parser();
-							fs.readFile(metaxmlPath, (err, result) => {
-								parser.parseString(result, (err, result) => {
-									const id = result.menu.title_id[0]._;
-									const name = result.menu.longname_en[0]._;
-									const game = this.gameHelper.getNew(name);
-									game.id = id;
-									const rpxFolder = path + "\\code";
-									fs.readdir(rpxFolder, (err, files) => {
-										if (!err) {
-											files.forEach((filename) => {
-												if (filename.indexOf(".rpx") !== -1) {
-													this.model.setGameFile(game, rpxFolder + "\\" + filename);
-													const imageSrcPath = path + "\\meta\\iconTex.tga";
-													const imageDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_image.png";
-													const backgroundSrcPath = path + "\\meta\\bootDrcTex.tga";
-													const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_background.png";
-													const inputs = [
-														{ src: imageSrcPath, dest: imageDestPath },
-														{ src: backgroundSrcPath, dest: backgroundDestPath }
-													];
-													this._imageManager.tgaToPng(inputs).subscribe(() => {
-														game.image = imageDestPath;
-														game.background = backgroundDestPath;
-														eventEmitter.emit(game);
-													})
-													return;
-												}
-											})
-										}
-									});
-								});
-							});
-						}
-					});
-					return eventEmitter;
-				},
-				function _initSelectedLanguage() {
+				_initSelectedLanguage: function () {
 					this.config.languages.forEach((item) => {
 						if (item.data === this.model.config.language) {
 							this.selectedLanguage = item;
@@ -193,7 +149,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 						}
 					});
 				},
-				function _initSelectedRenderer() {
+				_initSelectedRenderer: function () {
 					this.config.renderers.forEach((item) => {
 						if (item.data === this.model.config.renderer) {
 							this.selectedRenderer = item;
@@ -201,7 +157,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 						}
 					});
 				},
-				function _initUpdateCemuVersion() {
+				_initUpdateCemuVersion: function () {
 					if (this.model.config.cemu.file != null) {
 						const file = this.model.config.cemu.file;
 						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
@@ -211,7 +167,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 						});
 					}
 				},
-				function _initUpdateCemuHookVersion() {
+				_initUpdateCemuHookVersion: function () {
 					if (this.model.config.cemu.file != null) {
 						const file = this.model.config.cemu.file.replace("Cemu.exe", "dbghelp.dll");
 						this._wmicManager.getDatafileVersion(file).subscribe((version) => {
@@ -221,7 +177,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 						});
 					}
 				},
-				function _selectFile() {
+				_selectFile: function () {
 					const eventEmitter = new ng.core.EventEmitter();
 					const chooser = document.querySelector("#fileDialog");
 					const handler = function () {
@@ -232,7 +188,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					chooser.click();
 					return eventEmitter;
 				},
-				function _selectFolder() {
+				_selectFolder: function () {
 					const eventEmitter = new ng.core.EventEmitter();
 					const chooser = document.querySelector("#folderDialog");
 					const handler = function () {
@@ -243,7 +199,7 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					chooser.click();
 					return eventEmitter;
 				}
-			]
+			}
 		});
 	}
 );

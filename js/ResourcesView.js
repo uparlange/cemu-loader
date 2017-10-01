@@ -18,24 +18,24 @@ define(["AppUtils", "ItemHelper"],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("resources-view"))
 			],
-			functions: [
-				function ngOnInit() {
+			functions: {
+				ngOnInit: function () {
 					this._initCemuVersion();
 					this._initCemuHookVersion();
 				},
-				function openDataLink(event) {
+				openDataLink: function (event) {
 					nw.Shell.openExternal(event.target.dataset.link);
 				},
-				function openLink(link) {
+				openLink: function (link) {
 					nw.Shell.openExternal(link);
 				},
-				function downloadCemu() {
+				downloadCemu: function () {
 					nw.Shell.openExternal(this.cemu.link);
 				},
-				function trackCemuHook(index, value) {
+				trackCemuHook: function (index, value) {
 					return value.label;
 				},
-				function _initCemuVersion() {
+				_initCemuVersion: function () {
 					const htmlparser = require("htmlparser2");
 					this._http.get("http://cemu.info/").subscribe((result) => {
 						const parser = new htmlparser.Parser({
@@ -52,7 +52,7 @@ define(["AppUtils", "ItemHelper"],
 						parser.end();
 					});
 				},
-				function _initCemuHookVersion() {
+				_initCemuHookVersion: function () {
 					const htmlparser = require("htmlparser2");
 					let currentLink = null;
 					this._http.get("https://sshnuke.net/cemuhook/").subscribe((result) => {
@@ -77,7 +77,7 @@ define(["AppUtils", "ItemHelper"],
 						parser.end();
 					});
 				}
-			]
+			}
 		});
 	}
 );

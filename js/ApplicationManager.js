@@ -10,8 +10,8 @@ define(["AppUtils", "AppModel", "TranslateManager"],
 			parameters: [
 				[AppModel], [TranslateManager]
 			],
-			functions: [
-				function init() {
+			functions: {
+				init: function () {
 					const pkg = AppUtils.getPackageFile();
 					const title = pkg.description;
 					this._initWindow(title);
@@ -23,16 +23,16 @@ define(["AppUtils", "AppModel", "TranslateManager"],
 						this._initUpdateTrayMenu();
 					});
 				},
-				function show() {
+				show: function () {
 					nw.Window.get().show();
 				},
-				function hide() {
+				hide: function () {
 					nw.Window.get().hide();
 				},
-				function quit() {
+				quit: function () {
 					nw.App.quit();
 				},
-				function addDesktopShortcut(path, options) {
+				addDesktopShortcut: function (path, options) {
 					const ws = require("windows-shortcuts");
 					options.iconIndex = '0';
 					options.runStyle = ws.MIN;
@@ -42,7 +42,7 @@ define(["AppUtils", "AppModel", "TranslateManager"],
 						}
 					});
 				},
-				function _initTray(title) {
+				_initTray: function (title) {
 					this._tray = new nw.Tray({
 						title: title,
 						tooltip: title,
@@ -53,7 +53,7 @@ define(["AppUtils", "AppModel", "TranslateManager"],
 					});
 					this._initUpdateTrayMenu();
 				},
-				function _initUpdateTrayMenu() {
+				_initUpdateTrayMenu: function () {
 					this._translateManager.getValues(["L10N_QUIT"]).subscribe((translations) => {
 						const menu = new nw.Menu();
 						menu.append(new nw.MenuItem({
@@ -65,14 +65,14 @@ define(["AppUtils", "AppModel", "TranslateManager"],
 						this._tray.menu = menu;
 					});
 				},
-				function _initWindow(title) {
+				_initWindow: function (title) {
 					const win = nw.Window.get();
 					win.title = title;
 					win.on("close", () => {
 						this.hide();
 					});
 				}
-			]
+			}
 		});
 	}
 );

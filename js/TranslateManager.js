@@ -12,14 +12,14 @@ define(["AppUtils"],
 			parameters: [
 				[ng.http.Http]
 			],
-			functions: [
-				function init() {
+			functions: {
+				init: function () {
 
 				},
-				function getDefaultLanguage() {
+				getDefaultLanguage: function () {
 					return "en";
 				},
-				function setLanguage(lang) {
+				setLanguage: function (lang) {
 					if (this._currentLang !== lang) {
 						this._currentLang = lang;
 						this._loadProperties().subscribe(() => {
@@ -27,10 +27,10 @@ define(["AppUtils"],
 						});
 					}
 				},
-				function getCurrentLanguage() {
+				getCurrentLanguage: function () {
 					return this._currentLang;
 				},
-				function getValues(params) {
+				getValues: function (params) {
 					const eventEmitter = new ng.core.EventEmitter();
 					if (this._loading) {
 						this._pendingRequests.push({
@@ -45,7 +45,7 @@ define(["AppUtils"],
 					}
 					return eventEmitter;
 				},
-				function _getValues(params) {
+				_getValues: function (params) {
 					const values = {};
 					params.forEach((param) => {
 						if (typeof (param) === "object") {
@@ -56,26 +56,28 @@ define(["AppUtils"],
 					});
 					return values;
 				},
-				function _getValue(key, properties) {
+				_getValue: function (key, properties) {
 					let value = key;
-					if (this._properties[this._currentLang].hasOwnProperty(key)) {
-						value = this._properties[this._currentLang][key];
-					}
-					if (Array.isArray(properties)) {
-						properties.forEach((property, index) => {
-							value = value.replace("{" + index + "}", property);
-						});
+					if (this._properties[this._currentLang] !== undefined) {
+						if (this._properties[this._currentLang].hasOwnProperty(key)) {
+							value = this._properties[this._currentLang][key];
+						}
+						if (Array.isArray(properties)) {
+							properties.forEach((property, index) => {
+								value = value.replace("{" + index + "}", property);
+							});
+						}
 					}
 					return value;
 				},
-				function _checkPendingRequests() {
+				_checkPendingRequests: function () {
 					this._pendingRequests.forEach((request) => {
 						const values = this._getValues(request.params);
 						request.eventEmitter.emit(values);
 					});
 					this._pendingRequests = [];
 				},
-				function _loadProperties() {
+				_loadProperties: function () {
 					const eventEmitter = new ng.core.EventEmitter();
 					if (!this._properties.hasOwnProperty(this._currentLang) && !this._loading) {
 						this._loading = true;
@@ -93,6 +95,6 @@ define(["AppUtils"],
 					}
 					return eventEmitter;
 				}
-			]
+			}
 		});
 	});

@@ -21,26 +21,24 @@ define(["AppUtils", "AppModel", "GameHelper", "RouterManager", "ImageManager"],
 				[AppModel], [ng.core.NgZone], [ng.http.Http], [GameHelper], [RouterManager],
 				[ImageManager]
 			],
-			functions: [
-				function onAnimationComplete(filterInput) {
+			functions: {
+				onAnimationComplete: function (filterInput) {
 					window.scrollTo(0, 0);
 					filterInput.focus();
 				},
-				function selectImage(image) {
+				selectImage: function (image) {
 					const extension = image.substr(image.lastIndexOf(".") + 1, 3);
-					const imageDestPath = AppUtils.getPicturesPath() + "\\" + this.model.currentGame.id + "_image." + extension;
-					const inputs = [
-						{ src: image, dest: imageDestPath }
-					];
-					this._imageManager.download(inputs).subscribe(() => {
-						this.model.currentGame.image = imageDestPath;
+					let imageSrc = image;
+					let imageDest = AppUtils.getPicturesPath() + "\\" + this.model.currentGame.id + "_image." + extension;
+					this._imageManager.download([{ src: imageSrc, dest: imageDest }]).subscribe(() => {
+						this.model.currentGame.image = imageDest;
 						// TODO why needed ?
 						this._ngZone.run(() => {
 							this._routerManager.showConfigParams();
 						});
 					});
 				},
-				function showGameImages(game) {
+				showGameImages: function (game) {
 					this.images = [];
 					this.imagesPopupActive = true;
 					this.model.currentGame.id = game.id;
@@ -51,13 +49,13 @@ define(["AppUtils", "AppModel", "GameHelper", "RouterManager", "ImageManager"],
 						});
 					});
 				},
-				function deleteFilter() {
+				deleteFilter: function () {
 					this.filterValue = null;
 				},
-				function cancel() {
+				cancel: function () {
 					this._routerManager.showConfigParams();
 				},
-				function _getImageList(id) {
+				_getImageList: function (id) {
 					const htmlparser = require("htmlparser2");
 					const eventEmitter = new ng.core.EventEmitter();
 					this._http.get("http://www.gametdb.com/WiiU/" + id).subscribe((result) => {
@@ -77,7 +75,7 @@ define(["AppUtils", "AppModel", "GameHelper", "RouterManager", "ImageManager"],
 					});
 					return eventEmitter;
 				}
-			]
+			}
 		});
 	}
 );

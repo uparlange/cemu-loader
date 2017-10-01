@@ -4,8 +4,8 @@ define(["AppUtils"],
             constructor: function GameHelper() {
 
             },
-            functions: [
-                function getNew(name) {
+            functions: {
+                getNew: function (name) {
                     return {
                         id: null,
                         name: name,
@@ -13,10 +13,10 @@ define(["AppUtils"],
                         file: null
                     };
                 },
-                function track(index, value) {
+                track: function (index, value) {
                     return value.name;
                 }
-            ]
+            }
         });
     }
 );

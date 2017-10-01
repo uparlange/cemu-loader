@@ -4,8 +4,8 @@ define(["AppUtils"],
 			constructor: function AbstractEventManager() {
 				this._eventEmitters = {};
 			},
-			functions: [
-				function on(eventName) {
+			functions: {
+				on: function (eventName) {
 					let eventEmitter = this._eventEmitters[eventName];
 					if (eventEmitter === undefined) {
 						eventEmitter = new ng.core.EventEmitter();
@@ -13,16 +13,16 @@ define(["AppUtils"],
 					}
 					return eventEmitter;
 				},
-				function emit(eventName, evt) {
+				emit: function (eventName, evt) {
 					const eventEmitter = this._eventEmitters[eventName];
 					if (eventEmitter !== undefined) {
 						eventEmitter.emit(evt);
 					}
 				},
-				function off(eventSubscriber) {
+				off: function (eventSubscriber) {
 					eventSubscriber.unsubscribe();
 				}
-			]
+			}
 		});
 	}
 );

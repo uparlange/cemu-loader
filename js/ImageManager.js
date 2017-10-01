@@ -7,65 +7,118 @@ define(["AppUtils"],
 			parameters: [
 				[ng.http.Http]
 			],
-			functions: [
-				function init() {
+			functions: {
+				init: function () {
 
 				},
-				function download(inputs) {
+				download: function (inputs) {
 					const eventEmitter = new ng.core.EventEmitter();
 					const fs = require("fs");
-					const outputs = {};
 					inputs.forEach((input) => {
-						const extension = input.src.substr(input.src.lastIndexOf(".") + 1, 3);
+						const extension = this._getExtention(input.src);
 						this._http.get(input.src, {
 							headers: { "Content-Type": "image/" + extension },
 							responseType: ng.http.ResponseContentType.ArrayBuffer
 						}).subscribe((result) => {
 							fs.writeFile(input.dest, new Buffer(result.arrayBuffer()), (error) => {
-								outputs[input.src] = (error != null);
-								this._treated(inputs, outputs, eventEmitter);
+								input.done = (error != null);
+								this._treated(inputs, eventEmitter);
 							})
 						});
 					});
 					return eventEmitter;
 				},
-				function toIco(inputs) {
+				toIco: function (inputs) {
 					const eventEmitter = new ng.core.EventEmitter();
-					const fs = require("fs");
-					const pngToIco = require("png-to-ico");
-					const outputs = {};
 					inputs.forEach((input) => {
-						pngToIco(input.src).then((buf) => {
-							fs.writeFileSync(input.dest, buf);
-							outputs[input.src] = true;
-							this._treated(inputs, outputs, eventEmitter);
-						}).catch(() => {
-							outputs[input.src] = false;
-							this._treated(inputs, outputs, eventEmitter);
+						const extension = this._getExtention(input.src);
+						switch (extension) {
+							case "jpg":
+								const jpgToPngDest = input.src.replace(extension, "png");
+								this.jpgToPng([{ src: input.src, dest: jpgToPngDest }]).subscribe(() => {
+									input.src = jpgToPngDest;
+									this._finalizeToIco(inputs, input, eventEmitter);
+								});
+								break;
+							default:
+								this._finalizeToIco(inputs, input, eventEmitter);
+						}
+					});
+					return eventEmitter;
+				},
+				jpgToPng: function (inputs) {
+					const eventEmitter = new ng.core.EventEmitter();
+					const Jimp = require("jimp");
+					inputs.forEach((input) => {
+						Jimp.read(input.src, (err, src) => {
+							if (err) {
+								alert(err);
+								input.done = false;
+								this._treated(inputs, eventEmitter);
+							} else {
+								src.write(input.dest, () => {
+									input.done = true;
+									this._treated(inputs, eventEmitter);
+								});
+							}
 						});
 					});
 					return eventEmitter;
 				},
-				function tgaToPng(inputs) {
+				tgaToPng: function (inputs) {
 					const eventEmitter = new ng.core.EventEmitter();
 					const tga2png = require("tga2png");
-					const outputs = {};
 					inputs.forEach((input) => {
 						tga2png(input.src, input.dest).then(() => {
-							outputs[input.src] = true;
-							this._treated(inputs, outputs, eventEmitter);
-						}, () => {
-							outputs[input.src] = false;
-							this._treated(inputs, outputs, eventEmitter);
+							input.done = true;
+							this._treated(inputs, eventEmitter);
+						}, (err) => {
+							alert(err);
+							input.done = false;
+							this._treated(inputs, eventEmitter);
 						});
 					});
 					return eventEmitter;
 				},
-				function _treated(inputs, outputs, eventEmitter) {
-					if (Object.keys(outputs).length == inputs.length) {
-						eventEmitter.emit(outputs);
+				_finalizeToIco: function (inputs, input, eventEmitter) {
+					const fs = require("fs");
+					const pngToIco = require("png-to-ico");
+					const Jimp = require("jimp");
+					Jimp.read(input.src, (err, src) => {
+						if (err) {
+							alert(err);
+							input.done = false;
+							this._treated(inputs, eventEmitter);
+						} else {
+							input.src = input.src.replace(".png", "") + "-128x128.png";
+							src.resize(128, 128).write(input.src, () => {
+								pngToIco(input.src).then((buf) => {
+									fs.writeFileSync(input.dest, buf);
+									input.done = true;
+									this._treated(inputs, eventEmitter);
+								}).catch((err) => {
+									alert(err);
+									input.done = false;
+									this._treated(inputs, eventEmitter);
+								});
+							});
+						}
+					});
+				},
+				_getExtention: function (filename) {
+					return filename.substr(filename.lastIndexOf(".") + 1).toLowerCase();
+				},
+				_treated: function (inputs, eventEmitter) {
+					let treatedCount = 0;
+					inputs.forEach((input) => {
+						if (input.done !== undefined) {
+							treatedCount++;
+						}
+					});
+					if (treatedCount == inputs.length) {
+						eventEmitter.emit(inputs);
 					}
 				}
-			]
+			}
 		});
 	});

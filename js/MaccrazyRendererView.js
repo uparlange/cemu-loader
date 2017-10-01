@@ -14,8 +14,8 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("maccrazy-renderer-view"))
 			],
-			functions: [
-				function rendererInit() {
+			functions: {
+				rendererInit: function () {
 					SystemJS.import("/data/renderers/maccrazy/jquery-3.2.1.min.js").then(() => {
 						SystemJS.import("/data/renderers/maccrazy/sly-1.6.1.min.js").then((Sly) => {
 							this._sly = new Sly(".frame", {
@@ -40,16 +40,16 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 						});
 					});
 				},
-				function rendererDestroy() {
+				rendererDestroy: function () {
 					this._sly.destroy();
 				},
-				function showDescription(game) {
+				showDescription: function (game) {
 					this.description = game.name;
 				},
-				function hideDescription() {
+				hideDescription: function () {
 					this.description = (this.selectedGame != null) ? this.selectedGame.name : null;
 				},
-				function select(game) {
+				select: function (game) {
 					if (game != null) {
 						this.selectedGame = game;
 						this.description = this.selectedGame.name;
@@ -60,7 +60,7 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 						localStorage.setItem("lastGameName", game.name);
 					}
 				},
-				function _initLastGame() {
+				_initLastGame: function () {
 					const lastGameName = localStorage.getItem("lastGameName");
 					let lastGame = (lastGameName == null) ? this.provider[0] : this.helper.provider.find((game) => {
 						return (game.name === lastGameName);
@@ -70,7 +70,7 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 					}
 					this.select(lastGame);
 				}
-			]
+			}
 		});
 	}
 );

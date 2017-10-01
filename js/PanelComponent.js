@@ -16,19 +16,19 @@ define(["AppUtils", "PanelHeaderComponent", "PanelContentComponent", "AbstractEv
 					}
 				}))
 			],
-			functions: [
-				function ngAfterViewInit() {
+			functions: {
+				ngAfterViewInit: function () {
 					this._initListeners();
 				},
-				function ngOnDestroy() {
+				ngOnDestroy: function () {
 					this._headerClickSubscriber.unsubscribe();
 				},
-				function _initListeners() {
+				_initListeners: function () {
 					this._headerClickSubscriber = this.header.on("headerClick").subscribe(() => {
 						this.emit("panelHeaderClick", { id: this.id });
 					});
 				}
-			]
+			}
 		});
 	}
 );

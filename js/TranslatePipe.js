@@ -19,8 +19,8 @@ define(["AppUtils", "TranslateManager"],
 			parameters: [
 				[TranslateManager]
 			],
-			functions: [
-				function transform() {
+			functions: {
+				transform: function () {
 					const args = Array.from(arguments);
 					const value = args.shift();
 					const params = args.join(",");
@@ -31,10 +31,10 @@ define(["AppUtils", "TranslateManager"],
 					}
 					return this._tranlateValue;
 				},
-				function ngOnDestroy() {
+				ngOnDestroy: function () {
 					this._onLanguageChangeSubscriber.unsubscribe();
 				},
-				function _refreshTranslation() {
+				_refreshTranslation: function () {
 					let param = this._tranlateKey;
 					if (this._translateParams != null) {
 						param = {
@@ -46,6 +46,6 @@ define(["AppUtils", "TranslateManager"],
 						this._tranlateValue = translations[this._tranlateKey];
 					});
 				}
-			]
+			}
 		});
 	});

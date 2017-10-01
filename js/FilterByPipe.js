@@ -9,8 +9,8 @@ define(["AppUtils"],
 					name: "filterBy"
 				})
 			],
-			functions: [
-				function transform(list, property, value) {
+			functions: {
+				transform: function (list, property, value) {
 					if (value == null) {
 						return list;
 					}
@@ -19,7 +19,7 @@ define(["AppUtils"],
 						return (v.toLowerCase().indexOf(value.toLowerCase()) !== -1)
 					});
 				}
-			]
+			}
 		});
 	}
 );

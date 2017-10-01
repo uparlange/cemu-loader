@@ -39,5 +39,6 @@
 	"L10N_SELECT_FOLDER": "Select a folder",
 	"L10N_MAGIC_FIND_GAMES": "Automatic find games in roms's folder",
 	"L10N_PLAY": "Play",
-	"L10N_ADD_DESKTOP_SHORTCUT": "Add desktop shortcut"
+	"L10N_ADD_DESKTOP_SHORTCUT": "Add desktop shortcut",
+	"L10N_BACKGROUND": "Background"
 }

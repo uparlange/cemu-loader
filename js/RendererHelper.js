@@ -20,21 +20,21 @@ define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
                 [AppModel], [GameHelper], [CemuManager], [TranslateManager], [ItemHelper],
                 [ApplicationManager], [ng.platformBrowser.DomSanitizer], [ImageManager]
             ],
-            functions: [
-                function init() {
+            functions: {
+                init: function () {
                     this.provider = this._model.config.games;
                     this._initOptions();
                 },
-                function destroy() {
+                destroy: function () {
 
                 },
-                function getImageUrl(source) {
+                getImageUrl: function (source) {
                     return this._domSanitizer.bypassSecurityTrustUrl(source);
                 },
-                function playGame(game) {
+                playGame: function (game) {
                     this._cemuManager.launchGame(game);
                 },
-                function addDesktopShortcut(game) {
+                addDesktopShortcut: function (game) {
                     const icoDestPath = AppUtils.getPicturesPath() + "\\" + game.id + ".ico";
                     const inputs = [
                         { src: game.image, dest: icoDestPath }
@@ -42,19 +42,19 @@ define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
                     this._imageManager.toIco(inputs).subscribe(() => {
                         const path = AppUtils.getDesktopPath() + "\\" + game.id + '.lnk';
                         const options = {
-                            target: "\"" + this._model.config.cemu.file + "\"",
-                            args: "-g \"" + game.file + "\"",
+                            target: this._cemuManager.getLaunchGameTarget(),
+                            args: this._cemuManager.getLaunchGameArgs(game),
                             icon: icoDestPath
                         }
                         this._applicationManager.addDesktopShortcut(path, options);
                     });
                 },
-                function executeGameOption(game, option) {
+                executeGameOption: function (game, option) {
                     if (typeof (this[option.data]) === "function") {
                         this[option.data](game);
                     }
                 },
-                function _initOptions() {
+                _initOptions: function () {
                     const options = [];
                     this._translateManager.getValues(["L10N_PLAY", "L10N_ADD_DESKTOP_SHORTCUT"]).subscribe((translations) => {
                         options.push({
@@ -70,7 +70,7 @@ define(["AppUtils", "AppModel", "GameHelper", "CemuManager", "TranslateManager",
                         this.options = options;
                     });
                 }
-            ]
+            }
         });
     }
 );

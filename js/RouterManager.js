@@ -11,8 +11,8 @@ define(["AppUtils", "AbstractEventManager"],
             parameters: [
                 [ng.router.Router]
             ],
-            functions: [
-                function init() {
+            functions: {
+                init: function () {
                     this._routerEventsSubscriber = this._router.events.subscribe((event) => {
                         switch (event.constructor.name) {
                             case "RoutesRecognized":
@@ -32,21 +32,21 @@ define(["AppUtils", "AbstractEventManager"],
                         }
                     });
                 },
-                function navigate(commands, extras) {
+                navigate: function (commands, extras) {
                     this._router.navigate(commands, extras);
                 },
-                function showConfigParams(extras) {
+                showConfigParams: function (extras) {
                     this.navigate(["/config/params"], extras);
                 },
-                function showConfigGames(extras) {
+                showConfigGames: function (extras) {
                     this.navigate(["/config/games"], extras);
                 },
-                function showResources(extras) {
+                showResources: function (extras) {
                     this.navigate(["/resources"], extras);
                 },
-                function showList(renderer, extras) {
+                showList: function (renderer, extras) {
                     this.navigate(["/list/" + renderer], extras);
                 }
-            ]
+            }
         });
     });

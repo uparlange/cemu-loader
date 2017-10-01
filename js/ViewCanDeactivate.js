@@ -7,8 +7,8 @@ define(["AppUtils", "AnimationManager"],
 			parameters: [
 				[AnimationManager]
 			],
-			functions: [
-				function canDeactivate(component) {
+			functions: {
+				canDeactivate: function (component) {
 					const eventEmitter = new ng.core.EventEmitter();
 					const leaveAnimation = this._animationManager.leaveAnimation;
 					const animationDuration = (leaveAnimation != null) ? this._animationManager.duration : 0;
@@ -21,7 +21,7 @@ define(["AppUtils", "AnimationManager"],
 					}, animationDuration);
 					return eventEmitter;
 				}
-			]
+			}
 		});
 	}
 );

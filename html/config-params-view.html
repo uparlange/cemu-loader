@@ -138,7 +138,7 @@
                 <div class="field has-addons">
                     <p class="control">
                         <bulma-button-component [icon]="'fa-magic'" [enabled]="model.config.cemu.romsFolder != null" [title]="'L10N_MAGIC_FIND_GAMES'|translate"
-                            (click)="magicFindGames()"></bulma-button-component>
+                            (click)="scanGames()"></bulma-button-component>
                     </p>
                     <p class="control">
                         <bulma-button-component [icon]="'fa-plus'" [title]="'L10N_ADD_GAME'|translate" (click)="addGame()"></bulma-button-component>
@@ -173,6 +173,17 @@
                                             </p>
                                             <p class="control">
                                                 <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameImage(game)"></bulma-button-component>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">{{'L10N_BACKGROUND'|translate}}</label>
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                                <input class="input" readonly [title]="game.background" type="text" [ngModel]="game.background">
+                                            </p>
+                                            <p class="control">
+                                                <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameBackground(game)"></bulma-button-component>
                                             </p>
                                         </div>
                                     </div>

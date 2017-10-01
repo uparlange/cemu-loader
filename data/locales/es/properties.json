@@ -39,5 +39,6 @@
 	"L10N_SELECT_FOLDER": "Seleccionar una carpeta",
 	"L10N_MAGIC_FIND_GAMES": "Encuentra automáticamente juegos en la carpeta de roms",
 	"L10N_PLAY": "Jugar",
-	"L10N_ADD_DESKTOP_SHORTCUT": "Agregar un acceso directo al escritorio"
+	"L10N_ADD_DESKTOP_SHORTCUT": "Agregar un acceso directo al escritorio",
+	"L10N_BACKGROUND": "Fondo"
 }

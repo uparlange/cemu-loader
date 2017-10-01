@@ -15,17 +15,17 @@ define(["AppUtils", "BulmaTabComponent"],
 					}
 				}))
 			],
-			functions: [
-				function ngAfterContentInit() {
+			functions: {
+				ngAfterContentInit: function () {
 					this._initListeners();
 					this._refreshSelection();
 				},
-				function ngOnChanges(changes) {
+				ngOnChanges: function (changes) {
 					if (changes.hasOwnProperty("selected")) {
 						this._refreshSelection();
 					}
 				},
-				function _initListeners() {
+				_initListeners: function () {
 					this.tabs.forEach((tab) => {
 						tab.on("tabClick").subscribe((event) => {
 							if (event.id !== this.selected) {
@@ -37,14 +37,14 @@ define(["AppUtils", "BulmaTabComponent"],
 						});
 					});
 				},
-				function _refreshSelection() {
+				_refreshSelection: function () {
 					if (this.tabs) {
 						this.tabs.forEach((tab) => {
 							tab.active = (tab.id === this.selected);
 						});
 					}
 				}
-			]
+			}
 		});
 	}
 );

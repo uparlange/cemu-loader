@@ -4,18 +4,18 @@ define(["AppUtils"],
             constructor: function WmicManager() {
 
             },
-            functions: [
-                function init() {
+            functions: {
+                init: function () {
 
                 },
-                function getDatafileVersion(file) {
+                getDatafileVersion: function (file) {
                     const eventEmitter = new ng.core.EventEmitter();
                     this._getDatafile(file, "Version").subscribe((result) => {
                         eventEmitter.emit(result);
                     });
                     return eventEmitter;
                 },
-                function _getDatafile(file, type) {
+                _getDatafile: function (file, type) {
                     const eventEmitter = new ng.core.EventEmitter();
                     const fs = require("fs");
                     if (fs.existsSync(file)) {
@@ -40,7 +40,7 @@ define(["AppUtils"],
                     }
                     return eventEmitter;
                 }
-            ]
+            }
         });
     }
 );

@@ -13,9 +13,9 @@ define(function () {
 				c.parameters = conf.parameters;
 			}
 			if (conf.functions) {
-				conf.functions.forEach((element) => {
-					c.prototype[element.name] = element;
-				});
+				for(var fname in conf.functions) {
+					c.prototype[fname] = conf.functions[fname];
+				}
 			}
 			return c;
 		},

@@ -4,20 +4,20 @@ define(["AppUtils"],
             constructor: function AbstractRendererComponent(RendererHelper) {
                 this.helper = RendererHelper;
             },
-            functions: [
-                function ngOnInit() {
+            functions: {
+                ngOnInit: function () {
                     this.helper.init();
                     if (typeof (this.rendererInit) === "function") {
                         this.rendererInit();
                     }
                 },
-                function ngOnDestroy() {
+                ngOnDestroy: function () {
                     this.helper.destroy();
                     if (typeof (this.rendererDestroy) === "function") {
                         this.rendererDestroy();
                     }
                 }
-            ]
+            }
         });
     }
 );

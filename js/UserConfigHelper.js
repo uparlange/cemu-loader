@@ -7,8 +7,8 @@ define(["AppUtils", "TranslateManager"],
             parameters: [
                 [TranslateManager]
             ],
-            functions: [
-                function getNew() {
+            functions: {
+                getNew: function () {
                     return {
                         file: AppUtils.getUserConfigPath(),
                         autostart: false,
@@ -23,7 +23,7 @@ define(["AppUtils", "TranslateManager"],
                         games: []
                     }
                 }
-            ]
+            }
         });
     }
 );

@@ -11,8 +11,8 @@ define(["AppUtils", "RouterManager"],
 			parameters: [
 				[RouterManager]
 			],
-			functions: [
-				function init() {
+			functions: {
+				init: function () {
 					this._routerManager.on("NAVIGATION_START").subscribe((event) => {
 						this.enterAnimation = null;
 						this.leaveAnimation = null;
@@ -30,7 +30,7 @@ define(["AppUtils", "RouterManager"],
 					this.transitions = config.transitions;
 					this.duration = config.duration;
 				},
-				function _getReverseAnimation(animation) {
+				_getReverseAnimation: function (animation) {
 					let reverseAnimation = "";
 					if (animation.indexOf("Left") !== -1) {
 						reverseAnimation = animation.replace("Left", "Right");
@@ -43,7 +43,7 @@ define(["AppUtils", "RouterManager"],
 					}
 					return reverseAnimation;
 				}
-			]
+			}
 		});
 	}
 );

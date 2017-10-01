@@ -16,22 +16,22 @@ define(["AppUtils", "PanelComponent"],
 					}
 				}))
 			],
-			functions: [
-				function ngAfterContentInit() {
+			functions: {
+				ngAfterContentInit: function () {
 					this._initListeners();
 					this._refreshSelection();
 				},
-				function ngOnChanges(changes) {
+				ngOnChanges: function (changes) {
 					if (changes.hasOwnProperty("selected")) {
 						this._refreshSelection();
 					}
 				},
-				function ngOnDestroy() {
+				ngOnDestroy: function () {
 					this._panelsEventsSubscribers.forEach((subscriber) => {
 						subscriber.unsubscribe();
 					});
 				},
-				function _initListeners() {
+				_initListeners: function () {
 					this.panels.forEach((panel) => {
 						const subscriber = panel.on("panelHeaderClick").subscribe((event) => {
 							if (event.id !== this.selected) {
@@ -44,7 +44,7 @@ define(["AppUtils", "PanelComponent"],
 						this._panelsEventsSubscribers.push(subscriber);
 					});
 				},
-				function _refreshSelection() {
+				_refreshSelection: function () {
 					if (this.panels) {
 						this.panels.forEach((panel) => {
 							panel.header.icon = (panel.id === this.selected) ? "fa-minus-square-o" : "fa-plus-square-o";
@@ -52,7 +52,7 @@ define(["AppUtils", "PanelComponent"],
 						});
 					}
 				}
-			]
+			}
 		});
 	}
 );

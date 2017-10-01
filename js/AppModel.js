@@ -20,26 +20,26 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 			parameters: [
 				[TranslateManager], [GameHelper], [UserConfigHelper]
 			],
-			functions: [
-				function setLanguage(language) {
+			functions: {
+				setLanguage: function (language) {
 					this._translateManager.setLanguage(language);
 				},
-				function setRenderer(renderer) {
+				setRenderer: function (renderer) {
 					this.config.renderer = renderer;
 				},
-				function save() {
+				save: function () {
 					const fs = require("fs");
 					fs.writeFileSync(AppUtils.getUserConfigPath(), JSON.stringify(this.config));
 					this.unSelectGame();
 					//this._checkAutostart();
 				},
-				function clearGames() {
+				clearGames: function () {
 					this.config.games = [];
 				},
-				function unSelectGame() {
+				unSelectGame: function () {
 					this.currentGame = null;
 				},
-				function addGame(game) {
+				addGame: function (game) {
 					if (game == null) {
 						this._translateManager.getValues(["L10N_NEW_GAME"]).subscribe((translations) => {
 							const name = translations.L10N_NEW_GAME + " " + (this.config.games.length + 1);
@@ -52,12 +52,12 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 						this.currentGame = game;
 					}
 				},
-				function removeGame(game) {
+				removeGame: function (game) {
 					const index = this.config.games.indexOf(game);
 					this.config.games.splice(index, 1);
 					this.unSelectGame();
 				},
-				function setCemuFile(file) {
+				setCemuFile: function (file) {
 					const eventEmitter = new ng.core.EventEmitter();
 					this.config.cemu.file = file;
 					setTimeout(() => {
@@ -65,13 +65,13 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 					}, 0);
 					return eventEmitter;
 				},
-				function setGameFile(game, file) {
+				setGameFile: function (game, file) {
 					game.file = file;
 				},
-				function setRomsFolder(folder) {
+				setRomsFolder: function (folder) {
 					this.config.cemu.romsFolder = folder;
 				},
-				function _checkAutostart() {
+				_checkAutostart: function () {
 					const pkg = AppUtils.getPackageFile();
 					const AutoLaunch = require("auto-launch");
 					var cemuLoaderAutoLauncher = new AutoLaunch({
@@ -91,18 +91,18 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 						// TODO
 					});
 				},
-				function _init() {
+				_init: function () {
 					this._initConfig();
 					this._initLanguage();
 					this._initGameDb();
 				},
-				function _initLanguage() {
+				_initLanguage: function () {
 					this._onLanguageChangeSubscriber = this._translateManager.onLanguageChange.subscribe((language) => {
 						this.config.language = language;
 					});
 					this.setLanguage(this.config.language);
 				},
-				function _initConfig() {
+				_initConfig: function () {
 					const fs = require("fs");
 					if (fs.existsSync(this.config.file)) {
 						this.config = Object.assign(this.config, require(this.config.file));
@@ -110,7 +110,7 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 						this.save();
 					}
 				},
-				function _initGameDb() {
+				_initGameDb: function () {
 					const fs = require("fs");
 					const xml2js = require("xml2js");
 					const parser = new xml2js.Parser();
@@ -137,7 +137,7 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 						});
 					});
 				}
-			]
+			}
 		});
 	}
 );

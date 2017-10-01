@@ -9,8 +9,8 @@ define(["AppUtils"],
 					name: "orderBy"
 				})
 			],
-			functions: [
-				function transform(list, property) {
+			functions: {
+				transform: function (list, property) {
 					if (Array.isArray(list)) {
 						list.sort((o1, o2) => {
 							const v1 = (property == null) ? o1 : o1[property];
@@ -26,7 +26,7 @@ define(["AppUtils"],
 						return list;
 					}
 				}
-			]
+			}
 		});
 	}
 );
