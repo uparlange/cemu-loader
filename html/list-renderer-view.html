@@ -1,11 +1,13 @@
 <div view animated [(animation)]="animation" [(duration)]="duration">
     <table class="table is-fullwidth">
         <tbody>
-            <tr animated [animation]="'fadeInLeftBig'" [duration]="500" *ngFor="let game of helper.provider | orderBy:'name'; trackBy:helper.gameTrack"
-                (click)="helper.playGame(game)" [title]="game.name">
-                <td>
+            <tr *ngFor="let game of helper.provider | orderBy:'name'; trackBy:helper.gameTrack" [title]="game.name">
+                <td (click)="helper.playGame(game)">
                     <img [src]="helper.getImageUrl(game.image)">
                     <span>{{game.name}}</span>
+                </td>
+                <td>
+                    <bulma-combobox-component [(selected)]="selected" [provider]="helper.options" [right]="true" (change)="onAction(game, $event)"></bulma-combobox-component>
                 </td>
             </tr>
         </tbody>

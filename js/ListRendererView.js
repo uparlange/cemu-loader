@@ -4,13 +4,20 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 			extends: AbstractRendererComponent,
 			constructor: function ListRendererView(RendererHelper) {
 				AbstractRendererComponent.call(this, RendererHelper);
+				this.selected = null;
 			},
 			parameters: [
 				[RendererHelper]
 			],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("list-renderer-view"))
-			]
+			],
+			functions: {
+				onAction: function (game, option) {
+					this.helper.executeGameOption(game, option);
+					this.selected = {};
+				}
+			}
 		});
 	}
 );
