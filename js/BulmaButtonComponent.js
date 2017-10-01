@@ -6,11 +6,12 @@ define(["AppUtils"],
 				this.title = null;
 				this.label = null;
 				this.icon = null;
+				this.iconType = "fa";
 				this._elementRef = ElementRef.nativeElement;
 			},
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("bulma-button-component", {
-					inputs: ["enabled", "title", "icon", "label"]
+					inputs: ["enabled", "title", "icon", "iconType", "label"]
 				}))
 			],
 			parameters: [
