@@ -31,7 +31,7 @@
                         <tr>
                             <td class="form-label" width="200">{{'L10N_LANGUAGE'|translate}}</td>
                             <td>
-                                <bulma-combobox-component [(selected)]="selectedLanguage" [provider]="config.languages" (change)="onLanguageChange($event)"></bulma-combobox-component>
+                                <bulma-combobox-component [(selected)]="selectedLanguage" [provider]="config.languages" [iconType]="'img'" (change)="onLanguageChange($event)"></bulma-combobox-component>
                             </td>
                         </tr>
                         <tr>
@@ -39,7 +39,7 @@
                                 <label for="fullscreen">{{'L10N_DISPLAY'|translate}}</label>
                             </td>
                             <td>
-                                <bulma-combobox-component [(selected)]="selectedRenderer" [provider]="config.renderers" (change)="onRendererChange($event)"></bulma-combobox-component>
+                                <bulma-combobox-component [(selected)]="selectedRenderer" [provider]="config.renderers" [iconType]="'img'" (change)="onRendererChange($event)"></bulma-combobox-component>
                             </td>
                         </tr>
                         <!--
