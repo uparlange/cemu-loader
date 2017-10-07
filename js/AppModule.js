@@ -1,11 +1,5 @@
-define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
-	"AnimationManager", "RouterManager", "ApplicationManager", "Shell", "VersionManager",
-	"WmicManager", "TranslateManager", "GameHelper", "ItemHelper", "UserConfigHelper",
-	"RendererHelper", "ImageManager"],
-	function (AppUtils, CommonModule, AppView, AppModel, CemuManager,
-		AnimationManager, RouterManager, ApplicationManager, Shell, VersionManager,
-		WmicManager, TranslateManager, GameHelper, ItemHelper, UserConfigHelper,
-		RendererHelper, ImageManager) {
+define(["AppUtils", "CommonModule", "GlobalModule", "AppView", "AppModel"],
+	function (AppUtils, CommonModule, GlobalModule, AppView, AppModel) {
 		ng.core.enableProdMode();
 		ng.platformBrowserDynamic.platformBrowserDynamic().bootstrapModule(AppUtils.getClass({
 			constructor: function AppModule() {
@@ -15,6 +9,7 @@ define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
 				new ng.core.NgModule({
 					imports: [
 						CommonModule,
+						GlobalModule,
 						ng.platformBrowser.BrowserModule,
 						ng.router.RouterModule.forRoot([
 							{ path: "list", loadChildren: AppUtils.getLazyModuleName("ListModule") },
@@ -26,20 +21,7 @@ define(["AppUtils", "CommonModule", "AppView", "AppModel", "CemuManager",
 						AppView
 					],
 					providers: [
-						Shell,
-						AppModel,
-						CemuManager,
-						AnimationManager,
-						RouterManager,
-						ApplicationManager,
-						VersionManager,
-						WmicManager,
-						TranslateManager,
-						GameHelper,
-						ItemHelper,
-						UserConfigHelper,
-						RendererHelper,
-						ImageManager
+						AppModel
 					],
 					bootstrap: [
 						AppView
