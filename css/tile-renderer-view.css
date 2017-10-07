@@ -5,9 +5,23 @@
 
 img
 {
-    margin-left:5px;
-    width: 207px;
     box-shadow: 3px 3px 3px #aaa; 
     cursor: pointer;
     border-radius: 5px;
+    width: 204px;
+    height: 204px;
+}
+
+bulma-combobox-component
+{
+    position: absolute;
+    margin-left: -42px;
+    margin-top: 166px;
+    z-index: 1;
+}
+
+.item
+{
+    display: inline;
+    margin-left:5px;
 }

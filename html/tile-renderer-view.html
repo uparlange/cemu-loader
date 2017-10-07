@@ -1,4 +1,6 @@
 <div view animated [(animation)]="animation" [(duration)]="duration">
-    <img animated [animation]="'swing'" [duration]="500" *ngFor="let game of helper.provider | orderBy:'name'; trackBy:helper.gameTrack"
-        [src]="helper.getImageUrl(game.image)" [title]="game.name" (click)="helper.playGame(game)">
+    <div class="item" *ngFor="let game of helper.provider | orderBy:'name'; let index=index; trackBy:helper.gameTrack">
+        <img animated [animation]="'swing'" [duration]="500" [src]="helper.getImageUrl(game.image)" [title]="game.name" (click)="helper.playGame(game)">
+        <bulma-combobox-component [(selected)]="selected" [provider]="helper.options" [right]="getComboPosition(index)" (change)="onAction(game, $event)"></bulma-combobox-component>
+    </div>
 </div>
