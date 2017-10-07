@@ -25,13 +25,15 @@ gulp.task('copy-files', (callback) => {
 
 gulp.task('copy-js', () => {
     return gulp.src('js/*.js')
-        .pipe(uglify({ keep_fnames: true }))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('copy-css', () => {
     return gulp.src('css/*.css')
-        .pipe(cleanCSS())
+        .pipe(cleanCSS({
+            level: 2
+        }))
         .pipe(gulp.dest('dist/css'));
 });
 

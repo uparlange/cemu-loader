@@ -13,7 +13,7 @@ define(function () {
 				c.parameters = conf.parameters;
 			}
 			if (conf.functions) {
-				for(var fname in conf.functions) {
+				for (var fname in conf.functions) {
 					c.prototype[fname] = conf.functions[fname];
 				}
 			}
@@ -34,6 +34,12 @@ define(function () {
 				styleUrls: ["css/" + componentName + ".css"]
 			};
 			return Object.assign({}, defaultParams, params);
+		},
+		getUID: function () {
+			const S4 = function () {
+				return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+			}
+			return (S4() + S4() + "-" + S4() + "-4" + S4().substr(0, 3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
 		},
 		getPackageFile: function () {
 			return require("./package.json");
