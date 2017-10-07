@@ -1,8 +1,16 @@
 # Changelog #
 
+## 2.0.1 ##
+
+* Change XML parser (performance optimization)
+* Add combo options in "Tile" renderer
+* Manage keyboard navigation in "Maccrazy" renderer
+* Manage scan for all types of roms (loadiine, wud, wux, ...)
+* optimizations
+
 ## 2.0.0 ##
 * Breaking changes : paths (files, images) no more contains double quotes... update your configuration !
-* Add new "Maccray" renderer
+* Add new "Maccrazy" renderer
 * Add combo options in "List" renderer
 * Add option to create desktop game shortcut
 * Add progress bar when scanning games
