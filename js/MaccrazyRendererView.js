@@ -25,9 +25,7 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 								itemNav: "basic",
 								speed: "250",
 								scrollBy: 1,
-								scrollHijack: 50,
-								mouseDragging: true,
-								touchDragging: true
+								scrollHijack: 50
 							});
 							this._sly.on("load", () => {
 								this._zone.run(() => {
@@ -37,6 +35,13 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 							this._sly.init();
 						});
 					});
+				},
+				rendererKeyDown: function (event) {
+					switch (event.code) {
+						case "ArrowRight": this._selectNextGame(); break;
+						case "ArrowLeft": this._selectPreviousGame(); break;
+						case "Enter": this._playSelectedGame(); break;
+					}
 				},
 				rendererDestroy: function () {
 					this._sly.destroy();
@@ -56,6 +61,21 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 						});
 						this._sly.toCenter(gameIndex);
 						localStorage.setItem("lastGameName", game.name);
+					}
+				},
+				_playSelectedGame: function () {
+					this.helper.playGame(this.selectedGame);
+				},
+				_selectNextGame: function () {
+					const index = this.helper.provider.indexOf(this.selectedGame);
+					if (index < (this.helper.provider.length - 1)) {
+						this.select(this.helper.provider[index + 1]);
+					}
+				},
+				_selectPreviousGame: function () {
+					const index = this.helper.provider.indexOf(this.selectedGame);
+					if (index > 0) {
+						this.select(this.helper.provider[index - 1]);
 					}
 				},
 				_initLastGame: function () {

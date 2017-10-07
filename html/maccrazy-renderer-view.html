@@ -1,5 +1,5 @@
 <div view animated [(animation)]="animation" [(duration)]="duration">
-    <img class="background" [src]="helper.getImageUrl(selectedGame?.background != null ? selectedGame.background : '/data/renderers/maccrazy/background.png')">
+    <img class="background" [src]="helper.getImageUrl(selectedGame?.background != null ? selectedGame.background : 'images/default-background.png')">
     <div class="frame">
         <ul class="slidee">
             <li *ngFor="let game of helper.provider | orderBy:'name'; trackBy:helper.gameTrack" (mouseover)="showDescription(game)" (mouseout)="hideDescription(game)">
