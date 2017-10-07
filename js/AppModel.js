@@ -11,6 +11,7 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				this.currentGameType = "WiiU";
 				// ConfigParamsView
 				this.currentPanel = "application";
+				this.picturesFolder = AppUtils.getPicturesPath();
 				// -----
 				this._translateManager = TranslateManager;
 				this._onLanguageChangeSubscriber = null;
@@ -112,29 +113,24 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 				},
 				_initGameDb: function () {
 					const fs = require("fs");
-					const xml2js = require("xml2js");
-					const parser = new xml2js.Parser();
+					const XML = require("pixl-xml");
 					const games = [];
 					const gameTypes = [];
 					fs.readFile(AppUtils.getDatabasePath(), (err, result) => {
-						parser.parseString(result, (err, result) => {
-							result.datafile.game.forEach((element) => {
-								const type = element.type[0];
-								const id = element.id[0];
-								const name = element.$.name;
-								games.push({
-									id: id,
-									name: name,
-									type: type,
-									images: []
-								});
-								if (gameTypes.indexOf(type) == -1) {
-									gameTypes.push(type);
-								}
+						const doc = XML.parse(result);
+						doc.game.forEach((element) => {
+							games.push({
+								id: element.id,
+								name: element.name,
+								type: element.type,
+								images: []
 							});
-							this.games = games;
-							this.gameTypes = gameTypes;
+							if (gameTypes.indexOf(element.type) == -1) {
+								gameTypes.push(element.type);
+							}
 						});
+						this.games = games;
+						this.gameTypes = gameTypes;
 					});
 				}
 			}
