@@ -1,5 +1,5 @@
 <div class="dropdown" [ngClass]="{'is-active' : active, 'is-right' : right}" (click)="active=!active">
-    <div class="dropdown-trigger">
+    <div class="dropdown-trigger" (click)="onButtonClick()">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
         <span *ngIf="selected?.icon != null" class="icon">
             <img *ngIf="iconType === 'img'" [src]="selected?.icon">
@@ -14,7 +14,7 @@
     <div class="dropdown-menu" id="dropdown-menu" role="menu">
         <div class="dropdown-content">
             <a [ngClass]="(item.data == selected?.data) ? 'is-active' : null" *ngFor="let item of provider; trackBy:trackBy" class="dropdown-item"
-                (click)="onClick(item)">
+                (click)="onItemClick(item)">
             <span *ngIf="item.icon != null" class="icon">
                 <img *ngIf="iconType === 'img'" [src]="item.icon">
                 <i *ngIf="iconType === 'fa'" [ngClass]="item.icon" class="fa"></i>
