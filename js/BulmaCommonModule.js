@@ -1,7 +1,7 @@
 define(["AppUtils", "BulmaButtonComponent", "BulmaTabsComponent", "BulmaTabComponent", "BulmaComboboxComponent",
-    "BulmaProgressComponent"],
+    "BulmaProgressComponent", "ImageComponent"],
     function (AppUtils, BulmaButtonComponent, BulmaTabsComponent, BulmaTabComponent, BulmaComboboxComponent,
-        BulmaProgressComponent) {
+        BulmaProgressComponent, ImageComponent) {
         return AppUtils.getClass({
             constructor: function BulmaCommonModule() {
 
@@ -16,14 +16,16 @@ define(["AppUtils", "BulmaButtonComponent", "BulmaTabsComponent", "BulmaTabCompo
                         BulmaTabsComponent,
                         BulmaTabComponent,
                         BulmaComboboxComponent,
-                        BulmaProgressComponent
+                        BulmaProgressComponent,
+                        ImageComponent
                     ],
                     exports: [
                         BulmaButtonComponent,
                         BulmaTabsComponent,
                         BulmaTabComponent,
                         BulmaComboboxComponent,
-                        BulmaProgressComponent
+                        BulmaProgressComponent,
+                        ImageComponent
                     ]
                 })
             ]

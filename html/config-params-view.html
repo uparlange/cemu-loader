@@ -19,7 +19,7 @@
                             <td>
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
-                                        <input class="input" readonly type="text" [title]="model.config.file" [ngModel]="model.config.file">
+                                        <input class="input" readonly tabindex="-1" type="text" [title]="model.config.file" [ngModel]="model.config.file">
                                     </p>
                                     <p class="control">
                                         <bulma-button-component [icon]="'fa-folder-open-o'" [enabled]="model.config.file != null" [title]="'L10N_OPEN_FOLDER'|translate"
@@ -33,7 +33,7 @@
                             <td>
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
-                                        <input class="input" readonly type="text" [title]="model.picturesFolder" [ngModel]="model.picturesFolder">
+                                        <input class="input" readonly tabindex="-1" type="text" [title]="model.picturesFolder" [ngModel]="model.picturesFolder">
                                     </p>
                                     <p class="control">
                                         <bulma-button-component [icon]="'fa-folder-open-o'" [enabled]="model.picturesFolder != null" [title]="'L10N_OPEN_FOLDER'|translate"
@@ -97,7 +97,7 @@
                             <td>
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
-                                        <input class="input" type="text" readonly [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
+                                        <input class="input" type="text" readonly tabindex="-1" [title]="model.config.cemu.file" [ngModel]="model.config.cemu.file">
                                     </p>
                                     <p class="control">
                                         <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectCemuFile()"></bulma-button-component>
@@ -116,7 +116,7 @@
                             <td>
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
-                                        <input class="input" id="romsFolder" type="text" readonly [title]="model.config.cemu.romsFolder" [ngModel]="model.config.cemu.romsFolder">
+                                        <input class="input" id="romsFolder" type="text" readonly tabindex="-1" [title]="model.config.cemu.romsFolder" [ngModel]="model.config.cemu.romsFolder">
                                     </p>
                                     <p class="control">
                                         <bulma-button-component [icon]="'fa-folder-o'" [title]="'L10N_SELECT_FOLDER'|translate" (click)="selectRomsFolder()"></bulma-button-component>
@@ -183,7 +183,7 @@
                                         <label class="label">{{'L10N_IMAGE'|translate}}</label>
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
-                                                <input class="input" readonly [title]="game.image" type="text" [ngModel]="game.image">
+                                                <input class="input" readonly tabindex="-1" [title]="game.image" type="text" [ngModel]="game.image">
                                             </p>
                                             <p class="control">
                                                 <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameImage(game)"></bulma-button-component>
@@ -194,7 +194,7 @@
                                         <label class="label">{{'L10N_BACKGROUND'|translate}}</label>
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
-                                                <input class="input" readonly [title]="game.background" type="text" [ngModel]="game.background">
+                                                <input class="input" readonly tabindex="-1" [title]="game.background" type="text" [ngModel]="game.background">
                                             </p>
                                             <p class="control">
                                                 <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameBackground(game)"></bulma-button-component>
@@ -205,7 +205,7 @@
                                         <label class="label">{{'L10N_FILE'|translate}}</label>
                                         <div class="field has-addons">
                                             <p class="control is-expanded">
-                                                <input class="input" readonly [title]="game.file" type="text" [ngModel]="game.file">
+                                                <input class="input" readonly tabindex="-1" [title]="game.file" type="text" [ngModel]="game.file">
                                             </p>
                                             <p class="control">
                                                 <bulma-button-component [icon]="'fa-file-o'" [title]="'L10N_SELECT_FILE'|translate" (click)="selectGameFile(game)"></bulma-button-component>

@@ -1,7 +1,7 @@
-define(["AppUtils", "EventBusManager"],
-	function (AppUtils, EventBusManager) {
+define(["AppUtils", "EventBusManager", "KeyboardManager"],
+	function (AppUtils, EventBusManager, KeyboardManager) {
 		return AppUtils.getClass({
-			constructor: function BulmaComboboxComponent(EventBusManager) {
+			constructor: function BulmaComboboxComponent(EventBusManager, KeyboardManager) {
 				this.active = false;
 				this.right = false;
 				this.provider = [];
@@ -11,9 +11,12 @@ define(["AppUtils", "EventBusManager"],
 				this.selectedChange = new ng.core.EventEmitter();
 				this._id = AppUtils.getUID();
 				this._eventBusManager = EventBusManager;
+				this._eventBusManagerSubscriber = null;
+				this._keyboardManager = KeyboardManager;
+				this._keyboardManagerSubscriber = null;
 			},
 			parameters: [
-				[EventBusManager]
+				[EventBusManager], [KeyboardManager]
 			],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("bulma-combobox-component", {
@@ -28,9 +31,18 @@ define(["AppUtils", "EventBusManager"],
 							this.active = false;
 						}
 					});
+					this._keyboardManagerSubscriber = this._keyboardManager.on("keydown").subscribe((event) => {
+						if (this.active) {
+							switch (event.code) {
+								case "ArrowDown": this._selectNextItem(); break;
+								case "ArrowUp": this._selectPreviousItem(); break;
+							}
+						}
+					});
 				},
 				ngOnDestroy: function () {
 					this._eventBusManagerSubscriber.unsubscribe();
+					this._keyboardManagerSubscriber.unsubscribe();
 				},
 				trackBy: function (item) {
 					return item.data;
@@ -42,6 +54,18 @@ define(["AppUtils", "EventBusManager"],
 					this.selected = item;
 					this.selectedChange.emit(this.selected);
 					this.change.emit(this.selected);
+				},
+				_selectNextItem: function () {
+					const index = this.provider.indexOf(this.selected);
+					if (index < (this.provider.length - 1)) {
+						this.onItemClick(this.provider[index + 1]);
+					}
+				},
+				_selectPreviousItem: function () {
+					const index = this.provider.indexOf(this.selected);
+					if (index > 0) {
+						this.onItemClick(this.provider[index - 1]);
+					}
 				}
 			}
 		});

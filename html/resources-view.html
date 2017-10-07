@@ -14,7 +14,7 @@
                             <span>{{"L10N_LINK"|translate}}</span>
                         </td>
                         <td>
-                            <a data-link="http://cemu.info" title="http://cemu.info" (click)="openDataLink($event)">http://cemu.info</a>
+                            <a tabindex="0" data-link="http://cemu.info" title="http://cemu.info" (click)="openDataLink($event)">http://cemu.info</a>
                         </td>
                     </tr>
                     <tr>
@@ -22,7 +22,7 @@
                             <span>{{"L10N_DOWNLOAD"|translate}}</span>
                         </td>
                         <td>
-                            <a [title]="cemu.data" (click)="openLink(cemu.data)">{{cemu.label}}</a>
+                            <a tabindex="0" [title]="cemu.data" (click)="openLink(cemu.data)">{{cemu.label}}</a>
                         </td>
                     </tr>
                     <tr>
@@ -33,7 +33,7 @@
                             <span>{{"L10N_LINK"|translate}}</span>
                         </td>
                         <td>
-                            <a data-link="https://sshnuke.net/cemuhook" title="https://sshnuke.net/cemuhook" (click)="openDataLink($event)">https://sshnuke.net/cemuhook</a>
+                            <a tabindex="0" data-link="https://sshnuke.net/cemuhook" title="https://sshnuke.net/cemuhook" (click)="openDataLink($event)">https://sshnuke.net/cemuhook</a>
                         </td>
                     </tr>
                     <tr>
@@ -42,7 +42,7 @@
                         </td>
                         <td>
                             <span *ngFor="let version of cemuHook.versions; let last=last; trackBy:itemHelper.track">
-                                <span><a [title]="version.data" (click)="openLink(version.data)">{{version.label}}</a></span>
+                                <span><a tabindex="0" [title]="version.data" (click)="openLink(version.data)">{{version.label}}</a></span>
                                 <span *ngIf="!last">|</span>
                             </span>
                         </td>
@@ -55,7 +55,7 @@
                             <span>{{"L10N_LINK"|translate}}</span>
                         </td>
                         <td>
-                            <a data-link="https://slashiee.github.io/cemu_graphic_packs" title="https://slashiee.github.io/cemu_graphic_packs" (click)="openDataLink($event)">https://slashiee.github.io/cemu_graphic_packs</a>
+                            <a tabindex="0" data-link="https://slashiee.github.io/cemu_graphic_packs" title="https://slashiee.github.io/cemu_graphic_packs" (click)="openDataLink($event)">https://slashiee.github.io/cemu_graphic_packs</a>
                         </td>
                     </tr>
                     <tr>
@@ -63,7 +63,7 @@
                             <span>{{"L10N_DOWNLOAD"|translate}}</span>
                         </td>
                         <td>
-                            <a data-link="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip" title="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip"
+                            <a tabindex="0" data-link="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip" title="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip"
                                 (click)="openDataLink($event)">{{"L10N_LATEST_VERSION"|translate}}</a>
                         </td>
                     </tr>
@@ -75,7 +75,7 @@
                             <span>{{"L10N_LINK"|translate}}</span>
                         </td>
                         <td>
-                            <a data-link="http://wiiuusbhelper.com/" title="http://wiiuusbhelper.com/" (click)="openDataLink($event)">Wii U USB Helper (Wii U titles and DLC updates)</a>
+                            <a tabindex="0" data-link="http://wiiuusbhelper.com/" title="http://wiiuusbhelper.com/" (click)="openDataLink($event)">Wii U USB Helper (Wii U titles and DLC updates)</a>
                         </td>
                     </tr>
                     <tr>
@@ -83,7 +83,7 @@
                             <span>{{"L10N_LINK"|translate}}</span>
                         </td>
                         <td>
-                            <a data-link="http://www.gametdb.com/WiiU" title="http://www.gametdb.com/WiiU" (click)="openDataLink($event)">Wii U Database</a>
+                            <a tabindex="0" data-link="http://www.gametdb.com/WiiU" title="http://www.gametdb.com/WiiU" (click)="openDataLink($event)">Wii U Database</a>
                         </td>
                     </tr>
                 </tbody>

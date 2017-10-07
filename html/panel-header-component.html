@@ -1,6 +1,4 @@
 <div class="panel-header-component" (click)="onClick($event)">
-    <span *ngIf="icon != null" class="icon">
-        <i [ngClass]="icon" class="fa"></i>
-    </span>
+    <image-component *ngIf="icon != null" [iconType]="iconType" [icon]="icon"></image-component>
     <ng-content></ng-content>
 </div>

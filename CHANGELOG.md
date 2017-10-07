@@ -1,5 +1,9 @@
 # Changelog #
 
+## 2.0.2 ##
+
+* Accessibility : entire application accessible by keyboard navigation
+
 ## 2.0.1 ##
 
 * Change XML parser (performance optimization)
@@ -9,6 +13,7 @@
 * optimizations
 
 ## 2.0.0 ##
+
 * Breaking changes : paths (files, images) no more contains double quotes... update your configuration !
 * Add new "Maccrazy" renderer
 * Add combo options in "List" renderer

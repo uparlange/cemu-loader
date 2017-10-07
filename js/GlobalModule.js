@@ -1,9 +1,11 @@
 define(["AppUtils", "CemuManager", "AnimationManager", "RouterManager", "ApplicationManager",
 	"Shell", "VersionManager", "WmicManager", "TranslateManager", "GameHelper",
-	"ItemHelper", "UserConfigHelper", "RendererHelper", "ImageManager", "EventBusManager"],
+	"ItemHelper", "UserConfigHelper", "RendererHelper", "ImageManager", "EventBusManager",
+	"KeyboardManager"],
 	function (AppUtils, CemuManager, AnimationManager, RouterManager, ApplicationManager,
 		Shell, VersionManager, WmicManager, TranslateManager, GameHelper,
-		ItemHelper, UserConfigHelper, RendererHelper, ImageManager, EventBusManager) {
+		ItemHelper, UserConfigHelper, RendererHelper, ImageManager, EventBusManager,
+		KeyboardManager) {
 		return AppUtils.getClass({
 			constructor: function GlobalModule() {
 
@@ -24,7 +26,8 @@ define(["AppUtils", "CemuManager", "AnimationManager", "RouterManager", "Applica
 						UserConfigHelper,
 						RendererHelper,
 						ImageManager,
-						EventBusManager
+						EventBusManager,
+						KeyboardManager
 					]
 				})
 			]

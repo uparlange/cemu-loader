@@ -47,6 +47,7 @@ define(["AppUtils", "PanelComponent"],
 				_refreshSelection: function () {
 					if (this.panels) {
 						this.panels.forEach((panel) => {
+							panel.header.setTabIndex(0);
 							panel.header.icon = (panel.id === this.selected) ? "fa-minus-square-o" : "fa-plus-square-o";
 							panel.content.visible = (panel.id === this.selected);
 						});

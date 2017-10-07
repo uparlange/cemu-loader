@@ -1,22 +1,31 @@
-define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
-	function (AppUtils, AbstractRendererComponent, RendererHelper) {
+define(["AppUtils", "AbstractRendererComponent", "RendererHelper", "KeyboardManager"],
+	function (AppUtils, AbstractRendererComponent, RendererHelper, KeyboardManager) {
 		return AppUtils.getClass({
 			extends: AbstractRendererComponent,
-			constructor: function MaccrazyRendererView(RendererHelper, NgZone) {
+			constructor: function MaccrazyRendererView(RendererHelper, NgZone, KeyboardManager) {
 				AbstractRendererComponent.call(this, RendererHelper);
 				this.description = null;
 				this.selectedGame = null;
 				this._sly = null;
 				this._zone = NgZone;
+				this._keyboardManager = KeyboardManager;
+				this._keydownSubscriber = null;
 			},
 			parameters: [
-				[RendererHelper], [ng.core.NgZone]
+				[RendererHelper], [ng.core.NgZone], [KeyboardManager]
 			],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("maccrazy-renderer-view"))
 			],
 			functions: {
 				rendererInit: function () {
+					this._keydownSubscriber = this._keyboardManager.on("keydown").subscribe((event) => {
+						switch (event.code) {
+							case "ArrowRight": this._selectNextGame(); break;
+							case "ArrowLeft": this._selectPreviousGame(); break;
+							case "Enter": this._playSelectedGame(); break;
+						}
+					});
 					SystemJS.import("/data/renderers/maccrazy/jquery-3.2.1.min.js").then(() => {
 						SystemJS.import("/data/renderers/maccrazy/sly-1.6.1.min.js").then((Sly) => {
 							this._sly = new Sly(".frame", {
@@ -36,15 +45,9 @@ define(["AppUtils", "AbstractRendererComponent", "RendererHelper"],
 						});
 					});
 				},
-				rendererKeyDown: function (event) {
-					switch (event.code) {
-						case "ArrowRight": this._selectNextGame(); break;
-						case "ArrowLeft": this._selectPreviousGame(); break;
-						case "Enter": this._playSelectedGame(); break;
-					}
-				},
 				rendererDestroy: function () {
 					this._sly.destroy();
+					this._keydownSubscriber.unsubscribe();
 				},
 				showDescription: function (game) {
 					this.description = game.name;
