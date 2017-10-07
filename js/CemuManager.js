@@ -53,6 +53,13 @@ define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager", "Route
                             this._scanLoadiineGame(path).subscribe((game) => {
                                 eventEmitter.emit(game);
                             })
+                        } else {
+                            const name = path.substring(path.lastIndexOf("\\")+1, path.indexOf("."));
+                            const game = this._gameHelper.getNew(name);
+                            game.image = "images/default-image.png";
+                            game.background = "images/default-background.png";
+                            game.file = path;
+                            eventEmitter.emit(game);
                         }
                     });
                     return eventEmitter;
@@ -63,38 +70,36 @@ define(["AppUtils", "AppModel", "ApplicationManager", "TranslateManager", "Route
                     const fs = require("fs");
                     fs.lstat(metaxmlPath, (err, stats) => {
                         if (stats.isFile()) {
-                            const xml2js = require("xml2js");
-                            const parser = new xml2js.Parser();
+                            const XML = require("pixl-xml");
                             fs.readFile(metaxmlPath, (err, result) => {
-                                parser.parseString(result, (err, result) => {
-                                    const id = result.menu.title_id[0]._;
-                                    const name = result.menu.longname_en[0]._;
-                                    const game = this._gameHelper.getNew(name);
-                                    game.id = id;
-                                    const rpxFolder = path + "\\code";
-                                    fs.readdir(rpxFolder, (err, files) => {
-                                        if (!err) {
-                                            files.forEach((filename) => {
-                                                if (filename.indexOf(".rpx") !== -1) {
-                                                    game.file = rpxFolder + "\\" + filename;
-                                                    const imageSrcPath = path + "\\meta\\iconTex.tga";
-                                                    const imageDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_image.png";
-                                                    const backgroundSrcPath = path + "\\meta\\bootDrcTex.tga";
-                                                    const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_background.png";
-                                                    const inputs = [
-                                                        { src: imageSrcPath, dest: imageDestPath },
-                                                        { src: backgroundSrcPath, dest: backgroundDestPath }
-                                                    ];
-                                                    this._imageManager.tgaToPng(inputs).subscribe(() => {
-                                                        game.image = imageDestPath;
-                                                        game.background = backgroundDestPath;
-                                                        eventEmitter.emit(game);
-                                                    })
-                                                    return;
-                                                }
-                                            })
-                                        }
-                                    });
+                                const doc = XML.parse(result);
+                                const id = doc.title_id._Data;
+                                const name = doc.longname_en._Data;
+                                const game = this._gameHelper.getNew(name);
+                                game.id = id;
+                                const rpxFolder = path + "\\code";
+                                fs.readdir(rpxFolder, (err, files) => {
+                                    if (!err) {
+                                        files.forEach((filename) => {
+                                            if (filename.indexOf(".rpx") !== -1) {
+                                                game.file = rpxFolder + "\\" + filename;
+                                                const imageSrcPath = path + "\\meta\\iconTex.tga";
+                                                const imageDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_image.png";
+                                                const backgroundSrcPath = path + "\\meta\\bootDrcTex.tga";
+                                                const backgroundDestPath = AppUtils.getPicturesPath() + "\\" + game.id + "_background.png";
+                                                const inputs = [
+                                                    { src: imageSrcPath, dest: imageDestPath },
+                                                    { src: backgroundSrcPath, dest: backgroundDestPath }
+                                                ];
+                                                this._imageManager.tgaToPng(inputs).subscribe(() => {
+                                                    game.image = imageDestPath;
+                                                    game.background = backgroundDestPath;
+                                                    eventEmitter.emit(game);
+                                                })
+                                                return;
+                                            }
+                                        })
+                                    }
                                 });
                             });
                         }
