@@ -40,5 +40,6 @@
 	"L10N_MAGIC_FIND_GAMES": "Rechercher automatiquement les jeux dans le dossier des roms",
 	"L10N_PLAY": "Jouer",
 	"L10N_ADD_DESKTOP_SHORTCUT": "Ajouter un raccourci sur le bureau",
-	"L10N_BACKGROUND": "Fond"
+	"L10N_BACKGROUND": "Fond",
+	"L10N_PICTURES_FOLDER": "Dossier des images"
 }

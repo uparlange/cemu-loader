@@ -15,7 +15,7 @@
                 <table class="table is-fullwidth">
                     <tbody>
                         <tr>
-                            <td class="form-label" width="200">{{'L10N_SAVE_FILE'|translate}}</td>
+                            <td class="form-label" width="205">{{'L10N_SAVE_FILE'|translate}}</td>
                             <td>
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
@@ -29,13 +29,27 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="form-label" width="200">{{'L10N_LANGUAGE'|translate}}</td>
+                            <td class="form-label" width="205">{{'L10N_PICTURES_FOLDER'|translate}}</td>
+                            <td>
+                                <div class="field has-addons">
+                                    <p class="control is-expanded">
+                                        <input class="input" readonly type="text" [title]="model.picturesFolder" [ngModel]="model.picturesFolder">
+                                    </p>
+                                    <p class="control">
+                                        <bulma-button-component [icon]="'fa-folder-open-o'" [enabled]="model.picturesFolder != null" [title]="'L10N_OPEN_FOLDER'|translate"
+                                            (click)="openPicturesFolder()"></bulma-button-component>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="form-label" width="205">{{'L10N_LANGUAGE'|translate}}</td>
                             <td>
                                 <bulma-combobox-component [(selected)]="selectedLanguage" [provider]="config.languages" [iconType]="'img'" (change)="onLanguageChange($event)"></bulma-combobox-component>
                             </td>
                         </tr>
                         <tr>
-                            <td class="form-label" width="200">
+                            <td class="form-label" width="205">
                                 <label for="fullscreen">{{'L10N_DISPLAY'|translate}}</label>
                             </td>
                             <td>
@@ -44,7 +58,7 @@
                         </tr>
                         <!--
                     <tr>
-                        <td class="form-label" width="200">
+                        <td class="form-label" width="205">
                             <label for="autostart">Autostart</label>
                         </td>
                         <td>
@@ -53,7 +67,7 @@
                     </tr>
                     -->
                         <tr>
-                            <td class="form-label" width="200">
+                            <td class="form-label" width="205">
                                 <label for="startMinimized">{{'L10N_START_MINIMIZED'|translate}}</label>
                             </td>
                             <td>
@@ -79,7 +93,7 @@
                 <table class="table is-fullwidth">
                     <tbody>
                         <tr>
-                            <td class="form-label" width="200">{{'L10N_EMULATOR_EXE'|translate}}</td>
+                            <td class="form-label" width="205">{{'L10N_EMULATOR_EXE'|translate}}</td>
                             <td>
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
@@ -96,7 +110,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="form-label" width="200">
+                            <td class="form-label" width="205">
                                 <label for="romsFolder">{{'L10N_ROMS_FOLDER'|translate}}</label>
                             </td>
                             <td>
@@ -115,7 +129,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="form-label" width="200">
+                            <td class="form-label" width="205">
                                 <label for="fullscreen">{{'L10N_START_FULLSCREEN'|translate}}</label>
                             </td>
                             <td>

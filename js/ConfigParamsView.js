@@ -63,24 +63,24 @@ define(["AppUtils", "AppModel", "CemuManager", "WmicManager", "GameHelper",
 					}
 				},
 				openCemuFileFolder: function () {
-					const item = this.model.config.cemu.file;
-					nw.Shell.showItemInFolder(item);
+					nw.Shell.showItemInFolder(this.model.config.cemu.file);
 				},
 				openGameFileFolder: function (game) {
-					const item = game.file;
-					nw.Shell.showItemInFolder(item);
+					nw.Shell.showItemInFolder(game.file);
 				},
 				openConfigFolder: function () {
-					const item = AppUtils.getUserConfigFile();
-					nw.Shell.showItemInFolder(item);
+					nw.Shell.showItemInFolder(this.model.config.file);
+				},
+				openPicturesFolder: function () {
+					nw.Shell.openItem(this.model.picturesFolder);
+				},
+				openRomsFolder: function () {
+					nw.Shell.openItem(this.model.config.cemu.romsFolder);
 				},
 				selectRomsFolder: function () {
 					this._selectFolder().subscribe((folder) => {
 						this.model.setRomsFolder(folder);
 					});
-				},
-				openRomsFolder: function () {
-					nw.Shell.openItem(this.model.config.cemu.romsFolder);
 				},
 				scanGames: function () {
 					const romsFolder = this.model.config.cemu.romsFolder;
