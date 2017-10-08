@@ -14,15 +14,15 @@
 
 ## Package (Old)
 
-### Install NW.js
+### 1. Install NW.js
 * Download lastest normal version of [NW.js](https://nwjs.io/)
 * Unzip content in "C:\Program Files\nwjs"
 
-### Download application
+### 2. Download application
 * v2.x [Cemu Loader 2.0.3](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.3.nw)
 * v1.x [Cemu Loader 1.3.5](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.3.5.nw)
 
-### Launch application
+### 3. Launch application
 * Double click on the application (.nw file)
 * Select "nw.exe" from "C:\Program Files\nwjs" as default reader for "*.nw" files
 
