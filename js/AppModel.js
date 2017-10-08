@@ -101,7 +101,6 @@ define(["AppUtils", "TranslateManager", "GameHelper", "UserConfigHelper"],
 					this._onLanguageChangeSubscriber = this._translateManager.onLanguageChange.subscribe((language) => {
 						this.config.language = language;
 					});
-					this.setLanguage(this.config.language);
 				},
 				_initConfig: function () {
 					const fs = require("fs");

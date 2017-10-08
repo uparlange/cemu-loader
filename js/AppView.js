@@ -17,7 +17,7 @@ define(["AppUtils", "AppModel", "Shell", "RouterManager"],
 			],
 			functions: {
 				ngOnInit: function () {
-					this._shell.init();
+					this._shell.init(this.model.config);
 					this._routerManager.on("NAVIGATION_END").subscribe((event) => {
 						this.currentView = event.toUrl;
 					});

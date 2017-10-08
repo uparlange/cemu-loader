@@ -4,6 +4,11 @@ define(["AppUtils", "AbstractEventManager"],
 			extends: AbstractEventManager,
 			constructor: function EventBusManager() {
 				AbstractEventManager.call(this);
+			},
+			functions: {
+				init: function () {
+
+				}
 			}
 		});
 	}

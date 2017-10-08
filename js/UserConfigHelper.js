@@ -1,12 +1,9 @@
-define(["AppUtils", "TranslateManager"],
-    function (AppUtils, TranslateManager) {
+define(["AppUtils"],
+    function (AppUtils) {
         return AppUtils.getClass({
-            constructor: function UserConfigHelper(TranslateManager) {
-                this._translateManager = TranslateManager;
+            constructor: function UserConfigHelper() {
+
             },
-            parameters: [
-                [TranslateManager]
-            ],
             functions: {
                 getNew: function () {
                     return {
@@ -14,7 +11,7 @@ define(["AppUtils", "TranslateManager"],
                         autostart: false,
                         startMinimized: false,
                         renderer: "maccrazy",
-                        language: this._translateManager.getDefaultLanguage(),
+                        language: "en",
                         cemu: {
                             file: null,
                             romsFolder: null,
