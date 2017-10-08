@@ -1,5 +1,11 @@
 # Changelog #
 
+## 2.0.3 ##
+
+* Cemu Loader now packaged as "nw" (nwjs needed) or as "exe" standalone installer (nwjs included)
+* Bugs correction
+* Optimizations
+
 ## 2.0.2 ##
 
 * Accessibility : entire application accessible by keyboard navigation
