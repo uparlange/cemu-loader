@@ -2,9 +2,9 @@
     <div class="dropdown-trigger" (click)="onButtonClick()">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
             <image-component *ngIf="selected?.icon != null" [iconType]="iconType" [icon]="selected?.icon"></image-component>
-            <span style="width:10px"></span>
+            <span *ngIf="selected?.label != null" style="width:10px"></span>
             <span *ngIf="selected?.label != null">{{selected?.label}}</span>
-            <span style="width:5px"></span>
+            <span *ngIf="selected?.label != null" style="width:5px"></span>
             <image-component [iconType]="'fa'" [icon]="'fa-angle-down'"></image-component>
         </button>
     </div>
