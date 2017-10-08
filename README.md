@@ -8,15 +8,13 @@
     * And more ... 
 * This application is available in 3 languages (English, French, Spanish)
 
-[Cemu Loader Screenshot](https://github.com/uparlange/cemu-loader/blob/master/screenshot.png?raw=true)
+![Cemu Loader Screenshot](https://github.com/uparlange/cemu-loader/blob/master/screenshot.png?raw=true)
 
 # Execute application
 
-* [Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md)
-
 ## Standalone installer (New !)
 
-* [Cemu Loader 2.0.3](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.3.exe)
+* [Cemu Loader 2.0.3](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.3.exe) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
 
 ## Package (Old)
 
