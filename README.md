@@ -2,10 +2,10 @@
 
 * Cemu is a Wii U Emulator
 * This application is a frontend for this emulator
-* * Scan games in rom folder
-* * Load games
-* * Add game's shortcut in desktop
-* * And more ... 
+    * Scan games in rom folder
+    * Load games
+    * Add game's shortcut in desktop
+    * And more ... 
 * This application is available in 3 languages (English, French, Spanish)
 
 [Cemu Loader Screenshot](https://github.com/uparlange/cemu-loader/blob/master/screenshot.png?raw=true)
