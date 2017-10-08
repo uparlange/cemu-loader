@@ -23,8 +23,8 @@
 * Unzip content in "C:\Program Files\nwjs"
 
 ### 2. Download application
-* v2.x [Cemu Loader 2.0.3](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.3.nw)
-* v1.x [Cemu Loader 1.3.5](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.3.5.nw)
+* v2.x [Cemu Loader 2.0.3](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.3.nw) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
+* v1.x [Cemu Loader 1.3.5](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.3.5.nw) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
 
 ### 3. Launch application
 * Double click on the application (.nw file)
