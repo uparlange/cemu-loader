@@ -14,6 +14,8 @@ const htmlclean = require('gulp-htmlclean');
 const uglify = require('gulp-uglify-es').default;
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+const exec = require('gulp-exec');
+const rename = require('gulp-rename');
 
 gulp.task('clean-dist', () => {
     return del(['./dist']);
@@ -26,7 +28,7 @@ gulp.task('copy-files', (callback) => {
 gulp.task('copy-js', () => {
     return gulp.src('js/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/cemu-loader/js'));
 });
 
 gulp.task('copy-css', () => {
@@ -34,23 +36,23 @@ gulp.task('copy-css', () => {
         .pipe(cleanCSS({
             level: 2
         }))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/cemu-loader/css'));
 });
 
 gulp.task('copy-images', () => {
     return gulp.src('images/*.*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/cemu-loader/images'));
 });
 
 gulp.task('copy-html', () => {
     const streams = mergeStream();
     streams.add(gulp.src('html/*.html')
         .pipe(htmlclean())
-        .pipe(gulp.dest('dist/html')));
+        .pipe(gulp.dest('dist/cemu-loader/html')));
     streams.add(gulp.src('index.html')
         .pipe(htmlclean())
-        .pipe(gulp.dest('dist')));
+        .pipe(gulp.dest('dist/cemu-loader')));
     return streams;
 });
 
@@ -58,11 +60,11 @@ gulp.task('copy-static', () => {
     const streams = mergeStream();
     ['package.json'].forEach((item) => {
         streams.add(gulp.src([item])
-            .pipe(gulp.dest('dist/')));
+            .pipe(gulp.dest('dist/cemu-loader')));
     });
     ['data', 'node_modules/font-awesome/fonts'].forEach((item) => {
         streams.add(gulp.src([item + '/**/*'])
-            .pipe(gulp.dest('dist/' + item)));
+            .pipe(gulp.dest('dist/cemu-loader/' + item)));
     });
     return streams;
 });
@@ -84,7 +86,7 @@ gulp.task('copy-node-modules', () => {
             if (attributes[attribute] !== undefined && attributes[attribute].indexOf('node_modules') !== -1) {
                 const url = attributes[attribute];
                 urls.push(url);
-                const dest = 'dist/' + url.substring(0, url.lastIndexOf("/"));
+                const dest = 'dist/cemu-loader/' + url.substring(0, url.lastIndexOf("/"));
                 const begin = url.lastIndexOf("/") + 1;
                 const name = url.substring(begin);
                 streams.add(gulp.src([url])
@@ -96,7 +98,7 @@ gulp.task('copy-node-modules', () => {
         const fs = require("fs");
         const folder = './node_modules/' + dependency;
         streams.add(gulp.src([folder + '/**/*'])
-            .pipe(gulp.dest('./dist/node_modules/' + dependency)));
+            .pipe(gulp.dest('./dist/cemu-loader/node_modules/' + dependency)));
         if (fs.existsSync(folder + '/package.json')) {
             const pkg2 = require(folder + '/package.json');
             for (let dependency in pkg2.dependencies) {
@@ -122,8 +124,8 @@ gulp.task('copy-node-modules', () => {
     return streams;
 });
 
-gulp.task('generate-release', () => {
-    return gulp.src('dist/**/*')
+gulp.task('generate-nw', () => {
+    return gulp.src('dist/cemu-loader/**/*')
         .pipe(zip(pkg.name + '-' + pkg.version + '.nw'))
         .pipe(gulp.dest('release'));
 });
@@ -135,6 +137,41 @@ gulp.task('lint-js', () => {
         .pipe(eslint.failAfterError());
 });
 
+gulp.task('copy-nw', () => {
+    return gulp.src('node_modules/nw/nwjs/**/*')
+        .pipe(gulp.dest('dist/nw'));
+});
+
+gulp.task('move-release', () => {
+    return gulp.src('dist/release.exe')
+        .pipe(rename(pkg.name + '-' + pkg.version + '.exe'))
+        .pipe(gulp.dest("./release"));
+});
+
+gulp.task('execute-release', () => {
+    const options = {
+        continueOnError: false, // default = false, true means don't emit error event 
+        pipeStdout: false, // default = false, true means stdout is written to file.contents 
+        customTemplatingThing: "test" // content passed to gutil.template() 
+    };
+    const reportOptions = {
+        err: true, // default = true, false means don't write err 
+        stderr: true, // default = true, false means don't write stderr 
+        stdout: true // default = true, false means don't write stdout 
+    }
+    return gulp.src('.')
+        .pipe(exec('release.bat', options))
+        .pipe(exec.reporter(reportOptions));
+});
+
+gulp.task('prepare', (callback) => {
+    runSequence('lint-js', 'clean-dist', 'copy-files', 'copy-node-modules', callback);
+});
+
+gulp.task('generate-exe', (callback) => {
+    runSequence('copy-nw', 'execute-release', 'move-release', callback);
+});
+
 gulp.task('default', (callback) => {
-    runSequence('lint-js', 'clean-dist', 'copy-files', 'copy-node-modules', 'generate-release', callback);
+    runSequence('prepare', 'generate-nw', 'generate-exe', callback);
 });
