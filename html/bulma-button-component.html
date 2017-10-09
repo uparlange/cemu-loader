@@ -1,4 +1,4 @@
-<a class="button is-primary" [title]="title != null ? title : ''">
+<a class="button is-primary" [title]="title != null ? title : ''" (click)="onClick($event)">
     <image-component *ngIf="icon != null" [iconType]="iconType" [icon]="icon"></image-component>
     <span *ngIf="label != null">
         {{label}}

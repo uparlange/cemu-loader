@@ -36,6 +36,13 @@ define(["AppUtils", "KeyboardManager"],
 				ngOnDestroy: function () {
 					this._keyboardManagerSubscriber.unsubscribe();
 				},
+				onClick: function (event) {
+					if (!this.enabled) {
+						event.stopPropagation();
+						event.preventDefault();
+						return false;
+					}
+				},
 				_initUpdate: function () {
 					// tab index
 					this._elementRef.setAttribute("tabindex", this.enabled ? 0 : -1);

@@ -124,12 +124,6 @@ gulp.task('copy-node-modules', () => {
     return streams;
 });
 
-gulp.task('generate-nw', () => {
-    return gulp.src('dist/cemu-loader/**/*')
-        .pipe(zip(pkg.name + '-' + pkg.version + '.nw'))
-        .pipe(gulp.dest('release'));
-});
-
 gulp.task('lint-js', () => {
     return gulp.src(['js/*.js'])
         .pipe(eslint())
@@ -142,13 +136,13 @@ gulp.task('copy-nw', () => {
         .pipe(gulp.dest('dist/nw'));
 });
 
-gulp.task('move-release', () => {
+gulp.task('move-rename-exe', () => {
     return gulp.src('dist/release.exe')
         .pipe(rename(pkg.name + '-' + pkg.version + '.exe'))
         .pipe(gulp.dest("./release"));
 });
 
-gulp.task('execute-release', () => {
+gulp.task('generate-exe', () => {
     const options = {
         continueOnError: false, // default = false, true means don't emit error event 
         pipeStdout: false, // default = false, true means stdout is written to file.contents 
@@ -160,7 +154,7 @@ gulp.task('execute-release', () => {
         stdout: true // default = true, false means don't write stdout 
     }
     return gulp.src('.')
-        .pipe(exec('release.bat', options))
+        .pipe(exec('generate-exe.bat', options))
         .pipe(exec.reporter(reportOptions));
 });
 
@@ -168,10 +162,16 @@ gulp.task('prepare', (callback) => {
     runSequence('lint-js', 'clean-dist', 'copy-files', 'copy-node-modules', callback);
 });
 
-gulp.task('generate-exe', (callback) => {
-    runSequence('copy-nw', 'execute-release', 'move-release', callback);
+gulp.task('generate-package-file', () => {
+    return gulp.src('dist/cemu-loader/**/*')
+        .pipe(zip(pkg.name + '-' + pkg.version + '.nw'))
+        .pipe(gulp.dest('release'));
+});
+
+gulp.task('generate-exe-file', (callback) => {
+    runSequence('copy-nw', 'generate-exe', 'move-rename-exe', callback);
 });
 
 gulp.task('default', (callback) => {
-    runSequence('prepare', 'generate-nw', 'generate-exe', callback);
+    runSequence('prepare', 'generate-package-file', 'generate-exe-file', callback);
 });

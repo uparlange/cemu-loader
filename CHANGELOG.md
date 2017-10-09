@@ -1,5 +1,10 @@
 # Changelog #
 
+## 2.0.4 ##
+
+* Correct regression on bulma-button
+* Optimizations
+
 ## 2.0.3 ##
 
 * Cemu Loader now packaged as "nw" (nwjs needed) or as "exe" standalone installer (nwjs included)
