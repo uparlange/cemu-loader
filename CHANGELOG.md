@@ -1,5 +1,9 @@
 # Changelog #
 
+## 2.0.5 ##
+
+* Optimizations
+
 ## 2.0.4 ##
 
 * Correct regression on bulma-button
