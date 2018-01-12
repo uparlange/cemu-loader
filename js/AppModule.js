@@ -8,9 +8,10 @@ define(["AppUtils", "CommonModule", "GlobalModule", "AppView", "AppModel"],
 			annotations: [
 				new ng.core.NgModule({
 					imports: [
-						CommonModule,
 						GlobalModule,
+						CommonModule,
 						ng.platformBrowser.BrowserModule,
+						ng.common.http.HttpClientModule,
 						ng.router.RouterModule.forRoot([
 							{ path: "list", loadChildren: AppUtils.getLazyModuleName("ListModule") },
 							{ path: "config", loadChildren: AppUtils.getLazyModuleName("ConfigModule") },

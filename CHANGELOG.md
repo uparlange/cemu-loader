@@ -1,5 +1,11 @@
 # Changelog #
 
+## 2.0.6 ##
+
+* Wiiudb version 20180112092039
+* Manage graphic packs versions in resource view
+* Optimizations
+
 ## 2.0.5 ##
 
 * Optimizations

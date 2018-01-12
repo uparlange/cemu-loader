@@ -1,19 +1,23 @@
 define(["AppUtils", "ItemHelper"],
 	function (AppUtils, ItemHelper) {
 		return AppUtils.getClass({
-			constructor: function ResourcesView(Http, ItemHelper) {
-				this._http = Http;
+			constructor: function ResourcesView(HttpClient, ItemHelper) {
+				this._http = HttpClient;
 				this.itemHelper = ItemHelper;
 				this.cemu = {
 					label: null,
 					data: null
 				};
+				this.graphicPack = {
+					label: null,
+					data: null
+				};
 				this.cemuHook = {
 					versions: []
-				}
+				};
 			},
 			parameters: [
-				[ng.http.Http], [ItemHelper]
+				[ng.common.http.HttpClient], [ItemHelper]
 			],
 			annotations: [
 				new ng.core.Component(AppUtils.getComponentConfiguration("resources-view"))
@@ -22,6 +26,7 @@ define(["AppUtils", "ItemHelper"],
 				ngOnInit: function () {
 					this._initCemuVersion();
 					this._initCemuHookVersion();
+					this._initGraphicPackVersion();
 				},
 				openDataLink: function (event) {
 					nw.Shell.openExternal(event.target.dataset.link);
@@ -29,15 +34,9 @@ define(["AppUtils", "ItemHelper"],
 				openLink: function (link) {
 					nw.Shell.openExternal(link);
 				},
-				downloadCemu: function () {
-					nw.Shell.openExternal(this.cemu.link);
-				},
-				trackCemuHook: function (index, value) {
-					return value.label;
-				},
 				_initCemuVersion: function () {
 					const htmlparser = require("htmlparser2");
-					this._http.get("http://cemu.info/").subscribe((result) => {
+					this._http.get("http://cemu.info", { responseType: "text" }).subscribe((result) => {
 						const parser = new htmlparser.Parser({
 							onopentag: (tagname, attributes) => {
 								if (tagname == "a") {
@@ -48,14 +47,14 @@ define(["AppUtils", "ItemHelper"],
 								}
 							}
 						}, { decodeEntities: true });
-						parser.write(result.text());
+						parser.write(result);
 						parser.end();
 					});
 				},
 				_initCemuHookVersion: function () {
 					const htmlparser = require("htmlparser2");
 					let currentLink = null;
-					this._http.get("https://sshnuke.net/cemuhook/").subscribe((result) => {
+					this._http.get("https://sshnuke.net/cemuhook", { responseType: "text" }).subscribe((result) => {
 						const parser = new htmlparser.Parser({
 							onopentag: (tagname, attributes) => {
 								if (tagname == "a") {
@@ -73,7 +72,28 @@ define(["AppUtils", "ItemHelper"],
 								}
 							},
 						}, { decodeEntities: true });
-						parser.write(result.text());
+						parser.write(result);
+						parser.end();
+					});
+				},
+				_initGraphicPackVersion: function () {
+					const htmlparser = require("htmlparser2");
+					let currentLink = null;
+					this._http.get("https://github.com/slashiee/cemu_graphic_packs/releases", { responseType: "text" }).subscribe((result) => {
+						const parser = new htmlparser.Parser({
+							onopentag: (tagname, attributes) => {
+								if (tagname == "a") {
+									if (attributes.href.indexOf("download") !== -1) {
+										if (currentLink === null) {
+											currentLink = attributes.href;
+											this.graphicPack.label = "Graphic Packs " + attributes.href.substring(attributes.href.lastIndexOf("_") + 1, attributes.href.length - 4);
+											this.graphicPack.data = "https://github.com" + attributes.href;
+										}
+									}
+								}
+							}
+						}, { decodeEntities: true });
+						parser.write(result);
 						parser.end();
 					});
 				}

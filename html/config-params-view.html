@@ -219,7 +219,7 @@
                                 </div>
                             </td>
                             <td class="game-actions" width="24">
-                                <bulma-button-component [icon]="model.currentGame === game ? 'fa-close' : 'fa-pencil'" [title]="('L10N_EDIT'|translate) + ' ' + game.name" (click)="toggleEditGame(game)"></bulma-button-component>
+                                <bulma-button-component [icon]="model.currentGame === game ? 'fa-ban' : 'fa-pencil'" [title]="('L10N_EDIT'|translate) + ' ' + game.name" (click)="toggleEditGame(game)"></bulma-button-component>
                                 <div *ngIf="model.currentGame === game" style="height:10px;"></div>
                                 <bulma-button-component [icon]="'fa-trash-o'" *ngIf="model.currentGame === game" [title]="('L10N_DELETE'|translate) + ' ' + game.name"
                                     (click)="removeGame(game)"></bulma-button-component>

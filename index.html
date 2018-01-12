@@ -15,17 +15,23 @@
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.min.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.min.js"></script>
+    <script src="node_modules/@angular/compiler/bundles/compiler.umd.min.js"></script>
     <script src="node_modules/@angular/core/bundles/core.umd.min.js"></script>
     <script src="node_modules/@angular/common/bundles/common.umd.min.js"></script>
-    <script src="node_modules/@angular/compiler/bundles/compiler.umd.min.js"></script>
+    <script src="node_modules/tslib/tslib.js"></script>
+    <script>
+        // fix common-http.umd.js
+        tslib = { __extends: __extends };
+        Rx.Observable.prototype.of = Rx.Observable.of;
+    </script>
+    <script src="node_modules/@angular/common/bundles/common-http.umd.min.js"></script>
     <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.min.js"></script>
     <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.min.js"></script>
     <script src="node_modules/@angular/router/bundles/router.umd.min.js"></script>
-    <script src="node_modules/@angular/http/bundles/http.umd.min.js"></script>
     <script src="node_modules/@angular/forms/bundles/forms.umd.min.js"></script>
     <script src="node_modules/systemjs/dist/system.js"></script>
     <script src="js/config.js"></script>
-	<script>SystemJS.import("AppModule");</script>
+    <script>SystemJS.import("AppModule");</script>
 </body>
 
 </html>

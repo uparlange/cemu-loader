@@ -13,7 +13,6 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 					imports: [
 						ng.common.CommonModule,
 						ng.forms.FormsModule,
-						ng.http.HttpModule,
 						BulmaCommonModule
 					],
 					declarations: [
@@ -31,7 +30,6 @@ define(["AppUtils", "OrderByPipe", "FilterByPipe", "ViewDirective", "AnimatedDir
 					exports: [
 						ng.common.CommonModule,
 						ng.forms.FormsModule,
-						ng.http.HttpModule,
 						BulmaCommonModule,
 						OrderByPipe,
 						FilterByPipe,

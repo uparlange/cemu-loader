@@ -63,8 +63,7 @@
                             <span>{{"L10N_DOWNLOAD"|translate}}</span>
                         </td>
                         <td>
-                            <a tabindex="0" data-link="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip" title="https://github.com/slashiee/cemu_graphic_packs/archive/master.zip"
-                                (click)="openDataLink($event)">{{"L10N_LATEST_VERSION"|translate}}</a>
+                            <a tabindex="0" [title]="graphicPack.data" (click)="openLink(graphicPack.data)">{{graphicPack.label}}</a>
                         </td>
                     </tr>
                     <tr>

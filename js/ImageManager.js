@@ -1,11 +1,11 @@
 define(["AppUtils"],
 	function (AppUtils) {
 		return AppUtils.getClass({
-			constructor: function ImageManager(Http) {
-				this._http = Http;
+			constructor: function ImageManager(HttpClient) {
+				this._http = HttpClient;
 			},
 			parameters: [
-				[ng.http.Http]
+				[ng.common.http.HttpClient]
 			],
 			functions: {
 				init: function () {
@@ -18,9 +18,9 @@ define(["AppUtils"],
 						const extension = this._getExtention(input.src);
 						this._http.get(input.src, {
 							headers: { "Content-Type": "image/" + extension },
-							responseType: ng.http.ResponseContentType.ArrayBuffer
+							responseType: "arraybuffer"
 						}).subscribe((result) => {
-							fs.writeFile(input.dest, new Buffer(result.arrayBuffer()), (error) => {
+							fs.writeFile(input.dest, new Buffer(result), (error) => {
 								input.done = (error != null);
 								this._treated(inputs, eventEmitter);
 							})

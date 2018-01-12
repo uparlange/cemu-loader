@@ -1,9 +1,9 @@
 define(["AppUtils"],
 	function (AppUtils) {
 		return AppUtils.getClass({
-			constructor: function TranslateManager(Http) {
+			constructor: function TranslateManager(HttpClient) {
 				this.onLanguageChange = new ng.core.EventEmitter();
-				this._http = Http;
+				this._http = HttpClient;
 				this._properties = {};
 				this._propertyFilePattern = null;
 				this._loading = false;
@@ -12,7 +12,7 @@ define(["AppUtils"],
 				this._pendingLanguages = [];
 			},
 			parameters: [
-				[ng.http.Http]
+				[ng.common.http.HttpClient]
 			],
 			functions: {
 				init: function (params) {
@@ -88,7 +88,7 @@ define(["AppUtils"],
 						this._loading = true;
 						const path = this._propertyFilePattern.replace("{locale}", this._currentLang);
 						this._http.get(path).subscribe((data) => {
-							this._properties[this._currentLang] = data.json();
+							this._properties[this._currentLang] = data;
 							this._loading = false;
 							this._checkPendingRequests();
 							eventEmitter.emit();
