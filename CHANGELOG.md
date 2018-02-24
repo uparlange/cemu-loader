@@ -1,5 +1,10 @@
 # Changelog #
 
+## 2.0.7 ##
+
+* Wiiudb version 20180224105443
+* Optimizations
+
 ## 2.0.6 ##
 
 * Wiiudb version 20180112092039

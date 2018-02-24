@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datafile xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="wiiutdb.xsd">
-	<WiiUTDB version="20180112092039" filter="FR" games="2390"/>
+	<WiiUTDB version="20180224105443" filter="FR" games="2404"/>
 	<!--
  GameTDB: WiiU, Database started in 2012 (http://www.gametdb.com)
  Never modify this file manually, it will get overwritten when you update. You can add games and fixes on the website.
@@ -38313,9 +38313,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Mappy</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>マッピー</title>
+			<synopsis/>
+		</locale>
 		<developer>Namco</developer>
 		<publisher>Bandai Namco Entertainment</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="5" day="15"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -38358,9 +38362,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Wrecking Crew</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>レッキングクルー</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="19"/>
 		<genre>action,puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -38408,8 +38416,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>NES Old Tale New Onigashima Around Ed</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ふぁみこんむかし話 新・鬼ヶ島（前後編）</title>
+			<synopsis/>
+		</locale>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="9" day="18"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -38449,10 +38461,14 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Galaga</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ギャラガ</title>
+			<synopsis/>
+		</locale>
 		<developer>NAMCO BANDAI Games</developer>
 		<publisher>Bandai Namco Entertainment</publisher>
-		<date year="2013" month="8" day="15"/>
-		<genre>action,shooter,arcade</genre>
+		<date year="2013" month="7" day="24"/>
+		<genre>action,arcade,shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="2">
@@ -38524,9 +38540,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Rockman 4</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ロックマン4 新たなる野望!!</title>
+			<synopsis/>
+		</locale>
 		<developer>Capcom</developer>
 		<publisher>Capcom</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="12"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -38576,9 +38596,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Metroid</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>メトロイド</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="8" day="14"/>
 		<genre>action,platformer,shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -38651,9 +38675,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Super Mario Bros. 2 The Lost Levels</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>スーパーマリオブラザーズ2</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="8" day="8"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -38721,9 +38749,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Super Mario Brothers</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>スーパーマリオブラザーズ</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="5"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -38871,9 +38903,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Ice Climber</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>アイスクライマー</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="4" day="27"/>
 		<genre>action,arcade</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39023,9 +39059,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Mario Brothers</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>マリオブラザーズ</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="5" day="29"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39096,10 +39136,14 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Donkey Kong</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ドンキーコング</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
-		<genre>action,platformer,arcade</genre>
+		<date year="2013" month="7" day="17"/>
+		<genre>action,arcade,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -39169,9 +39213,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Excitebike</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>エキサイトバイク</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="4" day="27"/>
 		<genre>racing</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39248,7 +39296,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="3" day="19"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39316,9 +39364,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Balloon Fight</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>バルーンファイト</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="4" day="27"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39389,9 +39441,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Punch-Out!!</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>パンチアウト</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="5"/>
 		<genre>sports,boxing</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39464,9 +39520,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Xevious</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ゼビウス</title>
+			<synopsis/>
+		</locale>
 		<developer>Bandai Namco Entertainment</developer>
 		<publisher>Bandai Namco Entertainment</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="4" day="27"/>
 		<genre>action,adventure,shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39537,9 +39597,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Yoshi</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ヨッシーのたまご </title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="12"/>
 		<genre>puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39612,9 +39676,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>RockMan</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ロックマン</title>
+			<synopsis/>
+		</locale>
 		<developer>Capcom</developer>
 		<publisher>Capcom</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="12"/>
 		<genre>action,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39686,9 +39754,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Rockman 2</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ロックマン2 Dr.ワイリーの謎</title>
+			<synopsis/>
+		</locale>
 		<developer>Capcom</developer>
 		<publisher>Capcom</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="12"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39738,8 +39810,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Daiundoukai Yuke Downtown Nekketsu It</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ダウンタウン熱血行進曲 それゆけ大運動会</title>
+			<synopsis/>
+		</locale>
 		<publisher>Arc System Works</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="4" day="27"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -39779,9 +39855,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Pac-Man</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>パックマン</title>
+			<synopsis/>
+		</locale>
 		<developer>Bandai Namco Games Inc.</developer>
 		<publisher>Bandai Namco Games Inc.</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="5" day="15"/>
 		<genre>arcade</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39850,9 +39930,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Spelunker</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>スペランカー</title>
+			<synopsis/>
+		</locale>
 		<developer>Tozai Games</developer>
 		<publisher>Tozai Games</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="4" day="27"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39927,9 +40011,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Gradius</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>グラディウス</title>
+			<synopsis/>
+		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="10" day="2"/>
 		<genre>action,adventure,shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -39979,9 +40067,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>TwinBee</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ツインビー</title>
+			<synopsis/>
+		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="9" day="4"/>
 		<genre>action,shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40026,10 +40118,9 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>ロードランナー</title>
 			<synopsis/>
 		</locale>
-		<developer>Nintendo</developer>
-		<publisher>Nintendo</publisher>
+		<publisher>Konami</publisher>
 		<date year="2014" month="9" day="17"/>
-		<genre>action,platformer,puzzle</genre>
+		<genre>action,puzzle,platformer</genre>
 		<rating type="CERO" value="A"/>
 		<wi-fi players="0"/>
 		<input players="2">
@@ -40099,10 +40190,14 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Donkey Kong Jr.</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ドンキーコングJR.</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
-		<genre>action,platformer,arcade</genre>
+		<date year="2013" month="7" day="17"/>
+		<genre>action,arcade,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -40149,8 +40244,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Ninjajajamarukun</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>忍者じゃじゃ丸くん</title>
+			<synopsis/>
+		</locale>
 		<publisher>Hamster</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="6" day="19"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -40190,9 +40289,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>The Key of Solomon</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ソロモンの鍵</title>
+			<synopsis/>
+		</locale>
 		<developer>Tecmo Koei</developer>
 		<publisher>Koei Tecmo Games</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="5" day="1"/>
 		<genre>strategy,arcade,puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40265,10 +40368,14 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Rockman 3 Dr. Willy's Revenge</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ロックマン3 Dr.ワイリーの最期!?</title>
+			<synopsis/>
+		</locale>
 		<developer>Capcom</developer>
 		<publisher>Capcom</publisher>
-		<date year="2014" month="" day=""/>
-		<genre>action,adventure,platformer,arcade</genre>
+		<date year="2013" month="5" day="1"/>
+		<genre>action,adventure,arcade,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -40339,9 +40446,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Super Dodgeball</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>熱血高校ドッジボール部</title>
+			<synopsis/>
+		</locale>
 		<developer>Million Co.,Ltd.</developer>
 		<publisher>Arc System Works</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="12" day="18"/>
 		<genre>sports</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40388,9 +40499,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Castlevania</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>悪魔城ドラキュラ</title>
+			<synopsis/>
+		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="12" day="4"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40463,9 +40578,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Mario Golf</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>マリオオープンゴルフ</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="1" day="15"/>
 		<genre>sports,golf</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40535,9 +40654,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Dr. Mario</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ドクターマリオ</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="2" day="26"/>
 		<genre>strategy,puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40601,11 +40724,15 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Renegade (USA) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Renegade (Japan) (JA)">
 		<id>FB6J</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Renegade</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>熱血硬派くにおくん</title>
 			<synopsis/>
@@ -40616,11 +40743,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<genre>action,adventure,fighting</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Renegade (Japan) (JA).wud"/>
 	</game>
 	<game name="Renegade (Europe) (EN)">
 		<id>FB6P</id>
@@ -40685,9 +40811,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Double Dragon</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ダブルドラゴン</title>
+			<synopsis/>
+		</locale>
 		<developer>Arc System Works Co., Ltd.</developer>
 		<publisher>Arc System Works Co., Ltd.</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="1" day="22"/>
 		<genre>action,adventure,fighting</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40753,25 +40883,29 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Castlevania II: Simon's Quest (USA) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Castlevania II: Simon's Quest (Japan) (JA)">
 		<id>FB8J</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Castlevania II: Simon's Quest</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>ドラキュラII 呪いの封印</title>
 			<synopsis/>
 		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="3" day="5"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
+		<rom version="" name="Castlevania II: Simon's Quest (Japan) (JA).wud"/>
 	</game>
 	<game name="Castlevania II: Simon's Quest (Europe) (EN)">
 		<id>FB8P</id>
@@ -40811,9 +40945,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Elevator Action</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>エレベーターアクション</title>
+			<synopsis/>
+		</locale>
 		<publisher>Square Enix</publisher>
-		<date year="2014" month="1" day="1"/>
-		<genre>action,platformer,arcade</genre>
+		<date year="2014" month="2" day="19"/>
+		<genre>action,arcade,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -40855,9 +40993,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>The Legend of Zelda</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ゼルダの伝説</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2013" month="8" day="28"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -40929,9 +41071,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Kid Icarus</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>光神話 パルテナの鏡</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="8" day="14"/>
 		<genre>action,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41006,9 +41152,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Zelda II: The Adventure of Link</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>リンクの冒険</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="9" day="11"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41091,7 +41241,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</locale>
 		<developer>Shigesato Itoi, HAL Laboratory, Ape, Inc., Creatures Inc.</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2015" month="6" day="21"/>
+		<date year="2015" month="6" day="15"/>
 		<genre>role-playing</genre>
 		<rating type="CERO" value="A"/>
 		<wi-fi players="0"/>
@@ -41139,8 +41289,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Ikki</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>いっき</title>
+			<synopsis/>
+		</locale>
 		<publisher>Sunsoft</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="5" day="22"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -41263,10 +41417,14 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Ghouls and Ghosts</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>魔界村</title>
+			<synopsis/>
+		</locale>
 		<developer>Capcom</developer>
 		<publisher>Capcom</publisher>
-		<date year="2014" month="1" day="1"/>
-		<genre>action,adventure,platformer,arcade</genre>
+		<date year="2014" month="7" day="3"/>
+		<genre>action,adventure,arcade,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="2">
@@ -41315,8 +41473,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>The Tower of Druga</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ドルアーガの塔</title>
+			<synopsis/>
+		</locale>
 		<publisher>Bandai Namco Entertainment</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="8" day="21"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -41356,9 +41518,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Baseball</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ベースボール</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="10" day="23"/>
 		<genre>sports,baseball</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41429,9 +41595,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Tennis</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>テニス</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="10" day="30"/>
 		<genre>sports,tennis</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41502,9 +41672,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Pinball</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ピンボール</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="10" day="23"/>
 		<genre>sports,pinball</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41577,9 +41751,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Urban Champion</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>アーバンチャンピオン</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="10" day="23"/>
 		<genre>action,adventure,fighting</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41652,9 +41830,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Clu Clu Land</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>クルクルランド</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="11" day="20"/>
 		<genre>strategy,puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41725,10 +41907,14 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Donkey Kong 3</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ドンキーコング3</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
-		<genre>action,platformer,shooter,arcade</genre>
+		<date year="2013" month="11" day="6"/>
+		<genre>action,arcade,platformer,shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="2">
@@ -41798,9 +41984,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Golf</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ゴルフ</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="11" day="13"/>
 		<genre>sports,golf</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41839,23 +42029,27 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Golf (Europe) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Final Fantasy (Japan) (JA)">
 		<id>FBTJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Final Fantasy</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>ファイナルファンタジー</title>
 			<synopsis/>
 		</locale>
 		<publisher>Square Enix</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="11" day="13"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
+		<rom version="" name="Final Fantasy (Japan) (JA).wud"/>
 	</game>
 	<game name="Ice Hockey (USA) (EN)">
 		<id>FBUE</id>
@@ -41891,9 +42085,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Ice Hockey</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>アイスホッケー</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="12" day="11"/>
 		<genre>sports,hockey</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41959,18 +42157,22 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Wario's Woods (USA) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Wario's Woods (Japan) (JA)">
 		<id>FBVJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Wario's Woods</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>ワリオの森</title>
 			<synopsis/>
 		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="1" day="29"/>
 		<genre>strategy,puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -41980,7 +42182,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="wiimote" required="false"/>
 			<control type="classiccontroller" required="false"/>
 		</input>
-		<rom version=""/>
+		<rom version="" name="Wario's Woods (Japan) (JA).wud"/>
 	</game>
 	<game name="Wario's Woods (Europe) (EN)">
 		<id>FBVP</id>
@@ -42018,9 +42220,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Bubble Bobble</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>バブルボブル</title>
+			<synopsis/>
+		</locale>
 		<developer>Taito</developer>
 		<publisher>Square Enix</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="1" day="29"/>
 		<genre>action,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42040,9 +42246,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Final Fantasy II</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ファイナルファンタジーII</title>
+			<synopsis/>
+		</locale>
 		<developer>Square Enix</developer>
 		<publisher>Square Enix</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="12" day="11"/>
 		<genre>adventure,role-playing</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42054,11 +42264,15 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Final Fantasy II (Japan) (JA).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Final Fantasy III (Japan) (JA)">
 		<id>FBYJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Final Fantasy III</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>ファイナルファンタジーIII</title>
 			<synopsis/>
@@ -42067,11 +42281,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2014" month="1" day="8"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Final Fantasy III (Japan) (JA).wud"/>
 	</game>
 	<game name="Downtown Special: It's Kunio's Period Piece, Assemble Everyone!! (Japan) (JA)">
 		<id>FBZJ</id>
@@ -42082,8 +42295,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Downtown Special: It's Kunio's Period Piece, Assemble Everyone!!</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ダウンタウンスペシャル くにおくんの時代劇だよ全員集合!</title>
+			<synopsis/>
+		</locale>
 		<publisher>Arc System Works</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2013" month="12" day="4"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -42171,9 +42388,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Antarctic Adventure</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>けっきょく南極大冒険</title>
+			<synopsis/>
+		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="6" day="19"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -42293,9 +42514,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Red Ali Maher II</title>
 			<synopsis/>
 		</locale>
-		<developer>CAPCOM</developer>
+		<locale lang="JA">
+			<title>レッドアリーマーII</title>
+			<synopsis/>
+		</locale>
+		<developer>Capcom</developer>
 		<publisher>Capcom</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="5" day="21"/>
 		<genre>action</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42342,8 +42567,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>The Mysterious Murasame Castle</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>謎の村雨城</title>
+			<synopsis/>
+		</locale>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="7" day="30"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42376,6 +42605,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="classiccontroller" required="false"/>
 		</input>
 		<rom version="" name="Double Dragon II: The Revenge (USA) (EN).wud"/>
+	</game>
+	<game name="Double Dragon II: The Revenge (Japan) (JA)">
+		<id>FC8J</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Double Dragon II: The Revenge</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>ダブルドラゴンII ザ・リベンジ</title>
+			<synopsis/>
+		</locale>
+		<publisher>Arc System Works</publisher>
+		<date year="2016" month="9" day="14"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Double Dragon II: The Revenge (Japan) (JA).wud"/>
 	</game>
 	<game name="Double Dragon II: The Revenge (Europe) (EN)">
 		<id>FC8P</id>
@@ -42444,8 +42695,8 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>沙羅曼蛇</title>
 			<synopsis/>
 		</locale>
-		<developer>Nintendo</developer>
-		<publisher>Nintendo</publisher>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
 		<date year="2014" month="10" day="8"/>
 		<genre>action,shooter</genre>
 		<rating type="CERO" value="A"/>
@@ -42494,9 +42745,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Famicom Detective Club</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ファミコン探偵倶楽部 消えた後継者</title>
+			<synopsis/>
+		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="5" day="28"/>
 		<genre>adventure,puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42545,7 +42800,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</locale>
 		<developer>Tecmo Koei </developer>
 		<publisher>Koei Tecmo Games</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="3" day="26"/>
 		<genre>action,adventure,fighting</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42606,25 +42861,29 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Mighty Bomb Jack (USA) (EN).wud"/>
 	</game>
-	<game name="Mightyjack (Japan) (JA)">
+	<game name="Mighty Bomb Jack (Japan) (JA)">
 		<id>FCCJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
 		<locale lang="EN">
-			<title>Mightyjack</title>
+			<title>Mighty Bomb Jack</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>マイティボンジャック</title>
 			<synopsis/>
 		</locale>
 		<developer>Tecmo Koei</developer>
 		<publisher>Koei Tecmo Games</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="2" day="5"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version="" name="Mightyjack (Japan) (JA).wud"/>
+		<rom version="" name="Mighty Bomb Jack (Japan) (JA).wud"/>
 	</game>
 	<game name="Mighty Bomb Jack (Europe) (EN)">
 		<id>FCCP</id>
@@ -42662,8 +42921,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Ganbare Goemon! Karakuri Dōchū</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>がんばれゴエモン!からくり道中</title>
+			<synopsis/>
+		</locale>
 		<publisher>Konami</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="7" day="2"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -42696,25 +42959,29 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Super C (USA) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Super Contra (Japan) (JA)">
 		<id>FCEJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Super Contra</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>SUPER魂斗羅</title>
 			<synopsis/>
 		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="1" day="1"/>
-		<genre>action,shooter,arcade</genre>
+		<date year="2014" month="3" day="5"/>
+		<genre>action,arcade,shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="2">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
+		<rom version="" name="Super Contra (Japan) (JA).wud"/>
 	</game>
 	<game name="Super C (Europe) (EN)">
 		<id>FCEP</id>
@@ -42768,18 +43035,22 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Volleyball (USA) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Volleyball (Japan) (JA)">
 		<id>FCFJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Volleyball</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>バレーボール</title>
 			<synopsis/>
 		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="3" day="12"/>
 		<genre>sports,volleyball</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42789,7 +43060,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="wiimote" required="false"/>
 			<control type="classiccontroller" required="false"/>
 		</input>
-		<rom version=""/>
+		<rom version="" name="Volleyball (Japan) (JA).wud"/>
 	</game>
 	<game name="Volleyball (Europe) (EN)">
 		<id>FCFP</id>
@@ -42827,8 +43098,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Fire Emblem: Ankoko Ryu to Hikari no Tsurugi</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ファイアーエムブレム 暗黒竜と光の剣</title>
+			<synopsis/>
+		</locale>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="6" day="4"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -42870,9 +43145,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Castlevania Legend</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>悪魔城伝説</title>
+			<synopsis/>
+		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="4" day="16"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -42911,23 +43190,27 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Castlevania III: Dracula's Curse (Europe) (EN).wud"/>
 	</game>
-	<game name="Semi Hero (Japan) (JA)">
+	<game name="Hanjuku Hero (Japan) (JA)">
 		<id>FCJJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
 		<locale lang="EN">
-			<title>Semi Hero</title>
+			<title>Hanjuku Hero</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>半熟英雄</title>
 			<synopsis/>
 		</locale>
 		<publisher>Square Enix</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="4" day="9"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version="" name="Semi Hero (Japan) (JA).wud"/>
+		<rom version="" name="Hanjuku Hero (Japan) (JA).wud"/>
 	</game>
 	<game name="The Legend Of Kage (Japan) (JA)">
 		<id>FCKJ</id>
@@ -42938,8 +43221,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>The Legend Of Kage</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>影の伝説</title>
+			<synopsis/>
+		</locale>
 		<publisher>Square Enix</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="6" day="4"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -42961,7 +43248,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<synopsis/>
 		</locale>
 		<publisher>Arc System Works</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="3" day="19"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -43052,6 +43339,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<languages>JA</languages>
 		<locale lang="EN">
 			<title>Fire Emblem Gaiden</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>ファイアーエムブレム 外伝</title>
 			<synopsis/>
 		</locale>
 		<developer>Intelligent Systems</developer>
@@ -43227,8 +43518,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Ike Ike! Nekketsu Hockey-bu: Subette Koronde Dairantou</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>いけいけ!熱血ホッケー部 「すべってころんで大乱闘」</title>
+			<synopsis/>
+		</locale>
 		<publisher>Arc System Works</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="6" day="19"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -43323,6 +43618,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Battle City</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>バトルシティー</title>
+			<synopsis/>
+		</locale>
 		<developer>Namco</developer>
 		<publisher>Bandai Namco Entertainment</publisher>
 		<date year="2014" month="7" day="9"/>
@@ -43343,8 +43642,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Wagyan Land</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ワギャンランド</title>
+			<synopsis/>
+		</locale>
 		<publisher>Bandai Namco Entertainment</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="5" day="7"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -43361,9 +43664,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Princess Tomato And The Salad Kingdom</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>サラダの国のトマト姫</title>
+			<synopsis/>
+		</locale>
 		<developer>Hudson Soft</developer>
 		<publisher>Konami</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="5" day="14"/>
 		<genre>adventure</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -43379,6 +43686,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<languages>JA</languages>
 		<locale lang="EN">
 			<title>Super Chinese</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>スーパーチャイニーズ</title>
 			<synopsis/>
 		</locale>
 		<developer>CULTURE BRAIN</developer>
@@ -43458,7 +43769,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<synopsis/>
 		</locale>
 		<developer>HAL Laboratory</developer>
-		<publisher>Nintendo</publisher>
+		<publisher>HAL Laboratory</publisher>
 		<date year="2014" month="9" day="3"/>
 		<genre>puzzle</genre>
 		<rating type="CERO" value="A"/>
@@ -43507,8 +43818,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Joy Mech Fight</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>ジョイメカファイト</title>
+			<synopsis/>
+		</locale>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="5" day="28"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -43550,9 +43865,13 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Pac-Land</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>パックランド</title>
+			<synopsis/>
+		</locale>
 		<developer>Bandai Namco Entertainment </developer>
 		<publisher>Bandai Namco Entertainment</publisher>
-		<date year="2014" month="1" day="1"/>
+		<date year="2014" month="6" day="11"/>
 		<genre>action,adventure,platformer</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
@@ -43619,6 +43938,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="classiccontroller" required="false"/>
 		</input>
 		<rom version="" name="The Adventures of Bayou Billy (USA) (EN).wud"/>
+	</game>
+	<game name="The Adventures of Bayou Billy (Japan) (JA)">
+		<id>FD2J</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>The Adventures of Bayou Billy</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>マッド・シティ</title>
+			<synopsis/>
+		</locale>
+		<publisher>Konami</publisher>
+		<date year="2016" month="9" day="21"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="The Adventures of Bayou Billy (Japan) (JA).wud"/>
 	</game>
 	<game name="The Adventures of Bayou Billy (Europe) (EN)">
 		<id>FD2P</id>
@@ -43712,7 +44053,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</locale>
 		<developer>Konami</developer>
 		<publisher>Konami</publisher>
-		<date year="2015" month="3" day="10"/>
+		<date year="2015" month="3" day="11"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value="A"/>
 		<wi-fi players="0"/>
@@ -43746,11 +44087,15 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="STINGER (USA) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan) (JA)">
 		<id>FD6J</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Moero TwinBee - Cinnamon Hakase wo Sukue!</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>もえろツインビー シナモン博士を救え!</title>
 			<synopsis/>
@@ -43761,11 +44106,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<genre>action,first-person shooter</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan) (JA).wud"/>
 	</game>
 	<game name="Sugoro Quest (Japan) (JA)">
 		<id>FD7J</id>
@@ -43776,8 +44120,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Sugoro Quest</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>すごろクエスト ダイスの戦士たち</title>
+			<synopsis/>
+		</locale>
 		<publisher>Arc System Works</publisher>
-		<date year="2015" month="" day=""/>
+		<date year="2015" month="6" day="3"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -43995,8 +44343,12 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>Quinty</title>
 			<synopsis/>
 		</locale>
+		<locale lang="JA">
+			<title>クインティ</title>
+			<synopsis/>
+		</locale>
 		<publisher>Bandai Namco Entertainment</publisher>
-		<date year="2014" month="" day=""/>
+		<date year="2014" month="7" day="2"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -44195,8 +44547,8 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>つっぱり大相撲</title>
 			<synopsis/>
 		</locale>
-		<developer>Nintendo</developer>
-		<publisher>Nintendo</publisher>
+		<developer>Tecmo Koei</developer>
+		<publisher>Koei Tecmo Games</publisher>
 		<date year="2014" month="10" day="8"/>
 		<genre>sports,wrestling</genre>
 		<rating type="CERO" value="A"/>
@@ -44373,8 +44725,8 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<title>2010 ストリートファイター</title>
 			<synopsis/>
 		</locale>
-		<developer>Nintendo</developer>
-		<publisher>Nintendo</publisher>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
 		<date year="2014" month="10" day="15"/>
 		<genre>action,platformer,run and gun</genre>
 		<rating type="CERO" value="A"/>
@@ -44472,11 +44824,15 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Devil World (Europe) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Wai Wai World 2 - SOS!! Paseri Jou (Japan) (JA)">
 		<id>FDNJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Wai Wai World 2 - SOS!! Paseri Jou</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>ワイワイワールド2 SOS!!パセリ城</title>
 			<synopsis/>
@@ -44485,11 +44841,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="9" day="2"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Wai Wai World 2 - SOS!! Paseri Jou (Japan) (JA).wud"/>
 	</game>
 	<game name="Treasure of Ganbaregoemon Gaiden 2 World (Japan) (JA)">
 		<id>FDPJ</id>
@@ -44505,13 +44860,35 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<synopsis/>
 		</locale>
 		<publisher>Konami</publisher>
-		<date year="2015" month="" day=""/>
+		<date year="2015" month="5" day="20"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="Treasure of Ganbaregoemon Gaiden 2 World (Japan) (JA).wud"/>
+	</game>
+	<game name="Tatakai no Banka (Japan) (JA)">
+		<id>FDQJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Tatakai no Banka</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>闘いの挽歌</title>
+			<synopsis/>
+		</locale>
+		<publisher/>
+		<date year="2016" month="8" day="31"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Tatakai no Banka (Japan) (JA).wud"/>
 	</game>
 	<game name="Phantom Travel Journal (Japan) (JA)">
 		<id>FDRJ</id>
@@ -44786,7 +45163,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</locale>
 		<developer>Bandai Namco Games</developer>
 		<publisher>Bandai Namco Games</publisher>
-		<date year="2015" month="2" day="2"/>
+		<date year="2015" month="2" day="4"/>
 		<genre>action,adventure</genre>
 		<rating type="CERO" value="A"/>
 		<wi-fi players="0"/>
@@ -45003,6 +45380,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="classiccontroller" required="false"/>
 		</input>
 		<rom version="" name="City Connection (USA) (EN).wud"/>
+	</game>
+	<game name="City Connection (Japan) (JA)">
+		<id>FE4J</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>City Connection</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>シティコネクション</title>
+			<synopsis/>
+		</locale>
+		<publisher>City Connection</publisher>
+		<date year="2017" month="3" day="29"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="City Connection (Japan) (JA).wud"/>
 	</game>
 	<game name="Ninja Gaiden II: The Dark Sword of Chaos (USA) (EN)">
 		<id>FE5E</id>
@@ -45370,11 +45769,15 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Lode Runner (Japan) (JA).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Kanshakudama Nage Kantarou no Toukaidou Gojuusan Tsugi (Japan) (JA)">
 		<id>FEEJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Kanshakudama Nage Kantarou no Toukaidou Gojuusan Tsugi</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>かんしゃく玉なげカン太郎の東海道五十三次</title>
 			<synopsis/>
@@ -45383,17 +45786,20 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="10" day="7"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Kanshakudama Nage Kantarou no Toukaidou Gojuusan Tsugi (Japan) (JA).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Wagan Land 2 (Japan) (JA)">
 		<id>FEFJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Wagan Land 2</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>ワギャンランド2</title>
 			<synopsis/>
@@ -45402,17 +45808,20 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="11" day="11"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Wagan Land 2 (Japan) (JA).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Metro-Cross (Japan) (JA)">
 		<id>FEGJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Metro-Cross</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>メトロクロス</title>
 			<synopsis/>
@@ -45421,11 +45830,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="11" day="25"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Metro-Cross (Japan) (JA).wud"/>
 	</game>
 	<game name="Duck Hunt (USA) (EN)">
 		<id>FEHE</id>
@@ -45467,7 +45875,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</locale>
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
-		<date year="2014" month="11" day="24"/>
+		<date year="2014" month="12" day="24"/>
 		<genre>simulation,hunting</genre>
 		<rating type="CERO" value="A"/>
 		<wi-fi players="0"/>
@@ -45506,11 +45914,15 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Duck Hunt (Europe) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Star Luster (Japan) (JA)">
 		<id>FEJJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Star Luster</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>スターラスター</title>
 			<synopsis/>
@@ -45519,17 +45931,20 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="11" day="4"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Star Luster (Japan) (JA).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Ganbare Goemon Gaiden - Kieta Ougon Kiseru (Japan) (JA)">
 		<id>FEKJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Ganbare Goemon Gaiden - Kieta Ougon Kiseru</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>がんばれゴエモン外伝 きえた黄金キセル</title>
 			<synopsis/>
@@ -45538,17 +45953,20 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="10" day="21"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Ganbare Goemon Gaiden - Kieta Ougon Kiseru (Japan) (JA).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Field Combat (Japan) (JA)">
 		<id>FELJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Field Combat</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>フィールドコンバット</title>
 			<synopsis/>
@@ -45557,11 +45975,32 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="11" day="25"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Field Combat (Japan) (JA).wud"/>
+	</game>
+	<game name="Little Ninja Brothers (Japan) (JA)">
+		<id>FEMJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Little Ninja Brothers</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>スーパーチャイニーズ2 ドラゴンキッド</title>
+			<synopsis/>
+		</locale>
+		<publisher>CultureBrainExcel</publisher>
+		<date year="2016" month="10" day="19"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Little Ninja Brothers (Japan) (JA).wud"/>
 	</game>
 	<game name="Little Ninja Brothers (Europe) (EN)">
 		<id>FEMP</id>
@@ -45592,6 +46031,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Little Ninja Brothers (Europe) (EN).wud"/>
 	</game>
+	<game name="Flying Warriors (Japan) (JA)">
+		<id>FENJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Flying Warriors</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>飛龍の拳Ⅱ ドラゴンの翼</title>
+			<synopsis/>
+		</locale>
+		<publisher>CultureBrainExcel</publisher>
+		<date year="2016" month="9" day="21"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Flying Warriors (Japan) (JA).wud"/>
+	</game>
 	<game name="Flying Warriors (Europe) (EN)">
 		<id>FENP</id>
 		<type>VC-NES</type>
@@ -45621,11 +46082,59 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Flying Warriors (Europe) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="Magmax (Japan) (JA)">
+		<id>FEPJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Magmax</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>マグマックス</title>
+			<synopsis/>
+		</locale>
+		<publisher>Hamster</publisher>
+		<date year="2016" month="9" day="14"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Magmax (Japan) (JA).wud"/>
+	</game>
+	<game name="Formation Z (Japan) (JA)">
+		<id>FEQJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Formation Z</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>フォーメーションZ</title>
+			<synopsis/>
+		</locale>
+		<publisher>City Connection</publisher>
+		<date year="2017" month="3" day="29"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Formation Z (Japan) (JA).wud"/>
+	</game>
+	<game name="Exerion (Japan) (JA)">
 		<id>FERJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Exerion</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>エクセリオン</title>
 			<synopsis/>
@@ -45634,11 +46143,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<date year="2015" month="9" day="16"/>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="Exerion (Japan) (JA).wud"/>
 	</game>
 	<game name="River City Ransom (USA) (EN)">
 		<id>FESE</id>
@@ -45736,7 +46244,7 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<synopsis/>
 		</locale>
 		<developer>HAL Laboratory</developer>
-		<publisher>Nintendo</publisher>
+		<publisher>HAL Laboratory</publisher>
 		<date year="2015" month="7" day="1"/>
 		<genre>adventure</genre>
 		<rating type="CERO" value="B"/>
@@ -45769,6 +46277,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Wild Gunman (USA) (EN).wud"/>
 	</game>
+	<game name="Wild Gunman (Japan) (JA)">
+		<id>FEUJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Wild Gunman</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>ワイルドガンマン</title>
+			<synopsis/>
+		</locale>
+		<publisher>Nintendo</publisher>
+		<date year="2016" month="6" day="22"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Wild Gunman (Japan) (JA).wud"/>
+	</game>
 	<game name="Wild Gunman (Europe) (EN)">
 		<id>FEUP</id>
 		<type>VC-NES</type>
@@ -45796,6 +46326,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Wild Gunman (Europe) (EN).wud"/>
 	</game>
+	<game name="Choujin - Ultra Baseball (Japan) (JA)">
+		<id>FEVJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Choujin - Ultra Baseball</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>超人ウルトラベースボール</title>
+			<synopsis/>
+		</locale>
+		<publisher>CultureBrainExcel</publisher>
+		<date year="2016" month="10" day="26"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Choujin - Ultra Baseball (Japan) (JA).wud"/>
+	</game>
 	<game name="Dig Dug II (USA) (EN)">
 		<id>FEWE</id>
 		<type>VC-NES</type>
@@ -45820,6 +46372,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="classiccontroller" required="false"/>
 		</input>
 		<rom version="" name="Dig Dug II (USA) (EN).wud"/>
+	</game>
+	<game name="Dig Dug II (Japan) (JA)">
+		<id>FEWJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Dig Dug II</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>ディグダグII</title>
+			<synopsis/>
+		</locale>
+		<publisher>Bandai Namco Entertainment</publisher>
+		<date year="2016" month="9" day="7"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Dig Dug II (Japan) (JA).wud"/>
 	</game>
 	<game name="Dig Dug II (Europe) (EN)">
 		<id>FEWP</id>
@@ -45848,6 +46422,50 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="Dig Dug II (Europe) (EN).wud"/>
 	</game>
+	<game name="King's Knight (Japan) (JA)">
+		<id>FEXJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>King's Knight</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>キングスナイト</title>
+			<synopsis/>
+		</locale>
+		<publisher/>
+		<date year="2016" month="7" day="6"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="King's Knight (Japan) (JA).wud"/>
+	</game>
+	<game name="Front Line (Japan) (JA)">
+		<id>FEYJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Front Line</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>フロントライン</title>
+			<synopsis/>
+		</locale>
+		<publisher/>
+		<date year="2016" month="6" day="29"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Front Line (Japan) (JA).wud"/>
+	</game>
 	<game name="VS. Excitebike (USA) (EN)">
 		<id>FEZE</id>
 		<type>VC-NES</type>
@@ -45871,11 +46489,15 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		</input>
 		<rom version="" name="VS. Excitebike (USA) (EN).wud"/>
 	</game>
-	<game name=" (Japan) (JA)">
+	<game name="VS. Excitebike (Japan) (JA)">
 		<id>FEZJ</id>
 		<type>VC-NES</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
+		<locale lang="EN">
+			<title>VS. Excitebike</title>
+			<synopsis/>
+		</locale>
 		<locale lang="JA">
 			<title>VS.エキサイトバイク</title>
 			<synopsis/>
@@ -45886,11 +46508,10 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 		<genre>racing</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
-		<input players="0">
+		<input players="1">
 			<control type="pad" required="true"/>
 		</input>
-		<rom version=""/>
-		<case color=""/>
+		<rom version="" name="VS. Excitebike (Japan) (JA).wud"/>
 	</game>
 	<game name="Hogan's Alley (USA) (EN)">
 		<id>FHAE</id>
@@ -45914,6 +46535,28 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="pad" required="false"/>
 		</input>
 		<rom version="" name="Hogan's Alley (USA) (EN).wud"/>
+	</game>
+	<game name="Hogan's Alley (Japan) (JA)">
+		<id>FHAJ</id>
+		<type>VC-NES</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>Hogan's Alley</title>
+			<synopsis/>
+		</locale>
+		<locale lang="JA">
+			<title>ホーガンズアレイ</title>
+			<synopsis/>
+		</locale>
+		<publisher>Nintendo</publisher>
+		<date year="2016" month="6" day="22"/>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Hogan's Alley (Japan) (JA).wud"/>
 	</game>
 	<game name="Hogan's Alley (Europe) (EN)">
 		<id>FHAP</id>
