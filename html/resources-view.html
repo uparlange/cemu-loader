@@ -42,8 +42,8 @@
                         </td>
                         <td>
                             <span *ngFor="let version of cemuHook.versions; let last=last; trackBy:itemHelper.track">
-                                <span><a tabindex="0" [title]="version.data" (click)="openLink(version.data)">{{version.label}}</a></span>
-                                <span *ngIf="!last">|</span>
+                                <a tabindex="0" [title]="version.data" (click)="openLink(version.data)">{{version.label}}</a>
+                                <span *ngIf="!last" style="margin-left:5px;margin-right:5px">|</span>
                             </span>
                         </td>
                     </tr>

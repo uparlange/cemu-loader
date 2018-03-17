@@ -5,7 +5,6 @@ const pkg = require('./package.json');
 const gulp = require('gulp');
 const del = require('del');
 const eslint = require('gulp-eslint');
-const runSequence = require('run-sequence');
 const zip = require('gulp-zip');
 const mergeStream = require('merge-stream');
 const htmlparser = require('htmlparser2');
@@ -19,10 +18,6 @@ const rename = require('gulp-rename');
 
 gulp.task('clean-dist', () => {
     return del(['./dist']);
-});
-
-gulp.task('copy-files', (callback) => {
-    runSequence('copy-js', 'copy-css', 'copy-html', 'copy-images', 'copy-static', callback);
 });
 
 gulp.task('copy-js', () => {
@@ -158,20 +153,16 @@ gulp.task('generate-exe', () => {
         .pipe(exec.reporter(reportOptions));
 });
 
-gulp.task('prepare', (callback) => {
-    runSequence('lint-js', 'clean-dist', 'copy-files', 'copy-node-modules', callback);
-});
-
 gulp.task('generate-package-file', () => {
     return gulp.src('dist/cemu-loader/**/*')
         .pipe(zip(pkg.name + '-' + pkg.version + '.nw'))
         .pipe(gulp.dest('release'));
 });
 
-gulp.task('generate-exe-file', (callback) => {
-    runSequence('copy-nw', 'generate-exe', 'move-rename-exe', callback);
-});
+gulp.task('copy-files', gulp.parallel('copy-js', 'copy-css', 'copy-html', 'copy-images', 'copy-static'));
 
-gulp.task('default', (callback) => {
-    runSequence('prepare', 'generate-package-file', 'generate-exe-file', callback);
-});
+gulp.task('prepare', gulp.series('lint-js', 'clean-dist', 'copy-files', 'copy-node-modules'));
+
+gulp.task('generate-exe-file', gulp.series('copy-nw', 'generate-exe', 'move-rename-exe'));
+
+gulp.task('default', gulp.series('prepare', 'generate-package-file', 'generate-exe-file'));

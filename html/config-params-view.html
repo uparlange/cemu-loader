@@ -4,10 +4,8 @@
     <accordion-component [(selected)]="model.currentPanel">
         <panel-component [id]="'application'">
             <panel-header-component>
-                <span>
-                    <span>Cemu Loader</span>
-                <span *ngIf="version.application != null">{{version.application}}</span>
-                </span>
+                <span>Cemu Loader</span>
+                <span *ngIf="version.application != null" style="margin-left:5px">{{version.application}}</span>
                 <span style="flex-grow:1"></span>
                 <bulma-button-component [icon]="'fa-floppy-o'" [title]="'L10N_SAVE_CONFIGURATION'|translate" (click)="saveConfiguration()"></bulma-button-component>
             </panel-header-component>
@@ -80,11 +78,9 @@
         </panel-component>
         <panel-component [id]="'cemu'">
             <panel-header-component>
-                <span>
-                    <span>Cemu Emulator</span>
-                <span *ngIf="version.cemu != null">{{version.cemu}}</span>
-                <span *ngIf="version.cemuHook != null">| Cemu Hook {{version.cemuHook}}</span>
-                </span>
+                <span>Cemu Emulator</span>
+                <span *ngIf="version.cemu != null" style="margin-left:5px">{{version.cemu}}</span>
+                <span *ngIf="version.cemuHook != null" style="margin-left:5px">| Cemu Hook {{version.cemuHook}}</span>
                 <span style="flex-grow:1"></span>
                 <bulma-button-component [icon]="'fa-bullseye'" [enabled]="model.config.cemu.file != null" [title]="('L10N_LAUNCH'|translate) + ' Cemu'"
                     (click)="launchCemu()"></bulma-button-component>
@@ -142,10 +138,8 @@
         </panel-component>
         <panel-component [id]="'games'">
             <panel-header-component>
-                <span>
-                    <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
+                <span *ngIf="model.config.games.length > 0; else nogames">{{'L10N_MY_XXX_GAMES'|translate:model.config.games.length}}</span>
                 <ng-template #nogames>{{'L10N_MY_FUTURE_GAMES'|translate}}</ng-template>
-                </span>
                 <span style="flex-grow:1"></span>
                 <bulma-progress-component *ngIf="progress.visible" [theme]="'primary'" [value]="progress.value" [max]="progress.max"></bulma-progress-component>
                 <span style="flex-grow:1"></span>
@@ -219,7 +213,8 @@
                                 </div>
                             </td>
                             <td class="game-actions" width="24">
-                                <bulma-button-component [icon]="model.currentGame === game ? 'fa-ban' : 'fa-pencil'" [title]="('L10N_EDIT'|translate) + ' ' + game.name" (click)="toggleEditGame(game)"></bulma-button-component>
+                                <bulma-button-component [icon]="model.currentGame === game ? 'fa-ban' : 'fa-pencil'" [title]="('L10N_EDIT'|translate) + ' ' + game.name"
+                                    (click)="toggleEditGame(game)"></bulma-button-component>
                                 <div *ngIf="model.currentGame === game" style="height:10px;"></div>
                                 <bulma-button-component [icon]="'fa-trash-o'" *ngIf="model.currentGame === game" [title]="('L10N_DELETE'|translate) + ' ' + game.name"
                                     (click)="removeGame(game)"></bulma-button-component>
