@@ -14,7 +14,7 @@
 
 ## Standalone installer (New !)
 
-* [Cemu Loader 2.0.8](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.8.exe) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
+* [Cemu Loader 2.0.9](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.9.exe) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
 > **Disable Smartscreen** (on windows 10) and **run installer as administrator**... i know this can be scary but you can open the archive (with 7zip for example) and you will see that there is nothing except NWjs and application's sources. If you are still afraid you should simply move to "Package" installation described below
 
 ## Package (Old)
@@ -24,7 +24,7 @@
 * Unzip content in "C:\Program Files\nwjs"
 
 ### 2. Download application
-* v2.x [Cemu Loader 2.0.8](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.8.nw) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
+* v2.x [Cemu Loader 2.0.9](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.0.9.nw) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
 * v1.x [Cemu Loader 1.3.5](https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-1.3.5.nw) ([Changelog](https://github.com/uparlange/cemu-loader/blob/master/CHANGELOG.md))
 
 ### 3. Launch application

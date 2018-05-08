@@ -12,17 +12,11 @@
 </head>
 
 <body>
-    <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.min.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.min.js"></script>
+    <script src="node_modules/rxjs/bundles/rxjs.umd.js"></script>
     <script src="node_modules/@angular/compiler/bundles/compiler.umd.min.js"></script>
     <script src="node_modules/@angular/core/bundles/core.umd.min.js"></script>
     <script src="node_modules/@angular/common/bundles/common.umd.min.js"></script>
-    <script src="node_modules/tslib/tslib.js"></script>
-    <script>
-        // fix common-http.umd.js
-        tslib = { __extends: __extends };
-    </script>
     <script src="node_modules/@angular/common/bundles/common-http.umd.min.js"></script>
     <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.min.js"></script>
     <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.min.js"></script>
