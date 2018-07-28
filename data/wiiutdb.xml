@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datafile xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="wiiutdb.xsd">
-	<WiiUTDB version="20180508183751" filter="FR" games="2486"/>
+	<WiiUTDB version="20180728145947" filter="FR" games="2546"/>
 	<!--
  GameTDB: WiiU, Database started in 2012 (https://www.gametdb.com)
  Never modify this file manually, it will get overwritten when you update. You can add games and fixes on the website.
@@ -1087,6 +1087,10 @@
 			<title>Bayonetta</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Bayonetta</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Bayonetta</title>
 			<synopsis/>
@@ -1229,6 +1233,10 @@
 			<title>Animal Crossing: amiibo Festival</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Animal Crossing: amiibo Festival</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Animal Crossing: amiibo Festival</title>
 			<synopsis/>
@@ -1236,7 +1244,7 @@
 		<developer>Nd Cube</developer>
 		<publisher>Nintendo</publisher>
 		<date year="2015" month="11" day="20"/>
-		<genre>board game,party</genre>
+		<genre>party,board game</genre>
 		<rating type="PEGI" value="3"/>
 		<wi-fi players="0"/>
 		<input players="4">
@@ -1355,6 +1363,10 @@
 			<title>Barbie: Dreamhouse Party</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Barbie: Dreamhouse Party</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Barbie: Dreamhouse Party</title>
 			<synopsis/>
@@ -1403,6 +1415,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,RU</languages>
 		<locale lang="EN">
+			<title>Ben 10: Omniverse</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Ben 10: Omniverse</title>
 			<synopsis/>
 		</locale>
@@ -1513,6 +1529,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,PT,RU</languages>
 		<locale lang="EN">
+			<title>Resident Evil: Revelations</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Resident Evil: Revelations</title>
 			<synopsis/>
 		</locale>
@@ -1729,6 +1749,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,RU</languages>
 		<locale lang="EN">
+			<title>Batman Arkham City: Armoured Edition</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Batman Arkham City: Armoured Edition</title>
 			<synopsis/>
 		</locale>
@@ -1986,6 +2010,7 @@
 			<title>Cabela's Dangerous Hunts 2013</title>
 			<synopsis/>
 		</locale>
+		<developer>Cauldron</developer>
 		<publisher>Activision</publisher>
 		<date year="2012" month="12" day="3"/>
 		<genre>action,simulation,shooter,hunting</genre>
@@ -2012,10 +2037,15 @@
 			<title>Cabela's Dangerous Hunts 2013</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Cabela's Dangerous Hunts 2013</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Cabela's Dangerous Hunts 2013</title>
 			<synopsis/>
 		</locale>
+		<developer>Cauldron</developer>
 		<publisher>Activision</publisher>
 		<date year="2012" month="12" day="5"/>
 		<genre>action,simulation,shooter,hunting</genre>
@@ -2038,6 +2068,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,PT</languages>
 		<locale lang="EN">
+			<title>Cocoto Magic Circus 2</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Cocoto Magic Circus 2</title>
 			<synopsis/>
 		</locale>
@@ -2135,6 +2169,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>The Wonderful 101</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>The Wonderful 101</title>
 			<synopsis/>
 		</locale>
@@ -2259,6 +2297,10 @@
 			<title>Call of Duty: Ghosts</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Call of Duty: Ghosts</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Call of Duty: Ghosts</title>
 			<synopsis/>
@@ -2266,7 +2308,7 @@
 		<developer>treyarc, infinity ward, Raven, Neversoft, DemonWare, havoc, Bink Video</developer>
 		<publisher>Activision</publisher>
 		<date year="2013" month="11" day="5"/>
-		<genre>action,fighting,strategy,shooter,survival horror,party</genre>
+		<genre>action,fighting,strategy,party,shooter,survival horror</genre>
 		<rating type="PEGI" value="16">
 			<descriptor>language</descriptor>
 			<descriptor>violence</descriptor>
@@ -2338,7 +2380,7 @@
 		<developer>NAMCO BANDAI Games</developer>
 		<publisher>D3 Publisher</publisher>
 		<date year="2013" month="4" day="11"/>
-		<genre>action,platformer,board game,party</genre>
+		<genre>action,party,platformer,board game</genre>
 		<rating type="PEGI" value="7">
 			<descriptor>violence</descriptor>
 		</rating>
@@ -2385,6 +2427,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>Darksiders II</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Darksiders II</title>
 			<synopsis/>
 		</locale>
@@ -2517,12 +2563,16 @@
 		<rom version="" name="Devil's Third (Japan) (JA).wud" size="25025314816"/>
 		<case color="000000"/>
 	</game>
-	<game name="Devil's Third (Europe) (EN,FR,DE)">
+	<game name="Devil's Third (Europe) (EN,FR)">
 		<id>ADNP01</id>
 		<type>WiiU</type>
 		<region>PAL</region>
-		<languages>EN,FR,DE</languages>
+		<languages>EN,FR</languages>
 		<locale lang="EN">
+			<title>Devil's Third</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Devil's Third</title>
 			<synopsis/>
 		</locale>
@@ -2547,7 +2597,7 @@
 			<control type="pad" required="false"/>
 			<control type="procontroller" required="false"/>
 		</input>
-		<rom version="" name="Devil's Third (Europe) (EN,FR,DE).wud" size="25025314816"/>
+		<rom version="" name="Devil's Third (Europe) (EN,FR).wud" size="25025314816"/>
 	</game>
 	<game name="Just Dance Disney Party 2 (USA) (EN)">
 		<id>ADPE41</id>
@@ -2651,6 +2701,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Disney Infinity: Marvel Super Heroes - 2.0 Edition</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Disney Infinity: Marvel Super Heroes - 2.0 Edition</title>
 			<synopsis/>
 		</locale>
@@ -2761,6 +2815,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,JA</languages>
 		<locale lang="EN">
+			<title>Disney Infinity</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Disney Infinity</title>
 			<synopsis/>
 		</locale>
@@ -2922,6 +2980,10 @@
 			<title>Deus Ex: Human Revolution - Director's Cut</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Deus Ex: Human Revolution – Director's Cut</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Deus Ex: Human Revolution - Director's Cut</title>
 			<synopsis/>
@@ -2940,6 +3002,35 @@
 		</input>
 		<rom version="" name="Deus Ex: Human Revolution - Director's Cut (Europe) (EN,FR,DE,ES,IT).wud" size="25025314816"/>
 		<case versions="2"/>
+	</game>
+	<game name="Call of Duty: Black Ops II (Europe) (DE)">
+		<id>AECD52</id>
+		<type>WiiU</type>
+		<region>PAL</region>
+		<languages>DE</languages>
+		<locale lang="EN">
+			<title>Call of Duty: Black Ops II</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Call of Duty: Black Ops II</title>
+			<synopsis/>
+		</locale>
+		<developer>Treyarch</developer>
+		<publisher>Activision</publisher>
+		<date year="2012" month="11" day="30"/>
+		<genre>first-person shooter</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="8">
+			<feature>online</feature>
+		</wi-fi>
+		<input players="4">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+		</input>
+		<rom version="" name="Call of Duty: Black Ops II (Europe) (DE).wud" size="25025314816"/>
 	</game>
 	<game name="Call of Duty: Black Ops II (USA) (EN)">
 		<id>AECE52</id>
@@ -3113,7 +3204,7 @@
 		<rom version="" name="Disney Epic Mickey 2: The Power of Two (USA) (EN).wud" size="25025314816"/>
 	</game>
 	<game name="Disney Epic Mickey 2: The Power of Two (Japan) (EN,JA)">
-		<id>AEMJ4Q</id>
+		<id>AEMJ91</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>EN,JA</languages>
@@ -3261,7 +3352,7 @@
 		<rom version="" name="FIFA Soccer 13 (USA) (EN).wud"/>
 	</game>
 	<game name="FIFA 13 (Japan) (EN,JA)">
-		<id>AF3J69</id>
+		<id>AF3J13</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>EN,JA</languages>
@@ -3444,6 +3535,10 @@
 			<title>Funky Barn</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Funky Barn</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>Funky Barn</title>
 			<synopsis/>
@@ -3522,6 +3617,10 @@
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>Fit Music for Wii U</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Fit Music for Wii U</title>
 			<synopsis/>
 		</locale>
@@ -3655,6 +3754,10 @@
 			<title>Disney Planes: Fire &amp; Rescue</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Disney Planes 2: Immer im Einsatz</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Disney Planes: Fire &amp; Rescue</title>
 			<synopsis/>
@@ -3746,6 +3849,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 * Piloter une variété de véhicules dans l'air et sur le sol.
 * Aiguisez vos compétences en tant que pilote légendaire, Fox McCloud.
 * Voir votre environnement sur votre téléviseur, et obtenir un point de vue différent sur le GamePad en l'inclinant pour viser.</synopsis>
+		</locale>
+		<locale lang="DE">
+			<title>Star Fox Zero</title>
+			<synopsis/>
 		</locale>
 		<locale lang="NL">
 			<title>Star Fox Zero</title>
@@ -3965,6 +4072,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>Guitar Hero Live</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Guitar Hero Live</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Guitar Hero Live</title>
 			<synopsis/>
@@ -4014,6 +4125,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Game Party Champions</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Game Party Champions</title>
 			<synopsis/>
 		</locale>
@@ -4116,6 +4231,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN</languages>
 		<locale lang="EN">
+			<title>Hunter's Trophy 2 - Europa</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Hunter's Trophy 2 - Europa</title>
 			<synopsis/>
 		</locale>
@@ -4230,6 +4349,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN</languages>
 		<locale lang="EN">
+			<title>Warriors Orochi 3 Hyper</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Warriors Orochi 3 Hyper</title>
 			<synopsis/>
 		</locale>
@@ -4409,6 +4532,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>Hello Kitty Kruisers</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Hello Kitty Kruisers</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Hello Kitty Kruisers</title>
 			<synopsis/>
@@ -4518,7 +4645,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<case versions="2"/>
 	</game>
 	<game name="Just Dance Wii U (Japan) (JA)">
-		<id>AJ5J41</id>
+		<id>AJ5J01</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
@@ -4531,7 +4658,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<synopsis/>
 		</locale>
 		<developer>Ubisoft</developer>
-		<publisher>Ubisoft</publisher>
+		<publisher>Nintendo</publisher>
 		<date year="2014" month="4" day="3"/>
 		<genre>action,music,3d platformer,dance,rhythm</genre>
 		<rating type="CERO" value=""/>
@@ -4548,6 +4675,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Just Dance 2014</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Just Dance 2014</title>
 			<synopsis/>
 		</locale>
@@ -4602,6 +4733,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Just Dance 2016</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Just Dance 2016</title>
 			<synopsis/>
 		</locale>
@@ -4719,6 +4854,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>Just Dance 4</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Just Dance 4</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>Just Dance 4</title>
 			<synopsis/>
@@ -4773,6 +4912,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN,FR,ES</languages>
 		<locale lang="EN">
+			<title>Just Dance Kids 2014</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Just Dance Kids 2014</title>
 			<synopsis/>
 		</locale>
@@ -4850,6 +4993,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<control type="classiccontroller" required="false"/>
 		</input>
 		<rom version="" firmware="2.1.1" name="Injustice: Gods Among Us (USA) (EN).wud" size="25025314816"/>
+		<case versions="2"/>
 	</game>
 	<game name="Injustice: Kamigami no Gekitotsu (Japan) (JA)">
 		<id>AJSJWR</id>
@@ -4928,6 +5072,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>Jett Tailfin</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Jett Tailfin</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Jett Tailfin</title>
 			<synopsis/>
@@ -5003,6 +5151,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>Captain Toad: Treasure Tracker</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Captain Toad: Treasure Tracker</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Captain Toad: Treasure Tracker</title>
 			<synopsis/>
@@ -5010,7 +5162,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<developer>Nintendo</developer>
 		<publisher>Nintendo</publisher>
 		<date year="2015" month="1" day="2"/>
-		<genre>action,platformer,puzzle</genre>
+		<genre>action,puzzle,platformer</genre>
 		<rating type="PEGI" value="3"/>
 		<wi-fi players="0"/>
 		<input players="1">
@@ -5098,6 +5250,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
 			<title>Tekken: Tag Tournament 2</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Tekken Tag Tournament 2</title>
 			<synopsis/>
 		</locale>
 		<locale lang="ES">
@@ -5253,6 +5409,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>LEGO La Grande Aventure : Le Jeu Video</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>The LEGO Movie Videogame</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>La LEGO Película: El Videojuego</title>
 			<synopsis/>
@@ -5308,6 +5468,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,DK</languages>
 		<locale lang="EN">
+			<title>LEGO Batman 2: DC Super Heroes</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>LEGO Batman 2: DC Super Heroes</title>
 			<synopsis/>
 		</locale>
@@ -5461,11 +5625,11 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		</input>
 		<rom version="" name="LEGO The Hobbit (USA) (EN).wud" size="25025314816"/>
 	</game>
-	<game name="LEGO The Hobbit (Europe) (EN,FR,DE,ES,IT,NL)">
+	<game name="LEGO The Hobbit (Europe) (EN,FR,DE,ES,IT,NL,DK)">
 		<id>ALHPWR</id>
 		<type>WiiU</type>
 		<region>PAL</region>
-		<languages>EN,FR,DE,ES,IT,NL</languages>
+		<languages>EN,FR,DE,ES,IT,NL,DK</languages>
 		<locale lang="EN">
 			<title>LEGO The Hobbit</title>
 			<synopsis/>
@@ -5493,7 +5657,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<developer>TT Games</developer>
 		<publisher>Warner Bros. Interactive Entertainment Inc.</publisher>
 		<date year="2014" month="4" day="11"/>
-		<genre>fantasy,action,adventure</genre>
+		<genre>action,adventure,fantasy</genre>
 		<rating type="PEGI" value="7">
 			<descriptor>fear</descriptor>
 			<descriptor>violence</descriptor>
@@ -5505,7 +5669,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<control type="wiimote" required="false"/>
 			<control type="nunchuk" required="false"/>
 		</input>
-		<rom version="" name="LEGO The Hobbit (Europe) (EN,FR,DE,ES,IT,NL).wud" size="25025314816"/>
+		<rom version="" name="LEGO The Hobbit (Europe) (EN,FR,DE,ES,IT,NL,DK).wud" size="25025314816"/>
 	</game>
 	<game name="LEGO Jurassic World (USA) (EN)">
 		<id>ALJEWR</id>
@@ -5570,6 +5734,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,RU</languages>
 		<locale lang="EN">
+			<title>LEGO Jurassic World</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>LEGO Jurassic World</title>
 			<synopsis/>
 		</locale>
@@ -5863,6 +6031,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>The Legend of Zelda: Breath of the Wild</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>The Legend of Zelda: Breath of the Wild</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>The Legend of Zelda: Breath of the Wild</title>
 			<synopsis/>
@@ -5965,6 +6137,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>The Amazing Spider-Man 2</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>The Amazing Spider-Man 2</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>The Amazing Spider-Man 2</title>
 			<synopsis/>
@@ -6052,6 +6228,10 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<title>Super Mario Maker</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Super Mario Maker</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Super Mario Maker</title>
 			<synopsis/>
@@ -6134,7 +6314,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<rom version="" name="Mass Effect 3: Special Edition (USA) (EN).wud" size="25025314816"/>
 	</game>
 	<game name="Mass Effect 3: Special Edition (Japan) (EN,JA)">
-		<id>AMEJ69</id>
+		<id>AMEJ13</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>EN,JA</languages>
@@ -6337,7 +6517,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 		<case versions="2"/>
 	</game>
 	<game name="Mighty No. 9 (USA) (EN)">
-		<id>AMQEKM</id>
+		<id>AMQEJJ</id>
 		<type>WiiU</type>
 		<region>NTSC-U</region>
 		<languages>EN</languages>
@@ -6373,7 +6553,7 @@ General Pepper a besoin de votre aide! Utilisez la vue de votre téléviseur pou
 			<synopsis/>
 		</locale>
 		<developer>Comcept</developer>
-		<publisher>Deep Silver</publisher>
+		<publisher>Koch Media Europe</publisher>
 		<date year="2016" month="6" day="24"/>
 		<genre>action,adventure,3d platformer</genre>
 		<rating type="PEGI" value="12"/>
@@ -6491,6 +6671,10 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 			<title>The Amazing Spider-Man Ultimate Edition</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>The Amazing Spider-Man Ultimate Edition</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>The Amazing Spider-Man: Ultimate Edition</title>
 			<synopsis/>
@@ -6600,7 +6784,7 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 		<rom version="" firmware="1.0.1" name="Ninja Gaiden 3: Razor's Edge (USA) (EN,JA).wud" size="25025314816"/>
 	</game>
 	<game name="Ninja Gaiden 3: Razor's Edge (Japan) (JA)">
-		<id>ANGJ01</id>
+		<id>ANGJC8</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
@@ -6742,7 +6926,7 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 		<rom version="" firmware="1.0.1" name="Need for Speed: Most Wanted U (USA) (EN).wud" size="25025314816"/>
 	</game>
 	<game name="Need for Speed: Most Wanted U (Japan) (JA)">
-		<id>ANSJ69</id>
+		<id>ANSJ13</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
@@ -6864,6 +7048,10 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 			<title>Wii Party U</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Wii Party U</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Wii Party U</title>
 			<synopsis/>
@@ -6934,6 +7122,10 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Disney Planes</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Disney Planes</title>
 			<synopsis/>
 		</locale>
@@ -7230,7 +7422,7 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 		<rom version="" name="Pokkén Tournament (USA) (EN).wud" size="25025314816"/>
 	</game>
 	<game name="Pokkén Tournament (Japan) (JA)">
-		<id>APKJ01</id>
+		<id>APKJ2P</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
@@ -7347,6 +7539,10 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,PT,DK,RU</languages>
 		<locale lang="EN">
+			<title>LEGO City Undercover</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>LEGO City Undercover</title>
 			<synopsis/>
 		</locale>
@@ -7501,6 +7697,10 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 			<title>LEGO Dimensions</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>LEGO Dimensions</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>LEGO Dimensions</title>
 			<synopsis/>
@@ -7590,6 +7790,10 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 			<title>Bayonetta 2</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Bayonetta 2</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Bayonetta 2</title>
 			<synopsis/>
@@ -7602,7 +7806,7 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 			<descriptor>language</descriptor>
 			<descriptor>violence</descriptor>
 		</rating>
-		<wi-fi players="0">
+		<wi-fi players="2">
 			<feature>online</feature>
 		</wi-fi>
 		<input players="2">
@@ -7680,6 +7884,10 @@ Avengers™: Battle for Earth propose d’incarner 20 personnages différents pa
 		</locale>
 		<locale lang="FR">
 			<title>The Lapins Crétins Land</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Rabbids Land</title>
 			<synopsis/>
 		</locale>
 		<locale lang="ES">
@@ -7999,7 +8207,7 @@ Caractéristiques:
 		<case versions="2"/>
 	</game>
 	<game name="Rayman Legends (Japan) (EN,FR,DE,ES,IT,NL,JA)">
-		<id>ARMJ41</id>
+		<id>ARMJ01</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>EN,FR,DE,ES,IT,NL,JA</languages>
@@ -8032,6 +8240,10 @@ Caractéristiques:
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Rayman Legends</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Rayman Legends</title>
 			<synopsis/>
 		</locale>
@@ -8329,6 +8541,10 @@ Caractéristiques:
 			<title>Sonic &amp; All-Stars Racing Transformed</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Sonic &amp; All-Stars Racing Transformed</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>Sonic &amp; All-Stars Racing Transformed</title>
 			<synopsis/>
@@ -8420,7 +8636,7 @@ Caractéristiques:
 		<rom version="" name="SpongeBob SquarePants: Plankton's Robotic Revenge (Europe) (EN,FR,DE,ES,IT,NL).wud" size="25025314816"/>
 	</game>
 	<game name="Skylanders: Spyro's Adventure (Japan) (JA)">
-		<id>AS7J52</id>
+		<id>AS7JGD</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
@@ -8582,6 +8798,10 @@ Caractéristiques:
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,RU</languages>
 		<locale lang="EN">
+			<title>Tom Clancy's Splinter Cell Blacklist</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Tom Clancy's Splinter Cell Blacklist</title>
 			<synopsis/>
 		</locale>
@@ -8747,6 +8967,10 @@ Caractéristiques:
 			<title>Assassin's Creed IV: Black Flag</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Assassin's Creed IV: Black Flag</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Assassin's Creed IV: Black Flag</title>
 			<synopsis/>
@@ -8798,6 +9022,10 @@ Caractéristiques:
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Scribblenauts Unlimited</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Scribblenauts Unlimited</title>
 			<synopsis/>
 		</locale>
@@ -8933,6 +9161,10 @@ Caractéristiques:
 			<title>Skylanders: Swap Force</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Skylanders: Swap Force</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Skylanders: Swap Force</title>
 			<synopsis/>
@@ -8997,6 +9229,10 @@ Caractéristiques:
 		<locale lang="FR">
 			<title>Skylanders: Giants</title>
 			<synopsis>Skylanders Giants est un jeu d'action / plates-formes sur Wii U. On peut y incarner des créatures en contrôlant des figurines qu'on doit positionner sur un socle fourni avec le jeu. Cette suite propose huit figurines supplémentaires, deux fois plus grandes que les celles du premier opus. Toutefois, ces dernières seront toujours compatibles.</synopsis>
+		</locale>
+		<locale lang="DE">
+			<title>Skylanders: Giants</title>
+			<synopsis/>
 		</locale>
 		<locale lang="ES">
 			<title>Skylanders: Giants</title>
@@ -9192,6 +9428,10 @@ C'est le pire cauchemar de Sonic !
 			<title>Sports Connection</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Sports Connection</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Sports Connection</title>
 			<synopsis/>
@@ -9287,6 +9527,10 @@ C'est le pire cauchemar de Sonic !
 			<title>Assassin's Creed III</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Assassin's Creed III</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>Assassin's Creed III</title>
 			<synopsis/>
@@ -9298,7 +9542,7 @@ C'est le pire cauchemar de Sonic !
 		<developer>Ubisoft Quebec</developer>
 		<publisher>Ubisoft</publisher>
 		<date year="2012" month="11" day="30"/>
-		<genre>historic,action,adventure</genre>
+		<genre>action,adventure,historic</genre>
 		<rating type="PEGI" value="18">
 			<descriptor>language</descriptor>
 			<descriptor>violence</descriptor>
@@ -9376,6 +9620,10 @@ C'est le pire cauchemar de Sonic !
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,JA</languages>
 		<locale lang="EN">
+			<title>Wii Fit U</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Wii Fit U</title>
 			<synopsis/>
 		</locale>
@@ -9478,6 +9726,7 @@ C'est le pire cauchemar de Sonic !
 			<title>007 Legends</title>
 			<synopsis/>
 		</locale>
+		<developer>Eurocom</developer>
 		<publisher>Activision</publisher>
 		<date year="2012" month="12" day="11"/>
 		<genre>action</genre>
@@ -9495,7 +9744,7 @@ C'est le pire cauchemar de Sonic !
 			<control type="pad" required="false"/>
 			<control type="procontroller" required="false"/>
 		</input>
-		<rom version="" name="007 Legends (USA) (EN).wud"/>
+		<rom version="" name="007 Legends (USA) (EN).wud" size="25025314816"/>
 	</game>
 	<game name="007 Legends (Europe) (EN,FR,DE)">
 		<id>ASVP52</id>
@@ -9520,6 +9769,10 @@ Ce qui nous ramène à votre situation actuelle. L'horloge tourne. Passerez-vous
 
 Vous êtes le seul à le savoir, Bond.</synopsis>
 		</locale>
+		<locale lang="DE">
+			<title>007 Legends</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>007 Legends</title>
 			<synopsis/>
@@ -9528,6 +9781,7 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 			<title>007 Legends</title>
 			<synopsis/>
 		</locale>
+		<developer>Eurocom</developer>
 		<publisher>Activision</publisher>
 		<date year="2012" month="12" day="21"/>
 		<genre>action</genre>
@@ -9575,6 +9829,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,PT,RU</languages>
 		<locale lang="EN">
+			<title>SiNG Party</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>SiNG Party</title>
 			<synopsis/>
 		</locale>
@@ -9679,6 +9937,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 			<title>Turbo: Super Stunt Squad</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Turbo: Die Super-Stunt-Gang</title>
+			<synopsis/>
+		</locale>
 		<locale lang="IT">
 			<title>Turbo: Acrobazie In Pista</title>
 			<synopsis/>
@@ -9731,6 +9993,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 		<languages>EN,FR,DE,ES,IT,PT</languages>
 		<locale lang="EN">
 			<title>How to Train Your Dragon 2</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Drachenzähmen leicht gemacht 2</title>
 			<synopsis/>
 		</locale>
 		<locale lang="NL">
@@ -9825,6 +10091,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>Tank! Tank! Tank!</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Tank! Tank! Tank!</title>
 			<synopsis/>
 		</locale>
@@ -9971,27 +10241,6 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 		<rom version="" name="New Super Mario Bros. U + New Super Luigi U (Europe) (EN,FR,DE,ES,IT,NL,PT,RU).wud" size="25025314816" crc="d069637e" md5="9a2d8731a07592a4392c9ec3d80d38bb" sha1="0642cf818386f6a7398944b0a6a74c2009ae488f"/>
 		<case versions="3"/>
 	</game>
-	<game name="Minecraft: Super Mario Edition (USA) (EN)">
-		<id>AUMED2</id>
-		<type>WiiU</type>
-		<region>NTSC-U</region>
-		<languages>EN</languages>
-		<locale lang="EN">
-			<title>Minecraft: Super Mario Edition</title>
-			<synopsis/>
-		</locale>
-		<developer>4J Studios</developer>
-		<publisher>Mojang AB</publisher>
-		<date year="2016" month="5" day="17"/>
-		<rating type="ESRB" value=""/>
-		<wi-fi players="0">
-			<feature>online</feature>
-		</wi-fi>
-		<input players="1">
-			<control type="pad" required="true"/>
-		</input>
-		<rom version="" name="Minecraft: Super Mario Edition (USA) (EN).wud" size="25025314816"/>
-	</game>
 	<game name="Minecraft: Wii U Edition (USA) (EN,FR,DE,ES,IT,NL,PT)">
 		<id>AUMEDU</id>
 		<type>WiiU</type>
@@ -10019,7 +10268,7 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 		<rom version="" name="Minecraft: Wii U Edition (USA) (EN,FR,DE,ES,IT,NL,PT).wud" size="25025314816"/>
 	</game>
 	<game name="Minecraft: Wii U Edition (Japan) (JA)">
-		<id>AUMJDU</id>
+		<id>AUMJ88</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
@@ -10483,6 +10732,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 			<title>Watch Dogs</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Watch Dogs</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Watch Dogs</title>
 			<synopsis/>
@@ -10641,6 +10894,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 			<title>Wii Sports Club</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Wii Sports Club</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Wii Sports Club</title>
 			<synopsis/>
@@ -10668,6 +10925,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>Xenoblade Chronicles X</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Xenoblade Chronicles X</title>
 			<synopsis/>
 		</locale>
@@ -10826,6 +11087,10 @@ Vous êtes le seul à le savoir, Bond.</synopsis>
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,PT,RU</languages>
 		<locale lang="EN">
+			<title>Super Smash Bros. for Wii U</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Super Smash Bros. for Wii U</title>
 			<synopsis/>
 		</locale>
@@ -11059,6 +11324,10 @@ Découvrez un monde entièrement fait de laine, trouvez d'innombrables objets à
 •Vous pouvez utiliser les amiibo pour débloquer de nouveaux patrons Yoshi basés sur d'autres personnages, ou jouer avec deux Yoshi en même temps !
 </synopsis>
 		</locale>
+		<locale lang="DE">
+			<title>Yoshi's Woolly World</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Yoshi's Woolly World</title>
 			<synopsis/>
@@ -11170,6 +11439,10 @@ Découvrez un monde entièrement fait de laine, trouvez d'innombrables objets à
 			<title>Your Shape: Fitness Evolved 2013</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Your Shape: Fitness Evolved 2013</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>Your Shape: Fitness Evolved 2013</title>
 			<synopsis/>
@@ -11252,6 +11525,10 @@ Découvrez un monde entièrement fait de laine, trouvez d'innombrables objets à
 			<title>The Legend of Zelda: Twilight Princess HD</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>The Legend of Zelda: Twilight Princess HD</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>The Legend of Zelda: Twilight Princess HD</title>
 			<synopsis/>
@@ -11325,6 +11602,10 @@ Découvrez un monde entièrement fait de laine, trouvez d'innombrables objets à
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>Zumba Fitness World Party</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Zumba Fitness World Party</title>
 			<synopsis/>
 		</locale>
@@ -11427,6 +11708,10 @@ Si le Joker, Bane et le Pingouin ne vous suffisent pas comme adversaires, vous p
 •Affrontez une série d'ennemis bien connus, tels que le Joker, Black Mask, Bane, le Pingouin et d'autres encore.
 </synopsis>
 		</locale>
+		<locale lang="DE">
+			<title>Batman : Arkham Origins</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Batman: Arkham Origins</title>
 			<synopsis/>
@@ -11464,6 +11749,10 @@ Pour la deuxième fois de l'Histoire, un terrible fléau s'est répandu dans le 
 
 Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien de temps survivrez-vous dans ce labyrinthe de rues et métros abandonnés par les derniers survivants et envahis par les infectés ? Les vestiges horrifiants d'une humanité ravagée par l'épidémie arpentent les rues à la recherche de chair fraîche : la vôtre !</synopsis>
 		</locale>
+		<locale lang="DE">
+			<title>ZombiU</title>
+			<synopsis/>
+		</locale>
 		<locale lang="ES">
 			<title>ZombiU</title>
 			<synopsis/>
@@ -11492,6 +11781,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<control type="nunchuk" required="false"/>
 		</input>
 		<rom version="" name="ZombiU (Europe) (EN,DE).wud" size="25025314816"/>
+		<case versions="2"/>
 	</game>
 	<game name="ZombiU (USA) (EN)">
 		<id>AZUE41</id>
@@ -11636,12 +11926,16 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		</input>
 		<rom version="" name="Cars 3: Driven to Win (USA) (EN).wud" size="25025314816"/>
 	</game>
-	<game name="Cars 3: Driven to Win (Europe) (EN)">
+	<game name="Cars 3: Driven to Win (Europe) (EN,FR,DE,ES,IT,NL,RU)">
 		<id>BA4PWR</id>
 		<type>WiiU</type>
 		<region>PAL</region>
-		<languages>EN</languages>
+		<languages>EN,FR,DE,ES,IT,NL,RU</languages>
 		<locale lang="EN">
+			<title>Cars 3: Driven to Win</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Cars 3: Driven to Win</title>
 			<synopsis/>
 		</locale>
@@ -11658,7 +11952,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<control type="nunchuk" required="false"/>
 			<control type="classiccontroller" required="false"/>
 		</input>
-		<rom version="" name="Cars 3: Driven to Win (Europe) (EN).wud" size="25025314816"/>
+		<rom version="" name="Cars 3: Driven to Win (Europe) (EN,FR,DE,ES,IT,NL,RU).wud" size="25025314816"/>
 	</game>
 	<game name="Minecraft: Story Mode - The Complete Adventure (USA) (EN)">
 		<id>BAKETL</id>
@@ -11669,6 +11963,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<title>Minecraft: Story Mode - The Complete Adventure</title>
 			<synopsis/>
 		</locale>
+		<developer>Telltale Games, Mojang</developer>
 		<publisher>Telltale Games</publisher>
 		<date year="2016" month="12" day="13"/>
 		<genre>adventure</genre>
@@ -11691,6 +11986,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<title>Minecraft: Story Mode - The Complete Adventure</title>
 			<synopsis/>
 		</locale>
+		<developer>Telltale Games, Mojang</developer>
 		<publisher>Telltale Games</publisher>
 		<date year="2016" month="1" day="1"/>
 		<genre>adventure</genre>
@@ -11754,6 +12050,10 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>The Legend of Zelda: The Wind Waker HD</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>The Legend of Zelda: The Wind Waker HD</title>
 			<synopsis/>
 		</locale>
@@ -11838,6 +12138,10 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<title>Disney Infinity 3.0</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Disney Infinity 3.0</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Disney Infinity 3.0</title>
 			<synopsis/>
@@ -11904,7 +12208,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<rom version="" name="Dragon Quest X All in One Package (Japan) (JA).wud" size="25025314816"/>
 	</game>
 	<game name="Darksiders - Warmastered Edition (USA) (EN)">
-		<id>BEDE78</id>
+		<id>BEDE6V</id>
 		<type>WiiU</type>
 		<region>NTSC-U</region>
 		<languages>EN</languages>
@@ -11929,7 +12233,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<rom version="" name="Darksiders - Warmastered Edition (USA) (EN).wud" size="25025314816"/>
 	</game>
 	<game name="Darksiders - Warmastered Edition (Europe) (EN,FR,DE,ES,IT,PT,RU)">
-		<id>BEDP78</id>
+		<id>BEDP6V</id>
 		<type>WiiU</type>
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,PT,RU</languages>
@@ -12106,6 +12410,10 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<title>Just Dance 2017</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Just Dance 2017</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Just Dance 2017</title>
 			<synopsis/>
@@ -12148,12 +12456,16 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		</input>
 		<rom version="" name="Just Dance 2018 (USA) (EN).wud" size="25025314816"/>
 	</game>
-	<game name="Just Dance 2018 (Europe) (EN)">
+	<game name="Just Dance 2018 (Europe) (EN,FR,DE,ES,IT,NL)">
 		<id>BJ8P41</id>
 		<type>WiiU</type>
 		<region>PAL</region>
-		<languages>EN</languages>
+		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
+			<title>Just Dance 2018</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Just Dance 2018</title>
 			<synopsis/>
 		</locale>
@@ -12166,7 +12478,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<input players="4">
 			<control type="wiimote" required="true"/>
 		</input>
-		<rom version="" name="Just Dance 2018 (Europe) (EN).wud" size="25025314816"/>
+		<rom version="" name="Just Dance 2018 (Europe) (EN,FR,DE,ES,IT,NL).wud" size="25025314816"/>
 	</game>
 	<game name="Just Dance 2015 (USA) (EN)">
 		<id>BJDE41</id>
@@ -12203,6 +12515,10 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 			<title>Just Dance 2015</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Just Dance 2015</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Just Dance 2015</title>
 			<synopsis/>
@@ -12210,7 +12526,7 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<developer>Ubi Soft Entertainment</developer>
 		<publisher>Ubi Soft Entertainment</publisher>
 		<date year="2014" month="10" day="24"/>
-		<genre>music,health,fitness,party</genre>
+		<genre>music,health,party,fitness</genre>
 		<rating type="PEGI" value="3">
 			<descriptor>online</descriptor>
 		</rating>
@@ -12258,6 +12574,10 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,SE,DK,NO,FI</languages>
 		<locale lang="EN">
+			<title>Skylanders: Trap Team</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Skylanders: Trap Team</title>
 			<synopsis/>
 		</locale>
@@ -12375,6 +12695,10 @@ Vous êtes l'un des derniers humains à ne pas avoir été infecté ... Combien 
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,SE,DK,NO,FI</languages>
 		<locale lang="EN">
+			<title>Skylanders Imaginators</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Skylanders Imaginators</title>
 			<synopsis/>
 		</locale>
@@ -12731,6 +13055,10 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 			<title>Bayonetta 2</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Bayonetta 2</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Bayonetta 2</title>
 			<synopsis/>
@@ -12780,6 +13108,10 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 		<languages>EN,FR,DE,ES,IT,NL</languages>
 		<locale lang="EN">
 			<title>The Peanuts Movie: Snoopy's Grand Adventure</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Die Peanuts - Der Film: Snoopys große Abenteuer</title>
 			<synopsis/>
 		</locale>
 		<locale lang="NL">
@@ -12879,6 +13211,10 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 			<title>FAST Racing NEO</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>FAST Racing NEO</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>FAST Racing NEO</title>
 			<synopsis/>
@@ -12932,7 +13268,7 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 		<case versions="2"/>
 	</game>
 	<game name="Rodea the Sky Soldier (Japan) (JA)">
-		<id>BRDJ8J</id>
+		<id>BRDJQC</id>
 		<type>WiiU</type>
 		<region>NTSC-J</region>
 		<languages>JA</languages>
@@ -12965,6 +13301,10 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 		<region>PAL</region>
 		<languages>EN,FR,DE</languages>
 		<locale lang="EN">
+			<title>Rodea the Sky Soldier</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Rodea the Sky Soldier</title>
 			<synopsis/>
 		</locale>
@@ -13105,6 +13445,10 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT,NL,SE,DK,NO,FI</languages>
 		<locale lang="EN">
+			<title>Skylanders: SuperChargers</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>Skylanders: SuperChargers</title>
 			<synopsis/>
 		</locale>
@@ -13491,6 +13835,10 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 			<title>Terraria</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Terraria</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Terraria</title>
 			<synopsis/>
@@ -13544,6 +13892,10 @@ Viens arpenter les couloirs du lycée Monster High et faire la connaissance de t
 		<region>PAL</region>
 		<languages>EN,FR,DE,ES,IT</languages>
 		<locale lang="EN">
+			<title>The Book of Unwritten Tales 2</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
 			<title>The Book of Unwritten Tales 2</title>
 			<synopsis/>
 		</locale>
@@ -13634,6 +13986,10 @@ Utilisez 12 caméras en les plaçant à différents endroits afin de repérer et
 Vous pouvez également modifier le placement des ennemis. Ces dispositions d'ennemis peuvent être envoyées en ligne afin que d'autres joueurs puissent jouer à vos stages.
 
 Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et en savoir plus.</synopsis>
+		</locale>
+		<locale lang="DE">
+			<title>Star Fox Guard</title>
+			<synopsis/>
 		</locale>
 		<locale lang="NL">
 			<title>Star Fox Guard</title>
@@ -13784,6 +14140,10 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<title>Art Academy: Atelier</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Art Academy: Atelier</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Art Academy: Atelier</title>
 			<synopsis/>
@@ -13891,11 +14251,11 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 		</input>
 		<rom version="" name="(Event Preview) Freedom Planet (USA) (EN).wud" size="25025314816"/>
 	</game>
-	<game name="(Event Preview) Runbow (USA) (EN)">
+	<game name="(Event Preview) Runbow (USA) (EN,FR,ES)">
 		<id>SNGE</id>
 		<type>WiiU</type>
 		<region>NTSC-U</region>
-		<languages>EN</languages>
+		<languages>EN,FR,ES</languages>
 		<locale lang="EN">
 			<title>(Event Preview) Runbow</title>
 			<synopsis/>
@@ -13905,13 +14265,17 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 		<date year="2015" month="8" day="8"/>
 		<genre>action,racing</genre>
 		<rating type="ESRB" value="E"/>
-		<wi-fi players="8">
+		<wi-fi players="9">
 			<feature>online</feature>
 		</wi-fi>
 		<input players="1">
-			<control type="pad" required="true"/>
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
 		</input>
-		<rom version="" name="(Event Preview) Runbow (USA) (EN).wud" size="25025314816"/>
+		<rom version="" name="(Event Preview) Runbow (USA) (EN,FR,ES).wud" size="25025314816"/>
 	</game>
 	<game name="(Event Preview) Soul Axiom (USA) (EN)">
 		<id>SNHE</id>
@@ -13943,9 +14307,9 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<synopsis/>
 		</locale>
 		<developer>Brainseed Factory</developer>
-		<publisher>Brainseed Factory</publisher>
-		<date year="2015" month="11" day="4"/>
-		<genre>role-playing,strategy rpg,puzzle</genre>
+		<publisher>Headup Games</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,puzzle,platformer</genre>
 		<rating type="ESRB" value="E10+">
 			<descriptor>fantasy violence</descriptor>
 		</rating>
@@ -14059,6 +14423,10 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<title>DuckTales: Remastered</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>DuckTales: Remastered</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>DuckTales: Remastered</title>
 			<synopsis/>
@@ -14086,6 +14454,10 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<title>Teslagrad</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Teslagrad</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Teslagrad</title>
 			<synopsis/>
@@ -14093,7 +14465,7 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 		<developer>Rain Games</developer>
 		<publisher>Rain Games</publisher>
 		<date year="2014" month="9" day="11"/>
-		<genre>action,platformer,puzzle</genre>
+		<genre>action,puzzle,platformer</genre>
 		<rating type="PEGI" value="7">
 			<descriptor>violence</descriptor>
 		</rating>
@@ -14140,6 +14512,10 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<title>Shovel Knight</title>
 			<synopsis/>
 		</locale>
+		<locale lang="DE">
+			<title>Shovel Knight</title>
+			<synopsis/>
+		</locale>
 		<locale lang="NL">
 			<title>Shovel Knight</title>
 			<synopsis/>
@@ -14161,6 +14537,28 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<control type="amiibo" required="false"/>
 		</input>
 		<rom version="2.1" name="Shovel Knight (Europe) (EN,FR,DE,ES,IT) (v2.1).wud" size="25025314816"/>
+		<case versions="2"/>
+	</game>
+	<game name="Minecraft: Super Mario Edition (USA) (EN)">
+		<id>AUMED2</id>
+		<type>CUSTOM</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Minecraft: Super Mario Edition</title>
+			<synopsis></synopsis>
+		</locale>
+		<developer>4J Studios</developer>
+		<publisher>Mojang AB</publisher>
+		<date year="2016" month="5" day="17"/>
+		<rating type="ESRB" value=""/>
+		<wi-fi players="0">
+			<feature>online</feature>
+		</wi-fi>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Minecraft: Super Mario Edition (USA) (EN).wud" size="25025314816"/>
 		<case versions="2"/>
 	</game>
 	<game name="The Deer God (USA) (EN)">
@@ -14355,6 +14753,30 @@ Visitez le site amiibo.nintendo.eu pour voir la liste des amiibo compatibles et 
 			<control type="amiibo" required="false"/>
 		</input>
 		<rom version="" name="amiibo Touch &amp; Play: Nintendo Classics Highlights (Europe) (EN).wud"/>
+	</game>
+	<game name="Spheroids (Europe) (EN)">
+		<id>AAWP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Spheroids</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Spheroids</title>
+			<synopsis/>
+		</locale>
+		<developer>Eclipse Games</developer>
+		<publisher>Eclipse Games</publisher>
+		<date year="2017" month="1" day="15"/>
+		<genre>action,arcade,platformer</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Spheroids (Europe) (EN).wud"/>
 	</game>
 	<game name="B3 Game Expo For Bees (USA) (EN)">
 		<id>AB3E</id>
@@ -16007,6 +16429,31 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Sweetest Thing (Europe) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Tallowmere (USA) (EN)">
+		<id>AEUE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Tallowmere</title>
+			<synopsis/>
+		</locale>
+		<developer>McFarland</developer>
+		<publisher>McFarland</publisher>
+		<date year="2016" month="9" day="1"/>
+		<genre>action</genre>
+		<rating type="ESRB" value="T">
+			<descriptor>blood and gore</descriptor>
+			<descriptor>violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="4">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Tallowmere (USA) (EN).wud"/>
+	</game>
 	<game name="Tallowmere (Japan) (JA)">
 		<id>AEUJ</id>
 		<type>eShop</type>
@@ -16276,6 +16723,31 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Funky Physics (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Swap Fire (USA) (EN)">
+		<id>AF7E</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Swap Fire</title>
+			<synopsis/>
+		</locale>
+		<developer>Midnight Status</developer>
+		<publisher>Midnight Status</publisher>
+		<date year="2018" month="11" day="18"/>
+		<genre>action,party</genre>
+		<rating type="ESRB" value="E10+">
+			<descriptor>violent references</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="5">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Swap Fire (USA) (EN).wud"/>
+	</game>
 	<game name="Falling Skies: The Game (USA) (EN)">
 		<id>AF8E</id>
 		<type>eShop</type>
@@ -16402,6 +16874,31 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 			<control type="pad" required="false"/>
 		</input>
 		<rom version="" name="Wii Fit U (Free) (USA) (EN).wud"/>
+	</game>
+	<game name="Wii Fit U (promo) (Europe) (EN,FR,DE,ES,IT)">
+		<id>AFCP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT</languages>
+		<locale lang="EN">
+			<title>Wii Fit U (promo)</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Wii Fit U (promo)</title>
+			<synopsis/>
+		</locale>
+		<publisher>Nintendo</publisher>
+		<date year="" month="" day=""/>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="balanceboard" required="false"/>
+		</input>
+		<rom version="" name="Wii Fit U (promo) (Europe) (EN,FR,DE,ES,IT).wud"/>
 	</game>
 	<game name="Freedom Planet (USA) (EN)">
 		<id>AFEE</id>
@@ -16815,6 +17312,27 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="Flapp &amp; Zegeta (USA) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="The Gem Collector (USA) (EN)">
+		<id>AG2E</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>The Gem Collector</title>
+			<synopsis/>
+		</locale>
+		<developer>TreeFall Studios</developer>
+		<publisher>TreeFall Studios</publisher>
+		<date year="2016" month="9" day="8"/>
+		<genre>action,adventure</genre>
+		<rating type="ESRB" value="E"/>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="The Gem Collector (USA) (EN).wud"/>
 	</game>
 	<game name="Letter Quest Grimm's Journey Remastered (USA) (EN)">
 		<id>AG8E</id>
@@ -17725,6 +18243,26 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Job the Leprechaun (Europe) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Pirate Pop Plus (USA) (EN)">
+		<id>AJME</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Pirate Pop Plus</title>
+			<synopsis/>
+		</locale>
+		<developer>dadako</developer>
+		<publisher>13AM Games</publisher>
+		<date year="2016" month="10" day="20"/>
+		<genre>action</genre>
+		<rating type="ESRB" value="E"/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Pirate Pop Plus (USA) (EN).wud"/>
+	</game>
 	<game name="Kaizoku Pop (Japan) (JA)">
 		<id>AJMJ</id>
 		<type>eShop</type>
@@ -17771,6 +18309,31 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Super Destronaut 2: Go Duck Yourself (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Super Destronaut 2: Go Duck Yourself (Europe) (EN)">
+		<id>AJNP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Super Destronaut 2: Go Duck Yourself</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Super Destronaut 2: Go Duck Yourself</title>
+			<synopsis/>
+		</locale>
+		<developer>Petite Games</developer>
+		<publisher>Petite Games</publisher>
+		<date year="2016" month="10" day="20"/>
+		<genre>action,arcade,shooter</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="Super Destronaut 2: Go Duck Yourself (Europe) (EN).wud"/>
+	</game>
 	<game name="Jewel Quest (USA) (EN)">
 		<id>AJQE</id>
 		<type>eShop</type>
@@ -17816,6 +18379,28 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="Jewel Quest (Europe) (EN,FR,DE,ES,IT,NL,PT).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Ohayou! Beginner's Japanese (Europe) (EN)">
+		<id>AJUP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Ohayou! Beginner's Japanese</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Ohayou! Beginner's Japanese</title>
+			<synopsis/>
+		</locale>
+		<publisher>Finger Gun Games</publisher>
+		<date year="2016" month="11" day="24"/>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Ohayou! Beginner's Japanese (Europe) (EN).wud"/>
 	</game>
 	<game name="Jotun: Valhalla Edition (USA) (EN)">
 		<id>AJVE</id>
@@ -17938,6 +18523,28 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="INVANOID (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="SHOOTY SPACE (USA) (EN)">
+		<id>AJZE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>SHOOTY SPACE</title>
+			<synopsis/>
+		</locale>
+		<developer>RCMADIAX</developer>
+		<publisher>RCMADIAX</publisher>
+		<date year="2016" month="9" day="15"/>
+		<genre>action,adventure</genre>
+		<rating type="ESRB" value="E">
+			<descriptor>mild fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="SHOOTY SPACE (USA) (EN).wud"/>
+	</game>
 	<game name="Kung Fu FIGHT! (USA) (EN)">
 		<id>AK2E</id>
 		<type>eShop</type>
@@ -18031,6 +18638,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="TITANS TOWER (Europe) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="SHOOTY SPACE (Europe) (EN)">
+		<id>AK5P</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>SHOOTY SPACE</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>SHOOTY SPACE</title>
+			<synopsis/>
+		</locale>
+		<developer>RCMADIAX</developer>
+		<publisher>RCMADIAX</publisher>
+		<date year="2016" month="9" day="15"/>
+		<genre>arcade,shooter</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="SHOOTY SPACE (Europe) (EN).wud"/>
 	</game>
 	<game name="Cubit The Hardcore Platformer Robot HD (Europe) (EN,FR,DE,ES,IT)">
 		<id>AK9P</id>
@@ -18174,6 +18805,32 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="6-Hand Video Poker (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Collateral Thinking (Europe) (EN)">
+		<id>AKQP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Collateral Thinking</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Collateral Thinking</title>
+			<synopsis/>
+		</locale>
+		<developer>Astrosaurus Games</developer>
+		<publisher>Astrosaurus Games</publisher>
+		<date year="2016" month="8" day="18"/>
+		<genre>action,arcade</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+		</input>
+		<rom version="" name="Collateral Thinking (Europe) (EN).wud"/>
+	</game>
 	<game name="Ascent of Kings (USA) (EN)">
 		<id>AKSE</id>
 		<type>eShop</type>
@@ -18265,6 +18922,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="SHOOT THE BALL (Japan) (JA).wud"/>
+	</game>
+	<game name="SHOOT THE BALL (Europe) (EN)">
+		<id>AKWP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>SHOOT THE BALL</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>SHOOT THE BALL</title>
+			<synopsis/>
+		</locale>
+		<developer>RCMADIAX</developer>
+		<publisher>RCMADIAX</publisher>
+		<date year="2016" month="12" day="1"/>
+		<genre>strategy,arcade,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="SHOOT THE BALL (Europe) (EN).wud"/>
 	</game>
 	<game name="Level 22 (USA) (EN)">
 		<id>AL2E</id>
@@ -18387,6 +19068,26 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="Laser Blaster (Europe) (EN).wud"/>
+	</game>
+	<game name="Plantera (USA) (EN)">
+		<id>AL8E</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Plantera</title>
+			<synopsis/>
+		</locale>
+		<developer>Ratalaika Games</developer>
+		<publisher>Ratalaika Games</publisher>
+		<date year="2017" month="2" day="9"/>
+		<genre>simulation,strategy</genre>
+		<rating type="ESRB" value="E"/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Plantera (USA) (EN).wud"/>
 	</game>
 	<game name="Plantera Garden Life (Japan) (JA)">
 		<id>AL8J</id>
@@ -19275,6 +19976,33 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Sky Force Anniversary (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Sky Force Anniversary  (Europe) (EN,FR,DE,ES,IT,PT)">
+		<id>ANVP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT,PT</languages>
+		<locale lang="EN">
+			<title>Sky Force Anniversary </title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Sky Force Anniversary </title>
+			<synopsis/>
+		</locale>
+		<developer>Infinite Dreams</developer>
+		<publisher>Infinite Dreams</publisher>
+		<date year="2017" month="3" day="16"/>
+		<genre>action,arcade,shooter</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Sky Force Anniversary  (Europe) (EN,FR,DE,ES,IT,PT).wud"/>
+	</game>
 	<game name="Oddworld: New 'n' Tasty (USA) (EN)">
 		<id>ANWE</id>
 		<type>eShop</type>
@@ -19861,6 +20589,28 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="The Quiet Collection (Europe) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Q.U.B.E: Director's Cut (USA) (EN)">
+		<id>AQEE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Q.U.B.E: Director's Cut</title>
+			<synopsis/>
+		</locale>
+		<developer>Toxic Games Ltd. / Grip Digital s.r.o.</developer>
+		<publisher>Grip Digital s.r.o.</publisher>
+		<date year="2015" month="9" day="10"/>
+		<genre>strategy,puzzle</genre>
+		<rating type="ESRB" value="T">
+			<descriptor>language</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Q.U.B.E: Director's Cut (USA) (EN).wud"/>
 	</game>
 	<game name="Queen's Garden (USA) (EN)">
 		<id>AQNE</id>
@@ -21043,6 +21793,33 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Tetrobot &amp; Co. (Europe) (EN,FR,DE,ES,IT).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Twisted Fusion (Europe) (EN)">
+		<id>ATFP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Twisted Fusion</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Twisted Fusion</title>
+			<synopsis/>
+		</locale>
+		<developer>Leuvsion</developer>
+		<publisher>Twisted Fusion</publisher>
+		<date year="2016" month="11" day="3"/>
+		<genre>action,adventure,role-playing,platformer</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Twisted Fusion (Europe) (EN).wud"/>
+	</game>
 	<game name="Toss N Go (USA) (EN)">
 		<id>ATGE</id>
 		<type>eShop</type>
@@ -21373,6 +22150,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="RCMADIAX 3-in-1 (Japan) (JA).wud"/>
+	</game>
+	<game name="Tabletop Gallery (Europe) (EN)">
+		<id>ATYP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Tabletop Gallery</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Tabletop Gallery</title>
+			<synopsis/>
+		</locale>
+		<developer>RCMADIAX</developer>
+		<publisher>RCMADIAX</publisher>
+		<date year="2015" month="4" day="16"/>
+		<genre>strategy,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Tabletop Gallery (Europe) (EN).wud"/>
 	</game>
 	<game name="Star Sky (USA) (EN)">
 		<id>ATZE</id>
@@ -21920,6 +22721,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="VoxelMaker (Europe) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Vaccine (USA) (EN)">
+		<id>AVNE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Vaccine</title>
+			<synopsis/>
+		</locale>
+		<developer>Rainy Night Creations</developer>
+		<publisher>Rainy Frog</publisher>
+		<date year="" month="" day=""/>
+		<genre>action,adventure,arcade,first-person shooter</genre>
+		<rating type="ESRB" value="M">
+			<descriptor>blood</descriptor>
+			<descriptor>violence</descriptor>
+			<descriptor>strong language</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Vaccine (USA) (EN).wud"/>
+	</game>
 	<game name="Dead House: Saisei (Japan) (JA)">
 		<id>AVNJ</id>
 		<type>eShop</type>
@@ -21987,6 +22812,27 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="AVOIDER (USA) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Völgarr the Viking (USA) (EN)">
+		<id>AVVE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Völgarr the Viking</title>
+			<synopsis/>
+		</locale>
+		<developer>Crazy Viking Studios</developer>
+		<publisher>Crazy Viking</publisher>
+		<date year="" month="" day=""/>
+		<genre>action,adventure,platformer</genre>
+		<rating type="ESRB" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="Völgarr the Viking (USA) (EN).wud"/>
 	</game>
 	<game name="Vektor Wars (USA) (EN)">
 		<id>AVWE</id>
@@ -22476,33 +23322,6 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="PixlCross (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
-	<game name="Kirby and the Rainbow Paintbrush (Europe) (EN,FR,DE,ES,IT)">
-		<id>AXYP</id>
-		<type>eShop</type>
-		<region>PAL</region>
-		<languages>EN,FR,DE,ES,IT</languages>
-		<locale lang="EN">
-			<title>Kirby and the Rainbow Paintbrush</title>
-			<synopsis/>
-		</locale>
-		<locale lang="NL">
-			<title>Kirby and the Rainbow Paintbrush</title>
-			<synopsis/>
-		</locale>
-		<developer>Nintendo / HAL Laboratory</developer>
-		<publisher>Nintendo</publisher>
-		<date year="2015" month="5" day="8"/>
-		<genre>action,platformer</genre>
-		<rating type="PEGI" value="3"/>
-		<wi-fi players="0"/>
-		<input players="4">
-			<control type="pad" required="false"/>
-			<control type="procontroller" required="false"/>
-			<control type="wiimote" required="false"/>
-			<control type="amiibo" required="false"/>
-		</input>
-		<rom version="" name="Kirby and the Rainbow Paintbrush (Europe) (EN,FR,DE,ES,IT).wud"/>
-	</game>
 	<game name="The Swapper (USA) (EN)">
 		<id>AXZE</id>
 		<type>eShop</type>
@@ -22634,6 +23453,29 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="SteamWorld Heist (Europe) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Y.A.S.G (USA) (EN)">
+		<id>AYGE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Y.A.S.G</title>
+			<synopsis/>
+		</locale>
+		<developer>LSA Games</developer>
+		<publisher>LSA Games</publisher>
+		<date year="2018" month="" day=""/>
+		<genre>action,arcade</genre>
+		<rating type="ESRB" value="E">
+			<descriptor>mild fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="Y.A.S.G (USA) (EN).wud"/>
 	</game>
 	<game name="SKEASY (USA) (EN)">
 		<id>AYKE</id>
@@ -22873,6 +23715,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="CUP CRITTERS (Europe) (EN).wud"/>
 	</game>
+	<game name="RADIANTFLUX: HYPERFRACTAL (Europe) (EN)">
+		<id>AZKP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>RADIANTFLUX: HYPERFRACTAL</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>RADIANTFLUX: HYPERFRACTAL</title>
+			<synopsis/>
+		</locale>
+		<developer>TACS Games</developer>
+		<publisher>TACS Games</publisher>
+		<date year="2016" month="12" day="22"/>
+		<genre>action,arcade</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="RADIANTFLUX: HYPERFRACTAL (Europe) (EN).wud"/>
+	</game>
 	<game name="Revenant Saga (Japan) (JA)">
 		<id>AZLJ</id>
 		<type>eShop</type>
@@ -22894,6 +23760,56 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="Revenant Saga (Japan) (JA).wud"/>
+	</game>
+	<game name="Six Sides of the World (Europe) (EN,FR,ES)">
+		<id>AZWP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,ES</languages>
+		<locale lang="EN">
+			<title>Six Sides of the World</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Six Sides of the World</title>
+			<synopsis/>
+		</locale>
+		<developer>Dolores Entertainment</developer>
+		<publisher>Dolores Entertainment</publisher>
+		<date year="2017" month="3" day="23"/>
+		<genre>puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="wiimote" required="false"/>
+		</input>
+		<rom version="" name="Six Sides of the World (Europe) (EN,FR,ES).wud"/>
+	</game>
+	<game name="Space Hunted (USA) (EN)">
+		<id>BA3E</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Space Hunted</title>
+			<synopsis/>
+		</locale>
+		<developer>Ultra Dolphin Revolution</developer>
+		<publisher>Ultra Dolphin Revolution</publisher>
+		<date year="2016" month="7" day="6"/>
+		<genre>action,arcade,platformer</genre>
+		<rating type="ESRB" value="E">
+			<descriptor>mild fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Space Hunted (USA) (EN).wud"/>
 	</game>
 	<game name="Badland - Game Of The Year Edition (USA) (EN)">
 		<id>BADE</id>
@@ -22956,6 +23872,34 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="Badland - Game Of The Year Edition (Europe) (EN,FR,DE,ES,IT,PT,RU).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Star Fox Zero: The Battle Begins + Training (USA) (EN,FR,ES)">
+		<id>BAEE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN,FR,ES</languages>
+		<locale lang="EN">
+			<title>Star Fox Zero: The Battle Begins + Training</title>
+			<synopsis/>
+		</locale>
+		<locale lang="FR">
+			<title>Star Fox Zero : Le combat commence + Entraînement</title>
+			<synopsis/>
+		</locale>
+		<locale lang="ES">
+			<title>Star Fox Zero: Comienza el combate + Entrenamiento</title>
+			<synopsis/>
+		</locale>
+		<developer>Nintendo</developer>
+		<publisher>Nintendo</publisher>
+		<date year="" month="" day=""/>
+		<genre>demo,multimedia</genre>
+		<rating type="ESRB" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Star Fox Zero: The Battle Begins + Training (USA) (EN,FR,ES).wud"/>
 	</game>
 	<game name="Star Fox Zero: The Battle Begins + Training (Japan) (JA)">
 		<id>BAEJ</id>
@@ -23109,6 +24053,33 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="Adventures of Pip (Europe) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Shadow Archer (Europe) (EN)">
+		<id>BARP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Shadow Archer</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Shadow Archer</title>
+			<synopsis/>
+		</locale>
+		<developer>Ultra Dolphin Revolution</developer>
+		<publisher>Ultra Dolphin Revolution</publisher>
+		<date year="2017" month="1" day="2"/>
+		<genre>action,arcade</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Shadow Archer (Europe) (EN).wud"/>
 	</game>
 	<game name="Aenigma Os (Europe) (EN,FR,DE,ES,IT)">
 		<id>BASP</id>
@@ -24244,6 +25215,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Electronic Super Joy: Groove City (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="SPHERE SLICE (Europe) (EN)">
+		<id>BEUP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>SPHERE SLICE</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>SPHERE SLICE</title>
+			<synopsis/>
+		</locale>
+		<developer>RCMADIAX</developer>
+		<publisher>RCMADIAX</publisher>
+		<date year="2017" month="6" day="8"/>
+		<genre>arcade,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="SPHERE SLICE (Europe) (EN).wud"/>
+	</game>
 	<game name="FIFTEEN (Europe) (EN)">
 		<id>BF4P</id>
 		<type>eShop</type>
@@ -24285,10 +25280,13 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<publisher>MixedBag</publisher>
 		<date year="2017" month="2" day="23"/>
 		<genre>action,adventure</genre>
-		<rating type="ESRB" value=""/>
+		<rating type="ESRB" value="E10+">
+			<descriptor>mild blood</descriptor>
+			<descriptor>fantasy violence</descriptor>
+		</rating>
 		<wi-fi players="0"/>
 		<input players="1">
-			<control type="pad" required="false"/>
+			<control type="pad" required="true"/>
 			<control type="procontroller" required="false"/>
 			<control type="wiimote" required="false"/>
 			<control type="classiccontroller" required="false"/>
@@ -25260,6 +26258,29 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Blackjack 21 (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Pinball (Europe) (EN)">
+		<id>BLMP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Pinball</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Pinball</title>
+			<synopsis/>
+		</locale>
+		<publisher>RCMADIAX</publisher>
+		<date year="2017" month="5" day="18"/>
+		<genre>arcade,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Pinball (Europe) (EN).wud"/>
+	</game>
 	<game name="Life of Pixel (USA) (EN)">
 		<id>BLPE</id>
 		<type>eShop</type>
@@ -25359,7 +26380,7 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</rating>
 		<wi-fi players="0"/>
 		<input players="1">
-			<control type="pad" required="false"/>
+			<control type="pad" required="true"/>
 			<control type="procontroller" required="false"/>
 			<control type="wiimote" required="false"/>
 			<control type="nunchuk" required="false"/>
@@ -25388,7 +26409,7 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rating type="PEGI" value="3"/>
 		<wi-fi players="0"/>
 		<input players="1">
-			<control type="pad" required="false"/>
+			<control type="pad" required="true"/>
 			<control type="procontroller" required="false"/>
 			<control type="wiimote" required="false"/>
 			<control type="nunchuk" required="false"/>
@@ -25813,6 +26834,32 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Never Alone (Kisima Ingitchuna) (Europe) (EN,FR,DE,ES,IT,NL,PT,RU).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Zombie Brigade: No Brain No Gain (Europe) (EN)">
+		<id>BNRP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Zombie Brigade: No Brain No Gain</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Zombie Brigade: No Brain No Gain</title>
+			<synopsis/>
+		</locale>
+		<developer>Cypron Interactive</developer>
+		<publisher>Cypronia</publisher>
+		<date year="2016" month="12" day="22"/>
+		<genre>action,platformer</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+		</input>
+		<rom version="" name="Zombie Brigade: No Brain No Gain (Europe) (EN).wud"/>
+	</game>
 	<game name="Perpetual Blast (USA) (EN)">
 		<id>BP2E</id>
 		<type>eShop</type>
@@ -25878,6 +26925,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="PONCHO (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="PONCHO (Europe) (EN,FR,DE,ES,IT,NL,PT)">
+		<id>BP4P</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT,NL,PT</languages>
+		<locale lang="EN">
+			<title>PONCHO</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>PONCHO</title>
+			<synopsis/>
+		</locale>
+		<developer>Delve Interactive</developer>
+		<publisher>Rising Star Games</publisher>
+		<date year="2016" month="8" day="18"/>
+		<genre>adventure,puzzle,platformer</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="PONCHO (Europe) (EN,FR,DE,ES,IT,NL,PT).wud"/>
+	</game>
 	<game name="Petit Computer BIG (Japan) (JA)">
 		<id>BP5J</id>
 		<type>eShop</type>
@@ -25922,6 +26993,26 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="153 Hand Video Poker (USA) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="PSIBO (USA) (EN)">
+		<id>BP8E</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>PSIBO</title>
+			<synopsis/>
+		</locale>
+		<developer>Nami Tentou Mushi</developer>
+		<publisher>Nami Tentou Mushi</publisher>
+		<date year="2016" month="10" day="6"/>
+		<genre>action</genre>
+		<rating type="ESRB" value="E"/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="PSIBO (USA) (EN).wud"/>
 	</game>
 	<game name="Pumped BMX + (USA) (EN)">
 		<id>BPBE</id>
@@ -26643,6 +27734,29 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="REPLAY : VHS is not dead (Europe) (EN,FR,DE,ES).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="The Girl and the Robot (USA) (EN)">
+		<id>BRJE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>The Girl and the Robot</title>
+			<synopsis/>
+		</locale>
+		<developer>Flying Carpets Games</developer>
+		<publisher>Flying Carpets Games</publisher>
+		<date year="2017" month="5" day="25"/>
+		<genre>action,adventure,role-playing,puzzle</genre>
+		<rating type="ESRB" value="E10+">
+			<descriptor>fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="The Girl and the Robot (USA) (EN).wud"/>
+	</game>
 	<game name="The Girl and The Robot (Japan) (JA)">
 		<id>BRJJ</id>
 		<type>eShop</type>
@@ -26658,10 +27772,12 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</locale>
 		<publisher/>
 		<date year="2017" month="9" day="13"/>
+		<genre>action,adventure,role-playing,puzzle</genre>
 		<rating type="CERO" value=""/>
 		<wi-fi players="0"/>
 		<input players="1">
-			<control type="pad" required="true"/>
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
 		</input>
 		<rom version="" name="The Girl and The Robot (Japan) (JA).wud"/>
 	</game>
@@ -27674,6 +28790,33 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Toto Temple Deluxe (Europe) (EN,FR).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Tetraminos (Europe) (EN,FR,DE,ES,IT,NL)">
+		<id>BT6P</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT,NL</languages>
+		<locale lang="EN">
+			<title>Tetraminos</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Tetraminos</title>
+			<synopsis/>
+		</locale>
+		<developer>Sanuk Games</developer>
+		<publisher>Sanuk Games</publisher>
+		<date year="2018" month="" day=""/>
+		<genre>arcade,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Tetraminos (Europe) (EN,FR,DE,ES,IT,NL).wud"/>
+	</game>
 	<game name="TAP TAP ARCADE (USA) (EN)">
 		<id>BTAE</id>
 		<type>eShop</type>
@@ -27988,6 +29131,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Tiny Galaxy (USA) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Touch Selections (Europe) (EN)">
+		<id>BTJP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Touch Selections</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Touch Selections</title>
+			<synopsis/>
+		</locale>
+		<developer>RCMADIAX</developer>
+		<publisher>RCMADIAX</publisher>
+		<date year="2016" month="9" day="8"/>
+		<genre>strategy,arcade,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Touch Selections (Europe) (EN).wud"/>
+	</game>
 	<game name="Brave Tank Hero (USA) (EN)">
 		<id>BTKE</id>
 		<type>eShop</type>
@@ -28069,6 +29236,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="Brave Tank Hero (Europe) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Teslapunk (USA) (EN)">
+		<id>BTLE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Teslapunk</title>
+			<synopsis/>
+		</locale>
+		<developer>klutzGames</developer>
+		<publisher>klutzGames</publisher>
+		<date year="2016" month="12" day="8"/>
+		<genre>action</genre>
+		<rating type="ESRB" value="E">
+			<descriptor>mild fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Teslapunk (USA) (EN).wud"/>
 	</game>
 	<game name="Teslapunk (Japan) (JA)">
 		<id>BTLJ</id>
@@ -28204,6 +29395,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="The Stonecutter (USA) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="The Stonecutter (Europe) (EN)">
+		<id>BTTP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>The Stonecutter</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>The Stonecutter</title>
+			<synopsis/>
+		</locale>
+		<developer>Brave Rock Games</developer>
+		<publisher>Brave Rock Games</publisher>
+		<date year="2017" month="4" day="3"/>
+		<genre>educational</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="The Stonecutter (Europe) (EN).wud"/>
 	</game>
 	<game name="Thomas Was Alone (USA) (EN)">
 		<id>BTWE</id>
@@ -28604,6 +29819,54 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Spikey Walls (USA) (EN).wud"/>
 		<case versions="3"/>
 	</game>
+	<game name="Splashy Duck (Europe) (EN)">
+		<id>BWLP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Splashy Duck</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Splashy Duck</title>
+			<synopsis/>
+		</locale>
+		<developer>RCMADIAX</developer>
+		<publisher>RCMADIAX</publisher>
+		<date year="2016" month="6" day="23"/>
+		<genre>strategy,arcade,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Splashy Duck (Europe) (EN).wud"/>
+	</game>
+	<game name="Rorrim (Europe) (EN)">
+		<id>BWRP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Rorrim</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Rorrim</title>
+			<synopsis/>
+		</locale>
+		<developer>Nitrolic Games / Matthew Flewelling / Ezekiel Rage</developer>
+		<publisher>Nitrolic Games</publisher>
+		<date year="2016" month="9" day="8"/>
+		<genre>action,adventure,arcade</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Rorrim (Europe) (EN).wud"/>
+	</game>
 	<game name="Art Academy: Home Studio (USA) (EN)">
 		<id>BXAE</id>
 		<type>eShop</type>
@@ -28802,6 +30065,35 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		<rom version="" name="Blocky Bot (Europe) (EN).wud"/>
 		<case versions="2"/>
 	</game>
+	<game name="Zombeer (USA) (EN,FR,ES)">
+		<id>BZBE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN,FR,ES</languages>
+		<locale lang="EN">
+			<title>Zombeer</title>
+			<synopsis/>
+		</locale>
+		<developer>PadaOne Games</developer>
+		<publisher>PadaOne Games</publisher>
+		<date year="2017" month="4" day="13"/>
+		<genre>action,first-person shooter</genre>
+		<rating type="ESRB" value="M">
+			<descriptor>blood</descriptor>
+			<descriptor>violence</descriptor>
+			<descriptor>strong language</descriptor>
+			<descriptor>partial nudity</descriptor>
+			<descriptor>sexual themes</descriptor>
+			<descriptor>use of alcohol</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="true"/>
+			<control type="classiccontroller" required="true"/>
+		</input>
+		<rom version="" name="Zombeer (USA) (EN,FR,ES).wud"/>
+	</game>
 	<game name="Back to Bed (USA) (EN)">
 		<id>BZDE</id>
 		<type>eShop</type>
@@ -28848,6 +30140,30 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="Back to Bed (Japan) (JA).wud"/>
 	</game>
+	<game name="Mutant Alien Moles of the Dead (Europe) (EN,FR,DE,ES,IT)">
+		<id>BZEP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT</languages>
+		<locale lang="EN">
+			<title>Mutant Alien Moles of the Dead</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Mutant Alien Moles of the Dead</title>
+			<synopsis/>
+		</locale>
+		<developer>Pixel Bones Studio</developer>
+		<publisher>EnjoyUp Games</publisher>
+		<date year="2017" month="3" day="30"/>
+		<genre>action,arcade</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Mutant Alien Moles of the Dead (Europe) (EN,FR,DE,ES,IT).wud"/>
+	</game>
 	<game name="COLOR CUBES (Europe) (EN)">
 		<id>BZFP</id>
 		<type>eShop</type>
@@ -28871,6 +30187,53 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="COLOR CUBES (Europe) (EN).wud"/>
+	</game>
+	<game name="Preston Sterling and the Legend of Excalibur (Europe) (EN,DE)">
+		<id>BZGP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,DE</languages>
+		<locale lang="EN">
+			<title>Preston Sterling and the Legend of Excalibur</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Preston Sterling und die Legende von Excalibur</title>
+			<synopsis/>
+		</locale>
+		<developer>Animation Arts</developer>
+		<publisher>MiracleBoxGames</publisher>
+		<date year="2017" month="6" day="1"/>
+		<genre>adventure,arcade,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Preston Sterling and the Legend of Excalibur (Europe) (EN,DE).wud"/>
+	</game>
+	<game name="ORBIT (Europe) (EN)">
+		<id>BZJP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>ORBIT</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>ORBIT</title>
+			<synopsis/>
+		</locale>
+		<publisher>RCMADIAX</publisher>
+		<date year="2017" month="4" day="20"/>
+		<genre>action,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="ORBIT (Europe) (EN).wud"/>
 	</game>
 	<game name="Cube Life: Pixel Action Heroes (Japan) (JA)">
 		<id>BZPJ</id>
@@ -28939,6 +30302,32 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="SphereZor (USA) (EN).wud"/>
 		<case versions="2"/>
+	</game>
+	<game name="Triple Breakout (Europe) (EN)">
+		<id>BZTP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Triple Breakout</title>
+			<synopsis/>
+		</locale>
+		<locale lang="DE">
+			<title>Triple Breakout</title>
+			<synopsis/>
+		</locale>
+		<developer>nuGAME</developer>
+		<publisher>nuGAME</publisher>
+		<date year="2016" month="5" day="4"/>
+		<genre>arcade</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="2">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="Triple Breakout (Europe) (EN).wud"/>
 	</game>
 	<game name="Daikon Set (USA) (EN)">
 		<id>BZUE</id>
@@ -29144,6 +30533,351 @@ Utilisez le Wii U GamePad pour écrire des messages lumineux à l'intention d'au
 		</input>
 		<rom version="" name="Pikmin Short Movies HD (Europe) (EN).wud"/>
 		<case versions="4"/>
+	</game>
+	<game name="LOST REAVERS BETA TEST VERSION (Japan) (JA)">
+		<id>SBPJ</id>
+		<type>eShop</type>
+		<region>NTSC-J</region>
+		<languages>JA</languages>
+		<locale lang="EN">
+			<title>LOST REAVERS BETA TEST VERSION</title>
+			<synopsis/>
+		</locale>
+		<developer>BANDAI NAMCO Studio Inc.</developer>
+		<publisher>Bandai Namco Entertainment America Inc.</publisher>
+		<date year="" month="" day=""/>
+		<genre>action,shooter</genre>
+		<rating type="CERO" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="LOST REAVERS BETA TEST VERSION (Japan) (JA).wud"/>
+	</game>
+	<game name="(Event Preview) forma.8 (USA) (EN,FR,DE)">
+		<id>SNBE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN,FR,DE</languages>
+		<locale lang="EN">
+			<title>(Event Preview) forma.8</title>
+			<synopsis/>
+		</locale>
+		<developer>MixedBag</developer>
+		<publisher>MixedBag</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,adventure</genre>
+		<rating type="ESRB" value="E10+">
+			<descriptor>fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) forma.8 (USA) (EN,FR,DE).wud"/>
+	</game>
+	<game name="(Event Preview) forma.8 (Europe) (EN)">
+		<id>SNBP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) forma.8</title>
+			<synopsis/>
+		</locale>
+		<developer>MixedBag</developer>
+		<publisher>MixedBag</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,adventure</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) forma.8 (Europe) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Freedom Planet (Europe) (EN)">
+		<id>SNCP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Freedom Planet</title>
+			<synopsis/>
+		</locale>
+		<developer>GalaxyTrail</developer>
+		<publisher>GalaxyTrail</publisher>
+		<date year="" month="" day=""/>
+		<genre>action,adventure</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="(Event Preview) Freedom Planet (Europe) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Lovely Planet (USA) (EN)">
+		<id>SNDE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Lovely Planet</title>
+			<synopsis/>
+		</locale>
+		<developer>QUICKTEQUILA</developer>
+		<publisher>tinyBuild Games</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,platformer,first-person shooter</genre>
+		<rating type="ESRB" value="E10+">
+			<descriptor>fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Lovely Planet (USA) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Lovely Planet (Europe) (EN)">
+		<id>SNDP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Lovely Planet</title>
+			<synopsis/>
+		</locale>
+		<developer>QUICKTEQUILA</developer>
+		<publisher>tinyBuild Games</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,platformer,first-person shooter</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Lovely Planet (Europe) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Mutant Mudds Super Challenge (USA) (EN)">
+		<id>SNEE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Mutant Mudds Super Challenge</title>
+			<synopsis/>
+		</locale>
+		<developer>Renegade Kid</developer>
+		<publisher>Renegade Kid</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,adventure,platformer</genre>
+		<rating type="ESRB" value="E">
+			<descriptor>mild fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Mutant Mudds Super Challenge (USA) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Mutant Mudds Super Challenge (Europe) (EN)">
+		<id>SNEP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Mutant Mudds Super Challenge</title>
+			<synopsis/>
+		</locale>
+		<developer>Renegade Kid</developer>
+		<publisher>Renegade Kid</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,adventure</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Mutant Mudds Super Challenge (Europe) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Runbow (Europe) (EN,FR,DE,ES,IT)">
+		<id>SNGP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Runbow</title>
+			<synopsis/>
+		</locale>
+		<developer>13AM Games</developer>
+		<publisher>13AM Games</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>party</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="9">
+			<feature>online</feature>
+		</wi-fi>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Runbow (Europe) (EN,FR,DE,ES,IT).wud"/>
+	</game>
+	<game name="(Event Preview) Soul Axiom (Europe) (EN)">
+		<id>SNHP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Soul Axiom</title>
+			<synopsis/>
+		</locale>
+		<developer>Wales Interactive</developer>
+		<publisher>Wales Interactive</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,horror,puzzle</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Soul Axiom (Europe) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Typoman (Europe) (EN)">
+		<id>SNJP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Typoman</title>
+			<synopsis/>
+		</locale>
+		<developer>Brainseed Factory</developer>
+		<publisher>Headup Games</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>action,puzzle,platformer</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="(Event Preview) Typoman (Europe) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Extreme Exorcism (USA) (EN,FR,ES)">
+		<id>SNKE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN,FR,ES</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Extreme Exorcism</title>
+			<synopsis/>
+		</locale>
+		<developer>Golden Ruby Games </developer>
+		<publisher>Ripstone</publisher>
+		<date year="" month="" day=""/>
+		<genre>action,arcade,platformer</genre>
+		<rating type="ESRB" value="E10+">
+			<descriptor>fantasy violence</descriptor>
+		</rating>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="false"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Extreme Exorcism (USA) (EN,FR,ES).wud"/>
+	</game>
+	<game name="(Event Preview) Extreme Exorcism (Europe) (EN,FR,DE,ES,IT,NL,PT)">
+		<id>SNKP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT,NL,PT</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Extreme Exorcism</title>
+			<synopsis/>
+		</locale>
+		<developer>Golden Ruby Games </developer>
+		<publisher>Ripstone</publisher>
+		<date year="2018" month="" day=""/>
+		<genre>action,arcade,platformer</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+			<control type="procontroller" required="false"/>
+			<control type="wiimote" required="false"/>
+			<control type="nunchuk" required="false"/>
+			<control type="classiccontroller" required="false"/>
+		</input>
+		<rom version="" name="(Event Preview) Extreme Exorcism (Europe) (EN,FR,DE,ES,IT,NL,PT).wud"/>
+	</game>
+	<game name="(Event Preview) Rive (USA) (EN)">
+		<id>SNLE</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Rive</title>
+			<synopsis/>
+		</locale>
+		<developer>Two Tribes</developer>
+		<publisher>Two Tribes</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>platformer,shoot 'em up</genre>
+		<rating type="ESRB" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="(Event Preview) Rive (USA) (EN).wud"/>
+	</game>
+	<game name="(Event Preview) Rive (Europe) (EN)">
+		<id>SNLP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>(Event Preview) Rive</title>
+			<synopsis/>
+		</locale>
+		<developer>Two Tribes</developer>
+		<publisher>Two Tribes</publisher>
+		<date year="2015" month="6" day="15"/>
+		<genre>platformer,shoot 'em up</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="(Event Preview) Rive (Europe) (EN).wud"/>
 	</game>
 	<game name="Wii U Panorama View: Trailer (USA) (EN)">
 		<id>SPGE</id>
@@ -32528,6 +34262,42 @@ Plusieurs sortes de tickets sont disponibles sur le Nintendo eShop, et vous pouv
 		</input>
 		<rom version="" name="Spin the Bottle: Bumpie's Party (Europe) (EN,FR,DE,ES).wud"/>
 		<case versions="3"/>
+	</game>
+	<game name="Rayman Legends Challenges App (USA) (EN)">
+		<id>WB7E</id>
+		<type>eShop</type>
+		<region>NTSC-U</region>
+		<languages>EN</languages>
+		<locale lang="EN">
+			<title>Rayman Legends Challenges App</title>
+			<synopsis/>
+		</locale>
+		<publisher>Ubisoft</publisher>
+		<date year="" month="" day=""/>
+		<rating type="ESRB" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Rayman Legends Challenges App (USA) (EN).wud"/>
+	</game>
+	<game name="Rayman Legends Challenges App (Europe) (EN,FR,DE,ES,IT)">
+		<id>WB7P</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT</languages>
+		<locale lang="EN">
+			<title>Rayman Legends Challenges App</title>
+			<synopsis/>
+		</locale>
+		<publisher>Ubisoft</publisher>
+		<date year="" month="" day=""/>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Rayman Legends Challenges App (Europe) (EN,FR,DE,ES,IT).wud"/>
 	</game>
 	<game name="Zen Pinball 2 (USA) (EN)">
 		<id>WBAE</id>
@@ -37896,6 +39666,26 @@ Résolvez plus de 250 casse-têtes inédits, découvrez de nouveaux types de blo
 			<control type="pad" required="true"/>
 		</input>
 		<rom version="" name="Demaekan (Japan) (JA).wud"/>
+	</game>
+	<game name="Uplay (Europe) (EN,FR,DE,ES,IT)">
+		<id>WLAP</id>
+		<type>eShop</type>
+		<region>PAL</region>
+		<languages>EN,FR,DE,ES,IT</languages>
+		<locale lang="EN">
+			<title>Uplay</title>
+			<synopsis/>
+		</locale>
+		<developer>Ubisoft</developer>
+		<publisher>Ubisoft</publisher>
+		<date year="2012" month="12" day="1"/>
+		<genre>software</genre>
+		<rating type="PEGI" value=""/>
+		<wi-fi players="0"/>
+		<input players="1">
+			<control type="pad" required="true"/>
+		</input>
+		<rom version="" name="Uplay (Europe) (EN,FR,DE,ES,IT).wud"/>
 	</game>
 	<game name="Lucadian Chronicles (USA) (EN)">
 		<id>WLCE</id>
